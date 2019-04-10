@@ -1,0 +1,10 @@
+====== Software Archival Project ======
+===== Mission statement =====
+
+To compile a complete reference guide to abandonware! The end goal is a listing of every version of every app with a link to a good disk image and scans in the Internet Archive.
+
+===== Publishers by name =====
+
+  * [[Apple]]
+  * [[Lemke]]
+  * [[Microsoft]]

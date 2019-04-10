@@ -1,0 +1,9 @@
+**dceutils** is PHP software for working with [[DCE]] data. Previously named [[libdce]]; renamed to dceutils 3 October 2013 due to a naming conflict with the [[https://gitorious.org/gstreamer-omap/libdce/source/80587a8de98494ebca4a20e68f47493769b13bbf:|Distributed Codec Engine]].
+
+Eventually it should support character set inheritance, so that, for example, precomposed Tibetan stacks conforming to the [[ref:GB T 22238-2008|GB/T 22238-2008]] standard (an extension of Unicode, with specific PUA assignments) could be converted to DCE with minimal effort by inheriting the Unicode parser and only providing mapping overrides for the needed codepoints.
+
+===== Subproject scope =====
+
+  * DcCore: Conversion utilities, Dc_Data class. [work in progress]
+  * DcMeta: Support functionality, including DcMetaArgumentHandler().
+  * DcRender: Rendering and related operations. [not begun]

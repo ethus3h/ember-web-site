@@ -1,0 +1,18 @@
+====== Notes for trying to mirror Chomikuj.pl ======
+
+[[http://chomikuj.pl/|Chomikuj.pl]] is a Polish filesharing website. I want to get it mirrored somewhere.
+
+===== Notes from IRC (#archiveteam-bs on EFnet), 11 January 2014 (/ 12 January 2014 a.mn.?) (somewhat paraphrased) =====
+It's a huge website. (I saw one user over 13TB.) (Edit 12 January 2014 a.mn.: Never mind 13TB, according to http://www.wjunction.com/102-file-host-affiliate-discussion/178572-2.html#post1904094 this user http://chomikuj.pl/Hardy.Portier has over 705TB…) A lot of the data in the website I don't think is elsewhere. And it's not backed up, since they charge $$$ to download. Some files/folders are password protected.
+
+Looking at it, the way a file download for a 1mb or less file (free) happens, is an obfuscated POST request to http://chomikuj.pl/action/License/Download, which spits back JSON containing a download URL. That resulting download URL seems to remain static between "ChomikSession"s, which could possibly provide a convenient static URL associated with each file. The POST request, however, does change between sessions. (The URL for the download key request is 2/3 of the way through a line of the packed JQuery code…)
+
+One can run ch.UI.Download.dnFile('1959709470'); on any Chomikuj file page to try downloading the file (where 1959709470 is the file ID). If the file ID specified is freely downloadable it gives an error, if it's not it gives a purchase form (including, interestingly enough, the file size).
+
+Some users share larger files for free, presumably by having a premium account or something. The audio preview seems to provide full quality MP3s, regardless of size, although the value of that is probably limited, since most of the mp3s are probably pirated anyway. One can get all the mp3s by http://chomikuj.pl/Audio.ashx?id=1959709469&type=2&tp=mp3 where 1959709469 is the file ID. Unfortunately it doesn't work on PDFs.
+
+The price for a file download appears to be 3.69 zloty (incl. tax) for a file (about US$1.21, according to Google). A little steep for automatically grabbing the whole site. :(
+
+===== Some code from the website, grabbed 11 January 2014 (reformatted and compiled for easier searching) =====
+
+[[http://futuramerlin.com/files/chomi-11Jany2014.txt|Hyperlink to code (warning, large text file)]]

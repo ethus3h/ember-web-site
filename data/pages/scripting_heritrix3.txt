@@ -1,0 +1,7 @@
+Scripting Heritrix 3: See this web page:
+
+https://webarchive.jira.com/wiki/display/Heritrix/Heritrix+3.x+API+Guide#Heritrix3.xAPIGuide-API
+
+and this:
+
+http://builds.archive.org/javadoc/heritrix-3.x-snapshot/

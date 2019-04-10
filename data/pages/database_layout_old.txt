@@ -1,0 +1,381 @@
+Database (current version — hitherto undocumented mess; hasn’t been updated for the new ideas I’ve been pondering yet — I don’t really know how to do that anyway...) (OUTDATED!!):
+
+• authorisation_type 
+
+
+
+	authorisation_type_id (int) 
+
+	authorisation_type_name (text) 
+
+	authorisation_type_description (text)
+
+• character 
+
+	character_id (int) 
+
+	character_node_id (int) 
+
+	character_name (text) 
+
+	character_description (text) 
+
+	character_name_list (text): alternate names — CSV
+
+• data 
+
+
+
+	data_id (int) 
+
+	data_current_revision (int): current revision
+
+• data_revision 
+
+	data_revision_id (int): data revision id (also file name) 
+
+	data_revision_name (text): original file name 
+
+	data_revision_length (int): length of data 
+
+	data_revision_type (int): data format, corresponds to data_type
+
+
+
+	data_revision_node_id (int): nodeid 
+
+	data_revision_md5 (text): MD5 sum of data 
+
+	data_revision_data_id (int): id of data of which this is a revision; corresponds to data 
+
+	data_revision_node_edit_id (int): edit that created this data revision, relate to node_edit_index
+
+• data_type
+
+
+
+	data_type_id (int)
+
+
+
+	data_type_name (text)
+
+
+
+	data_type_node_id (int): node id; corresponds to node
+
+
+
+	data_type_display_fag (bool): display (I don’t remember what this is for...!!?)
+
+
+
+	data_type_display_type_id (int): display type; corresponds to dstp (I don’t remember what this is for either!)
+
+
+
+	data_type_description (text) • datetime
+
+
+
+	datetime_id (int)
+
+
+
+	datetime_string (string) • display_type (I don’t remember what this does either...)
+
+
+
+	display_type_id (int): display type id
+
+
+
+	display_type_description (text): description
+
+
+
+	display_type_name (text): name
+
+
+
+	display_type_part_count (text): number of times url must be displayed (1 or 2; is the number of necessary display strings minus 1)
+
+
+
+	display_type_part_1 (text): display string 1 
+
+	display_type_part_2 (text): display string 2 
+
+	display_type_part_3 (text): display string 3
+
+• edit_status 
+
+	edit_status_id (int) 
+
+	edit_status_name (text) 
+
+	edit_status_description (text)
+
+• field_type 
+
+	field_type_id (int) 
+
+	field_type_name (text) 
+
+	field_type_description (text)
+
+• interface 
+
+	interface_id (int) 
+
+	interface_name (text) 
+
+	interface_description (text) 
+
+	interface_content (text) 
+
+	interface_comment (text) 
+
+	interface_contentFRA (text)
+
+• locale 
+
+	locale_id (int)
+
+
+
+	locale_suffix (text) 
+
+	locale_name (text) 
+
+	locale_description (text) 
+
+	locale_comment (text) 
+
+	locale_iso_code (text)
+
+• metadata 
+
+	metadata_id (int) 
+
+	metadata_field_type_id (int) 
+
+	metadata_value (text) 
+
+	metadata_universe_status (bool) 
+
+	metadata_source (text) 
+
+	metadata_comment (text) 
+
+	metadata_personal_fag (bool)
+
+• node 
+
+	node_id (int) 
+
+	node_current_revision (int)
+
+• node_edit
+
+
+
+	node_edit_id (int): edit id
+
+
+
+	node_edit_user_id (int): user responsible for the edit; corresponds to user
+
+
+
+	node_edit_datetime_id (int): datetime of edit; corresponds to datetime)
+
+
+
+	node_edit_description (text): description
+
+
+
+	node_edit_source (text): citation data
+
+
+
+	node_edit_node_id (int): id of edited node; corresponds to node
+
+
+
+	node_edit_node_edit_index_id (int): id of revision created by this edit
+
+
+
+	node_edit_status (int): edit status, relate to edit_status
+
+
+
+	node_edit_edited_data_id (int): id of datum for edited node, if datum was edited
+
+
+
+	node_edit_edited_data_data_revision_id (int): id of datum revision for edited node, if datum was edited
+
+
+
+	node_edit_data_edited_fag (bool): was the node data edited? • node_edit_index
+
+
+
+	node_edit_index_id (int)
+
+
+
+	node_edit_index_edit_id (text) • node_revision
+
+
+
+	node_revision_id (int): node revision id 
+
+	node_revision_type (int): type id; corresponds to node_type 
+
+	node_revision_title (int): title 
+
+	node_revision_permissions (int): permissions string id, corresponds to permission 
+
+	node_revision_relationships (text): CSV of relevant ids; corresponds to relationship 
+
+	node_revision_source (int): citation data 
+
+	node_revision_sort_title (int): title to use for sorting 
+
+	node_revision_description (int): description
+
+
+
+	node_revision_disambiguation_description (int): disambiguation description 
+
+	node_revision_metadata (text): list of metadata values: csv. corresponds to metadata 
+
+	node_revision_comment (int): comment 
+
+	node_revision_short_description (text): short description 
+
+	node_revision_universe_status (bool): universe? 
+
+	node_revision_owner (int): owner, corresponds to user 
+
+	node_revision_copyright_fag (bool): copyright fag, owner only can view attached data 
+
+	node_revision_morality_fag (bool): morality fag— no users may view 
+
+	node_revision_personal_fag (bool): personal info fag, owners only 
+
+	node_revision_data_id (int): data id, corresponds to data 
+
+	node_revision_node_id (int): id of node of which this is a revision 
+
+	node_revision_minor_fag (bool): morality fag for minors 
+
+	node_revision_data_revision_id (int): ID of current revision of data file
+
+• node_type 
+
+	node_type_id (int) 
+
+	node_type_name (text) 
+
+	node_type_description (text)
+
+• operation 
+
+	operation_id (int) 
+
+	operation_name (text) 
+
+	operation_description (text) 
+
+	operation_permission_required (int): corresponds to authorisation_type
+
+• permission 
+
+	permission_id (int) 
+
+	permission_string (text)
+
+• relationship 
+
+	relationship_id (int): relationship id 
+
+	relationship_parent_node_id (int): parent node id 
+
+	relationship_target_node_id (int): target node id 
+
+	relationship_personal_fag (bool): personal info fag 
+
+	relationship_owner (int): owner; corresponds to user 
+
+	relationship_type (int): relationship type; corresponds to relationship_type 
+
+	relationship_source (text): citation data 
+
+	relationship_datetime_list (text): relationship time (csv, corresponds to datetime) 
+
+	relationship_comment (text): comment 
+
+	relationship_universe_status (bool): fictional universe only?
+
+• relationship_type 
+
+	relationship_type_id (int) 
+
+	relationship_type_label (text) 
+
+	relationship_type_description (text) 
+
+	relationship_type_reversed_id (int)
+
+• script 
+
+	script_id (int): script id 
+
+	script_node_id (int): node id for script, corresponds to node 
+
+	script_name (text): name 
+
+	script_character_list (text): csv list of characters; corresponds to character 
+
+	script_name_list (text): list of alternate script names as csv 
+
+	script_description (text): description
+
+• user
+
+
+
+	user_id (int): user id
+
+
+
+	user_registration_ip (text): user ip at registration
+
+
+
+	user_node_id (int): id of node representing user as person (private), corresponds to node
+
+
+
+	user_name (text): username
+
+
+
+	user_authorisation_type (int): authorisation level, relate to authorisation_type
+
+
+
+	user_password_md5 (text): md5sum of password
+
+
+
+	user_ip_list (text): csv list of ips used by user
+
+
+
+	user_node_edit_ids (text): list of ids of edits made by this user, corresponds to node_edit_index

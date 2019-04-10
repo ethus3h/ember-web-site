@@ -1,0 +1,22 @@
+<h1>Backup a Gmail account &mdash; Wreathe Documentation</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/ancillary/ready-to-use.htm">Software</a></span>
+    <span><a href="/ancillary/wreathe/">Wreathe</a></span>
+    <span><a href="/ancillary/wreathe/documentation/">Documentation</a></span>
+    <span><a href="/ancillary/wreathe/documentation/useful-notes/">Useful notes</a></span>
+</p>
+
+<p class="hatnote-emphasis-warning">This article applies to: Wreathe 7.2</p>
+
+<p class="hatnote-emphasis-warning">The advice to remove Python 2.7 reeks of being the wrong way to do it.</p>
+
+<p>Backup a Gmail account [example]@gmail.com (relevant, at least, to Wreathe 7r2):<br /><br />
+
+<pre><code>gmvault sync -c no -d /path/to/your/backups/folder/[example]/ [example]@gmail.com</code></pre></p>
+
+<p>If you get the error message:<br /><br />
+
+<pre><code>ImportError: No module named gmv.gmv_cmd</code></pre><br /><br />
+
+or something like that, try removing the Python 2.7 packages (leaving only Python 2.6 installed).</p>

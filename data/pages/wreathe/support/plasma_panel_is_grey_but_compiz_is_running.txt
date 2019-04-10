@@ -1,0 +1,11 @@
+
+===== Plasma panel is grey but Compiz is running =====
+
+==== Problem ====
+
+Plasma panel sometimes appears grey instead of transparent, even when Compiz is running
+(see unresolved bug http://futuramerlin.com/d/s/mantis/view.php?id=175 )
+
+==== Solution ====
+
+Clicking on the panel (or on grey bits of it?) fixes either some or all of the grey part(s). Click more than once as needed. It can be a little hard to click right on the grey parts when the grey part is small (e. g. when it's around the quicklaunch icons, IIRC); just try to hit it again.

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC1091
+source ember_bash_setup &> /dev/null
+# set -x
+
+mkdir -p specification/engineering-and-tech/information-technology/env
+rm -rf specification/engineering-and-tech/information-technology/env || sudo rm -rf specification/engineering-and-tech/information-technology/env
+mkdir -p specification/engineering-and-tech/information-technology/env
+cp -r ../ember-information-technology-environment/built/web specification/engineering-and-tech/information-technology/env
+chmod -R 777 specification/engineering-and-tech/information-technology/env || sudo chmod -R 777 specification/engineering-and-tech/information-technology/env
+cat futuramerlin-web-toolkit-output/people/elliot/music/futuramerlin-web-toolkit-discography.iaidentifiers >> "identifiers.lst" || true
+removeDuplicateLines 'identifiers.lst' | sponge 'identifiers.lst'

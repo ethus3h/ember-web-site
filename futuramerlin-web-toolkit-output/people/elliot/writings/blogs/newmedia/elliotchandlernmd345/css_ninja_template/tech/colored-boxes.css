@@ -1,0 +1,95 @@
+*, *::before, *::after {
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+#logo {
+	position: fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background-image: url('https://raw.githubusercontent.com/ethus3h/wreathe-backgrounds/master/Backgrounds/DSCN8100.JPG');
+	background-size: cover;
+}
+body {
+	overflow: hidden;
+}
+#main-container {
+	display: flex;
+	flex-direction: column;
+}
+#other-projects {
+	display: flex;
+	flex-direction: column-reverse;
+}
+#description-container > :nth-child(1)::before, #description-container > :nth-child(2)::before {
+	position: fixed;
+	color: white;
+	width: 50vw;
+	background-color: rgba(195,83,229,0.9);
+	height: 3rem;
+	font-size: 3rem;
+	opacity: 1;
+	text-align: center;
+	top: 0;
+	transition: all 0.2s ease-in-out;
+	border-right: 0.5rem solid rgba(65,105,225,0.9);
+}
+#description-container > :nth-child(1):hover::after {
+	right: 25vw;
+	filter: blur(0);
+	transition: all 0.2s ease-in-out, filter 1s ease-in-out;
+}
+@keyframes filterer {
+	0% {
+			filter: blur(0rem) hue-rotate(0deg);
+	}
+	100% {
+			filter: blur(0rem) hue-rotate(359deg);
+	}
+}
+#description-container > :nth-child(2):hover::after {
+	left: 25vw;
+	filter: blur(0) hue-rotate(90deg);
+	transition: all 0.2s ease-in-out, filter 1s ease-in-out;
+	animation: filterer 10s infinite;
+	background-image: linear-gradient(90deg,rgba(199,130,229,1) 0,rgba(199,130,229,1) 1%,rgba(162,130,229,0.9) 15%,rgba(129,145,226,0.78) 23%,rgba(129,134,226,0.66) 34%,rgba(142,129,226,0.44) 47%,rgba(130,152,229,0.34) 59%,rgba(0,150,255,0) 100%);
+}
+#description-container > :nth-child(2)::after {
+	left: 110vw;
+	right:unset;
+	background-color:rgba(255,0,255,0.8);
+	filter: blur(1rem) hue-rotate(0deg);
+	animation: unset;
+}
+#description-container > ::after {
+	columns: 3;
+	content: 'Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractavissent, ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. nam quibusdam, et iis quidem non admodum indoctis, totum hoc displicet philosophari. quidam autem non tam id reprehendunt, si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur. erunt etiam, et ii quidem eruditi Graecis litteris, contemnentes Latinas, qui se dicant in Graecis legendis operam malle consumere. postremo aliquos futuros suspicor, qui me ad alias litteras vocent, genus hoc scribendi, etsi sit elegans, personae tamen et dignitatis esse negent.';
+	filter: blur(1rem) hue-rotate(0deg);
+}
+#description-container > ::after {
+	color: white;
+	text-indent: 1rem;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	right: 110vw;
+	top: 20vh;
+	transition: all 1s ease-in-out, filter 1s ease-in-out;
+	height: 60vh;
+	width: 75vw;
+	padding: 1rem;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+#description-container > :nth-child(1):not(:hover)::before, #description-container > :nth-child(2):not(:hover)::before {
+	background-color: rgba(195,83,229,1);
+}
+#description-container > :nth-child(2)::before {
+	content: 'Filter';
+	left:50vw;
+}
+#description-container > :nth-child(1)::before {
+	content: 'Columns';
+}

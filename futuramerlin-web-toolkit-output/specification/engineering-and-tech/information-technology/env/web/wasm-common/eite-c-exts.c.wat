@@ -1,0 +1,37 @@
+(module
+  (type $t0 (func))
+  (type $t1 (func (result i32)))
+  (type $t2 (func (param i32) (result i32)))
+  (type $t3 (func (param i32 i32) (result i32)))
+  (func $__wasm_call_ctors (type $t0))
+  (func $die (type $t1) (result i32)
+    (local $l0 i32)
+    (i32.store offset=1024
+      (i32.const 0)
+      (i32.const 1))
+    (local.get $l0))
+  (func $checkForError (export "checkForError") (type $t1) (result i32)
+    (local $l0 i32)
+    (local.set $l0
+      (i32.load offset=1024
+        (i32.const 0)))
+    (i32.store offset=1024
+      (i32.const 0)
+      (i32.const 0))
+    (local.get $l0))
+  (func $fortytwo (export "fortytwo") (type $t2) (param $p0 i32) (result i32)
+    (i32.const 42))
+  (func $add (export "add") (type $t3) (param $p0 i32) (param $p1 i32) (result i32)
+    (i32.add
+      (local.get $p1)
+      (local.get $p0)))
+  (func $utf8enc (export "utf8enc") (type $t1) (result i32)
+    (i32.const 44))
+  (func $utf9enc (export "utf9enc") (type $t1) (result i32)
+    (i32.const 43))
+  (table $T0 1 1 anyfunc)
+  (memory $memory (export "memory") 2)
+  (global $g0 (mut i32) (i32.const 66576))
+  (global $__heap_base (export "__heap_base") i32 (i32.const 66576))
+  (global $__data_end (export "__data_end") i32 (i32.const 1028))
+  (data $d0 (i32.const 1024) "\00\00\00\00"))

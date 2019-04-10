@@ -1,0 +1,28 @@
+
+===== Can't uninstall gnustep-base-runtime without gdomap running =====
+
+==== Problem ====
+
+Can't uninstall gnustep-base-runtime without gdomap running.
+
+dpkg gives an error like this:
+<code>kyan@elegy:~$ sudo dpkg --purge --force-all gnustep-base-runtime
+(Reading database ... 366623 files and directories currently installed.)
+Removing gnustep-base-runtime ...
+Stopping GNUstep distributed object mapper: invoke-rc.d: initscript gdomap, action "stop" failed.
+dpkg: error processing gnustep-base-runtime (--purge):
+ subprocess installed pre-removal script returned error exit status 1
+Errors were encountered while processing:
+ gnustep-base-runtime
+kyan@elegy:~$</code>
+
+==== Solution ====
+(from http://www.linuxsir.org/bbs/thread372101.html)
+
+Run:
+  $ /etc/init.d/gdomap start
+  # aptitude remove gnustep-base-runtime
+--or--
+  $ /etc/init.d/gdomap start
+  # aptitude purge gnustep-base-runtime
+depending on which you want (first one removes the package, second one removes configuration files too)

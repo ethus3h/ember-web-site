@@ -1,0 +1,11 @@
+DCE interface: at core of [[Wreathe 8: Morning|Wreathe 8: Morning]]
+
+Aero snap / compiz work
+
+[[Quick look equivalent]]
+
+[[HTTP sync]]
+
+panel-based download manager in DCE interface
+
+Spotlight-style launcher tool/indexer.

@@ -1,0 +1,1 @@
+**HTTP sync**: be able to keep a local, up-to-date copy of a website w/o having to redownload each file every time (check modification times & such). (what I wanted for WG2 document registry) Part of the [[DCE interface]] project.

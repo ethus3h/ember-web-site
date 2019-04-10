@@ -1,0 +1,21 @@
+The **Futuramerlin.com Wiki** (reopened). See the page [[Futuramerlin.com Wiki]] for information on the two wikis. It uses DokuWiki as its engine.
+
+  * URL: http://futuramerlin.com/wiki/index.php
+  * Status: Dormant
+  * Edit mode: Read-only
+  * Engine: DokuWiki
+  * License: Public Domain
+  * Size: 17 pages (as of 15 January 2014)
+  * Statistics URL: http://futuramerlin.com/wiki/doku.php?do=index&id=start
+
+The **Futuramerlin.com Wiki**.
+
+Judging from the first revision of the start page, "Welcome to the Futuramerlin.com Wiki, reopened 27.11.2010.", this is a reincarnation of an earlier [[Futuramerlin.com Wiki]].
+
+A wiki created 27 November 2010. Removed from the website. Later (14 or 15 January 2014, if the creator recalls correctly) restored from a backup. Fixed (had a .htaccess problem with a directive <code>AddType x-mapp-php5 .php</code> needed for a previous webhost) / made available on 15 January 2014.
+
+This is not the main wiki currently used by Futuramerlin. That is the Futuramerlin [[Documentation (wiki)|Documentation]] wiki.
+
+On 15 January 2014, the wiki was made read-only (except for the admin) to preserve it in its historic state.
+
+This page contains content copied from http://wikiindex.org/index.php?title=Futuramerlin.com_Wiki_%28reopened%29&oldid=174823.

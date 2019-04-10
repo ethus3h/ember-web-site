@@ -1,0 +1,28 @@
+<h1>Mirror a website &mdash; Wreathe Documentation</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/ancillary/ready-to-use.htm">Software</a></span>
+    <span><a href="/ancillary/wreathe/">Wreathe</a></span>
+    <span><a href="/ancillary/wreathe/documentation/">Documentation</a></span>
+    <span><a href="/ancillary/wreathe/documentation/useful-notes/">Useful notes</a></span>
+</p>
+
+<p class="hatnote-emphasis-warning">This article applies to: Wreathe 7.3</p>
+
+<p class="hatnote-emphasis-warning">There have been a lot of innovations in this area since this article was written, and it may be out of date.</p>
+
+<h2>Grab a single Web page</h2>
+    <p><!-- FIXME -->Note that this requires <a href="https://github.com/ethus3h/wreathe-base/blob/master/etc/portage/patches/net-misc/wget/0001-Add-option-to-retry-on-host-errors.patch">a patch to</a> wget for the <code>--retry-on-host-error</code> option.</p>
+    <pre><code>( tempName="wget-$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -E -k -K --warc-file="$tempName" --retry-on-host-error --retry-on-http-error=429,500,502,503,504 -H [url] 2>&1 | tee -a "$tempName.log" )</code></pre>
+
+<h2>Mirror a website (without parent directories)</h2>
+    <pre><code>( tempName="wget-$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -E -k -K --no-parent --warc-file="$tempName" --retry-on-host-error --retry-on-http-error=429,500,502,503,504 --mirror -H -D [example.com] [url] 2>&1 | tee -a "$tempName.log" )</code></pre>
+
+    <h3>Omit other subdomains (including www. vs. non-www.)</h3>
+        <pre><code>( tempName="wget-$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -E -k -K --no-parent --warc-file="$tempName" --retry-on-host-error --retry-on-http-error=429,500,502,503,504 --mirror [url] 2>&1 | tee -a "$tempName.log" )</code></pre>
+
+<h2>If you don't want to keep the files as well as the WARCs</h2>
+    <pre><code>--delete-after</code></pre>
+
+<h2>Exclude some domains…</h2>
+    <pre><code>--exclude-domains example.com,example.org</code></pre>

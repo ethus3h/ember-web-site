@@ -1,0 +1,1 @@
+**FASL** is an initialism of [[Futuramerlin Active Scripting Library]].

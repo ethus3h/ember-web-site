@@ -1,0 +1,13 @@
+====== How to play "Flash" Internet content embedded in WWW pages ======
+
+To enable "Flash" playback:
+
+  * Open the Internet WWW viewer
+  * Click "Tools" in the top toolbar
+  * Hover over "Flash-Aid"
+  * Hover over "Quick Mode"
+  * Click "Install beta flash"
+  * Click "OK"
+  * Enter your password when prompted (if you haven't [[change the default password|changed it]], it is by default ''elen-esar'')
+  * Press 'Enter'
+  * Follow the instructions presented in the window into which you typed your password

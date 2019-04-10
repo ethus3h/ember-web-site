@@ -1,0 +1,3 @@
+The **DCE number format** is the proper method for representing numbers in [[DCE]].
+
+Its simplest format is to use the Western/Arabic numerals 0123456789 to represent numbers. The decimal point is represented internally in [[Weave]] by its CDCE equivalent @12@. For example, 3 and three quarters would be: 3@12@75

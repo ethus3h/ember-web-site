@@ -1,0 +1,68 @@
+====== Microsoft ======
+====== Office ======
+===== Office 1.0 =====
+===== Office 1.5 =====
+===== Office 1.6 =====
+===== Office 3.0 =====
+==== Office 92 ====
+===== Office 4.0 =====
+===== Office 4.3 =====
+===== Office for NT 4.2 =====
+===== Office 95 (7.0) =====
+===== Office 97 (8.0) =====
+===== Office 97 Powered by Word 98 (8.5) =====
+===== Office 2000 (9.0) =====
+==== Office 2000 Standard ====
+==== Office 2000 Personal ====
+==== Office 2000 Small Business ====
+==== Office 2000 Professional ====
+==== Office 2000 Premium ====
+=== Office 2000 Premium SR-1 ===
+http://www.ebay.com/itm/Microsoft-Office-2000-Premium-SR-1-with-PhotoDraw-2-/151532906876?pt=US_Office_Business_Software&hash=item234810a97c
+==== Office 2000 Developer ====
+  * Purchase $50 http://www.ebay.com/itm/Microsoft-Office-2000-Developer-Full-Version-/181623148817?pt=US_Office_Business_Software&hash=item2a49955111#viTabs_0
+=== Office 2000 Developer 1.5 ===
+http://www.amazon.com/Microsoft-Office-2000-Developer-Version/dp/B00004TFJ5
+==== Project 2000 ====
+==== MapPoint 2000 ====
+==== Vizact 2000 ====
+==== Visio 2000 ====
+  * Comparison of versions: http://support.microsoft.com/kb/277782/en-us ( [[https://web.archive.org/web/20141229061848/http://support.microsoft.com/kb/277782/en-us|Wayback]] | [[https://archive.org/download/V2kSp2/Version%20comparison.maff|MAFF]] )
+=== Standard ===
+=== Professional ===
+=== Technical ===
+== Technical SR-1 ==
+  * Purchase: $112 http://www.ebay.com/itm/Microsoft-Visio-2000-SR-1-SR1-Technical-Edition-Windows-2461-D88-00001-EZ-Return-/400769533623 ( [[https://web.archive.org/web/20141229062753/http://www.ebay.com/itm/Microsoft-Visio-2000-SR-1-SR1-Technical-Edition-Windows-2461-D88-00001-EZ-Return-/400769533623|Wayback]] )
+=== Enterprise ===
+=== Service Release 1 ===
+=== Service Pack 2 ===
+Still available from Microsoft's website as of 2014-12-28a29.
+
+  * Description from Microsoft's website http://support.microsoft.com/KB/830243 ( [[https://web.archive.org/web/20141229063248/http://support.microsoft.com/KB/830243|Wayback]] | [[https://archive.org/download/V2kSp2/Description.maff|MAFF]] )
+  * Download page http://www.microsoft.com/en-us/download/details.aspx?id=5375 ( [[https://web.archive.org/web/20141229063134/http://www.microsoft.com/en-us/download/details.aspx?id=5375|Wayback]] | [[https://archive.org/download/V2kSp2/Download%20page.maff|MAFF]] )
+  * [[https://archive.org/download/V2kSp2/Visio2000-KB830243-FullFile-ENU.exe|Visio2000-KB830243-FullFile-ENU.exe]]
+  * [[https://archive.org/download/V2kSp2/Visio2000-KB830243-FullFile-IE.exe|Visio2000-KB830243-FullFile-IE.exe]]
+
+==== Office 2000 Service Release 1 ====
+==== Office 2000 Service Pack 3 ====
+Available from Microsoft's website as of 2014dec28a29.
+  * Download page http://www.microsoft.com/en-us/download/details.aspx?id=14190
+
+==== Office 2000 MSDN ====
+===  Microsoft MSDN Library: Office 2000 Developer 3 disk set ===
+  * Purchase: $26 http://www.ebay.com/itm/Microsoft-MSDN-Library-Office-2000-Developer-3-disk-set-/321626724728?pt=US_Servers_Development_DBMS_Software&hash=item4ae2725978
+===== Office XP (10.0) =====
+===== Office 2003 (11.0) =====
+===== Office 2007 (12.0) =====
+===== Office 2010 (14.0) =====
+===== Office 2013 (15.0) =====
+==== Sharepoint Designer 2013 ====
+  * Download page (free): http://www.microsoft.com/en-us/download/details.aspx?id=35491
+====== Windows ======
+====== SharePoint ======
+For SharePoint Designer, see under Office.
+
+===== SharePoint 2013 =====
+==== SharePoint Foundation 2013 ====
+==== SharePoint Server Standard 2013 ====
+==== SharePoint Server Enterprise 2013 ====

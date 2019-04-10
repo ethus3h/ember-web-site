@@ -1,0 +1,24 @@
+**RSAS (Random Short AppleScripts) Incorporated!** is Eddie's AppleScripts website 
+
+URL: http://rsas260.tripod.com/
+
+Archive (WARC): https://archive.org/details/archiveteam_archivebot_go_019
+
+Note that [[:ref:Tripod (web hosting)|Tripod]] may be going down soon http://archive.fart.website/bin/irclogger_log/archiveteam?date=2014-12-02,Tue
+
+Contact email: [[tapd260@gmail.com]]
+
+===== Programs =====
+==== Useful ====
+  * [[:ref:RSAS:Notemate]]
+  * [[:ref:RSAS:Virtual Calculator]]
+
+==== Entertainment ====
+
+  * [[:ref:RSAS:Practical Jokes]]
+    * [[:ref:RSAS:"Error Report"]]
+    * [[:ref:RSAS:Blank Button]]
+    * [[:ref:RSAS:Evil Program]]
+  * [[:ref:RSAS:Virtual Magic Eight Ball]]
+  * [[:ref:RSAS:The Parrot Program]]
+  * [[:ref:RSAS:Uncle iMac's Sesame Street!]]

@@ -1,0 +1,7 @@
+**Wreathe 1: Frost** was the first version of [[:Wreathe]]. It was part of the [[:Frost]] release group.
+
+* Group: [[:Frost]]
+
+* Branch: [[:Wreathe 1.*]]
+
+Based on Lubuntu. Never released. One ISO made but promptly deleted.

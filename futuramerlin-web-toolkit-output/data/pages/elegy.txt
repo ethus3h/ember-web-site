@@ -1,0 +1,9 @@
+This is the **Elegy** release group:
+
+* [[Wreathe 7 alpha]]
+
+* [[Wreathe 7: Elegy|Wreathe 7: Elegy]] (cancelled)
+
+* [[Wreathe 7r2a]]
+
+* [[Wreathe 7 Elegy: R2 Evening Star|Wreathe 7 Elegy: R2 Evening Star]] (in development)
