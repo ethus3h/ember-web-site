@@ -256,13 +256,13 @@ async function internalSetup() {
     }
 
     // Fill out format settings arrays in case they aren't yet
-    let settingsCount=Object.keys(await listInputFormats()).length;
+    let settingsCount=Object.keys(await listFormats()).length;
     for (let settingsCounter=0; settingsCounter < settingsCount; settingsCounter++) {
         if (importSettings[settingsCounter] === undefined) {
             importSettings[settingsCounter] = '';
         }
     }
-    settingsCount=Object.keys(await listOutputFormats()).length;
+    settingsCount=Object.keys(await listFormats()).length;
     for (let settingsCounter=0; settingsCounter < settingsCount; settingsCounter++) {
         if (exportSettings[settingsCounter] === undefined) {
             exportSettings[settingsCounter] = '';
@@ -1468,26 +1468,6 @@ async function dcDataFilterByValueGreater(dataset, filterField, filterValue, des
     await assertIsStrArray(asReturn); return asReturn;
 }
 
-async function getImportSettingsArr() {
-    await assertIsStrArray(getWindowOrSelf().importSettings);
-
-    return getWindowOrSelf().importSettings;
-}
-
-async function getExportSettingsArr() {
-    await assertIsStrArray(getWindowOrSelf().exportSettings);
-
-    return getWindowOrSelf().exportSettings;
-}
-
-async function setImportSettings(formatId, strNewSettings) {
-    await assertIsStr(strNewSettings); getWindowOrSelf().importSettings[formatId]=strNewSettings;
-}
-
-async function setExportSettings(formatId, strNewSettings) {
-    await assertIsStr(strNewSettings); getWindowOrSelf().exportSettings[formatId]=strNewSettings;
-}
-
 // Based on https://web.archive.org/web/20190305073920/https://github.com/mathiasbynens/wtf-8/blob/58c6b976c6678144d180b2307bee5615457e2cc7/wtf-8.js
 // This code for wtf8 is included under the following license (from https://web.archive.org/web/20190305074047/https://github.com/mathiasbynens/wtf-8/blob/58c6b976c6678144d180b2307bee5615457e2cc7/LICENSE-MIT.txt):
 /*
@@ -1996,6 +1976,34 @@ async function internalRequestRenderDrawHTMLToDOM(htmlString) {
     htmlOutputRootElement.scrollTop = htmlOutputRootElement.scrollHeight;
 }
 
+async function getImportSettingsArr() {
+    await assertIsStrArray(getWindowOrSelf().importSettings);
+
+    return getWindowOrSelf().importSettings;
+}
+
+async function getExportSettingsArr() {
+    await assertIsStrArray(getWindowOrSelf().exportSettings);
+
+    return getWindowOrSelf().exportSettings;
+}
+
+async function setImportSettings(formatId, strNewSettings) {
+    await assertIsStr(strNewSettings);
+
+    await implDebug('State change for import settings for '+formatId+' to '+strNewSettings+'.', 1);
+
+    getWindowOrSelf().importSettings[formatId]=strNewSettings;
+}
+
+async function setExportSettings(formatId, strNewSettings) {
+    await assertIsStr(strNewSettings);
+
+    await implDebug('State change for export settings for '+formatId+' to '+strNewSettings+'.', 1);
+
+    getWindowOrSelf().exportSettings[formatId]=strNewSettings;
+}
+
 /* type-tools, provides:
     implIntBytearrayLength
 */
@@ -2490,11 +2498,11 @@ async function runTestsFormatSems(boolV) {
 
     await testing(boolV, 'formatSems');
     /* No trailing space, will fail in strict mode. */
-    //await runTest(boolV, await arrEq([ 1, 2 ], await dcaFromSems([ 49, 32, 50 ])));
+    await runTest(boolV, await arrEq([ 1, 2 ], await dcaFromSems([ 49, 32, 50 ])));
     /* Should fail but I don't have a way to test to ensure failure yet: runTest b/v arrEq ( 1 2 ) dcaFromSems ( 49 32 32 50 ) */
-    //await runTest(boolV, await arrEq([ 49, 32, 50, 32, 13, 10 ], await dcaToSems([ 1, 2 ])));
+    await runTest(boolV, await arrEq([ 49, 32, 50, 32, 13, 10 ], await dcaToSems([ 1, 2 ])));
     /* Comment preservation */
-    //await runTest(boolV, await arrEq([ 1, 2, 246, 50, 248 ], await dcaFromSems([ 49, 32, 50, 35, 65 ])));
+    await runTest(boolV, await arrEq([ 1, 2, 246, 50, 248 ], await dcaFromSems([ 49, 32, 50, 35, 65 ])));
     await runTest(boolV, await arrEq([ 49, 32, 50, 32, 35, 65, 13, 10 ], await dcaToSems([ 1, 2, 246, 50, 248 ])));
     /* UTF-8 comments */
     await runTest(boolV, await arrEq([ 256, 258, 260, 262, 264, 263, 57, 86, 93, 93, 96, 30, 18, 286, 72, 96, 99, 93, 85, 287, 19, 18, 284, 261, 259, 246, 18, 100, 82, 106, 18, 20, 57, 86, 93, 93, 96, 30, 18, 33, 72, 96, 99, 93, 85, 33, 19, 18, 281, 20, 248, 1, 2, 246, 18, 281, 248 ], await dcaFromSems([ 50, 53, 54, 32, 50, 53, 56, 32, 50, 54, 48, 32, 50, 54, 50, 32, 50, 54, 52, 32, 50, 54, 51, 32, 53, 55, 32, 56, 54, 32, 57, 51, 32, 57, 51, 32, 57, 54, 32, 51, 48, 32, 49, 56, 32, 50, 56, 54, 32, 55, 50, 32, 57, 54, 32, 57, 57, 32, 57, 51, 32, 56, 53, 32, 50, 56, 55, 32, 49, 57, 32, 49, 56, 32, 50, 56, 52, 32, 50, 54, 49, 32, 50, 53, 57, 32, 35, 32, 115, 97, 121, 32, 34, 72, 101, 108, 108, 111, 44, 32, 47, 87, 111, 114, 108, 100, 47, 33, 32, 226, 154, 189, 34, 10, 49, 32, 50, 32, 35, 32, 226, 154, 189, 10 ])));
@@ -2678,10 +2686,6 @@ async function dcaToUtf8(intArrayContent) {
     let intArrayRes = [];
     let intArrayToOutput = [];
     intArrayToOutput = intArrayContent;
-    let intL = 0;
-    intL = await count(intArrayToOutput);
-    let intC = 0;
-    intC = 0;
     let intArrayTemp = [];
     let intDcAtIndex = 0;
     let intArrayUnmappables = [];
@@ -2697,6 +2701,10 @@ async function dcaToUtf8(intArrayContent) {
     let boolDcBasenbFragmentEnabled = false;
     boolDcBasenbFragmentEnabled = await contains(strArrayVariantSettings, 'dcBasenbFragment');
     intArrayToOutput = await dcPreprocessForFormat(intArrayToOutput, 'utf8', 'out');
+    let intL = 0;
+    intL = await count(intArrayToOutput);
+    let intC = 0;
+    intC = 0;
     while (await le(intC, intL)) {
         /* Start by getting the character's UTF8 equivalent and putting it in an/temp. This might be empty, if the character can't be mapped to UTF8. */
         if (await implLt(intC, intL)) {
@@ -3737,6 +3745,7 @@ async function getPreferredCodeLanguageForFormat(strFormat, strDirection) {
 
     strReturn = strRes; await assertIsStr(strReturn); await internalDebugStackExit(); return strReturn;
 }
+/* setImportSettings/setExportSettings are platform implementation in environment */
 
 async function getImportSettings(intFormatId) {
     await internalDebugCollect('int FormatId = ' + intFormatId + '; '); await internalDebugStackEnter('getImportSettings:formats-settings'); await assertIsInt(intFormatId); let strReturn;
@@ -5322,7 +5331,7 @@ async function runTestsTypeConversion(boolV) {
     await internalDebugCollect('bool V = ' + boolV + '; '); await internalDebugStackEnter('runTestsTypeConversion:type-conversion-tests'); await assertIsBool(boolV);
 
     await testing(boolV, 'typeConversion');
-    /*await runTest(boolV, await arrEq([ 'a', 'b', 'c' ], await strSplit('a,b,c', ',')));
+    await runTest(boolV, await arrEq([ 'a', 'b', 'c' ], await strSplit('a,b,c', ',')));
     await runTest(boolV, await arrEq([ 'a', 'b', 'c' ], await strSplit('aabbabc', 'ab')));
     await runTest(boolV, await arrEq([ 'a', 'b', 'c', '' ], await strSplit('aabbabcab', 'ab')));
     await runTest(boolV, await arrEq([ '', 'c' ], await strSplit('abc', 'ab')));
@@ -5331,7 +5340,7 @@ async function runTestsTypeConversion(boolV) {
     await runTest(boolV, await arrEq([ '', 'a', '' ], await strSplit('abaab', 'ab')));
     await runTest(boolV, await arrEq([ '', 'a', '', '' ], await strSplit('abaabab', 'ab')));
     await runTest(boolV, await arrEq([ '', '', '' ], await strSplit('abab', 'ab')));
-    await runTest(boolV, await arrEq([ '', '' ], await strSplit('ab', 'ab')));*/
+    await runTest(boolV, await arrEq([ '', '' ], await strSplit('ab', 'ab')));
     await runTest(boolV, await arrEq([ '', '', '' ], await strSplit(await strJoin(await strSplit('abab', 'ab'), 'ab'), 'ab')));
 
     await internalDebugStackExit();
@@ -5746,19 +5755,19 @@ async function runTestsOnly(boolV) {
     /* This runs each component's test suite */
     /* General tests */
     /*runTestsBits b/v */
-    //await runTestsMath(boolV);
-    //await runTestsPack32(boolV);
-    //await runTestsTypeConversion(boolV);
-    //await runTestsWasm(boolV);
+   /* await runTestsMath(boolV);
+    await runTestsPack32(boolV);
+    await runTestsTypeConversion(boolV);
+    await runTestsWasm(boolV);*/
     /* Core tests */
-    //await runTestsDcData(boolV);
-    //await runTestsFormatDc(boolV);
+/*    await runTestsDcData(boolV);
+    await runTestsFormatDc(boolV);*/
     /* Format tests */
-    /*await runTestsFormatAscii(boolV);
+/*    await runTestsFormatAscii(boolV);
     await runTestsFormatAsciiSafeSubset(boolV);
     await runTestsFormatHtml(boolV);
-    await runTestsFormatHtmlFragment(boolV);*/
-    //await runTestsFormatIntegerList(boolV);
+    await runTestsFormatHtmlFragment(boolV);
+    await runTestsFormatIntegerList(boolV);*/
     await runTestsFormatSems(boolV);
     await runTestsFormatUtf8(boolV);
     /* Document exec tests */
