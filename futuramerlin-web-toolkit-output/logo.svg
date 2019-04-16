@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   sodipodi:docname="logo.svg">
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/Ember Library/Ember/ember-information-technology-environment/work-docs/publicity/logo.svg.png"
+   inkscape:export-xdpi="299.99976"
+   inkscape:export-ydpi="299.99976">
   <defs
      id="defs2">
     <clipPath
@@ -58,8 +61,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.625"
-     inkscape:cx="32.790821"
-     inkscape:cy="32.725759"
+     inkscape:cx="8.8571193"
+     inkscape:cy="30.957803"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -83,7 +86,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -127,7 +130,7 @@
        transform="matrix(1,0,0,-1,-4.2529298e-7,577.06664)"
        sodipodi:insensitive="true" />
     <path
-       style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#dee1c9;stroke-width:0.52916667;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="display:inline;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#1a1a1a;stroke-width:0.52916667;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 8.4666667,280.06665 c 0,0.52917 -0.5291665,4.7625 -2.1166666,6.35 C 4.7625,288.00415 0.52916667,288.53332 0,288.53332 c 0.52916667,0 4.7625001,0.52916 6.3500001,2.11666 1.5875,1.5875 2.1166666,5.82084 2.1166666,6.35 0,-0.52916 0.5291667,-4.7625 2.1166663,-6.35 1.5875,-1.5875 5.820834,-2.11666 6.35,-2.11666 -0.529166,0 -4.7625,-0.52917 -6.35,-2.11667 -1.5875005,-1.5875 -2.1166663,-5.82083 -2.1166663,-6.35 z"
        id="path4925"
        inkscape:connector-curvature="0"
