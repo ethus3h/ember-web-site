@@ -47,6 +47,7 @@
         <li>Type constraints are generally only enforced when values are returned or given as parameters (in which case they are checked by code automatically inserted into the routine called during transpilation). Thus, for instance, you can assign the wrong datatype to a variable without it showing an error, and it will only die when it gets returned or passed to another routine.</li>
         <li>Array literals can (probably) only be used with the <code>set</code> command. For other things, make a temp value, assign the array literal to it, and then use the temp value in its place.</li>
         <li>Whitespace requirements apply to lines where the entire line is a comment, too.</li>
+        <li>Comments have to be on their own lines.</li>
 	<li>What's wrong with this code? <pre><code>    while lt 8 len an/res
                 set an/res push [ 0 ] an/res
 	</code></pre> The array bracket type doesn't match the content type: [ is for strings, while ( is for numbers.</li>
