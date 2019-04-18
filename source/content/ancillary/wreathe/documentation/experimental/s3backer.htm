@@ -1,0 +1,22 @@
+<h1>Using s3backer &mdash; Wreathe Documentation</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/ancillary/ready-to-use.htm">Software</a></span>
+    <span><a href="/ancillary/wreathe/">Wreathe</a></span>
+    <span><a href="/ancillary/wreathe/documentation/">Documentation</a></span>
+    <span><a href="/ancillary/wreathe/documentation/experimental/">Documentation for experimental features</a></span>
+</p>
+
+<p class="hatnote-emphasis-warning">This is an experimental, unsupported feature.</p>
+
+<p class="hatnote-emphasis-warning">This article applies to: Wreathe 7.3</p>
+
+<h2>Mounting an s3backer storage unit</h2>
+
+    <p>Example:<br /><br />
+    <pre><code>s3backer --accessId=foo --accessKey=bar --baseURL=https://s3.us.example.org/ --blockCacheFile=/Wreathe/.Resources/WreatheCloudService/Example/LocalCache --blockSize=16M --compress=9 --blockCacheWriteDelay=40000 --blockCacheThreads=2 --listBlocks --maxRetryPause=600000 --timeout=600 --encrypt --password=example --prefix=example --size=128T --filename=StorageBlockDevice --debug --debug-http example-bucket-name /Wreathe/.Resources/WreatheCloudService/Example/dev/; losetup /dev/loop8 /Wreathe/.Resources/WreatheCloudService/Example/dev/StorageBlockDevice; mount -t ext4 /dev/loop8 /Wreathe/.Resources/WreatheCloudService/Example/mount/</code></pre></p>
+
+<h2>Checking the storage limits</h2>
+
+    <p>Example:<br /><br />
+    <pre><code>curl "http://s3.us.example.org/?check_limit=1&accesskey=example&bucket=example-bucket-name"</code></pre></p>

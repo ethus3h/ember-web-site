@@ -1,0 +1,24 @@
+<h1>fusermount: mount failed: Operation not permitted &mdash; Wreathe Documentation</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/ancillary/ready-to-use.htm">Software</a></span>
+    <span><a href="/ancillary/wreathe/">Wreathe</a></span>
+    <span><a href="/ancillary/wreathe/documentation/">Documentation</a></span>
+    <span><a href="/ancillary/wreathe/documentation/troubleshooting/">Troubleshooting</a></span>
+</p>
+
+<p class="hatnote-emphasis-warning">This article applies to: Wreathe 7.2</p>
+
+<h2>Problem</h2>
+
+    <p>When trying to mount using sshfs, an error is given:<br /><br />
+
+    <pre><code>fusermount: mount failed: Operation not permitted</code></pre></p>
+
+<h2>Solution</h2>
+
+    <p>Run:<br /><br />
+
+    <pre><code># chmod 4755 /usr/bin/fusermount</code></pre><br /><br />
+
+    (from: <a href="http://forums.debian.net/viewtopic.php?p=442891#p442891">http://forums.debian.net/viewtopic.php?p=442891#p442891</a>)</p>
