@@ -2503,12 +2503,11 @@ async function runTestsFormatSems(boolV) {
     await runTest(boolV, await arrEq([ 49, 32, 50, 32, 13, 10 ], await dcaToSems([ 1, 2 ])));
     /* Comment preservation */
     await runTest(boolV, await arrEq([ 1, 2, 246, 50, 248 ], await dcaFromSems([ 49, 32, 50, 35, 65 ])));
-    await runTest(boolV, await arrEq([ 49, 32, 50, 32, 35, 65, 13, 10 ], await dcaToSems([ 1, 2, 246, 50, 248 ])));
+    await runTest(boolV, await arrEq([ 49, 32, 50, 32, 35, 65, 13, 10 ], await dcaToSems([ 1, 2, 246, 50, 248 ])/* Currently doesn't output the 65 in the desired result (FIXME not implemented) */
     /* UTF-8 comments */
     await runTest(boolV, await arrEq([ 256, 258, 260, 262, 264, 263, 57, 86, 93, 93, 96, 30, 18, 286, 72, 96, 99, 93, 85, 287, 19, 18, 284, 261, 259, 246, 18, 100, 82, 106, 18, 20, 57, 86, 93, 93, 96, 30, 18, 33, 72, 96, 99, 93, 85, 33, 19, 18, 281, 20, 248, 1, 2, 246, 18, 281, 248 ], await dcaFromSems([ 50, 53, 54, 32, 50, 53, 56, 32, 50, 54, 48, 32, 50, 54, 50, 32, 50, 54, 52, 32, 50, 54, 51, 32, 53, 55, 32, 56, 54, 32, 57, 51, 32, 57, 51, 32, 57, 54, 32, 51, 48, 32, 49, 56, 32, 50, 56, 54, 32, 55, 50, 32, 57, 54, 32, 57, 57, 32, 57, 51, 32, 56, 53, 32, 50, 56, 55, 32, 49, 57, 32, 49, 56, 32, 50, 56, 52, 32, 50, 54, 49, 32, 50, 53, 57, 32, 35, 32, 115, 97, 121, 32, 34, 72, 101, 108, 108, 111, 44, 32, 47, 87, 111, 114, 108, 100, 47, 33, 32, 226, 154, 189, 34, 10, 49, 32, 50, 32, 35, 32, 226, 154, 189, 10 ])));
-
-    await internalDebugStackExit();
 }
+));
 
 async function dcaToHtml(intArrayDcIn) {
     await internalDebugCollect('intArray DcIn = ' + intArrayDcIn + '; '); await internalDebugStackEnter('dcaToHtml:format-html'); await assertIsIntArray(intArrayDcIn); let intArrayReturn;
@@ -5755,19 +5754,19 @@ async function runTestsOnly(boolV) {
     /* This runs each component's test suite */
     /* General tests */
     /*runTestsBits b/v */
-   /* await runTestsMath(boolV);
+    await runTestsMath(boolV);
     await runTestsPack32(boolV);
     await runTestsTypeConversion(boolV);
-    await runTestsWasm(boolV);*/
+    await runTestsWasm(boolV);
     /* Core tests */
-/*    await runTestsDcData(boolV);
-    await runTestsFormatDc(boolV);*/
+    await runTestsDcData(boolV);
+    await runTestsFormatDc(boolV);
     /* Format tests */
-/*    await runTestsFormatAscii(boolV);
+    await runTestsFormatAscii(boolV);
     await runTestsFormatAsciiSafeSubset(boolV);
     await runTestsFormatHtml(boolV);
     await runTestsFormatHtmlFragment(boolV);
-    await runTestsFormatIntegerList(boolV);*/
+    await runTestsFormatIntegerList(boolV);
     await runTestsFormatSems(boolV);
     await runTestsFormatUtf8(boolV);
     /* Document exec tests */
