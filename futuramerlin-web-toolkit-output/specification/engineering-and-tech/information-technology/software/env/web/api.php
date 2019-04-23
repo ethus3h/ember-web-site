@@ -3,6 +3,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 $mysqlUser="futuqiur_eite";
 $mysqlPassword="UNCONFIGURED";
+//from https://stackoverflow.com/questions/13640109/how-to-prevent-browser-cache-for-php-site
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 // from https://stackoverflow.com/questions/14467673/enable-cors-in-htaccess
 // Allow from any origin
 if (isset($_SERVER['HTTP_ORIGIN'])) {
@@ -62,7 +66,7 @@ $field = getParam('field');
 $value = getParam('value');
 $data = getParam('data');
 $sessionkey = getParam('sessionkey');
-
+$resultsArray=array();
 include('active.fracturedb.php');
 $database=new FractureDB('futuqiur_eite_'.$table, $mysqlUser, $mysqlPassword);
 $datetime=new DateTime();
@@ -72,9 +76,9 @@ if ($action==='getTable') {
     #print_r($resultsArray);
 } elseif ($action==='getSession') {
     $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', 'test', $timestamp, $timestamp + 1000, '']);
-    $resultsArray='test';
+    $resultsArray[]='test';
 } elseif ($action==='getRowByValue') {
-    $resultsArray=$database->getRow($table, $field, $value);
+    $resultsArray[]=$database->getRow($table, $field, $value);
 } elseif ($action==='insertNode') {
     // based on https://stackoverflow.com/questions/1939581/selecting-every-nth-item-from-an-array
     $fields=array();
@@ -89,7 +93,7 @@ if ($action==='getTable') {
             $values[] = $value;
         }
     }
-    $resultsArray=$database->addRow($table, $fields, $values);
+    $resultsArray[]=$database->addRow($table, $fields, $values);
 }
 echo json_encode ($resultsArray);
 ?>
