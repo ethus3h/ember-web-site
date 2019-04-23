@@ -1,0 +1,3 @@
+html > body::before, html > body::after {
+    content: unset;
+}
