@@ -448,12 +448,14 @@ class FractureDB
         $placeholders="";
         while($i<$n-1) {
             $placeholders=$placeholders.'?, ';
+            $i=$i+1;
         }
         $placeholders=$placeholders.'?';
-        $query    = $dbh->prepare('INSERT INTO ' . $table . ' (' . implode(',', $fields) . ') VALUES (' . $placeholders . ');';
+        $query    = $dbh->prepare('INSERT INTO ' . $table . ' (' . implode(',', $fields) . ') VALUES (' . $placeholders . ');');
         $i=0;
         while($i<$n) {
             $query->bindParam($i, $values[$i]);
+            $i=$i+1;
         }
         $stmt->execute();
         return $dbh->lastInsertId();
