@@ -41,46 +41,28 @@ function explode_escaped($delimiter, $string)
     }
     return $fixed;
 }
-if (isset($_GET['table'])) {
-    $table = $_GET['table'];
-} else {
-    $table = $_POST['table'];
+function getParam($name) {
+    if (isset($_GET[$name])) {
+        return $_GET[$name];
+    } else {
+        if (isset($_POST[$name])) {
+            return $_POST[$name];
+        }
+        else
+        {
+            return '';
+        }
+    }
 }
-if (isset($_GET['user'])) {
-    $user = $_GET['user'];
-} else {
-    $user = $_POST['user'];
-}
-if (isset($_GET['secretkey'])) {
-    $secretkey = $_GET['secretkey'];
-} else {
-    $secretkey = $_POST['secretkey'];
-}
-if (isset($_GET['action'])) {
-    $action = $_GET['action'];
-} else {
-    $action = $_POST['action'];
-}
-if (isset($_GET['field'])) {
-    $field = $_GET['field'];
-} else {
-    $field = $_POST['field'];
-}
-if (isset($_GET['value'])) {
-    $value = $_GET['value'];
-} else {
-    $value = $_POST['value'];
-}
-if (isset($_GET['data'])) {
-    $data = $_GET['data'];
-} else {
-    $data = $_POST['data'];
-}
-if (isset($_GET['sessionkey'])) {
-    $sessionkey = $_GET['sessionkey'];
-} else {
-    $sessionkey = $_POST['sessionkey'];
-}
+$table = getParam('table');
+$user = getParam('user');
+$secretkey = getParam('secretkey');
+$action = getParam('action');
+$field = getParam('field');
+$value = getParam('value');
+$data = getParam('data');
+$sessionkey = getParam('sessionkey');
+
 include('active.fracturedb.php');
 $database=new FractureDB('futuqiur_eite_'.$table, $mysqlUser, $mysqlPassword);
 $datetime=new DateTime();
