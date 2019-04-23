@@ -434,9 +434,16 @@ class FractureDB
 		//print_r($data);
 		return $data[0]['Column_name'];
     }
+    // ALL THE ADDROW THINGS ARE VULNERABLE TO SQL INJECTION FIXME
     function addRow($table, $fields, $values)
     {
         $query    = 'INSERT INTO ' . $table . ' (' . $fields . ') VALUES (' . $values . ');';
+        $newRowId = $this->queryInsert($query);
+        return $newRowId;
+    }
+    function addRowFromArrays($table, $fields, $values)
+    {
+        $query    = 'INSERT INTO ' . $table . ' (' . implode(',', $fields) . ') VALUES (' . implode(',', $values) . ');';
         $newRowId = $this->queryInsert($query);
         return $newRowId;
     }
