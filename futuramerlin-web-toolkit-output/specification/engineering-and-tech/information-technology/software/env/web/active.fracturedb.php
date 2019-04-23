@@ -455,7 +455,7 @@ class FractureDB
         $query    = $dbh->prepare('INSERT INTO ' . $table . ' (' . implode(',', $fields) . ') VALUES (' . $placeholders . ');');
         $i=0;
         while($i<$n) {
-            $query->bindParam($i, $values[$i]);
+            $query->bindParam($i+1, $values[$i]);
             $i=$i+1;
         }
         $stmt->execute();
