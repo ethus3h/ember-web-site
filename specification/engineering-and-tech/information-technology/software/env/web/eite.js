@@ -104,7 +104,7 @@ async function storageSetup(kvStorageCfgParam) {
     // Provider: MySQL
     temp=await kvGetValue(kvStorageCfg, 'mysqlApi')
     if (''===temp) {
-        kvStorageCfg=await kvSetValue(kvStorageCfg, 'mysqlApi', 'http://futuramerlin.com/specification/engineering-and-technology/information-technology/software/env/web/api.php');
+        kvStorageCfg=await kvSetValue(kvStorageCfg, 'mysqlApi', 'http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/env/web/api.php');
     }
     temp=await kvGetValue(kvStorageCfg, 'mysqlUser')
     if (''===temp) {
