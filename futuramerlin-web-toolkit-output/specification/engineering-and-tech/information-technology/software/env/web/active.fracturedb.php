@@ -255,7 +255,7 @@ class FractureDB
     {
         $query    = 'SELECT * FROM ' . $table . ' WHERE ' . $field . ' = \'' . $value . '\';';
         $rowData  = $this->query($query);
-        print_r($rowData);
+        //print_r($rowData);
         if(isset($rowData[0])) {
         	$rowDataP = $rowData[0];
         }
