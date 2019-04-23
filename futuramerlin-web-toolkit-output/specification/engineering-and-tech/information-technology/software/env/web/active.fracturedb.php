@@ -443,9 +443,20 @@ class FractureDB
     }
     function addRowFromArrays($table, $fields, $values)
     {
-        $query    = 'INSERT INTO ' . $table . ' (' . implode(',', $fields) . ') VALUES (' . implode(',', $values) . ');';
-        $newRowId = $this->queryInsert($query);
-        return $newRowId;
+        $i=0;
+        $n=count($values);
+        $placeholders="";
+        while($i<$n-1) {
+            $placeholders=$placeholders.'?, ';
+        }
+        $placeholders=$placeholders.'?';
+        $query    = $dbh->prepare('INSERT INTO ' . $table . ' (' . implode(',', $fields) . ') VALUES (' . $placeholders . ');';
+        $i=0;
+        while($i<$n) {
+            $query->bindParam($i, $values[$i]);
+        }
+        $stmt->execute();
+        return $dbh->lastInsertId();
     }
     function addRowFuzzy($table, $fields, $values)
     {
