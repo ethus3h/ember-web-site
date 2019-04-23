@@ -458,7 +458,7 @@ class FractureDB
             $query->bindParam($i+1, $values[$i]);
             $i=$i+1;
         }
-        $stmt->execute();
+        $query->execute();
         return $dbh->lastInsertId();
     }
     function addRowFuzzy($table, $fields, $values)
