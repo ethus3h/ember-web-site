@@ -14,6 +14,8 @@ window.onload = async function() {
     async function listRows() {
         alert(await internalStorageGetTable('node'));
     }
+    attachFn('addRow', addRow);
+    attachFn('listRows', listRows);
 };
 
 // @license-end
