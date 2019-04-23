@@ -84,7 +84,9 @@ if ($action==='getTable') {
     $fields=array();
     $values=array();
     $i=0;
+    echo($data);
     $rowData=explode_escaped($data, ',');
+    print_r($rowData);
     foreach($rowData as $value) {
         if ($i++ % 2 == 0) {
             $fields[] = $value;
