@@ -83,12 +83,13 @@ if (isset($_GET['sessionkey'])) {
 }
 include('active.fracturedb.php');
 $database=new FractureDB('futuqiur_eite_'.$table, $mysqlUser, $mysqlPassword);
-
+$datetime=new DateTime();
+$timestamp=$datetime->getTimestamp();
 if ($action==='getTable') {
     $resultsArray=$database->getTable($table);
     #print_r($resultsArray);
 } elseif ($action==='getSession') {
-    $database->addRow('idxSession', ['id', 'sessionKey', 'created', 'expires', 'events'], ['NULL', 'test', new DateTime()->getTimestamp(), new DateTime()->getTimestamp() + 1000, 'NULL']);
+    $database->addRow('idxSession', ['id', 'sessionKey', 'created', 'expires', 'events'], ['NULL', 'test', $timestamp, $timestamp + 1000, 'NULL']);
     $resultsArray='test';
 } elseif ($action==='getRowByValue') {
     $resultsArray=$database->getRow($table, $field, $value);
