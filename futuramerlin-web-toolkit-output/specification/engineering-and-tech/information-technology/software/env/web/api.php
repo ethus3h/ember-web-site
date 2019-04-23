@@ -93,7 +93,7 @@ if ($action==='getTable') {
             $values[] = $value;
         }
     }
-    $resultsArray=$database->addRow($table, $fields, $values);
+    $resultsArray=$database->addRowFromArrays($table, $fields, $values);
 }
 echo json_encode ($resultsArray);
 ?>
