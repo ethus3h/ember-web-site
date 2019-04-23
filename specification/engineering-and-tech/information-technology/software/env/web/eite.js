@@ -89,6 +89,9 @@ async function internalRunDocument(execId) {
 
 async function storageSetup(kvStorageCfgParam) {
     kvStorageCfg=kvStorageCfgParam;
+    if (typeof kvStorageCfg === 'undefined') {
+        kvStorageCfg=[];
+    }
     let temp;
     // Later, use OrbitDB. Currently they don't support granting write access after a database has been created, which makes it unusable for this.
     /* ipfsNode = new IPFS();
@@ -113,13 +116,14 @@ async function storageSetup(kvStorageCfgParam) {
         kvStorageCfg=await kvSetValue(kvStorageCfg
         , 'mysqlSecretKey', 'UNCONFIGURED');
     }
+    await setStorageSettings(kvStorageCfg);
     temp=await kvGetValue(kvStorageCfg, 'mysqlSession')
     if (''===temp) {
         kvStorageCfg=await kvSetValue(kvStorageCfg
-        , 'mysqlSession', await internalStorageMysqlApiRequest('action=getSession&user='+await kvGetValue(strArrayStorageCfg, 'mysqlUser')+'&secretkey='+await kvGetValue(strArrayStorageCfg, 'mysqlSecretKey')));
+        , 'mysqlSession', await internalStorageMysqlApiRequest('action=getSession&user='+await kvGetValue(await getStorageSettings(), 'mysqlUser')+'&secretkey='+await kvGetValue(await getStorageSettings(), 'mysqlSecretKey')));
     }
     // Done, so now set the global value to the prepared configuration key-value pairs
-    strArrayStorageCfg=kvStorageCfg;
+    await setStorageSettings(kvStorageCfg);
 }
 
 async function storageSave(data) {
@@ -155,7 +159,7 @@ async function storageGetLastNodeID() {
 }
 
 async function internalStorageMysqlApiRequest(queryString) {
-    let url=await kvGetValue(strArrayStorageCfg, 'mysqlApi')+'?'+queryString;
+    let url=await kvGetValue(await getStorageSettings(), 'mysqlApi')+'?'+queryString;
     let response = await new Promise(resolve => {
     var oReq = new XMLHttpRequest();
     oReq.open('GET', url, true);
@@ -173,13 +177,14 @@ async function internalStorageMysqlApiRequest(queryString) {
 
 async function internalStorageGetTable(tableName) {
     // For testing; will be removed eventually
-    let qs='action=getTable&session='+await kvGetValue(strArrayStorageCfg, 'mysqlSession')+'&table='+tableName;
-    return internalStorageMysqlApiRequest(qs);
+    let qs='action=getTable&session='+await kvGetValue(await getStorageSettings(), 'mysqlSession')+'&table='+tableName;
+    return await internalStorageMysqlApiRequest(qs);
 }
 
 // Preferences (most preferences should be implemented in EITE itself rather than this implementation of its data format)
 
 var STAGEL_DEBUG;
+var EITE_STORAGE_CFG;
 var importSettings;
 var exportSettings;
 var envPreferredFormat;
@@ -2067,7 +2072,11 @@ async function setExportSettings(formatId, strNewSettings) {
 
 async function setStorageSettings(strArrayNewSettings) {
     await assertIsStrArray(strArrayNewSettings);
-    strArrayStorageCfg=strArrayNewSettings;
+    getWindowOrSelf().strArrayStorageCfg=strArrayNewSettings;
+}
+
+async function getStorageSettings(strArrayNewSettings) {
+    return getWindowOrSelf().strArrayStorageCfg;
 }
 
 /* type-tools, provides:
@@ -6616,11 +6625,11 @@ async function kvSetValue(strArrayData, strKey, strVal) {
                 boolContinue = false;
             }
             else {
-                if (await implNot(await implLt(intC, intL))) {
+                if (await implNot(await implLt(intC, await dec(intL)))) {
                     boolContinue = false;
                 }
                 if (await implEq(0, await implMod(intC, 2))) {
-                    if (await implEq(strKey, await get(strArrayRes, intC))) {
+                    if (await implEq(strKey, await get(strArrayData, intC))) {
                         boolFound = true;
                     }
                 }
