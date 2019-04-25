@@ -110,6 +110,7 @@ else {
     } else {
         $sessionIsValid=false;
         $sessionData=$database->getRow('idxSession', "sessionKey", $sessionkey);
+        echo $sessionkey;
         if ($sessionData != null) {
         print_r($sessionData);
             $sessionExpires=$sessionData["expires"];
