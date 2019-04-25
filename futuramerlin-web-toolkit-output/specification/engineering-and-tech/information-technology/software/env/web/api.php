@@ -93,15 +93,22 @@ function validateSession() {
     }
     return false;
 }
+function eiteHashSecret($secretkey) {
+    return password_hash($secretkey, PASSWORD_DEFAULT);
+}
 if ($action==='getSession') {
-    $userData=$database->getRow($table, publicId, $user);
-    if($userData["hashedSecretKey"]===password_hash($secretkey)) {
-        $newSession=uuidgen();
-        $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 1000, '']);
-        $resultsArray=$newSession;
+    $userData=$database->getRow($table, "publicId", $user);
+    if ($userData != null) {
+        if(password_verify($secretkey, $userData["hashedSecretKey"])) {
+            $newSession=uuidgen();
+            $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 1000, '']);
+            $resultsArray=$newSession;
+        }
+    } else {
+        $resultsArray="ERROR: Unknown user. c5e74673-32dd-408a-be6e-165361256fba";
     }
 } elseif ($action==='hashSecret') {
-    $resultsArray=password_hash($secretkey);
+    $resultsArray=eiteHashSecret($secretkey);
 } elseif (validateSession()) {
     if ($action==='getTable') {
         $resultsArray=$database->getTable($table);
@@ -125,6 +132,9 @@ if ($action==='getSession') {
             }
         }
         $resultsArray=$database->addRowFromArrays($table, $fields, $values);
+    }
+    else {
+        $resultsArray="ERROR: Unknown action. 29a80dff-cbf7-4183-a645-4b6af5a50bdf";
     }
 } else {
     http_response_code(403);
