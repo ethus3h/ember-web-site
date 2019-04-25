@@ -96,64 +96,59 @@ function validateSession() {
 function eiteHashSecret($secretkey) {
     return password_hash($secretkey, PASSWORD_DEFAULT);
 }
-if ($action==='getSession') {
-    $userData=$database->getRow($table, "publicId", $user);
-    if ($userData != null) {
-        //print_r($userData);
-        //echo $secretkey;
-        if(password_verify($secretkey, $userData["hashedSecretKey"])) {
-            $newSession=uuidgen();
-            $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 1000, '']);
-            $resultsArray=$newSession;
+if ($action==='hashSecret') {
+    echo eiteHashSecret($secretkey);
+}
+else {
+    if ($action==='getSession') {
+        $userData=$database->getRow($table, "publicId", $user);
+        if ($userData != null) {
+            //print_r($userData);
+            //echo $secretkey;
+            if(password_verify($secretkey, $userData["hashedSecretKey"])) {
+                $newSession=uuidgen();
+                $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 1000, '']);
+                $resultsArray=$newSession;
+            } else {
+                http_response_code(403);
+                $resultsArray="ERROR: Could not verify secret key. 2d9e733b-58d1-43bd-b306-bbd46570381e";
+            }
         } else {
             http_response_code(403);
-            $resultsArray="ERROR: Could not verify secret key. 2d9e733b-58d1-43bd-b306-bbd46570381e";
+            $resultsArray="ERROR: Unknown user. c5e74673-32dd-408a-be6e-165361256fba";
+        }
+    } elseif (validateSession()) {
+        if ($action==='getTable') {
+            $resultsArray=$database->getTable($table);
+            #print_r($resultsArray);
+        } elseif ($action==='getRowByValue') {
+            $resultsArray=$database->getRow($table, $field, $value);
+        } elseif ($action==='insertNode') {
+            // based on https://stackoverflow.com/questions/1939581/selecting-every-nth-item-from-an-array
+            $fields=array();
+            $values=array();
+            $i=0;
+            //echo($data);
+            $rowData=explode_escaped(",", $data);
+            //print_r($rowData);
+            foreach($rowData as $value) {
+                if ($i++ % 2 == 0) {
+                    $fields[] = $value;
+                }
+                else {
+                    $values[] = $value;
+                }
+            }
+            $resultsArray=$database->addRowFromArrays($table, $fields, $values);
+        }
+        else {
+            http_response_code(400);
+            $resultsArray="ERROR: Unknown action. 29a80dff-cbf7-4183-a645-4b6af5a50bdf";
         }
     } else {
         http_response_code(403);
-        $resultsArray="ERROR: Unknown user. c5e74673-32dd-408a-be6e-165361256fba";
+        $resultsArray="ERROR: Session key invalid or expired. 4bb92b44-4e05-452b-bc1c-00156290a2bb"; // UUID for identifying error unambiguously
     }
-} elseif ($action==='hashSecret') {
-$res=eiteHashSecret($secretkey);
-    if(password_verify('UNCONFIRM', eiteHashSecret('UNCONFIRM'))) {
-        echo "BLAHABLAHBLAH".$res.'BLAHBLAHBLAH';
-    }
-    if(password_verify($secretkey, $res)) {
-    echo "WORKED";
-    }
-    $resultsArray=$res;
-//    $resultsArray=eiteHashSecret($secretkey);
-} elseif (validateSession()) {
-    if ($action==='getTable') {
-        $resultsArray=$database->getTable($table);
-        #print_r($resultsArray);
-    } elseif ($action==='getRowByValue') {
-        $resultsArray=$database->getRow($table, $field, $value);
-    } elseif ($action==='insertNode') {
-        // based on https://stackoverflow.com/questions/1939581/selecting-every-nth-item-from-an-array
-        $fields=array();
-        $values=array();
-        $i=0;
-        //echo($data);
-        $rowData=explode_escaped(",", $data);
-        //print_r($rowData);
-        foreach($rowData as $value) {
-            if ($i++ % 2 == 0) {
-                $fields[] = $value;
-            }
-            else {
-                $values[] = $value;
-            }
-        }
-        $resultsArray=$database->addRowFromArrays($table, $fields, $values);
-    }
-    else {
-        http_response_code(400);
-        $resultsArray="ERROR: Unknown action. 29a80dff-cbf7-4183-a645-4b6af5a50bdf";
-    }
-} else {
-    http_response_code(403);
-    $resultsArray="ERROR: Session key invalid or expired. 4bb92b44-4e05-452b-bc1c-00156290a2bb"; // UUID for identifying error unambiguously
+    echo json_encode ($resultsArray);
 }
-echo json_encode ($resultsArray);
 ?>
