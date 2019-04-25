@@ -97,7 +97,7 @@ else {
             //echo $secretkey;
             if(password_verify($secretkey, $userData["hashedSecretKey"])) {
                 $newSession=uuidgen();
-                $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 1000, '']);
+                $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 48*60*60, '']);
                 $resultsArray=$newSession;
             } else {
                 http_response_code(403);
