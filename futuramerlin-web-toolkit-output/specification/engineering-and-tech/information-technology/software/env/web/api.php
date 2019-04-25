@@ -101,9 +101,6 @@ if ($action==='getSession') {
     if ($userData != null) {
         //print_r($userData);
         //echo $secretkey;
-        if(password_verify('UNCONFIRM', eiteHashSecret('UNCONFIRM'))) {
-        echo "BLAHABLAHBLAH";
-        }
         if(password_verify($secretkey, $userData["hashedSecretKey"])) {
             $newSession=uuidgen();
             $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 1000, '']);
@@ -117,7 +114,15 @@ if ($action==='getSession') {
         $resultsArray="ERROR: Unknown user. c5e74673-32dd-408a-be6e-165361256fba";
     }
 } elseif ($action==='hashSecret') {
-    $resultsArray=eiteHashSecret($secretkey);
+$res=eiteHashSecret($secretkey);
+    if(password_verify('UNCONFIRM', eiteHashSecret('UNCONFIRM'))) {
+        echo "BLAHABLAHBLAH".$res.'BLAHBLAHBLAH';
+    }
+    if(password_verify($secretkey, $res)) {
+    echo "WORKED";
+    }
+    $resultsArray=$res;
+//    $resultsArray=eiteHashSecret($secretkey);
 } elseif (validateSession()) {
     if ($action==='getTable') {
         $resultsArray=$database->getTable($table);
