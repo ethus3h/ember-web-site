@@ -434,35 +434,29 @@ class FractureDB
 		//print_r($data);
 		return $data[0]['Column_name'];
     }
-    function addRow($table, $fields, $values)
+    function addRowFromArrays($table, $fields, $values, $print="false")
     {
-        $query    = 'INSERT INTO ' . $table . ' (' . $fields . ') VALUES (' . $values . ');';
-        $newRowId = $this->queryInsert($query);
-        return $newRowId;
-    }
-    function addRowFuzzy($table, $fields, $values)
-    {
-        $query = 'INSERT INTO ' . $table . ' (' . $fields . ') VALUES (' . $values . ');';
-        #$query    = 'INSERT INTO ' . $table . ' (' . $fields . ') VALUES (' . $values . ');';
-        #echo '<br><br><font color="red">EXECUTING addRowfuzzy QUERY: ' . $query . '</font><br><br>';
-        try {
-            $newRowId = $this->queryInsert($query);
+        if($print=="true"){
+            print_r($fields);
+            print_r($values);
         }
-        catch (PDOException $e) {
-            #condition from http://stackoverflow.com/questions/4366730/how-to-check-if-a-string-contains-specific-words
-            if (strpos($e->getMessage, 'Duplicate entry') !== False) {
-                #Do nothing; this is a normal condition
-            }
-            
-            else {
-                #Something went wrong
-                # from http://www.php.net/manual/en/class.pdoexception.php#95812
-                throw new Exception($e->getMessage(), $e->getCode());
-                #from http://stackoverflow.com/questions/15887070/php-trigger-fatal-error
-                trigger_error("Fatal error inserting URL", E_USER_ERROR);
-            }
+        $dbh      = $this->db;
+        $i=0;
+        $n=count($values);
+        $placeholders="";
+        while($i<$n-1) {
+            $placeholders=$placeholders.'?, ';
+            $i=$i+1;
         }
-        return $newRowId;
+        $placeholders=$placeholders.'?';
+        $query    = $dbh->prepare('INSERT INTO ' . $table . ' (' . implode(',', $fields) . ') VALUES (' . $placeholders . ');');
+        $i=0;
+        while($i<$n) {
+            $query->bindParam($i+1, $values[$i]);
+            $i=$i+1;
+        }
+        $query->execute();
+        return $dbh->lastInsertId();
     }
     function updateColumn($table, $field, $value, $filterField = 'id', $filterValue = '')
     {

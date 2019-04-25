@@ -1,14 +1,17 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-$mysqlUser="futuqiur_eite";
-$mysqlPassword="UNCONFIGURED";
+include('config.php');
+//from https://stackoverflow.com/questions/13640109/how-to-prevent-browser-cache-for-php-site
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 // from https://stackoverflow.com/questions/14467673/enable-cors-in-htaccess
 // Allow from any origin
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     // should do a check here to match $_SERVER['HTTP_ORIGIN'] to a
     // whitelist of safe domains
-    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+    header("Access-Control-Allow-Origin: *");
     header('Access-Control-Allow-Credentials: true');
     header('Access-Control-Max-Age: 86400');    // cache for 1 day
 }
@@ -21,6 +24,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
         header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
 
+}
+// from https://stackoverflow.com/questions/2040240/php-function-to-generate-v4-uuid
+function guidv4($data)
+{
+    assert(strlen($data) == 16);
+
+    $data[6] = chr(ord($data[6]) & 0x0f | 0x40); // set version to 0100
+    $data[8] = chr(ord($data[8]) & 0x3f | 0x80); // set bits 6-7 to 10
+
+    return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
+}
+function uuidgen() {
+    return guidv4(random_bytes(16));
 }
 function explode_escaped($delimiter, $string)
 {
@@ -41,72 +57,100 @@ function explode_escaped($delimiter, $string)
     }
     return $fixed;
 }
-if (isset($_GET['table'])) {
-    $table = $_GET['table'];
-} else {
-    $table = $_POST['table'];
-}
-if (isset($_GET['user'])) {
-    $user = $_GET['user'];
-} else {
-    $user = $_POST['user'];
-}
-if (isset($_GET['secretkey'])) {
-    $secretkey = $_GET['secretkey'];
-} else {
-    $secretkey = $_POST['secretkey'];
-}
-if (isset($_GET['action'])) {
-    $action = $_GET['action'];
-} else {
-    $action = $_POST['action'];
-}
-if (isset($_GET['field'])) {
-    $field = $_GET['field'];
-} else {
-    $field = $_POST['field'];
-}
-if (isset($_GET['value'])) {
-    $value = $_GET['value'];
-} else {
-    $value = $_POST['value'];
-}
-if (isset($_GET['data'])) {
-    $data = $_GET['data'];
-} else {
-    $data = $_POST['data'];
-}
-if (isset($_GET['sessionkey'])) {
-    $sessionkey = $_GET['sessionkey'];
-} else {
-    $sessionkey = $_POST['sessionkey'];
-}
-include('active.fracturedb.php');
-$database=new FractureDB('futuqiur_eite_'.$table, $mysqlUser, $mysqlPassword);
-
-if ($action==='getTable') {
-    $resultsArray=$database->getTable($table);
-    #print_r($resultsArray);
-} elseif ($action==='getSession') {
-    $database->addRow('idxSession', ['id', 'sessionKey', 'created', 'expires', 'events'], ['NULL', 'test', new DateTime()->getTimestamp(), new DateTime()->getTimestamp() + 1000, 'NULL']);
-    $resultsArray='test';
-} elseif ($action==='getRowByValue') {
-    $resultsArray=$database->getRow($table, $field, $value);
-} elseif ($action==='insertNode') {
-    // based on https://stackoverflow.com/questions/1939581/selecting-every-nth-item-from-an-array
-    $fields=array();
-    $values=array();
-    $i=0;
-    $rowData=explode_escaped($data);
-    foreach($rowData as $value) {
-        if ($i++ % 2 == 0) {
-            $fields[] = $value;
+function getParam($name) {
+    if (isset($_GET[$name])) {
+        return $_GET[$name];
+    } else {
+        if (isset($_POST[$name])) {
+            return $_POST[$name];
         }
-        else {
-            $values[] = $value;
+        else
+        {
+            return '';
         }
     }
-    $resultsArray=$database->addRow($table, $fields, $values);
 }
-echo json_encode ($resultsArray);
+$table = getParam('table');
+$user = getParam('user');
+$secretkey = getParam('secretkey');
+$action = getParam('action');
+$field = getParam('field');
+$value = getParam('value');
+$data = getParam('data');
+$sessionkey = getParam('session');
+$resultsArray=array();
+include('active.fracturedb.php');
+$database=new FractureDB($mysqlTablePrefix.'eite_node', $mysqlUser, $mysqlPassword, $mysqlServer);
+$datetime=new DateTime();
+$timestamp=$datetime->getTimestamp();
+function eiteHashSecret($secretkey) {
+    return password_hash($secretkey, PASSWORD_DEFAULT);
+}
+if ($action==='hashSecret') {
+    echo eiteHashSecret($secretkey);
+}
+else {
+    if ($action==='getSession') {
+        $userData=$database->getRow($table, "publicId", $user);
+        if ($userData != null) {
+            //print_r($userData);
+            //echo $secretkey;
+            if(password_verify($secretkey, $userData["hashedSecretKey"])) {
+                $newSession=uuidgen();
+                $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 48*60*60, '']);
+                $resultsArray=$newSession;
+            } else {
+                http_response_code(403);
+                $resultsArray="ERROR: Could not verify secret key. 2d9e733b-58d1-43bd-b306-bbd46570381e";
+            }
+        } else {
+            http_response_code(403);
+            $resultsArray="ERROR: Unknown user. c5e74673-32dd-408a-be6e-165361256fba";
+        }
+    } else {
+        $sessionIsValid=false;
+        $sessionData=$database->getRow('idxSession', "sessionKey", $sessionkey);
+        //echo $sessionkey;
+        if ($sessionData != null) {
+            //print_r($sessionData);
+            $sessionExpires=$sessionData["expires"];
+            if ($sessionExpires > $timestamp) {
+                $sessionIsValid=true;
+            }
+        }
+        if ($sessionIsValid) {
+            if ($action==='getTable') {
+                $resultsArray=$database->getTable($table);
+                #print_r($resultsArray);
+            } elseif ($action==='getRowByValue') {
+                $resultsArray=$database->getRow($table, $field, $value);
+            } elseif ($action==='insertNode') {
+                // based on https://stackoverflow.com/questions/1939581/selecting-every-nth-item-from-an-array
+                $fields=array();
+                $values=array();
+                $i=0;
+                //echo($data);
+                $rowData=explode_escaped(",", $data);
+                //print_r($rowData);
+                foreach($rowData as $value) {
+                    if ($i++ % 2 == 0) {
+                        $fields[] = $value;
+                    }
+                    else {
+                        $values[] = $value;
+                    }
+                }
+                $resultsArray=$database->addRowFromArrays($table, $fields, $values);
+            }
+            else {
+                http_response_code(400);
+                $resultsArray="ERROR: Unknown action. 29a80dff-cbf7-4183-a645-4b6af5a50bdf";
+            }
+        } else {
+            http_response_code(403);
+            $resultsArray="ERROR: Session key invalid or expired. 4bb92b44-4e05-452b-bc1c-00156290a2bb"; // UUID for identifying error unambiguously
+        }
+    }
+    echo json_encode ($resultsArray);
+}
 ?>

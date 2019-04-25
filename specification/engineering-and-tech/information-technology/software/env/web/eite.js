@@ -85,7 +85,7 @@ async function internalRunDocument(execId) {
 }
 
 // Schema: node[id, version, data]; idxPerson[nodeId, publicId, hashedSecretKey]; idxSession[nodeId, sessionKey, created, expires, events]
-// Node table is append only. Index tables are read-write. API currently doesn't have person-level permission granularity, or support sessions, and will need breaking changes to fix that.
+// Node table is append only. Index tables are read-write. API currently doesn't have person-level permission granularity, or support sessions, and will need breaking changes to fix that. idxPerson and idxSession are both in the idxPerson database for mysql backend.
 
 async function storageSetup(kvStorageCfgParam) {
     kvStorageCfg=kvStorageCfgParam;
@@ -119,7 +119,7 @@ async function storageSetup(kvStorageCfgParam) {
     await setStorageSettings(kvStorageCfg);
     temp=await kvGetValue(kvStorageCfg, 'mysqlSession')
     if (''===temp) {
-        kvStorageCfg=await kvSetValue(kvStorageCfg, 'mysqlSession', await internalStorageMysqlApiRequest('table=idxPerson&Session&action=getSession&user='+await kvGetValue(await getStorageSettings(), 'mysqlUser')+'&secretkey='+await kvGetValue(await getStorageSettings(), 'mysqlSecretKey')));
+        kvStorageCfg=await kvSetValue(kvStorageCfg, 'mysqlSession', await internalStorageMysqlApiRequest('table=idxPerson&action=getSession&user='+await kvGetValue(await getStorageSettings(), 'mysqlUser')+'&secretkey='+await kvGetValue(await getStorageSettings(), 'mysqlSecretKey')));
     }
     // Done, so now set the global value to the prepared configuration key-value pairs
     await setStorageSettings(kvStorageCfg);
@@ -149,7 +149,7 @@ async function storageRetrieve(id) {
         }
         return new Uint8Array(data);
     }); */
-    intArrayRes=await internalStorageMysqlApiRequest('table=node&action=getRowByValue&session='+await kvGetValue(await getStorageSettings(), 'mysqlSession')+'&field=id&value='+await strFrom(id))['data'];
+    intArrayRes=await internalStorageMysqlApiRequest('table=node&action=getRowByValue&session='+await kvGetValue(await getStorageSettings(), 'mysqlSession')+'&field=id&value='+await strFrom(id));
     await assertIsIntArray(intArrayRes); return intArrayRes;
 }
 
