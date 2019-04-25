@@ -99,8 +99,9 @@ function eiteHashSecret($secretkey) {
 if ($action==='getSession') {
     $userData=$database->getRow($table, "publicId", $user);
     if ($userData != null) {
-        print_r($userData);
-        echo $secretkey;
+        //print_r($userData);
+        //echo $secretkey;
+        echo password_verify('UNCONFIRM', eiteHashSecret('UNCONFIRM'));
         if(password_verify($secretkey, $userData["hashedSecretKey"])) {
             $newSession=uuidgen();
             $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 1000, '']);
