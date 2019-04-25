@@ -77,7 +77,7 @@ $action = getParam('action');
 $field = getParam('field');
 $value = getParam('value');
 $data = getParam('data');
-$sessionkey = getParam('sessionkey');
+$sessionkey = getParam('session');
 $resultsArray=array();
 include('active.fracturedb.php');
 $database=new FractureDB($mysqlTablePrefix.'eite_node', $mysqlUser, $mysqlPassword, $mysqlServer);
@@ -110,9 +110,9 @@ else {
     } else {
         $sessionIsValid=false;
         $sessionData=$database->getRow('idxSession', "sessionKey", $sessionkey);
-        echo $sessionkey;
+        //echo $sessionkey;
         if ($sessionData != null) {
-        print_r($sessionData);
+            //print_r($sessionData);
             $sessionExpires=$sessionData["expires"];
             if ($sessionExpires > $timestamp) {
                 $sessionIsValid=true;
