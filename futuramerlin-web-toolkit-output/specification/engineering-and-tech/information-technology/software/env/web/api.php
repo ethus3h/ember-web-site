@@ -83,16 +83,6 @@ include('active.fracturedb.php');
 $database=new FractureDB($mysqlTablePrefix.'eite_'.$table, $mysqlUser, $mysqlPassword, $mysqlServer);
 $datetime=new DateTime();
 $timestamp=$datetime->getTimestamp();
-function validateSession() {
-    $sessionData=$database->getRow('idxSession', sessionKey, $sessionkey);
-    if ($sessionData != null) {
-        $sessionExpires=$sessionData[expires];
-        if ($sessionExpires > $timestamp) {
-            return true;
-        }
-    }
-    return false;
-}
 function eiteHashSecret($secretkey) {
     return password_hash($secretkey, PASSWORD_DEFAULT);
 }
@@ -117,33 +107,43 @@ else {
             http_response_code(403);
             $resultsArray="ERROR: Unknown user. c5e74673-32dd-408a-be6e-165361256fba";
         }
-    } elseif (validateSession()) {
-        if ($action==='getTable') {
-            $resultsArray=$database->getTable($table);
-            #print_r($resultsArray);
-        } elseif ($action==='getRowByValue') {
-            $resultsArray=$database->getRow($table, $field, $value);
-        } elseif ($action==='insertNode') {
-            // based on https://stackoverflow.com/questions/1939581/selecting-every-nth-item-from-an-array
-            $fields=array();
-            $values=array();
-            $i=0;
-            //echo($data);
-            $rowData=explode_escaped(",", $data);
-            //print_r($rowData);
-            foreach($rowData as $value) {
-                if ($i++ % 2 == 0) {
-                    $fields[] = $value;
-                }
-                else {
-                    $values[] = $value;
-                }
+    } else {
+        $sessionIsValid=false;
+        $sessionData=$database->getRow('idxSession', sessionKey, $sessionkey);
+        if ($sessionData != null) {
+            $sessionExpires=$sessionData[expires];
+            if ($sessionExpires > $timestamp) {
+                $sessionIsValid=true;
             }
-            $resultsArray=$database->addRowFromArrays($table, $fields, $values);
         }
-        else {
-            http_response_code(400);
-            $resultsArray="ERROR: Unknown action. 29a80dff-cbf7-4183-a645-4b6af5a50bdf";
+        if ($sessionIsValid) {
+            if ($action==='getTable') {
+                $resultsArray=$database->getTable($table);
+                #print_r($resultsArray);
+            } elseif ($action==='getRowByValue') {
+                $resultsArray=$database->getRow($table, $field, $value);
+            } elseif ($action==='insertNode') {
+                // based on https://stackoverflow.com/questions/1939581/selecting-every-nth-item-from-an-array
+                $fields=array();
+                $values=array();
+                $i=0;
+                //echo($data);
+                $rowData=explode_escaped(",", $data);
+                //print_r($rowData);
+                foreach($rowData as $value) {
+                    if ($i++ % 2 == 0) {
+                        $fields[] = $value;
+                    }
+                    else {
+                        $values[] = $value;
+                    }
+                }
+                $resultsArray=$database->addRowFromArrays($table, $fields, $values);
+            }
+            else {
+                http_response_code(400);
+                $resultsArray="ERROR: Unknown action. 29a80dff-cbf7-4183-a645-4b6af5a50bdf";
+            }
         }
     } else {
         http_response_code(403);
