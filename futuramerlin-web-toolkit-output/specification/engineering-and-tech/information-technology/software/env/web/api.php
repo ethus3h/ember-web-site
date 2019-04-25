@@ -144,10 +144,10 @@ else {
                 http_response_code(400);
                 $resultsArray="ERROR: Unknown action. 29a80dff-cbf7-4183-a645-4b6af5a50bdf";
             }
+        } else {
+            http_response_code(403);
+            $resultsArray="ERROR: Session key invalid or expired. 4bb92b44-4e05-452b-bc1c-00156290a2bb"; // UUID for identifying error unambiguously
         }
-    } else {
-        http_response_code(403);
-        $resultsArray="ERROR: Session key invalid or expired. 4bb92b44-4e05-452b-bc1c-00156290a2bb"; // UUID for identifying error unambiguously
     }
     echo json_encode ($resultsArray);
 }
