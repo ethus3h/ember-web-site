@@ -2,7 +2,7 @@
 
 window.onload = async function() {
     //eiteCall('startEite');
-    EITE_STORAGE_CFG=['mysqlApi', 'http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/env/web/api.php', 'mysqlApiUser', 'test', 'mysqlApiSecretKey', 'test'];
+    EITE_STORAGE_CFG=['mysqlApi', 'http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/env/web/api.php', 'mysqlUser', 'test', 'mysqlSecretKey', 'test'];
     await storageSetup(EITE_STORAGE_CFG);
     alert('Ready to use');
     let attachFn = (elem, func) => {
@@ -17,6 +17,10 @@ window.onload = async function() {
     async function getNode() {
         alert(await storageRetrieve(1));
     }
+    async function getSecretKey() {
+        alert(await strFromByteArray(await getFileFromPath(await kvGetValue(await getStorageSettings(), 'mysqlApi')+'?action=hashSecret&secretkey='+'test')));
+    }
+    attachFn('getSecretKey', getSecretKey);
     attachFn('addRow', addRow);
     attachFn('listRows', listRows);
     attachFn('getNode', getNode);
