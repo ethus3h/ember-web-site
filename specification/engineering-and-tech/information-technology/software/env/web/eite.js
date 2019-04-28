@@ -123,7 +123,9 @@ async function storageSetup(kvStorageCfgParam) {
         if (session === null) {
             await implError('Could not log in!');
         }
-        kvStorageCfg=await kvSetValue(kvStorageCfg, 'mysqlSession', session);
+        else {
+            kvStorageCfg=await kvSetValue(kvStorageCfg, 'mysqlSession', session);
+        }
     }
     // Done, so now set the global value to the prepared configuration key-value pairs
     await setStorageSettings(kvStorageCfg);
@@ -153,7 +155,7 @@ async function storageRetrieve(id) {
         }
         return new Uint8Array(data);
     }); */
-    intArrayRes=await internalStorageMysqlApiRequest('table=node&action=getRowByValue&session='+await kvGetValue(await getStorageSettings(), 'mysqlSession')+'&field=id&value='+await strFrom(id));
+    intArrayRes=await strToByteArray((await internalStorageMysqlApiRequest('table=node&action=getRowByValue&session='+await kvGetValue(await getStorageSettings(), 'mysqlSession')+'&field=id&value='+await strFrom(id)))['data']);
     await assertIsIntArray(intArrayRes); return intArrayRes;
 }
 
@@ -408,7 +410,7 @@ function getSharedState(name) {
 }
 
 function setSharedState(name, value) {
-    implDebug('State change for ' + name + ' to ' + value + ' (this message may be out of order).', 1);
+    implDebug('State change for ' + name + ' to ' + value + ' (this message may be out of order).', 3);
     getWindowOrSelf()[name] = value;
 }
 
@@ -1291,7 +1293,7 @@ async function internalDebugQuiet(strMessage, intLevel) {
 }
 
 async function internalDebugCollect(strMessageFragment) {
-    setSharedState('stagelDebugCollection') = getSharedState('stagelDebugCollection') + strMessageFragment;
+    setSharedState('stagelDebugCollection', getSharedState('stagelDebugCollection') + strMessageFragment);
 }
 
 async function internalDebugFlush() {
