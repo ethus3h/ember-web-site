@@ -120,8 +120,14 @@ else {
         }
         if ($sessionIsValid) {
             if ($action==='getTable') {
-                $resultsArray=$database->getTable($table);
-                #print_r($resultsArray);
+                if (trim($table) === 'node' || trim($table) === 'idxPerson' || trim($table) === 'idxSession') {
+                    http_response_code(400);
+                    $resultsArray="ERROR: Attempted to access restricted table. 5de166b4-c8fe-446b-bda7-178ab50229d6";
+                }
+                else {
+                    $resultsArray=$database->getTable($table);
+                    #print_r($resultsArray);
+                }
             } elseif ($action==='getRowByValue') {
                 $resultsArray=$database->getRow($table, $field, $value);
             } elseif ($action==='insertNode') {
