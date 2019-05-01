@@ -499,13 +499,13 @@ async function internalSetup() {
     }
 
     // Set up data sets.
+
     await setSharedState('datasets', await listDcDatasets());
     if (!await getSharedState('datasetsLoaded')) {
         await internalLoadDatasets();
     }
 
     // Fill out format settings arrays in case they aren't yet
-    console.log('ok');
     let settingsCount=Object.keys(await listFormats()).length;
     let tempSettings;
     for (let settingsCounter=0; settingsCounter < settingsCount; settingsCounter++) {
@@ -1535,7 +1535,7 @@ async function dcDataLookupById(dataset, rowNum, fieldNum) {
     await assertIsDcDataset(dataset); await assertIsInt(rowNum); await assertIsInt(fieldNum); let strReturn;
 
     // This routine returns the value of the specified cell of the nth row in the dataset (zero-indexed, such that the 0th row is the first content row, and the header row is not available (would be -1 but isn't available from this routine)).
-    if (await getSharedState('dcData')[dataset] === undefined) {
+    if ((await getSharedState('dcData'))[dataset] === undefined) {
         await implDie('dcDataLookupById called, but dataset '+dataset+' does not appear to be available.');
     }
 
@@ -7699,7 +7699,7 @@ registerSpeedup('assertIsDc', async function (v) {
 });
 
 registerSpeedup('assertIsDcDataset', async function (str) {
-    if (datasets.includes(str)) {
+    if ((await getSharedState('datasets')).includes(str)) {
         return;
     }
     await assertIsTrue(false);
