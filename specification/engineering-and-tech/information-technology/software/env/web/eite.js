@@ -507,6 +507,7 @@ async function internalSetup() {
 
     // Fill out format settings arrays in case they aren't yet
     let settingsCount=Object.keys(await listFormats()).length;
+console.log('bububub');
     let tempSettings;
     for (let settingsCounter=0; settingsCounter < settingsCount; settingsCounter++) {
         if (await getSharedState('importSettings')[settingsCounter] === undefined) {
@@ -524,7 +525,6 @@ async function internalSetup() {
             await setSharedState('exportSettings', tempSettings);
         }
     }
-
     // Set up storage
 
     await storageSetup(await getSharedState('EITE_STORAGE_CFG'));
@@ -1595,7 +1595,7 @@ async function dcDataFilterByValueGreater(dataset, filterField, filterValue, des
 
     asReturn = [];
 
-    let intLength = await getSharedState('dcData')[dataset].length - 2;
+    let intLength = (await getSharedState('dcData'))[dataset].length - 2;
     // start at 1 to skip header row
     for (let row = 1; row <= intLength; row++) {
         if(parseInt(await getSharedState('dcData')[dataset][row][filterField], 10) > filterValue) {
