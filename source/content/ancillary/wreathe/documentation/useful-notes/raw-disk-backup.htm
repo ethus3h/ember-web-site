@@ -1,0 +1,16 @@
+<h1>Backing up a disk, raw &mdash; Wreathe Documentation</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/ancillary/ready-to-use.htm">Software</a></span>
+    <span><a href="/ancillary/wreathe/">Wreathe</a></span>
+    <span><a href="/ancillary/wreathe/documentation/">Documentation</a></span>
+    <span><a href="/ancillary/wreathe/documentation/useful-notes/">Useful notes</a></span>
+</p>
+
+<p class="hatnote-emphasis-warning">This article applies to: Wreathe 7.2</p>
+
+<p>Backing up one disk to another, raw:<br /><br />
+
+<p class="hatnote-emphasis-warning">NOTE: THIS HAS NOT BEEN TESTED THOROUGHLY; USE AT YOUR OWN RISK!</p><br /><br />
+
+<pre><code>sudo dcfldd if=/dev/sdd hash=md5,sha256 hashwindow=1G md5log=md5.txt sha256log=sha256.txt hashconv=after bs=512 conv=noerror,sync split=1G splitformat=aa of=/path/to/put/backup/in/backup-file-name.dd</code></pre></p>

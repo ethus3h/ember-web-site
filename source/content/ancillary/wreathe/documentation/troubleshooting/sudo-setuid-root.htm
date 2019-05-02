@@ -1,0 +1,27 @@
+<h1>Trying to use sudo says it must be setuid root &mdash; Wreathe Documentation</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/ancillary/ready-to-use.htm">Software</a></span>
+    <span><a href="/ancillary/wreathe/">Wreathe</a></span>
+    <span><a href="/ancillary/wreathe/documentation/">Documentation</a></span>
+    <span><a href="/ancillary/wreathe/documentation/troubleshooting/">Troubleshooting</a></span>
+</p>
+
+<p class="hatnote-emphasis-warning">This article applies to: Wreathe 7.2</p>
+
+<h2>Problem</h2>
+
+    <p>Trying to use sudo says it must be setuid root</p>
+
+    <p>Error is like this:<br /><br />
+
+    <pre><code>sudo: must be setuid root</code></pre></p>
+
+<h2>Solution</h2>
+
+    <p>To fix, run:<br /><br />
+
+    <pre><code># chown root:root /usr/bin/sudo
+    # chmod 4755 /usr/bin/sudo</code></pre><br /><br />
+
+    (Solution based on answer from http://askubuntu.com/questions/21931/error-after-sudo-ing-sudo-must-be-setuid-root — I didn't know about the second bit, the first was all I needed when I ran into this)</p>
