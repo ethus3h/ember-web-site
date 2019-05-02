@@ -143,7 +143,7 @@ async function storageSave(data) {
         // "'hash', known as CID, is a string uniquely addressing the data and can be used to get it again. 'files' is an array because 'add' supports multiple additions, but we only added one entry" —https://js.ipfs.io/
         return files[0].hash;
     }); */
-    intRes=await intFromIntStr(await internalStorageMysqlApiRequest('table=node&action=insertNode&session='+await kvGetValue(await getStorageSettings(), 'mysqlSession')+'&data=version,0,data,'+await intArrayToBase64(data))));
+    intRes=await intFromIntStr(await internalStorageMysqlApiRequest('table=node&action=insertNode&session='+await kvGetValue(await getStorageSettings(), 'mysqlSession')+'&data=version,0,data,'+await intArrayToBase64(data)));
     await assertIsInt(intRes); return intRes;
 }
 
