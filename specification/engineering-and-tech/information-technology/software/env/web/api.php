@@ -120,7 +120,7 @@ else {
         }
         if ($sessionIsValid) {
             if ($action==='getTable') {
-                if (trim($table) === 'node' || trim($table) === 'idxPerson' || trim($table) === 'idxSession') {
+                if (trim($table) === 'idxPerson' || trim($table) === 'idxSession') {
                     http_response_code(400);
                     $resultsArray="ERROR: Attempted to access restricted table. 5de166b4-c8fe-446b-bda7-178ab50229d6";
                 }
