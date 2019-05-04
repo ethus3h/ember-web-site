@@ -36,7 +36,7 @@ Import/export/tests support columns meaning:
 18,javascript,js,,,,programming,JavaScript,,"Programming languages are both formats on their own account, and variants of other formats: for exporting to a text-based format, you could opt to have programmatic Dcs exported to a programming language or a natlang."
 19,semanticToText,,1,,,transformation,Semantic Dcs to text,,“transformation” types operate on documents stored as arrays of Dcs.
 20,codeToText,,1,,,transformation,Programmatic Dcs to text,,
-21,,,,,,,,,
+21,colorcoded,htm,,1,,,Color-coded HTML integer list,,HTML file containing color-coded Dc integer list
 22,,,,,,,,,
 23,,,,,,,,,
 24,,,,,,,,,
