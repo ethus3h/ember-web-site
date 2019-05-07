@@ -243,7 +243,7 @@ TOTAL                               1400    10          14120
 
 <h2>Implementation process flow</h2>
     <p>This diagram shows conceptually how data flows at a high level in the process of running an EITE document using an interpreter (a compile-then-run system would use different data flows, but the overall effect would be equivalent). The non-bracketed elements represent programmed processes. The bracketed elements represent data structures. A circle ○ represents data storage persists for the lifetime of the document being open or being executed (not necessarily in RAM: for a long-running background task, like a periodic mail fetcher, this data could be moved to disk or the cloud if useful to free up local memory). Other data structures can be buffered/streaming FIFOs that discard input as it becomes unneccesary. The arrows represent data flows into and out of data storage or the system. This diagram assumes a Dc sequence as input; other forms of input would need a separate conversion/interpretation step for this.</p>
-    <pre>        External I/O: document source ──────────────╮
+    <pre>         External I/O: document source ──────────────╮
                (as Dc sequence)                      │
                                                      ↓
    [○ Document execution state] ╮    ╭ [○ Document as Dc sequence] ←╮

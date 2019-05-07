@@ -58,7 +58,7 @@
     <pre><code>
 r/s/fbSwitcher n/num
     if eq 0 mod n/num 15
-        return 'FizzBuzz' # just a literal sequence of bytes. Everything should be binary safe. 0x could be used to return data, too. 0x = data, not numbers, in StageL.
+        return 'FizzBuzz' # just a literal sequence of ASCII printable characters.
     # Comment
     if eq 0 mod n/num 5
         return 'Buzz' # Comment 2
@@ -67,7 +67,7 @@ r/s/fbSwitcher n/num
         eq 0 mod n/num 3
         return 'Fizz' # Comment 4
 
-r/s/fizzBuzz # A string is an array of 8-bit bytes.
+r/s/fizzBuzz # A string is an array of ASCII printable characters.
     # return-assert -n # the output should be non-empty.
     new n/counter 1
     until
