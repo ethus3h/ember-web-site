@@ -18,7 +18,7 @@
 <h2>EITE tools</h2>
     <p>The following natively implemented tools should be available in a full implementation: <a href="tool-testrunner.htm">test runner</a>, <a href="tool-docrunner.htm">document runner</a>, <a href="tool-implrunner.htm">main EITE implementation runner</a>, and <a href="tool-edit.htm">simple document edit tool</a>. They are not EITE documents; rather they are implemented for each platform, so they can be used in the course of developing and testing the EITE implementation. The also serve to some extent as sanity checks for the API functionality for a new implementation, as they would not work without the APIs available.</p>
 
-<h2>EITE implementation APIs</h2>
+<h2>EITE implementation public APIs</h2>
     <p>These APIs are implemented in public-interface.stagel.</p>
     <table>
     <thead>
@@ -56,6 +56,20 @@
     <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
     </tbody>
     </table>
+
+<h2>Command-line interface (mostly unimplemented)</h2>
+    <p>The EITE should provide the following user-facing command-line scripts.</p>
+    <dl>
+        <dt><code>eite</code></dt><dd>This is the main interface for EITE. Synopsis: <code>eite [check|run|run-tests|source-to-tree|tree-to-source] (&lt;path-to-document&gt;|-)</code></dd>
+    </dl>
+    <p>The EITE provides the following additional command-line scripts that it uses internally.</p>
+    <dl>
+        <dt><code>eite-check</code></dt><dd>Return false if the specified source document cannot be parsed. Synopsis: <code>eite-check (&lt;path-to-document&gt;|-)</code></dd>
+        <dt><code>eite-run</code></dt><dd>Run the specified document. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+        <dt><code>eite-run-tests</code></dt><dd>Run test suite. Synopsis: <code>eite-run-tests</code></dd>
+        <dt><code>eite-source-to-tree</code></dt><dd>Given a source file, print out an AST representation of the document. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+        <dt><code>eite-tree-to-source</code></dt><dd>Given an AST representation of a document, print out the source file for it. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+    </dl>
 
 <h2>Formats</h2>
     <p>The formats that should be supported are available in data/formats.csv. Only input or output is necessary for some formats, and some formats listed are internal formats only, which do not need to be implemented for purposes of this specification. The options that should be supported for given formats are: (TODO).</p>

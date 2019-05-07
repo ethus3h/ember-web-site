@@ -17,7 +17,7 @@
         <p>While current computing hardware, and many other processes and aspects of society, have many of the same and similar problems as the problems in software that this subproject aims to address, this section only focuses on software. Other parts of the Ember project deal with computing hardware, industry and industrial designs, and social organization, so these areas are not addressed here.</p>
 
         <h4>Existing work towards solving this problem</h4>
-            <p>Many existing projects address various aspects of the issues this project addresses. None seems to cohesively aim to integrate these aspects into a comprehensive libre framework and model implementation, though, driving the need for this project. For an annotated list of related projects and inspirations to this project, see the "Related projects and inspirations" section of the bibliography at the end of this proposal.</p>
+            <p>Many existing projects address various aspects of the issues this project addresses. None seems to cohesively aim to integrate these aspects into a comprehensive libre framework and model implementation, though, driving the need for this project. For an annotated list of related projects and inspirations to this project, see the "Related projects and inspirations" section of the bibliography at the end of this document.</p>
 
 <h2>General approach</h2>
     <p>This project should aim to systematically support the libre development and distribution as best as possible of an innovative information technology environment.</p>
@@ -265,20 +265,6 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
                               ⎢ monitor or HTML Canvas,    ⎥
                               ⎢ other formats for export,  ⎥
                               ⎣ etc.)                      ⎦</pre>
-
-<h2>Command-line interface (mostly unimplemented)</h2>
-    <p>The EITE provides the following user-facing command-line scripts.</p>
-    <dl>
-        <dt><code>eite</code></dt><dd>This is the main interface for EITE. Synopsis: <code>eite [check|run|run-tests|source-to-tree|tree-to-source] (&lt;path-to-document&gt;|-)</code></dd>
-    </dl>
-    <p>The EITE provides the following additional command-line scripts that it uses internally.</p>
-    <dl>
-        <dt><code>eite-check</code></dt><dd>Return false if the specified source document cannot be parsed. Synopsis: <code>eite-check (&lt;path-to-document&gt;|-)</code></dd>
-        <dt><code>eite-run</code></dt><dd>Run the specified document. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
-        <dt><code>eite-run-tests</code></dt><dd>Run test suite. Synopsis: <code>eite-run-tests</code></dd>
-        <dt><code>eite-source-to-tree</code></dt><dd>Given a source file, print out an AST representation of the document. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
-        <dt><code>eite-tree-to-source</code></dt><dd>Given an AST representation of a document, print out the source file for it. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
-    </dl>
 
 <h2>Data formats</h2>
 
