@@ -55,7 +55,7 @@
 	<li>Code like <code><pre>set as/data append as/data [ s/key s/val ]</pre></code> is an error: array literals can't contain variables in their definitions.</li>
     </ul>
     <h3>Example</h3>
-    <code>
+    <pre><code>
 r/s/fbSwitcher n/num
     if eq 0 mod n/num 15
         return 'FizzBuzz' # just a literal sequence of bytes. Everything should be binary safe. 0x could be used to return data, too. 0x = data, not numbers, in StageL.
@@ -76,7 +76,7 @@ r/s/fizzBuzz # A string is an array of 8-bit bytes.
         new s/temp ''
         set s/temp r/s/fbSwitcher n/counter
         return s/temp
-</code>
+</code></pre>
 
 <h2>Special syntaxes</h2>
     <p>For loops aren't available because they add complexity to the transpiler.</p>
