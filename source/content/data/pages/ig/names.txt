@@ -1,0 +1,37 @@
+====== List of common names ======
+
+List of common names (any gender name can be used for any gender, this is just more common usages):
+
+^ Ilienian ^ Earth ^ Notes ^
+|  |  |  |
+^ Either gender ^^^
+|  | [[Brightstorm]] |  |
+|  | [[Echo]] |  |
+| [[Ruan]] | [[Rowan]] | from Nancy Springer |
+|  | [[Slaughter]] | from the sculpture |
+^ Male ^^^
+|  | [[Penitent]] | from Joan Aiken |
+^ Female ^^^
+|  | [[Bloodlet]] |  |
+| [[Elen]] | [[Elen]] | from Joan Aiken |
+|  | [[Penitence]] | from Joan Aiken |
+|  | [[Wildling]] |  |
+| [[Zuria]] | [[Zoriah (name)|Zoriah]] |  |
+
+====== Ideas for whole names ======
+
+===== Female =====
+==== Earth ====
+
+  * Wildling Bloodlet Slaughter (thought this one up during the honors 211 lecture today (4 September 2014), IIRC, which I'm pretty darn sure I do)
+
+==== Ilentu ====
+
+===== Male =====
+  * Unordered List Item
+==== Earth ====
+
+  * Penitent Slaughter
+
+==== Ilentu ====
+  * Unordered List Item

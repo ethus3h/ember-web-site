@@ -1,0 +1,4 @@
+====== How to recursively md5 and then compare files in a directory tree in OS X ======
+
+  - Run this in the terminal emulator for both the source and the target directory, being careful to choose a unique filename (replace [filename] in the example with the filename you choose) each time. <code>find -s . -type f -exec md5 {} \; | cat > ~/[filename].txt</code>
+  - Then, compare the files using, for example, KDiff3 (http://kdiff3.sourceforge.net/).

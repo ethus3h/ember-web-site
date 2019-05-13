@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="m.css" rel="stylesheet" type="text/css">
+    <meta content="Ember" name="author">
+    <meta content="width=device-width, height=device-height, user-scalable=yes" name="viewport">
+    <title>EITE edit tool — Ember</title>
+
+    <!-- third-party code: CSV parser; wat2wasm -->
+    <script src="papaparse.js" type="text/javascript"></script>
+    <script src="libwabt.js" type="text/javascript"></script>
+
+    <!-- Merged EITE implementation, including StageL and StageR -->
+    <script src="eite.js" type="text/javascript"></script>
+
+    <!-- Stuff common to EITE tool HTML pages -->
+    <link href="eite.css" rel="stylesheet" type="text/css">
+
+    <!-- And the code specific to this page -->
+    <link href="edit.css" rel="stylesheet" type="text/css">
+    <script src="edit.js" type="text/javascript"></script>
+    <script src="edit-webext-request-handler.js" type="text/javascript"></script>
+</head>
+<body>
+<h1>IT environment: edit document tool</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/">Home</a></span>
+</p>
+<!-- Note: Don't include javascript (e.g. onclick events) in the HTML file. Put them in e.g. edit.js file instead, since, I think, it's easier to allow them for extension security there. -->
+<div id="overlay"><div id="overlayLoadingSpinner" class="loadingSpinner" style="background-color:#e3cdab;transform:all 0.2s;"></div></div>
+<section id="mainBox">
+    <div id="mainRow">
+        <div id="DcSelection">
+            <span>(Click buttons below to insert.)</span>
+            <input type="text" id="searchDcs" placeholder="Search…"/>
+            <button id="dcsShowAllButton">← Show All</button>
+        </div>
+        <div id="editorColumn">
+            <div class="formatOptions">
+                <div>Edit as: </div><select id="editFormat" disabled="true">
+                    <option value="">[not loaded]</option>
+                </select>
+            </div>
+            <div id="currentDcLabelGroup"><div id="currentDcLabel"></div><div id="currentDcId"></div></div>
+            <textarea id="inputarea" disabled="true"></textarea>
+        </div>
+        <p id="eiteDocumentRoot"></p>
+    </div>
+    <div id="editorButtons">
+        <div class="impExpButtonColumn">
+            <button disabled="true" id="ImportDocument">Import</button>
+            <div class="formatOptions">
+                <div>Import as: </div><select id="inFormat" disabled="true">
+                    <option value="">[not loaded]</option>
+                </select>
+            </div>
+        </div>
+        <div class="impExpButtonColumn">
+            <button disabled="true" id="ExportDocument">Export</button>
+            <div class="formatOptions">
+                <div>Export as: </div><select id="outFormat" disabled="true">
+                    <option value="">[not loaded]</option>
+                </select>
+            </div>
+        </div>
+        <button disabled="true" id="RunDocument">Run</button>
+    </div>
+</section>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgFilter">
+    <defs>
+        <filter id="f1" x="0" y="0">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            <feComponentTransfer>
+                <feFuncA type="discrete" tableValues="1 1"/>
+            </feComponentTransfer>
+        </filter>
+    </defs>
+</svg>
+<div id="background"></div>
+<div id="notificationOverlay"></div>
+<template id="documentRootLoadingSpinnerTemplate"><div class="documentRootOverlay"><div class="loadingSpinner docLoadingSpinner"></div></div></template>
+<template id="exportNotifyTemplate"><div class="exportNotification"></div></template>
+<template id="importDialogTemplate"><div class="importDialog"><div>(Imported document will replace current contents of edit field.)</div><button class="importFromFileBtn">Import from file</button><button class="importFromUrlBtn">Import from URL</button><button class="closeImportDiaBtn">Cancel</button></div></template>
+<template id="alertDialogTemplate"><div class="importDialog"><div class="alertDialogMessageRegion"></div><button class="closeAlertDiaBtn">Okay</button></div></template>
+<template id="doneButtonTemplate"><button disabled="true" class="doneEditingBtn">Done</button></template>
+<input type="file" id="filepicker"></input>
+</body>
+</html>

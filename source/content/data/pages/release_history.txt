@@ -1,0 +1,57 @@
+====== Release history of Wreathe ======
+Release history of [[Wreathe]].
+
+^ Version number       ^ Name       ^ Release group ^ Branch ^ Status ^ Release date ^
+| [[Before Wreathe]]    | —     | —        | — | Not actually Wreathe | — |
+| [[Wreathe 1: Frost|1]]    | Frost     | [[Frost]]        | [[Wreathe 1|1.*]] | Never released | 2010? |
+| [[Wreathe 1r2: Frost|1r2]]    | Frost     | [[Frost]]        | [[Wreathe 1|1.*]] | Never released | 2010? |
+| [[Wreathe 2 dev / Wreathe 2a|2 dev / 2a]]    | Mist (?)     | [[autumnfairy]]        | [[Wreathe 2 branch|2.*]] | Development version | 2011? |
+| [[Wreathe 2|2]]    | Mist (?)     | [[autumnfairy]]        | [[Wreathe 2 branch|2.*]] | Cancelled | 2011? |
+| [[Wreathe 2 Extended Edition / Wreathe 2e|2e]]    | Mist (?)     | [[autumnfairy]]        | [[Wreathe 2 branch|2.*]] | Unofficial | 2011 |
+| [[Wreathe 3 dev|3 dev]]    | (?)     | [[autumnfairy]]        | [[Wreathe 3 branch|3.*]] | Development version | ? |
+| [[Wreathe 3|3]]    | (?)     | [[autumnfairy]]        | [[Wreathe 3 branch|3.*]] | Cancelled | ? |
+| [[Wreathe 4 dev / Wreathe 4 dev 1|4 dev / 4 dev 1]]    | Blossom     | [[autumnfairy]]        | [[Wreathe 4|4.*]] | Development version | ? |
+| [[Wreathe 4 dev 2|4 dev 2]]    | Blossom     | [[Blossom]]        | [[Wreathe 4|4.*]] | Development version | ? |
+| [[Wreathe 4|4]]    | Blossom     | [[Blossom]]        | [[Wreathe 4|4.*]] | Released | ? |
+| [[Wreathe 5 dev|5 dev]]    | Rain     | [[Rain]]        | [[Wreathe 5 branch|5.*]] | Development version | 2012? |
+| [[Wreathe 5: Rain|5]]    | Rain     | [[Rain]]        | [[Wreathe 5 branch|5.*]] | Released | 2012? |
+| [[Wreathe 6: Forest|6]]    | Forest     | [[Forest]]        | [[Wreathe 6 branch|6.*]] | Cancelled | 2012? |
+| [[Wreathe 7 alpha|7a]]    | Elegy     | [[Elegy]]        | [[Wreathe 7 branch|7.*]] | Development version | 2012? |
+| [[Wreathe 7: Elegy|7]]    | Elegy     | [[Elegy]]        | [[Wreathe 7 branch|7.*]] | Cancelled | 2012? |
+| [[Wreathe 7r2a|7r2a]]    | Elegy     | [[Elegy]]        | [[Wreathe 7 branch|7.*]] | Current development version | Ongoing |
+| [[Wreathe 7 Elegy: R2 Evening Star|7r2]]    | R2 Evening Star     | [[Elegy]]        | [[Wreathe 7 branch|7.*]] | Upcoming | Future |
+| [[Wreathe 8: Morning|8]]    | Morning     | [[Morning]]        | [[Wreathe 8 branch|7.*]] | Upcoming | Future |
+
+====== Old list: ======
+
+
+===== Before Wreathe =====
+
+[[Before Wreathe]]
+
+===== 1: Frost =====
+
+This is the [[Frost]] release group: [[Wreathe 1.*]].
+
+===== autumnfairy =====
+
+This is the [[autumnfairy]] release group: [[Wreathe 2* (branch)|Wreathe 2*]], [[Wreathe 3* (branch)|Wreathe 3*]], and [[Wreathe 4 dev 1]].
+===== 4: Blossom =====
+
+This is the [[Blossom]] release group: [[Wreathe 4 dev 2]] and [[Wreathe 4: Blossom|Wreathe 4: Blossom]].
+
+===== 5: Rain =====
+
+This is the [[Rain]] release group.
+
+===== 6: Forest =====
+
+This is the [[Forest]] release group.
+
+===== 7: Elegy =====
+
+This is the [[Elegy]] release group.
+
+===== 8: Morning =====
+
+This is the [[Morning]] release group.

@@ -1,0 +1,162 @@
+**Compilation notes** for Wreathe…
+
+These are notes and procedures used when building software for Wreathe 7r2.
+
+Info on waf: http://docs.waf.googlecode.com/git/book_17/single.html#_library_interaction_use
+
+When building software from source, make sure to get the right PKG_CONFIG_PATH and LD_LIBRARY_PATH:
+
+  export PKG_CONFIG_PATH=/Technical/Library/.ardour3/usr/lib/pkgconfig:/Technical/Library/.ardour3/lib/pkgconfig:/Technical/Library/Wreathe/Development/lib/pkgconfig:/usr/lib/pkgconfig:/usr/local/lib/pkgconfig
+  export LD_LIBRARY_PATH=/Technical/Library/.ardour3/usr/lib:/Technical/Library/.ardour3/lib:/Technical/Library/Wreathe/Development/lib:/usr/lib:/usr/local/lib
+  export C_INCLUDE_PATH=/Technical/Library/.ardour3/usr/include:/Technical/Library/.ardour3/include:/Technical/Library/Wreathe/Development/include:/usr/include:/usr/local/include
+
+And when configuring, in case of a bug in some packages where PKG_CONFIG_PATH doesn't work properly (hrm, *gobject-introspection*):
+
+**GNU Build Tools**:
+  ./configure --prefix=/Technical/Library/Wreathe/Development PKG_CONFIG_PATH=/Technical/Library/.ardour3/usr/lib/pkgconfig:/Technical/Library/.ardour3/lib/pkgconfig:/Technical/Library/Wreathe/Development/lib/pkgconfig:/usr/lib/pkgconfig:/usr/local/lib/pkgconfig LD_LIBRARY_PATH=/Technical/Library/.ardour3/usr/lib:/Technical/Library/.ardour3/lib:/Technical/Library/Wreathe/Development/lib:/usr/lib:/usr/local/lib C_INCLUDE_PATH=C_INCLUDE_PATH=/Technical/Library/.ardour3/usr/include:/Technical/Library/.ardour3/include:/Technical/Library/Wreathe/Development/include:/usr/include:/usr/local/include
+
+**CMake**:
+  cmake . -DCMAKE_INSTALL_PREFIX=/Technical/Library/Wreathe/Development
+
+**waf**:
+  ./waf configure --prefix=/Technical/Library/Wreathe/Development
+
+If you need add special directories to your PATH, do it like so:
+  PATH=$PATH:/Technical/Library/.ardour3/bin/:/Technical/Library/.ardour3/usr/bin/
+
+I've been doing this also since I don't really know what I'm doing:
+  make PKG_CONFIG_PATH=/Technical/Library/.ardour3/usr/lib/pkgconfig:/Technical/Library/.ardour3/lib/pkgconfig:/Technical/Library/Wreathe/Development/lib/pkgconfig:/usr/lib/pkgconfig:/usr/local/lib/pkgconfig LD_LIBRARY_PATH=/Technical/Library/.ardour3/usr/lib:/Technical/Library/.ardour3/lib:/Technical/Library/Wreathe/Development/lib:/usr/lib:/usr/local/lib C_INCLUDE_PATH=C_INCLUDE_PATH=/Technical/Library/.ardour3/usr/include:/Technical/Library/.ardour3/include:/Technical/Library/Wreathe/Development/include:/usr/include:/usr/local/include
+
+  ./waf PKG_CONFIG_PATH=/Technical/Library/.ardour3/usr/lib/pkgconfig:/Technical/Library/.ardour3/lib/pkgconfig:/Technical/Library/Wreathe/Development/lib/pkgconfig:/usr/lib/pkgconfig:/usr/local/lib/pkgconfig LD_LIBRARY_PATH=/Technical/Library/.ardour3/usr/lib:/Technical/Library/.ardour3/lib:/Technical/Library/Wreathe/Development/lib:/usr/lib:/usr/local/lib C_INCLUDE_PATH=C_INCLUDE_PATH=/Technical/Library/.ardour3/usr/include:/Technical/Library/.ardour3/include:/Technical/Library/Wreathe/Development/include:/usr/include:/usr/local/include
+
+Optionally, check the build (strongly recommended for some packages):
+  make check
+
+And finally:
+  sudo make install
+  
+:-)
+
+====== Program-specific ======
+===== GCC =====
+==== 4.8.1 ====
+
+For GCC 4.8.1, configure…
+(based on Linux from Scratch's website: http://www.linuxfromscratch.org/lfs/view/development/chapter06/gcc.html as of 24 July 2013)
+
+I haven't gotten GCC to build yet (I'm first running into an issue that seems like this http://superuser.com/questions/609046/gcc-4-8-1-failed-complilation, and if I continue the process without ISL, an issue that looks an awful lot like this: http://forums.gentoo.org/viewtopic-t-955010-start-0.html). I'm not sure what's going on. :-(
+This is the procedure that I think ought to work, but doesn't seem to:
+
+  case `uname -m` in
+    i?86) sed -i 's/^T_CFLAGS =$/& -fomit-frame-pointer/' gcc/Makefile.in ;;
+  esac
+
+  sed -i -e /autogen/d -e /check.sh/d fixincludes/Makefile.in
+
+  mv -v libmudflap/testsuite/libmudflap.c++/pass41-frag.cxx{,.disable}
+
+  mkdir -v ../gcc-build
+  cd ../gcc-build
+
+  export PKG_CONFIG_PATH=/Technical/Library/Wreathe/Development/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/lib/pkgconfig
+  export LD_LIBRARY_PATH=/Technical/Library/Wreathe/Development/lib:/usr/local/lib:/usr/lib
+  export C_INCLUDE_PATH=/Technical/Library/Wreathe/Development/include:/usr/local/include:/usr/include
+
+  ../gcc-4.8.1/configure --prefix=/Technical/Library/Wreathe/Development --libexecdir=/Technical/Library/Wreathe/Development/lib --enable-shared --enable-threads=posix --enable-__cxa_atexit --enable-clocale=gnu --enable-languages=all --with-system-zlib --with-isl=/Technical/Library/Wreathe/Development PKG_CONFIG_PATH=/Technical/Library/Wreathe/Development/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/lib/pkgconfig LD_LIBRARY_PATH=/Technical/Library/Wreathe/Development/lib:/usr/local/lib:/usr/lib C_INCLUDE_PATH=/Technical/Library/Wreathe/Development/include:/usr/local/include:/usr/include
+
+  make PKG_CONFIG_PATH=/Technical/Library/Wreathe/Development/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/lib/pkgconfig LD_LIBRARY_PATH=/Technical/Library/Wreathe/Development/lib:/usr/local/lib:/usr/lib
+
+  ulimit -s 32768
+
+  make -k check
+
+  ../gcc-4.8.1/contrib/test_summary | grep -A7 Summ
+  
+Compare the test summaries with http://www.linuxfromscratch.org/lfs/build-logs/development/ and http://gcc.gnu.org/ml/gcc-testresults/. "A few unexpected failures cannot always be avoided. The GCC developers are usually aware of these issues, but have not resolved them yet. In particular, the libmudflap tests are known to be particularly problematic as a result of a bug in GCC (http://gcc.gnu.org/bugzilla/show_bug.cgi?id=20003). Unless the test results are vastly different from those at the above URL, it is safe to continue." (—LFS)
+
+===== GMP =====
+==== 5.1.2 ====
+Based on Linux from Scratch's instructions: http://www.linuxfromscratch.org/lfs/view/development/chapter06/gmp.html.
+
+Follow the standard GNU Build Tools procedure, but for the strongly recommended tests,
+
+  make check 2>&1 | tee gmp-check-log
+  awk '/tests passed/{total+=$2} ; END{print total}' gmp-check-log
+
+LFS says that one hundred eighty five tests should have passed, but for me awk only counted 165 tests passing, and I could find no sign of tests failing in [[GMP compilation output|the output]] (long page!).
+
+(For the record: [[GMP installation output]])
+
+===== MPFR =====
+==== 3.1.2 ====
+
+Follow the standard GNU Build Tools procedure, but specify the GMP to use when running ./configure:
+  ./configure --prefix=/Technical/Library/Wreathe/Development --with-gmp=/Technical/Library/Wreathe/Development PKG_CONFIG_PATH=/Technical/Library/Wreathe/Development/lib/pkgconfig:/usr/local/lib/pkgconfig:/usr/lib/pkgconfig LD_LIBRARY_PATH=/Technical/Library/Wreathe/Development/lib:/usr/local/lib:/usr/lib C_INCLUDE_PATH=/Technical/Library/Wreathe/Development/include:/usr/local/include:/usr/include
+
+Running the tests (''make check'') is strongly recommended by LFS (http://www.linuxfromscratch.org/lfs/view/development/chapter06/mpfr.html).
+
+
+====== Build order for Ardour3 dependencies ======
+
+  - lv2
+  - suil
+  - serd
+  - sord
+  - sratom
+  - curl
+  - raptor2
+  - rasqal
+  - redland
+  - rdflib
+  - pangomm
+  - lilv
+  - libvorbis
+  - libsndfile
+  - libsigc++
+  - libsamplerate
+  - libogg
+  - liblrdf
+  - expat http://www.linuxfromscratch.org/blfs/view/svn/general/expat.html
+  - XML::Parser http://www.linuxfromscratch.org/blfs/view/svn/general/perl-modules.html#perl-xml-parser (build instructions: http://www.linuxfromscratch.org/blfs/view/svn/general/perl-modules.html#perl-standard-install )
+  - intltool http://www.linuxfromscratch.org/blfs/view/svn/general/intltool.html (don't forget: <code>make check</code>)
+  - pixman
+  - libgnomecanvas (note: seems to depend on libselinux1-dev, at least to build)
+  - gtk-doc (ftp://ftp.gnome.org/pub/GNOME/sources/gtk-doc/)
+  - glib 2.32+ (Download from: https://git.gnome.org/browse/glib/refs/tags and run (THIS COMMAND WILL BREAK THINGS, KEEP READING BEFORE EXECUTING): <code>./autogen.sh --prefix=/usr; make; sudo make install</code>) BUT: DON'T try replacing the glib packaged with Wreathe this way! Set your own prefix here. Otherwise, things break. Unless you know what you're doing. In which case, please let me know what you know, because I don't know what **I'm** doing. Be careful that your glib version matches the version of GTK+ you want to install. If you get <code>libtool: install: error: cannot install `libgthread-2.0.la' to a directory not ending in /usr/lib</code>, read this: http://stackoverflow.com/questions/10279829/installing-glib-in-non-standard-prefix-fails . Hopefully the <code>make clean</code> after the <code>./configure</code> fixes the issue, but since I want it to go fast I'm appending usr to my prefix to be safe.
+  - gtk+ (NOT with Ardour patches) ("The modified version of GTK+ must be built with the -‌-enable-relocation argument given to the configure command." —http://ardour.org/current_dependencies.html Thus: <code>./configure --enable-relocation --prefix=/usr</code>) (Note: running <code>make check</code> will result in a failed test (FAIL: pltcheck.sh) (see the full output [[failed GTK make check output|here]]) but this appears to be a bug: https://bugzilla.gnome.org/show_bug.cgi?id=354522 ) (Um. I guess I don't read directions. It's right there in bold print: "You do NOT need this version of GTK+ on Linux unless you intend to try to build your own binary bundles of Ardour." Oh well.) Try running: <code>CPPFLAGS="-I/Technical/Library/.ardour3/usr/include"</code><code>LDFLAGS="-L/Technical/Library/.ardour3/usr/lib"</code><code>PKG_CONFIG_PATH="/Technical/Library/.ardour3/usr/lib/pkgconfig"</code><code>export CPPFLAGS LDFLAGS PKG_CONFIG_PATH</code>
+  - giomm-2.4 >= 2.27.93 (aka libglibmm-2.4-dev aka glibmm) (The version linked from http://www.gtkmm.org/en/download.html as "stable" appears to be old. Get it from: http://ftp.gnome.org/pub/GNOME/sources/glibmm/ directly. Ardour3 needs 2.32.0 anyway.) (http://stackoverflow.com/questions/3122475/how-do-i-get-the-giomm-2-4-package)
+  - atkmm 2.22+
+  - gtkmm
+  - cairo
+  - boost (build instructions: http://www.linuxfromscratch.org/blfs/view/svn/general/boost.html)
+  - Ardour 3
+
+It took a lot of fiddling to get Ardour to start. It still fails trying to create a new session though, saying "Could not reconnect to the Audio/MIDI engine" "Could not create session in "/home/kyan/Audio/Studio/projects/test"" and in the terminal saying: <code>kyan@elegy:/media/MyBook/ardour/Ardour3-3.5.74$ /Technical/Library/.ardour3/bin/ardour3 
+bnd txt domain [gtk2_ardour3] to /Technical/Library/.ardour3/share/locale
+Ardour3.5.74 (built using 3.5-74-g8c2cc85 and GCC version 4.4.5)
+ardour: [INFO]: Your system is configured to limit Ardour to only 1024 open files
+ardour: [INFO]: Loading system configuration file /Technical/Library/.ardour3/etc/ardour3/ardour_system.rc
+Loading user configuration file /home/kyan/.config/ardour3/ardour.rc
+Using SSE optimized routines
+Gtk-Message: Failed to load module "rgba"
+Gtk-Message: Failed to load module "canberra-gtk-module"
+
+(ardour-3.5.74:8882): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+ardour: [INFO]: Loading default ui configuration file /Technical/Library/.ardour3/etc/ardour3/ardour3_ui_default.conf
+Loading ui configuration file /Technical/Library/.ardour3/etc/ardour3/ardour3_ui_dark.rc
+
+(ardour-3.5.74:8882): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+JACK protocol mismatch 8
+Cannot connect to the server
+Found nothing along /home/kyan/.config/ardour3/templates:/Technical/Library/.ardour3/share/ardour3/templates
+run dialog
+Announcement is: 
+
+(ardour-3.5.74:8882): GLib-CRITICAL **: g_source_remove: assertion `tag > 0' failed
+JACK command line will be: /usr/bin/jackd -t 200 -p 2048 -R -T -d alsa -n 2 -r 44100 -p 1024 -d hw:Intel,0
+JACK protocol mismatch 8
+Cannot connect to the server
+Butler drops pool trash
+</code>
+
+After struggling to compile it from source, it seems that it is a much better use of my time to purchase a binary.

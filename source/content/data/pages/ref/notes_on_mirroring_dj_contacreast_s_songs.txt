@@ -1,0 +1,357 @@
+Starting from DJ Contacreast's website http://www.djconta.com/ and his songs page http://www.djconta.com/songs
+
+Paste into TextWrangler from website source code:
+
+<code>AudioPlayer.embed("audioplayer_1", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIFdhcyBUaGVyZS5tcDM"});
+AudioPlayer.embed("audioplayer_2", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvSW5zcGlyaW5nIE1vb25saWdodCBwcmV2aWV3Lm1wMw"});
+AudioPlayer.embed("audioplayer_3", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvTW9ybmluZyBGbG93ZXIgcHJldmlldy5tcDM"});
+AudioPlayer.embed("audioplayer_4", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEaXZpbmUgQWR2ZW50dXJlLm1wMw"});
+AudioPlayer.embed("audioplayer_5", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIYXBweSBOZXcgU3RhcnQubXAzA"});
+AudioPlayer.embed("audioplayer_6", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvU291bGVybyAtIFN1bnNldCAoREogQ29udGFjcmVhc3QgUmVtaXgpLm1wMw"});
+AudioPlayer.embed("audioplayer_7", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBGbHlpbmcgSG9tZS5tcDM"});
+AudioPlayer.embed("audioplayer_8", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBKb3VybmV5IHRvIEhlYXZlbi5tcDM"});
+AudioPlayer.embed("audioplayer_9", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEZWVwIFRydXRoLm1wMw"});
+AudioPlayer.embed("audioplayer_10", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBGYXIgZnJvbSBVbml2ZXJzZS5tcDM"});
+AudioPlayer.embed("audioplayer_11", {loader:"17e2ff",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIGZvdW5kIG15IEFuZ2VsLm1wMw"});
+AudioPlayer.embed("audioplayer_12", {loader:"0xe60000",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREorQ29udGFjcmVhc3QrLStTa3liZWFtLm1wMw"});
+AudioPlayer.embed("audioplayer_13", {loader:"0x0266c8",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBHb2xkZW4gU3Vuc2V0Lm1wMw"});
+AudioPlayer.embed("audioplayer_14", {loader:"0xffb622",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXZWxjb21lIHRvIE15IERyZWFtLm1wMw"});
+AudioPlayer.embed("audioplayer_15", {loader:"0x7a00f9",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXb3JsZCBvZiBEcmVhbXMubXAzA"});
+AudioPlayer.embed("audioplayer_16", {loader:"0xff00d2",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBMaWZlIGlzIGEgR2lmdC5tcDM"});
+AudioPlayer.embed("audioplayer_17", {loader:"0xfff422",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBHYXRlcyBvZiBGcmVlZG9tLm1wMw"});
+AudioPlayer.embed("audioplayer_18", {loader:"0x00ff01",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIZWFsIG15IEhlYXJ0Lm1wMw"});
+AudioPlayer.embed("audioplayer_19", {loader:"0×e60000",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgTGlnaHQgaXMgU2hpbmluZy5tcDM"});
+AudioPlayer.embed("audioplayer_20", {loader:"0xe60000",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEcmVhbSBvZiBUZWFycy5tcDM"});
+AudioPlayer.embed("audioplayer_21", {loader:"0xe60000",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIYXBweSBGYW50YXN5Lm1wMw"});
+AudioPlayer.embed("audioplayer_22", {loader:"0xe60000",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXYWl0aW5nIGZvciBQYXJhZGlzZS5tcDM"});
+AudioPlayer.embed("audioplayer_23", {loader:"0xe60000",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgU2Vjb25kIERpbWVuc2lvbi5tcDM"});
+AudioPlayer.embed("audioplayer_24", {loader:"0xe60000",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgU2VhLm1wMw"});
+AudioPlayer.embed("audioplayer_25", {loader:"0xe60000",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJbiB0aGUgU2lsZW5jZS5tcDM"});
+AudioPlayer.embed("audioplayer_26", {loader:"0xe60000",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXb25kZXJpbmcubXAzA"});
+AudioPlayer.embed("audioplayer_27", {loader:"0xfeed2b",autostart:"no",soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBNZWxvZHkgZnJvbSBIZWF2ZW4ubXAzA"});
+AudioPlayer.embed("audioplayer_1", {soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3Mvd2VsY29tZSB0byBteSBkcmVhbSBhbGJ1bSBwcmV2aWV3Lm1wMw"});
+AudioPlayer.embed("audioplayer_2", {soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvTW9ybmluZyBGbG93ZXIgYWxidW0gcHJldmlldy5tcDM"});
+AudioPlayer.embed("audioplayer_3", {soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvJTVCMjAxNC0wNC0wOC0xMy0yMS0xNyU1RFN3ZWV0K0NoaWxpK0VQLm1wMw"});
+AudioPlayer.embed("audioplayer_4", {soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvcG9wIGFsYnVtIHByZXZpZXcubXAzA"});
+AudioPlayer.embed("audioplayer_5", {soundFile:"aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIFdhcyBUaGVyZS5tcDM"});
+</code>
+
+Search:
+<code>AudioPlayer\.embed\(\"audioplayer_.+soundFile:\"</code>
+
+Replace with nothing (Grep mode)
+<code>aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIFdhcyBUaGVyZS5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvSW5zcGlyaW5nIE1vb25saWdodCBwcmV2aWV3Lm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvTW9ybmluZyBGbG93ZXIgcHJldmlldy5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEaXZpbmUgQWR2ZW50dXJlLm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIYXBweSBOZXcgU3RhcnQubXAzA"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvU291bGVybyAtIFN1bnNldCAoREogQ29udGFjcmVhc3QgUmVtaXgpLm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBGbHlpbmcgSG9tZS5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBKb3VybmV5IHRvIEhlYXZlbi5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEZWVwIFRydXRoLm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBGYXIgZnJvbSBVbml2ZXJzZS5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIGZvdW5kIG15IEFuZ2VsLm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREorQ29udGFjcmVhc3QrLStTa3liZWFtLm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBHb2xkZW4gU3Vuc2V0Lm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXZWxjb21lIHRvIE15IERyZWFtLm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXb3JsZCBvZiBEcmVhbXMubXAzA"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBMaWZlIGlzIGEgR2lmdC5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBHYXRlcyBvZiBGcmVlZG9tLm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIZWFsIG15IEhlYXJ0Lm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgTGlnaHQgaXMgU2hpbmluZy5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEcmVhbSBvZiBUZWFycy5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIYXBweSBGYW50YXN5Lm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXYWl0aW5nIGZvciBQYXJhZGlzZS5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgU2Vjb25kIERpbWVuc2lvbi5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgU2VhLm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJbiB0aGUgU2lsZW5jZS5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXb25kZXJpbmcubXAzA"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBNZWxvZHkgZnJvbSBIZWF2ZW4ubXAzA"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3Mvd2VsY29tZSB0byBteSBkcmVhbSBhbGJ1bSBwcmV2aWV3Lm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvTW9ybmluZyBGbG93ZXIgYWxidW0gcHJldmlldy5tcDM"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvJTVCMjAxNC0wNC0wOC0xMy0yMS0xNyU1RFN3ZWV0K0NoaWxpK0VQLm1wMw"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvcG9wIGFsYnVtIHByZXZpZXcubXAzA"});
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIFdhcyBUaGVyZS5tcDM"});
+</code>
+
+Search: <code>});</code>
+
+Replace with nothing (this and later replaces not in grep mode until mentioned otherwise)
+<code>aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIFdhcyBUaGVyZS5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvSW5zcGlyaW5nIE1vb25saWdodCBwcmV2aWV3Lm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvTW9ybmluZyBGbG93ZXIgcHJldmlldy5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEaXZpbmUgQWR2ZW50dXJlLm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIYXBweSBOZXcgU3RhcnQubXAzA"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvU291bGVybyAtIFN1bnNldCAoREogQ29udGFjcmVhc3QgUmVtaXgpLm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBGbHlpbmcgSG9tZS5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBKb3VybmV5IHRvIEhlYXZlbi5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEZWVwIFRydXRoLm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBGYXIgZnJvbSBVbml2ZXJzZS5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIGZvdW5kIG15IEFuZ2VsLm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREorQ29udGFjcmVhc3QrLStTa3liZWFtLm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBHb2xkZW4gU3Vuc2V0Lm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXZWxjb21lIHRvIE15IERyZWFtLm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXb3JsZCBvZiBEcmVhbXMubXAzA"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBMaWZlIGlzIGEgR2lmdC5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBHYXRlcyBvZiBGcmVlZG9tLm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIZWFsIG15IEhlYXJ0Lm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgTGlnaHQgaXMgU2hpbmluZy5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEcmVhbSBvZiBUZWFycy5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIYXBweSBGYW50YXN5Lm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXYWl0aW5nIGZvciBQYXJhZGlzZS5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgU2Vjb25kIERpbWVuc2lvbi5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgU2VhLm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJbiB0aGUgU2lsZW5jZS5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXb25kZXJpbmcubXAzA"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBNZWxvZHkgZnJvbSBIZWF2ZW4ubXAzA"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3Mvd2VsY29tZSB0byBteSBkcmVhbSBhbGJ1bSBwcmV2aWV3Lm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvTW9ybmluZyBGbG93ZXIgYWxidW0gcHJldmlldy5tcDM"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvJTVCMjAxNC0wNC0wOC0xMy0yMS0xNyU1RFN3ZWV0K0NoaWxpK0VQLm1wMw"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvcG9wIGFsYnVtIHByZXZpZXcubXAzA"
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIFdhcyBUaGVyZS5tcDM"
+</code>
+Search <code>"</code>
+
+Replace with nothing
+
+<code>aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIFdhcyBUaGVyZS5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvSW5zcGlyaW5nIE1vb25saWdodCBwcmV2aWV3Lm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvTW9ybmluZyBGbG93ZXIgcHJldmlldy5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEaXZpbmUgQWR2ZW50dXJlLm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIYXBweSBOZXcgU3RhcnQubXAzA
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvU291bGVybyAtIFN1bnNldCAoREogQ29udGFjcmVhc3QgUmVtaXgpLm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBGbHlpbmcgSG9tZS5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBKb3VybmV5IHRvIEhlYXZlbi5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEZWVwIFRydXRoLm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBGYXIgZnJvbSBVbml2ZXJzZS5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIGZvdW5kIG15IEFuZ2VsLm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREorQ29udGFjcmVhc3QrLStTa3liZWFtLm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBHb2xkZW4gU3Vuc2V0Lm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXZWxjb21lIHRvIE15IERyZWFtLm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXb3JsZCBvZiBEcmVhbXMubXAzA
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBMaWZlIGlzIGEgR2lmdC5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBHYXRlcyBvZiBGcmVlZG9tLm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIZWFsIG15IEhlYXJ0Lm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgTGlnaHQgaXMgU2hpbmluZy5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBEcmVhbSBvZiBUZWFycy5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBIYXBweSBGYW50YXN5Lm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXYWl0aW5nIGZvciBQYXJhZGlzZS5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgU2Vjb25kIERpbWVuc2lvbi5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBUaGUgU2VhLm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJbiB0aGUgU2lsZW5jZS5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBXb25kZXJpbmcubXAzA
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBNZWxvZHkgZnJvbSBIZWF2ZW4ubXAzA
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3Mvd2VsY29tZSB0byBteSBkcmVhbSBhbGJ1bSBwcmV2aWV3Lm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvTW9ybmluZyBGbG93ZXIgYWxidW0gcHJldmlldy5tcDM
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvJTVCMjAxNC0wNC0wOC0xMy0yMS0xNyU1RFN3ZWV0K0NoaWxpK0VQLm1wMw
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvcG9wIGFsYnVtIHByZXZpZXcubXAzA
+aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2RqY29udGEvc29uZ3MvREogQ29udGFjcmVhc3QgLSBJIFdhcyBUaGVyZS5tcDM
+</code>
+
+Use http://www.motobit.com/util/base64-decoder-encoder.asp to convert each line from base64, filling in the file extension if it's missing (some of them came out with .mp or .m)
+
+<code>https://s3.amazonaws.com/djconta/songs/DJ Contacreast - I Was There.mp3
+https://s3.amazonaws.com/djconta/songs/Inspiring Moonlight preview.mp3
+https://s3.amazonaws.com/djconta/songs/Morning Flower preview.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Divine Adventure.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Happy New Start.mp3
+https://s3.amazonaws.com/djconta/songs/Soulero - Sunset (DJ Contacreast Remix).mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Flying Home.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Journey to Heaven.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Deep Truth.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Far from Universe.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - I found my Angel.mp3
+https://s3.amazonaws.com/djconta/songs/DJ+Contacreast+-+Skybeam.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Golden Sunset.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Welcome to My Dream.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - World of Dreams.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Life is a Gift.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Gates of Freedom.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Heal my Heart.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - The Light is Shining.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Dream of Tears.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Happy Fantasy.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Waiting for Paradise.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - The Second Dimension.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - The Sea.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - In the Silence.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Wondering.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - Melody from Heaven.mp3
+https://s3.amazonaws.com/djconta/songs/welcome to my dream album preview.mp3
+https://s3.amazonaws.com/djconta/songs/Morning Flower album preview.m
+https://s3.amazonaws.com/djconta/songs/%5B2014-04-08-13-21-17%5DSweet+Chili+EP.mp3
+https://s3.amazonaws.com/djconta/songs/pop album preview.mp3
+https://s3.amazonaws.com/djconta/songs/DJ Contacreast - I Was There.mp3
+</code>
+
+Search: <code> </code> (a space)
+
+Replace: <code>%20</code>
+
+<code>https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20Was%20There.mp3
+https://s3.amazonaws.com/djconta/songs/Inspiring%20Moonlight%20preview.mp3
+https://s3.amazonaws.com/djconta/songs/Morning%20Flower%20preview.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Divine%20Adventure.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Happy%20New%20Start.mp3
+https://s3.amazonaws.com/djconta/songs/Soulero%20-%20Sunset%20(DJ%20Contacreast%20Remix).mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Flying%20Home.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Journey%20to%20Heaven.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Deep%20Truth.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Far%20from%20Universe.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20found%20my%20Angel.mp3
+https://s3.amazonaws.com/djconta/songs/DJ+Contacreast+-+Skybeam.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Golden%20Sunset.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Welcome%20to%20My%20Dream.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20World%20of%20Dreams.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Life%20is%20a%20Gift.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Gates%20of%20Freedom.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Heal%20my%20Heart.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Light%20is%20Shining.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Dream%20of%20Tears.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Happy%20Fantasy.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Waiting%20for%20Paradise.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Second%20Dimension.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Sea.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20In%20the%20Silence.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Wondering.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Melody%20from%20Heaven.mp3
+https://s3.amazonaws.com/djconta/songs/welcome%20to%20my%20dream%20album%20preview.mp3
+https://s3.amazonaws.com/djconta/songs/Morning%20Flower%20album%20preview.m
+https://s3.amazonaws.com/djconta/songs/%5B2014-04-08-13-21-17%5DSweet+Chili+EP.mp3
+https://s3.amazonaws.com/djconta/songs/pop%20album%20preview.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20Was%20There.mp3
+</code>
+
+Add on a couple that exist even though they're not listed:
+
+<code>https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20Was%20There.mp3
+https://s3.amazonaws.com/djconta/songs/Inspiring%20Moonlight%20preview.mp3
+https://s3.amazonaws.com/djconta/songs/Morning%20Flower%20preview.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Divine%20Adventure.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Happy%20New%20Start.mp3
+https://s3.amazonaws.com/djconta/songs/Soulero%20-%20Sunset%20(DJ%20Contacreast%20Remix).mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Flying%20Home.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Journey%20to%20Heaven.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Deep%20Truth.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Far%20from%20Universe.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20found%20my%20Angel.mp3
+https://s3.amazonaws.com/djconta/songs/DJ+Contacreast+-+Skybeam.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Golden%20Sunset.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Welcome%20to%20My%20Dream.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20World%20of%20Dreams.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Life%20is%20a%20Gift.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Gates%20of%20Freedom.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Heal%20my%20Heart.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Light%20is%20Shining.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Dream%20of%20Tears.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Happy%20Fantasy.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Waiting%20for%20Paradise.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Second%20Dimension.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Sea.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20In%20the%20Silence.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Wondering.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Melody%20from%20Heaven.mp3
+https://s3.amazonaws.com/djconta/songs/welcome%20to%20my%20dream%20album%20preview.mp3
+https://s3.amazonaws.com/djconta/songs/Morning%20Flower%20album%20preview.m
+https://s3.amazonaws.com/djconta/songs/%5B2014-04-08-13-21-17%5DSweet+Chili+EP.mp3
+https://s3.amazonaws.com/djconta/songs/pop%20album%20preview.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20Was%20There.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Inspiring%20Moonlight.mp3
+https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Morning%20Flower.mp3
+</code>
+
+Search: <code>\n</code>
+Replace: <code>\">*</a>\n<a href=\"</code> (in Grep mode)
+
+<code>https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20Was%20There.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/Inspiring%20Moonlight%20preview.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/Morning%20Flower%20preview.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Divine%20Adventure.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Happy%20New%20Start.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/Soulero%20-%20Sunset%20(DJ%20Contacreast%20Remix).mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Flying%20Home.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Journey%20to%20Heaven.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Deep%20Truth.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Far%20from%20Universe.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20found%20my%20Angel.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ+Contacreast+-+Skybeam.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Golden%20Sunset.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Welcome%20to%20My%20Dream.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20World%20of%20Dreams.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Life%20is%20a%20Gift.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Gates%20of%20Freedom.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Heal%20my%20Heart.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Light%20is%20Shining.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Dream%20of%20Tears.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Happy%20Fantasy.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Waiting%20for%20Paradise.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Second%20Dimension.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Sea.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20In%20the%20Silence.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Wondering.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Melody%20from%20Heaven.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/welcome%20to%20my%20dream%20album%20preview.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/Morning%20Flower%20album%20preview.m">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/%5B2014-04-08-13-21-17%5DSweet+Chili+EP.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/pop%20album%20preview.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20Was%20There.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Inspiring%20Moonlight.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Morning%20Flower.mp3">*</a>
+<a href="</code>
+
+Manually clean it up and turn it into marginally proper HTML:
+
+<code><html>
+<head>
+<title>Contacreast song URLs</title>
+</head>
+<body>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20Was%20There.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/Inspiring%20Moonlight%20preview.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/Morning%20Flower%20preview.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Divine%20Adventure.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Happy%20New%20Start.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/Soulero%20-%20Sunset%20(DJ%20Contacreast%20Remix).mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Flying%20Home.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Journey%20to%20Heaven.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Deep%20Truth.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Far%20from%20Universe.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20found%20my%20Angel.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ+Contacreast+-+Skybeam.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Golden%20Sunset.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Welcome%20to%20My%20Dream.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20World%20of%20Dreams.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Life%20is%20a%20Gift.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Gates%20of%20Freedom.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Heal%20my%20Heart.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Light%20is%20Shining.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Dream%20of%20Tears.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Happy%20Fantasy.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Waiting%20for%20Paradise.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Second%20Dimension.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20The%20Sea.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20In%20the%20Silence.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Wondering.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Melody%20from%20Heaven.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/welcome%20to%20my%20dream%20album%20preview.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/Morning%20Flower%20album%20preview.m">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/%5B2014-04-08-13-21-17%5DSweet+Chili+EP.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/pop%20album%20preview.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20I%20Was%20There.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Inspiring%20Moonlight.mp3">*</a>
+<a href="https://s3.amazonaws.com/djconta/songs/DJ%20Contacreast%20-%20Morning%20Flower.mp3">*</a>
+</body></html></code>
+
+Save the file as something<del> (I'm calling it conta.html).</del>
+
+Never mind that, I'm calling it conta-saved-2014.oct.31.html.
+
+And uploading it to the website: http://futuramerlin.com/conta-saved-2014.oct.31.html
+
+Tada!
+
+Now we have a Web page of it, it's quite simple to tweak one of the commands at [[:wreathe:support:mirror_a_website_without_parent_directories]] to save them as a WARC: 
+
+<code>wget --mirror -p --no-parent --warc-max-size=500M --warc-file=cc2014.oct.31 -e robots=off -H http://futuramerlin.com/conta-saved-2014.oct.31.html;</code>
+
+All done!

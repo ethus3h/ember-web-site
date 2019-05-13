@@ -1,0 +1,21 @@
+**Wreathe** is a free Linux distribution targeted at technically knowledgeable desktop users. It contains a diverse and useful set of preinstalled application software, enabling it to be effective out-of-the-box in a large number of fields. Its goals are to provide a stable, fast system requiring minimal configuration and learning. The radically rethought user interface provides a very intuitive and powerful method for a variety of desktop computing applications, while still providing ease of access to seemingly endless configuration options and lower-level system functionality. Version 5, "[[Wreathe 5: Rain|Rain]]", adds a number of features and enhancements to Wreathe that should please old users and newcomers alike.
+
+The [[FMOS]] concept systems which later evolved into Wreathe were developed around 2005 to 2007. The Wreathe project to implement these ideas had its first release, "[[Wreathe 1: Frost|Wreathe 1: Frost]]", in early 2010, using Lubuntu as a basis for development. A later release, "[[Wreathe 1r2: Frost|Wreathe 1r2: Frost]]", was forked from Canonical's Ubuntu 10.10.
+
+The previous two paragraphs were adapted from [[http://futuramerlin.com/d/s/w/Wreathe%20web/index.html|the official website]] on 5 October 2012 (just after midnight of 4 October 2012) (and possibly a bit on 4 October 2012 just before midnight). Please see the official website for up-to-date information. 
+
+[[Release history]]
+
+[[Things to do for new releases]]
+
+[[Питер]]
+
+[[Wreathe Fusion Application Manager]]
+
+[[wreathe:support:home|Support]]
+
+[[Wreathe roadmap|Roadmap]]
+
+[[Compilation notes|Compilation notes]]
+
+[[Package lists]]

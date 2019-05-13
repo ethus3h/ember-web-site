@@ -1,0 +1,1 @@
+A **metadatum** is a record of a concrete attribute of or an objective truth regarding a [[node]], such as the number of words in a book or the dimensions of a sculpture.

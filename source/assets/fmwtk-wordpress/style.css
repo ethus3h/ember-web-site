@@ -1,0 +1,122 @@
+/*
+ Theme Name:   FMWTK Wordpress Theme
+ Theme URI:    http://futuramerlin.com/ancillary/futuramerlin-web-toolkit/
+ Description:  WordPress theme for the Futuramerlin Web Toolkit. Based on "fmwtkwordpress"
+ Author:       Ember Project
+ Author URI:   http://futuramerlin.com
+ Version:      0.0.1
+ License:      GNU General Public License v2 or later; modifications also licensed under the GNU Affero GPL V3
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         responsive-layout, accessibility-ready
+ Text Domain:  fmwtkwordpress
+*/
+html {
+    padding: 1rem;
+    padding-top: 3.5rem;
+    width: unset;
+    height: unset;
+}
+h2, h3 {
+    border-top: none;
+}
+h2 {
+    padding: 0.5rem;
+}
+h2:first-of-type::before {
+    content: none;
+}
+img {
+    display: initial;
+}
+.edit-link {
+    display: none;
+}
+.entry-title {
+    padding-bottom: 1rem;
+}
+.entry-meta {
+    padding-top: 0.5rem;
+    font-size: 1.25rem;
+}
+.post-navigation::before {
+    content: unset;
+}
+.screen-reader-text {
+    display: none;
+}
+.nav-subtitle::after {
+    content: ': ';
+}
+.icon {
+    display: none;
+}
+.cat-links {
+    background-color: rgba(0,0,0,0.1);
+    padding: 0.5rem;
+}
+.entry-footer {
+    top: 1rem;
+    position: relative;
+}
+.post-navigation {
+    top: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+time.updated::before {
+    content: ' — Updated: '
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: rgba(255,255,255,0.8);
+    font-size: 1.75rem;
+}
+#navlogo {
+    font-size: 1.75rem;
+    background-color: rgba(195,83,229,0.9);
+    backdrop-filter: blur(0.1rem);
+    padding: 0.5rem;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    height: 3rem;
+    color: #ffffff;
+    z-index: 1000;
+    white-space: nowrap;
+}
+.menu li::before {
+    content: none;
+}
+.status-private {
+    display: none;
+}
+p, ul {
+    font-size: 1.5rem;
+}
+.sub-menu {
+    display: none;
+    position: fixed;
+    background-color: rgba(65,105,225,0.9);
+    padding: 0.2rem 1rem 0.5rem 1rem;
+    border-right: 1rem solid #9600e1;
+    z-index: 1;
+}
+li:hover > .sub-menu {
+    display: block;
+}
+.sub-menu a {
+    color: white;
+    backdrop-filter: blur(0.1rem);
+    border-bottom: 0.063rem dotted rgba(255,255,255,0.4);
+    border-bottom: 0.063rem solid white;
+}
+body::before, body::after {
+    display: none;
+}
+.main-navigation ul {
+    list-style: none;
+}

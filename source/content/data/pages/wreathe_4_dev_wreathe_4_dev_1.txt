@@ -1,0 +1,9 @@
+**Wreathe 4 dev / Wreathe 4 dev 1** was the final version of [[Wreathe]] in the [[autumnfairy]] release group.
+
+* Release group: [[autumnfairy]]
+
+* Branch: [[Wreathe 4*]]
+
+Based on [[Wreathe 3 dev]].
+
+{{ :fusion_desktop_30_december_2011.png?200 |}}

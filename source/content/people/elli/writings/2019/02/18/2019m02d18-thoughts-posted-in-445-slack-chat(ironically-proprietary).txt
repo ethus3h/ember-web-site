@@ -1,0 +1,14 @@
+This link was posted in NMD445 Slack, so I responded to it (well, to the article that *it* linked to).
+
+ https://yro.slashdot.org/story/19/02/16/012249/free-software-foundation-dating-is-a-free-software-issue?utm_source=rss1.0mainlinkanon&utm_medium=feed
+
+It's a sort of weird forum Web page with a link to the actual article at the top, and a bunch of inane comments below (which I only skimmed). This is the actual article that it's a reference to:
+ https://www.fsf.org/blogs/community/dating-is-a-free-software-issue
+
+This was my response ("Elliot Chandler [5:40 PM]"):
+
+Proprietary software is an issue wherever it shows up, and in the last 20 years or so it seems like people's dependency on IT systems — especially proprietary IT systems — is increasing rapidly, and has broken out of the space it held in previous decades of businesses and enthusiasts to have a substantial and powerful sway on a huge range of aspects of people's lives. Proprietary software makes these dependencies especially hazardous. Even if there were only free/libre/open-source software, though, the rapid rise in brittleness and fragility of economic and social systems caused by the ubiquity of current IT systems is terrifying — setting aside the software, hardware with the capabilities demanded by modern uses is so complex, opaque, and dependent on globalized supply chains that for example a disruption to rare earth mines could cause a rapid shift in the ability of people who have become dependent on IT to go about their daily lives, I think. Modern "dating" as described in that article is a great example of to what an obscene extent these systems have taken over pretty much everything for a substantial chunk of people. Thanks for sharing the article.
+
+
+A later my response(note that context is omitted from this as it was a conversation; context is available in personal-private/work/Spring\ 2019/NMD445/):
+ Yes, that's similar to why I use Slack — it's proprietary, but I need to get a degree so I can work to promote reliable and sustainable systems. Still I think it is important for anyone who can to try to work towards this, for the benefit of everyone. 
