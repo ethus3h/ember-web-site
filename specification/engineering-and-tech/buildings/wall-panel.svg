@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.1767767"
-     inkscape:cx="413.57728"
-     inkscape:cy="17432.711"
+     inkscape:zoom="0.125"
+     inkscape:cx="6540.0009"
+     inkscape:cy="18198.792"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -857,5 +857,53 @@
          x="272.85291"
          y="-4320.5552"
          style="stroke-width:0.26458335px">8¼&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:50.80000305px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1701.8"
+       y="-5392.6001"
+       id="text1785"><tspan
+         sodipodi:role="line"
+         id="tspan1783"
+         x="1701.8"
+         y="-5346.8418"
+         style="stroke-width:0.26458335px" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:50.80000305px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1803.4"
+       y="-5849.8003"
+       id="text1789"><tspan
+         sodipodi:role="line"
+         id="tspan1787"
+         x="1803.4"
+         y="-5849.8003"
+         style="stroke-width:0.26458335px">6 reusable fasteners needed per tile of wall: half of the 4 to join to its adjacent tiles, and 4 to join the inside+outside panel pair; fastener ports are on left and right sides of the inner walls of the panel.</tspan><tspan
+         sodipodi:role="line"
+         x="1803.4"
+         y="-5786.3003"
+         style="stroke-width:0.26458335px"
+         id="tspan1795">This design has 6&quot; space between each panel's inner enclosure and the next, where fasteners/pipes/insulation/etc. could go.</tspan><tspan
+         sodipodi:role="line"
+         x="1803.4"
+         y="-5722.8003"
+         style="stroke-width:0.26458335px"
+         id="tspan1801">Not sure what to do about it being wood; it's consequently not fireproof, which I don't like.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:50.80000305px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458335px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1701.8"
+       y="-5392.6001"
+       id="text1805"><tspan
+         sodipodi:role="line"
+         id="tspan1803"
+         x="1701.8"
+         y="-5392.6001"
+         style="stroke-width:0.26458335px">7 wooden pieces</tspan><tspan
+         sodipodi:role="line"
+         x="1701.8"
+         y="-5329.1001"
+         style="stroke-width:0.26458335px"
+         id="tspan1809" /></text>
   </g>
 </svg>
