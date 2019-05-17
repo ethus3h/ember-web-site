@@ -89,6 +89,21 @@ r/s/fizzBuzz # A string is an array of ASCII printable characters.
         <dt>new</dt><dd>new ident</dd>
         <dt>set</dt><dd>set ident value</dd>
         <dt>}</dt><dd>End parameter list without new line</dd>
+        <dt>{</dt><dd>Loop over an array. How it's used: <pre><code>new as/temp
+set as/temp [ 'd' 'b' 'l' 'c' 'b' 'a' ]
+new n/c
+as/temp { n/i s/elem
+    set n/c inc n/c
+</code></pre>. This is shorthand for: <pre><code>new as/temp
+set as/temp [ 'd' 'b' 'l' 'c' 'b' 'a' ]
+new n/c
+new n/i
+new s/elem
+while lt n/i count as/temp
+    set s/elem get as/temp n/i
+    set n/i inc n/i
+    set n/c inc n/c
+</code></pre></dd>
     </dl>
 
 <h2>Scope</h2>
