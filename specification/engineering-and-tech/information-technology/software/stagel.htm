@@ -53,8 +53,9 @@
 	</code></pre> The array bracket type doesn't match the content type: [ is for strings, while ( is for numbers.</li>
 	<li><code><pre>set an/remainderArr anSubset an/in -5 -1 # last 4 characters</pre></code> breaks; the comment needs to be on a separate line.</li>
 	<li>Code like <code><pre>set as/data append as/data [ s/key s/val ]</pre></code> is an error: array literals can't contain variables in their definitions.</li>
-        <li>Test conditions have to be on the same line as the test keyword. For example, <pre><code>if
-    lt n/a 0</code></pre> is an error; it should be written as <code>if lt n/a 0</code> instead. Previously it was intended to support splitting them onto separate lines, but it is tedious to implement, and somewhat makes the StageL code harder to read anyway. As a result, this remains an error.</li>
+    <li>Perhaps test conditions should have to be on the same line as the test keyword. For example, <pre><code>if
+    lt n/a 0</code></pre> would be an error; it should be written as <code>if lt n/a 0</code> instead. Previously it was intended to support splitting them onto separate lines, but it is tedious to implement, and somewhat makes the StageL code harder to read anyway. As a result, this perhaps should be an error.</li>
+    <li><code>until</code> statements don't work (search for "This doesn't work. I guess it'll just be necessary to forgo split-line untils for now, although I'm not sure split-line commands are really desirable regardless. FIXME" in the code).</li>
     </ul>
     <h3>Example</h3>
     <pre><code>
