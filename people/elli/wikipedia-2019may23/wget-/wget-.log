@@ -1,5 +1,0 @@
-Opening WARC file ‘wget--00000.warc.gz’.
-
-Cannot open cookies file ‘cookies.txt’: No such file or directory
---2019-05-23 20:01:15--  https://en.wikipedia.org/wiki/Special:Export?pages=User:Crimsonmargarine%0D%0A&templates=1&history=1
-Resolving en.wikipedia.org (en.wikipedia.org)... 
