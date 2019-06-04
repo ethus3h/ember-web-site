@@ -95,13 +95,18 @@ else {
         if ($userData != null) {
             //print_r($userData);
             //echo $secretkey;
-            if(password_verify($secretkey, $userData["hashedSecretKey"])) {
-                $newSession=uuidgen();
-                $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 48*60*60, '']);
-                $resultsArray=$newSession;
+            if ($userData["permissions"] != '0') {
+                if (password_verify($secretkey, $userData["hashedSecretKey"])) {
+                    $newSession=uuidgen();
+                    $database->addRowFromArrays('idxSession', ['nodeId', 'sessionKey', 'created', 'expires', 'events'], ['NULL', $newSession, $timestamp, $timestamp + 48*60*60, '']);
+                    $resultsArray=$newSession;
+                } else {
+                    http_response_code(403);
+                    $resultsArray="ERROR: Could not verify secret key. 2d9e733b-58d1-43bd-b306-bbd46570381e";
+                }
             } else {
                 http_response_code(403);
-                $resultsArray="ERROR: Could not verify secret key. 2d9e733b-58d1-43bd-b306-bbd46570381e";
+                $resultsArray="ERROR: User account has not been activated. 108fb88a-53a7-445c-b4c0-a8929da44e23";
             }
         } else {
             http_response_code(403);
