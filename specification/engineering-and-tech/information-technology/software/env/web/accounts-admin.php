@@ -53,7 +53,7 @@ if($accessKey === $mysqlPassword) {
         <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
         <title>User Access Management</title>
         </head>
-        <body><a href="/">→ Home</a><br><br>
+        <body><a href="/">← Home</a><br><br>
         <table><thead><tr><th>ID</th><th>Public ID</th><th>Name</th><th>Location</th><th>Employees Count</th><th>Payment Method</th><th>Email</th><th>Other</th><th>Account approved?</th><th>(Dis)Approve</th></tr></thead>
         <tbody>';
         $resultsArray=$database->getTable('idxPerson');
@@ -84,7 +84,7 @@ else {
     <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
     <title>User Access Management</title>
     </head>
-    <body><a href="/">→ Home</a><br><br>
+    <body><a href="/">← Home</a><br><br>
     <p>ERROR: Incorrect access key!</p>
     </body>
     </html>';

@@ -1,3 +1,8 @@
-body {
+html {
     background-color: green;
+    padding: 0.5rem;
+}
+body {
+    background-color: background-color: rgba(255,255,255,0.8);
+    padding: 1rem;
 }

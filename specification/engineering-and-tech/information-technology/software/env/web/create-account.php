@@ -53,7 +53,7 @@ $paymentMethod = getParam('paymentMethod');
 $email = getParam('email');
 $other = getParam('other');
 $userData=$database->getRow('idxPerson', "publicId", $publicId);
-if ($userData != null) {
+if (array_key_exists('publicId', $userData)) {
     http_response_code(403);
     echo '<!DOCTYPE html>
     <html lang="en">
@@ -63,27 +63,11 @@ if ($userData != null) {
     <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
     <title>User Access Management</title>
     </head>
-    <body><a href="/">→ Home</a><br><br>
+    <body><a href="/">← Home</a><br><br>
     <p>ERROR: The requested user account ID already exists!</p>
     </body>
     </html>';
-}
-elseif ($userData["publicId"] != '') {
-    http_response_code(403);
-    echo '<!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="utf-8" />
-    <link href="accounts.css" rel="stylesheet" type="text/css">
-    <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
-    <title>User Access Management</title>
-    </head>
-    <body><a href="/">→ Home</a><br><br>
-    <p>ERROR: The requested user account ID may already exist!</p>
-    </body>
-    </html>';
-}
-else {
+} else {
     $database->addRowFromArrays('idxPerson', ['nodeId', 'publicId', 'hashedSecretKey', 'name', 'location', 'employeesCount', 'paymentMethod', 'email', 'other', 'permissions'], ['NULL', $publicId, eiteHashSecret($secretkey), $name, $location, $employeesCount, $paymentMethod, $email, $other, '0']);
     echo '<!DOCTYPE html>
     <html lang="en">
@@ -93,7 +77,7 @@ else {
     <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
     <title>User Access Management</title>
     </head>
-    <body><a href="/">→ Home</a><br><br>
+    <body><a href="/">← Home</a><br><br>
     <p>Added account (new account public ID is: '.$publicId.')! After it has been approved, you can start using the account.</p>
     </body>
     </html>';
