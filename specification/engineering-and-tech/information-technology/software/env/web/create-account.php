@@ -59,6 +59,7 @@ if ($userData != null) {
     <html lang="en">
     <head>
     <meta charset="utf-8" />
+    <link href="accounts.css" rel="stylesheet" type="text/css">
     <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
     <title>User Access Management</title>
     </head>
@@ -73,6 +74,7 @@ elseif ($userData["publicId"] != '') {
     <html lang="en">
     <head>
     <meta charset="utf-8" />
+    <link href="accounts.css" rel="stylesheet" type="text/css">
     <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
     <title>User Access Management</title>
     </head>
@@ -87,6 +89,7 @@ else {
     <html lang="en">
     <head>
     <meta charset="utf-8" />
+    <link href="accounts.css" rel="stylesheet" type="text/css">
     <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
     <title>User Access Management</title>
     </head>
