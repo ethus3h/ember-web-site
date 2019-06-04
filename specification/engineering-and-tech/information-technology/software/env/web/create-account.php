@@ -53,7 +53,7 @@ $paymentMethod = getParam('paymentMethod');
 $email = getParam('email');
 $other = getParam('other');
 $userData=$database->getRow('idxPerson', "publicId", $publicId);
-if ($userData["publicId"] != '') {
+if ($userData != null) {
     http_response_code(403);
     echo '<!DOCTYPE html>
     <html lang="en">
@@ -64,6 +64,20 @@ if ($userData["publicId"] != '') {
     </head>
     <body><a href="/">→ Home</a><br><br>
     <p>ERROR: The requested user account ID already exists!</p>
+    </body>
+    </html>';
+}
+elseif ($userData["publicId"] != '') {
+    http_response_code(403);
+    echo '<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
+    <title>User Access Management</title>
+    </head>
+    <body><a href="/">→ Home</a><br><br>
+    <p>ERROR: The requested user account ID may already exist!</p>
     </body>
     </html>';
 }
