@@ -72,6 +72,17 @@ if($accessKey === $mysqlPassword) {
         else {
             $database->setField('idxPerson', 'permissions', '0', $accountId);
         }
+        echo '<!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="utf-8" />
+        <link href="accounts.css" rel="stylesheet" type="text/css">
+        <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
+        <title>User Access Management</title>
+        </head>
+        <body><a href="/">← Home</a><br><br>';
+        echo '<form method="post" action="accounts-admin.php"><input type="hidden" name="accessKey" value="'.$accessKey.'"><input type="submit" value="Done! Back to management page"></form></td></tr>';
+        echo '</body></html>';
     }
 }
 else {
