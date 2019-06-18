@@ -1,1 +1,0 @@
-The **Traditional Main Menu** is the name for the GNOME 2 main menu used in some Wreathe documentation. This menu was removed (along with gnome-panel) in [[Elegy]], being entirely replaced by the [[Simplified Main Menu]].

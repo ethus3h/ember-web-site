@@ -1,3 +1,0 @@
-===== Copy all symlinks in symdir to symdir_output, but change them into the target files =====
-Copy all symlinks in symdir to symdir_output, but change them into the target files (replace them with the real linked files):
-  rsync symdir/ symdir_output/ -a --copy-links -v

@@ -1,7 +1,0 @@
-This page gives some definitions of terms, functions, etc used in and related to Weave — basically, generic documentation 
-
-[[CDCE]]
-
-[[Weave]]
-
-[[itf]] (function)

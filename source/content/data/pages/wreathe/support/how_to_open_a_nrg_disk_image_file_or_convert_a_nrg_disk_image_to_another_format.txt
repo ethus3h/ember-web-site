@@ -1,7 +1,0 @@
-====== How to open a NRG disk image file, or convert a NRG disk image to another format (such as BIN/CUE or ISO) ======
-
-Use the Windows program [[http://www.ezbsystems.com/ultraiso/|UltraISO]], running using WINE. It has a free trial available that seemed to work the one time I used it. In case the website goes offline, the free trial installer can be downloaded from: https://web.archive.org/web/20140108021242/http://dw.ezbsys.net/uiso9_pe.exe
-
-There are open source ways to work with these files, but I think UltraISO is probably the easiest solution.
-
-Note that (from what I've been reading at least) the ISO format does not have the capacity to store multiple sessions (or multitrack sessions?). BIN/CUE seems to avoid this problem.

@@ -1,1 +1,0 @@
-A **relationship** is a description of the connection between two [[nodes]].
