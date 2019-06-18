@@ -234,7 +234,7 @@ TOTAL                               1400    10          14120
         <tr><td>EITE document format tests</td><td>StageL</td><td>Test suite for EITE implementation.</td><td>web/tests.htm</td></tr>
         <tr><td>EITE document runner</td><td>Various platforms possible. For now, HTML+JS. (dep. on EITE document format implementation)</td><td>Thin wrapper around the EITE document format implementation that runs and displays a specified document.</td><td>(TODO)</td></tr>
         <tr><td>EITE non-native document editing tool</td><td>HTML, JavaScript (dep. on EITE document runner)</td><td>Tool for editing and running EITE-format documents before an EITE-native editing tool is available.</td><td>web/edit.htm (WIP)</td></tr>
-        <tr><td>EITE-native user interface and platform, including document editing tool, and optional servers for search, ad-hoc networking, encryption keys, and node data storage and synchronization (optionally, able to be a master server, storing all nodes in the network).</td><td>EITE</td><td>A user interface and document editing tool. This is what's shown in the mockups e.g. <a href="http://futuramerlin.com/people/elliot/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/">here</a>. It would be used by running it using the EITE document format implementation. Thus, it could be used as the main interface to a computer, by booting directly into it. (I probably won't get it running outside of a Web browser this semester, as that's not a big priority for me right now, and it almost certainly won't be nearly as useful as mainstream operating systems or Web desktops, but I think that such capabilities would ultimately be ideal.)</td><td>web/main.htm (WIP)</td></tr>
+        <tr><td>EITE-native user interface and platform, including document editing tool, and optional servers for search, ad-hoc networking, encryption keys, and node data storage and synchronization (optionally, able to be a master server, storing all nodes in the network).</td><td>EITE</td><td>A user interface and document editing tool. This is what's shown in the mockups e.g. <a href="/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/">here</a>. It would be used by running it using the EITE document format implementation. Thus, it could be used as the main interface to a computer, by booting directly into it. (I probably won't get it running outside of a Web browser this semester, as that's not a big priority for me right now, and it almost certainly won't be nearly as useful as mainstream operating systems or Web desktops, but I think that such capabilities would ultimately be ideal.)</td><td>web/main.htm (WIP)</td></tr>
     </tbody>
     </table>
 
@@ -272,26 +272,22 @@ TOTAL                               1400    10          14120
         <p>Consensus upon a standardized protocol for wirelessly establishing a decentralized network has not yet been fully established. Getting this consensus is largely a social and usage-dependent problem (the “network effect” creates something of a chicken-and-egg problem hindering the establishment of this). On the other hand, communication protocols to enable networking is a solved problem: the protocols which underlie Internet communication, UDP, TCP, and IP, are distributed already, which is what allows intranets and other independent, non-Internet-connected networks to communicate in an Internet-like fashion. The protocols are the same, but the independent networks are not connected to the specific instances of centralized trust systems that are a defining part of the Internet.</p>
         <p>Because fully distributed systems are inherently somewhat limited in their capabilities, due to the lack of a common trust system, this is not a technology that would entirely decentralize the Internet. Rather, it would provide a means for the system to continue operating in the event of losses of centralized service, and it would simplify replacing those few services which by nature must be centralized if an independent, separate network chose to implement them (a distributed centralization, in a sense, as it enables the centralized parts to be forked or replaced and to have their roles filled by equivalent but separate instances).</p>
         <p>One missing part of the technology is integrated relays for connectivity: if one piece of equipment can see another, and that one can in turn connect to the public Internet, there is no standardized protocol to enable the latter to route traffic on behalf of the former, and most common equipment does not provide the hardware necessary for such a facility. A protocol with a similar purpose has been implemented by ZigBee-brand communication hardware, which provides communication facilities for Internet of Things equipment, but it has a different purpose; even so it demonstrates the feasibility of the concept.</p>
-        <p>A technology known as content-addressed storage systems enables the unambiguous identification of, and thereby discussion of, information, without the need to quote it in its entirety: whereas traditional citation formats (e.g. an author’s name and a title, or a Web URL) do not include enough information to verify that the cited document being viewed by a reader is the same as the document viewed by the author, by including a cryptographic hash, the content can be identified precisely. Brewster Kahle, quoting Peter Lyman, writes: “Now we can add something: ‘Content addressibility means that knowledge has a name.’” This is the system used by the Git distributed version control system, and it allows validation of the accuracy of a copy of a document or set of documents, and thereby validation of the authenticity of them as well through the use of cryptographic signatures.<img src="102-000.png" from work-docs/2019may6a7/ Caption: Brewster Kahle, founder of the
- nonprofit Internet Archive, who
-has advocated for the use of
- distributed networks to facilitate
-information access
-</p>
+        <p>A technology known as content-addressed storage systems enables the unambiguous identification of, and thereby discussion of, information, without the need to quote it in its entirety: whereas traditional citation formats (e.g. an author’s name and a title, or a Web URL) do not include enough information to verify that the cited document being viewed by a reader is the same as the document viewed by the author, by including a cryptographic hash, the content can be identified precisely. Brewster Kahle, quoting Peter Lyman, writes: “Now we can add something: ‘Content addressibility means that knowledge has a name.’” This is the system used by the Git distributed version control system, and it allows validation of the accuracy of a copy of a document or set of documents, and thereby validation of the authenticity of them as well through the use of cryptographic signatures.
+            <figure class="thumbnail-right thumbnail-top">
+                <a href="102-000.png">
+                    <img src="102-000.png" alt="Photograph of Brewster Kahle" />
+                </a>
+                <figcaption>Brewster Kahle, founder of the nonprofit Internet Archive, who has advocated for the use of distributed networks to facilitate information access</figcaption>
+            </figure>
+        </p>
         <p>The ability to locate and establish a connection to a specific network node given only its name and a connection to other nodes in the network, without centralization being needed, is demonstrated by distributed hash trackers (DHT). DHT is a content-addressed storage system using which, given a network connection, can return — given the cryptographic hash of desired information — the address of a computer containing the information corresponding to that hash, without any centralized authority. Similarly, an experimental system called Namecoin attempts to implement a decentralized alternative to the Internet’s Domain Name System using a similar technique.</p>
-        <p>As with the Internet, verification of the identity of the connection thereby established can be accomplished using public-key cryptography, given an existing centralized public key infrastructure (PKI).<figure class="thumbnail-right thumbnail-top">
-    <a href="m.jpg">
-        <img src="m.jpg" alt="Photograph of Elli Chandler" />
-    </a>
-    <figcaption>Traveling while on the Kroka Vermont Semester Program, 2013.</figcaption>
-</figure>
- <img src="102-000.png" from work-docs/2019may6a7/ Caption:Whitfield Diffie and Martin
-Hellman, authors of the 1976 paper
- “New directions in cryptography”,
-which was influential in the
-development of public-key
-cryptography in the private sector
-
+        <p>As with the Internet, verification of the identity of the connection thereby established can be accomplished using public-key cryptography, given an existing centralized public key infrastructure (PKI).
+            <figure class="thumbnail-right thumbnail-top">
+                <a href="102-001.png">
+                    <img src="102-001.png" alt="Photograph of Whitfield Diffie and Martin Hellman" />
+                </a>
+                <figcaption>Whitfield Diffie and Martin Hellman, authors of the 1976 paper “New directions in cryptography”, which was influential in the development of public-key cryptography in the private sector</figcaption>
+            </figure>
         Public key cryptography is a technology allowing messages to be sent securely to a person without first having a secure communication channel to exchange secret cryptographic keys. Simon Singh summarized the challenge posed by key sharing between geographically separated parties in traditional cryptography in The Code Book: “If two parties wanted to communicate securely, they had to rely on a third party to deliver the key, and this became the weakest link in the chain of security.” This challenge was overcome by developments in cryptography in the 1970s, allowing a public key infrastructure to be developed for the Internet. The PKI is one of the aspects of the Internet that cannot be effectively decentralized, due to the challenge of knowing whether a public key belongs to the network node it is purported to without any source of trusted information transfer from which to bootstrap trust of the given node.</p>
         <p>These other implementations show that many of the hard problems that obstruct and have historically prevented developing ad-hoc computer network negotiation have already been partially or fully solved by other technologies. This indicates that effective development and adoption of this technology is possible.</p>
         <p>The primary challenge remaining is not technical, but socioeconomic: an existing base of electronic equipment using a common protocol for distributed network routing is needed for any one piece of equipment with this capability to show substantial benefit to its owner, and individuals are unlikely to invest in the additional cost of the equipment necessary for this capability without knowing that they will be able to use it. This chicken-and-egg problem can be solved, however, in several means.</p>
@@ -693,25 +689,29 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
         <p>I might also use this tool when collaborating with other musicians and writers for instant messaging musical ideas, especially when editing or suggesting changes for performance.</p>
         <p>And it will be great to have the option of displaying mere italics in Messages on my iPhone!</p>
     <h3>Storyboard</h3>
-        <img src="image-001.png" from work-docs/2019may6a7/
-        -002
-        -003
+        <img src="image-001.png" alt="I'm working on making a new computer game. I made a great look for a Web site for the game in a word processor. But now, the word processor won't let me put my new game into the file!">
+        <img src="image-002.png" alt="That doesn't make any sense. Computers can hold text and games, so why not both in one document? Oh! I remember a tool someone mentioned to me. They said it is a computer document editing tool that can hold many types of data.">
+        <img src="image-003.png" alt="Great, now I can have the game in my document, and post it to the Web like I originally wanted! Problem solved!">
 <h2>References</h2>
-    • [WHO 2017] WHO. “10 facts on dementia”. April, 2017. http://www.who.int/features/factfiles/dementia/en/
-    • [NIH, n.d.] NIH. “How many people are affected by autism?”. https://www.nichd.nih.gov/health/topics/autism/conditioninfo/Pages/at-risk.aspx#f1
-    • [WHO 2017b] WHO. “Autism spectrum disorders”. April, 2017. http://www.who.int/mediacentre/factsheets/autism-spectrum-disorders/en/
-    • [Miller-Wilson, n.d.] Miller-Wilson, Kate. “How Many People Are Affected by Autism Worldwide?”. http://autism.lovetoknow.com/what-is-autism/how-many-people-are-affected-by-autism-worldwide
-    • [Statista, n.d.] Statista. “Global PC penetration per capita from 2000 to 2015 (in percent)”. https://www.statista.com/statistics/203677/global-pc-penetration-per-capita-since-2000/
-    • [Statista, n.d. (b)] Statista. “Number of internet users worldwide from 2005 to 2017 (in millions)”. https://www.statista.com/statistics/273018/number-of-internet-users-worldwide/
-    • [Rohrer, 2014] Rohrer, Christian. “When to Use Which User-Experience Research Methods”. https://www.nngroup.com/articles/which-ux-research-methods/
-AlBlue. “Git Tip of the Week: Objects and Packfiles”. http://alblue.bandlem.com/2011/09/git-tip-of-week-objects-and-packfiles.html
-Diffie, Whitfield, and Martin Hellman. “New directions in cryptography”, in IEEE Transactions on Information Theory (Vol. 22, issue 6, Nov. 1976, pp. 644–654). DOI: 10.1109/TIT.1976.1055638
-Git manual, section 10.4: “Git Internals - Packfiles”
-Kahle, Brewster. “Locking the Web Open: A Call for a Distributed Web”. http://brewster.kahle.org/2015/08/11/locking-the-web-open-a-call-for-a-distributed-web-2/
-Kahle, Brewster. “Content Addressing is Magic”. http://brewster.kahle.org/2016/12/18/content-addressing-is-magic/
-Singh, Simon. The Code Book. ISBN: 9780385730624
-Wikipedia. “Mobile ad hoc network”; “Martin Hellman”; “Mesh network”;  “Network topology”; “Public-key cryptography”; “Wireless ad hoc network”
+    <ul>
+        <li>[WHO 2017] WHO. “10 facts on dementia”. April, 2017. <a href="http://www.who.int/features/factfiles/dementia/en/">http://www.who.int/features/factfiles/dementia/en/</a></li>
+        <li>[NIH, n.d.] NIH. “How many people are affected by autism?”. <a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/Pages/at-risk.aspx#f1">https://www.nichd.nih.gov/health/topics/autism/conditioninfo/Pages/at-risk.aspx#f1</a></li>
+        <li>[WHO 2017b] WHO. “Autism spectrum disorders”. April, 2017. <a href="http://www.who.int/mediacentre/factsheets/autism-spectrum-disorders/en/">http://www.who.int/mediacentre/factsheets/autism-spectrum-disorders/en/</a></li>
+        <li>[Miller-Wilson, n.d.] Miller-Wilson, Kate. “How Many People Are Affected by Autism Worldwide?”. <a href="http://autism.lovetoknow.com/what-is-autism/how-many-people-are-affected-by-autism-worldwide">http://autism.lovetoknow.com/what-is-autism/how-many-people-are-affected-by-autism-worldwide</a></li>
+        <li>[Statista, n.d.] Statista. “Global PC penetration per capita from 2000 to 2015 (in percent)”. <a href="https://www.statista.com/statistics/203677/global-pc-penetration-per-capita-since-2000/">https://www.statista.com/statistics/203677/global-pc-penetration-per-capita-since-2000/</a></li>
+        <li>[Statista, n.d. (b)] Statista. “Number of internet users worldwide from 2005 to 2017 (in millions)”. <a href="https://www.statista.com/statistics/273018/number-of-internet-users-worldwide/">https://www.statista.com/statistics/273018/number-of-internet-users-worldwide/</a></li>
+        <li>[Rohrer, 2014] Rohrer, Christian. “When to Use Which User-Experience Research Methods”. <a href="https://www.nngroup.com/articles/which-ux-research-methods/">https://www.nngroup.com/articles/which-ux-research-methods/</a></li>
+        <li>AlBlue. “Git Tip of the Week: Objects and Packfiles”. <a href="http://alblue.bandlem.com/2011/09/git-tip-of-week-objects-and-packfiles.html">http://alblue.bandlem.com/2011/09/git-tip-of-week-objects-and-packfiles.html</a></li>
+        <li>Diffie, Whitfield, and Martin Hellman. “New directions in cryptography”, in IEEE Transactions on Information Theory (Vol. 22, issue 6, Nov. 1976, pp. 644–654). DOI: 10.1109/TIT.1976.1055638</a></li>
+        <li>Git manual, section 10.4: “Git Internals - Packfiles”</a></li>
+        <li>Kahle, Brewster. “Locking the Web Open: A Call for a Distributed Web”. <a href="http://brewster.kahle.org/2015/08/11/locking-the-web-open-a-call-for-a-distributed-web-2/">http://brewster.kahle.org/2015/08/11/locking-the-web-open-a-call-for-a-distributed-web-2/</a></li>
+        <li>Kahle, Brewster. “Content Addressing is Magic”. <a href="http://brewster.kahle.org/2016/12/18/content-addressing-is-magic/">http://brewster.kahle.org/2016/12/18/content-addressing-is-magic/</a></li>
+        <li>Singh, Simon. The Code Book. ISBN: 9780385730624</a></li>
+        <li>Wikipedia. “Mobile ad hoc network”; “Martin Hellman”; “Mesh network”;  “Network topology”; “Public-key cryptography”; “Wireless ad hoc network”</li>
+    </ul>
 
-Photograph credits and licensing
-    • Brewster Kahle portrait: Sebastiaan ter Burg, 2015 March 23. Licensed under the Creative Commons Attribution 2.0 Generic license: https://creativecommons.org/licenses/by/2.0/deed
-    • Whitfield Diffie and Martin Hellman portrait: Martin Hellman, Mary Holzer, Matt Crypto, Phr~commonswiki, and .:Ajvol:., 2006 July 21. Licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license: https://creativecommons.org/licenses/by-sa/3.0/deed
+<h3>Photograph credits and licensing</h3>
+    <ul>
+        <li>Brewster Kahle portrait: Sebastiaan ter Burg, 2015 March 23. Licensed under the Creative Commons Attribution 2.0 Generic license: <a href="https://creativecommons.org/licenses/by/2.0/deed">https://creativecommons.org/licenses/by/2.0/deed</a></li>
+        <li>Whitfield Diffie and Martin Hellman portrait: Martin Hellman, Mary Holzer, Matt Crypto, Phr~commonswiki, and .:Ajvol:., 2006 July 21. Licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license: <a href="https://creativecommons.org/licenses/by-sa/3.0/deed">https://creativecommons.org/licenses/by-sa/3.0/deed</a></li>
+    </ul>
