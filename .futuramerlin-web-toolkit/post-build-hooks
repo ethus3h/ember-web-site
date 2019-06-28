@@ -1,6 +1,6 @@
 #!/bin/bash
 
-find ../../built/people/elliot/writings/blogs/elliotchandlernmd442 -type f -name '*.htm' -exec ../../.futuramerlin-web-toolkit/nmd442blogcleanup {} \;
+find ../../built/people/elli/writings/blogs/elliotchandlernmd442 -type f -name '*.htm' -exec ../../.futuramerlin-web-toolkit/nmd442blogcleanup {} \;
 
 pwd
 cd static
