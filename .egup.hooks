@@ -4,6 +4,6 @@ source ember_bash_setup &> /dev/null
 # set -x
 
 mkdir -p specification/engineering-and-tech/information-technology/software/env
-rsync -av --checksum --progress --delete ../ember-information-technology-environment/built/ specification/engineering-and-tech/information-technology/software/env
+rsync -av --checksum --progress --delete ../ember-information-technology-environment/built/web/ specification/engineering-and-tech/information-technology/software/env
 cat futuramerlin-web-toolkit-output/people/elli/music/futuramerlin-web-toolkit-discography.iaidentifiers >> "identifiers.lst" || true
 removeDuplicateLines 'identifiers.lst' | sponge 'identifiers.lst'
