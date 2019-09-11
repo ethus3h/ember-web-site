@@ -4,86 +4,15 @@
     <span><a href="/components.htm">Core project components</a></span>
 </p>
 
-<h2>Philosophy and rationale</h2>
-
-    <h3>Strategy</h3>
-
-        <p>See <a href="strategy.htm">the dedicated sub-page</a>.</p>
-
-    <h3>Goals</h3>
-
-        <p>An Ember community should provide useful elements of survival: shelter, nutrition (including food and water), goods and supplies, medical care, services, education, and information. It would do this as its fulfilment of its objective of managing the various needs of a society, by enabling people to be effective participants in that society.</p>
-
-        <p>One role of an Ember community would be to provide goods. For this, it would be ideal for the community to control as much of the supply chain in use as possible. That would allow efficient provision of the goods such as to reduce cost and to ensure quality, reproducibility, sustainability, and locality. That control of the supply chain would, in an ideal scenario, extend to all stages of the process, from production of the raw materials to component production to assembly to distribution, as well as shipping at all stages of the process.</p>
-
-        <p>There should be a universally and easily accessible facility to allow the community to vote easily, with systems in place to prevent voter suppression or intimidation.</p>
-
-    <h3>Project structure and implementation</h3>
-        <p>Ember will achieve these goals through creating individual components that each provide an integral part of the whole societal system. Implementation will probably need to be undertaken in stages.</p>
-
-    <h3>Rationale</h3>
-        <p>Human society is sometimes unpredictable in the rights and safeties it affords. Consequently, a unified institution with the aim of remedying these issues should be established outside of the realms of traditional governmental structures. Participation in Ember communities shall be dependent on agreement to specified terms, to best protect the rights of the individuals making up the community.</p>
-
-    <h3>Licensing</h3>
-        <p>Aside from sections 2 and 3 of the <a href="/library">Ember Library</a>, all portions of the Ember project should be compliant with the Ember Minimal Freedom Requirements, and all portions of the project original to Ember should be compliant with the Ember Freedom Requirements. This is likely not yet a legally effective license, due to a lack of available legal expertise to work on it, and consequently, most of the Ember project and its <a href="/ancillary">ancillary projects</a> are licensed under the GNU Affero GPL, version 3 (see the licensing information in each individual repository for details). The term "Information", in these requirements, refers to things such as music, software, computer typefaces, visual art, patents and inventions, specifications, schematics for equipment, <span class="foreign-word">etc</span>. (By their nature, sections 2 and 3 of the library cannot practically be fully libre at present; see the "Library" section of the proposal for further information and rationale.)</p>
-
-        <h4>Rationale</h4>
-            <p>These licensing requirements are present to attempt to prevent regressions in the availability and utility of the Ember project.</p>
-
-        <h4>Ember Minimal Freedom Requirements (EMFR)</h4>
-            <p>For given Information to be compliant with this standard, the following must be true:
-                <ul>
-                    <li><span class="important-word">Self-contained</span>: All information necessary for the full and complete use of the Information must also be EMFR-compliant.</li>
-                    <li><span class="important-word">Redistributable</span>: The Information must be legally redistributable.</li>
-                    <li><span class="important-word">Source included</span>: The preferred form for editing the Information must be available and EMFR-compliant; when used by Ember or when presented as EMFR-compliant, if the Information is in a form that is not the preferred form for editing it, a copy of the Information in the preferred form for editing it must always be included with the other copy.</li>
-                    <li><span class="important-word">Notice of terms</span>: When used by Ember or when presented as EMFR-compliant, documentation of these requirements must be provided with all copies of the Information.</li>
-                    <li><span class="important-word">Irrevocable</span>: The restrictions on the Information that make it EMFR-compliant must be irrevocable, at least until it falls into the public domain by legal necessity.</li>
-                    <li><span class="important-word">Unencumbered and unencumbering</span>: The Information may not employ any means to prevent or hinder copying or using it freely (<span class="foreign-word">e.g.</span> DRM); furthermore, if the Information enables access to information that employs such means, the Information must not be complicit in facilitating those restrictions (for instance, an EMFR-compliant app that allows streaming DRM-protected content to an HDMI content-protection–enabled monitor MUST enable that content to be used freely by the user, and may not simply pass protected content through to the monitor without being able to decrypt it and enable its free use by the user; software like Firefox's content-decryption-module sandbox is thus not EMFR-compliant).</li>
-                </ul>
-            </p>
-        <h4>Ember Freedom Requirements (EFR)</h4>
-            <p>This is the same as the Ember Minimal Freedom Requirements, with the following additional restrictions:
-                <ul>
-                    <li><span class="important-word">Requiring non-misleading attribution</span>: Attribution to the source of the Information must be required; if the Information is a derivative work, it must be made clear that it has been modified from the source information.</li>
-                    <li><span class="important-word">Editable</span>: It must be legal to modify the Information, and to redistribute both modified and/or unmodified copies of the Information.</li>
-                    <li><span class="important-word">Mandatory publication</span>: The Information must be promptly published and made widely available publicly at the cost of distribution or less.</li>
-                    <li><span class="important-word">Copyleft</span>: These requirements must be required to apply to all derivative works of the Information, and must be required to apply to all information packaged with the Information (<span class="foreign-word">e.g.</span>, non-EFR-compliant firmware may not be provided with an EFR-compliant kernel).</li>
-                    <li><span class="important-word">Inherited</span>: New information created using the Information must be EFR-compliant.<!-- Requiring only EMFR creation here allows the information to devolve into proprietary information. --></li>
-                    <li><span class="important-word">Provision as a service</span>: When the Information is provided as a service (as in the case of software being run on a server), the Information must be made readily available to those who access the service, and documentation of these requirements must be provided with the service.</li>
-                    <li><span class="important-word">Notice of terms</span>: Documentation of these requirements must be provided with all copies of the Information.</li>
-                    <li><span class="important-word">Restricted use</span>: The Information may not itself be used as or as part of advertisement or propaganda without the agreement of its creator or creators, although it may be used as a tool for the creation of advertisement or propaganda.</li>
-                    <li><span class="important-word">Irrevocable</span>: The restrictions on the Information that make it EFR-compliant must be irrevocable, at least until it falls into the public domain by legal necessity.</li>
-                    <!-- Things to deal with patent grants and such are presumably also necessary. -->
-                </ul>
-            </p>
-
-    <h3>Designs</h3>
-        <p>The Ember project should develop designs for things such as clothing, tools, and housing. Any finished design provided by the project should conform to some specific traits.</p>
-        <ul>
-            <li><span class="important-word">Buildable</span>: All technologies and materials needed to build, use, and disassemble the design must also meet these design requirements, and must be fully specified in this document, with reference within the design to those other design specifications, so that every design listed here can be built, used, and disassembled without any knowledge outside of this document, beginning with only the materials available naturally.</li>
-            <li><span class="important-word">Deconstructable</span>: The design should be able to be disassembled and/or reassembled without any damage or loss to the materials used.</li>
-            <li><span class="important-word">Materials</span>: All materials needed to build and use a design should be:
-                <ul>
-                    <li>readily available (not rare or geographically restricted)</li>
-                    <li>in a form that can be efficiently returned to a natural state if desired at the end of their lifespan (many plastics, for instance, would fail this criterion unless an energy-efficient tool for reversing their creation is available)</li>
-                    <li>all technologies needed for their sourcing, processing, and end-of-life processing must meet these requirements</li>
-                    <li>in a form that will return to a natural material over time (the goal of this rule is to avoid materials that result in nonbiodegradeable litter like the microparticles that synthetic textiles sometimes produce; it could probably be better expressed)</li>
-                </ul>
-            </li>
-            <li><span class="important-word">Rugged</span>: All item designs should be long-lasting (not disposable, able to function for many years), rugged, and able to function in adverse conditions.</li>
-            <li><span class="important-word">Safe</span>: All designs should be safe to build, use, disassemble, and biodegrade.</li>
-            <li><span class="important-word">Reliable</span>: All designs should work predictably and reliably.</li>
-            <li><span class="important-word">Libre</span>: The designs should follow the principles needed to ensure they are freely usable, drafted here under "Licensing".
-                <ul>
-                    <li>Any external dependencies of the project should be libre, so they can be forked and maintained if necessary.</li>
-                </ul>
-            </li>
-            <li><span class="important-word">Incremental</span>: This project should be attempted in an incremental, scalable manner, rather than creating a complex system that would need to be implemented all at once to be effective. That way, small improvements can be made without attempting the insurmountable task of improving larger components of society at once. This incremental development would also allow using the strengths of other current and future projects and systems, and collaborating with and complementing them more effectively.</li>
-        </ul>
+<ul>
+    <li><a href="philosophy-and-rationale.htm">Philosophy and rationale</a></li>
+    <li><a href="community/">Community</a></li>
+    <li><a href="engineering-and-tech.htm">Engineering and technology</a></li>
+</ul>
 
 <h2>Community</h2>
 
-    <p>See <a href="community/">the dedicated sub-page</a>.</p>
+    <p>See <a href="">the dedicated sub-page</a>.</p>
 
 <h2>Engineering and technology</h2>
 <p>A modular building should be designed, which is able to be easily moved even when assembled, changed to add windows or other sections of the building and similar parts, and waterproof.
