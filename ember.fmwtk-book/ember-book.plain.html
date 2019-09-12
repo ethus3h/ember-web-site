@@ -1697,9 +1697,9 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
                 <p>Three columns' contents are directly inherited from the Unicode Standard: Combining class (inherits Unicode's "Canonical_Combining_Class property"), Bidirectional class (inherits Unicode's "Bidi_Class" property), and Type (inherits Unicode's "General_Category" property). The "Simple case mapping" and "Script" columns should also be inherited from Unicode in some manner, but are not at present. For characters not included in Unicode, a reasonable value is chosen in the pattern of the values used by Unicode. If there are discrepancies between this value and Unicode's value for a given character that is in both sets, this should be reported as an error in the EITE Language standard. Unicode's values should take precedence.</p>
                 <p>"Type" column values also extend the Unicode Standard's possible values with the "!Cx" category, denoting characters that do not fit neatly into Unicode's existing categories.</p>
             <h9>Notes on specific Dcs</h9>
-                <h6>Dcs 241–245: Mode indicators</h6>
+                <h10>Dcs 241–245: Mode indicators</h10>
                     <p>Inclusion of the mode indicators in documents is <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts. This lets the resulting documents more concise and readable.</p>
-                <h6>Dcs 246–255: Source formatting control</h6>
+                <h10>Dcs 246–255: Source formatting control</h10>
                     <p>Dcs 246 through 255 control the formatting of the ELS format version of a document.</p>
         <h8>Document formats</h8>
             <p>There are seven file formats defined by this specification. Six of them (dcBasenb, ELS, ELAD, ELQ, DELQ, and SELQ) are general-use formats, while the seventh (ERD, not yet specified) is a special-purpose format with a subset of the other formats' capabilities. DcBasenb and ELS are the primary formats, while ELAD, ELQ, DELQ, and SELQ are intended as an intermediate, more-readable format, and are not intended for information interchange (they are much larger than the other formats for a given document, in general).</p>
@@ -1784,13 +1784,13 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
 
             <h9>Types</h9>
                 <p>Types have CamelCase names beginning with an uppercase letter.</p>
-                <h6>C Type</h6>
+                <h10>C Type</h10>
                     <dl>
                         <dt>Traits</dt><dd>C Type$type</dd>
                         <dt>Routines</dt><dd>C cs!this.$type:new(FuzzyList$params) { lang.new(this) }</dd>
                     </dl>
 
-                <h6>C Routine</h6>
+                <h10>C Routine</h10>
                     <dl>
                         <dt>Traits</dt><dd>
                             <ul>
@@ -1803,7 +1803,7 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
                         </ul></dd>
                     </dl>
 
-                <h6>C List</h6>
+                <h10>C List</h10>
                     <dl>
                         <dt>Traits</dt><dd>
                             <ul>
@@ -1823,10 +1823,10 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
                             </ul></dd>
                     </dl>
 
-                <h6>C FuzzyList (inherits from List)</h6>
+                <h10>C FuzzyList (inherits from List)</h10>
                     <p>When a FuzzyList is used in a list, its contents are appended to the list, and it is deconstructed. When a FuzzyList is used in the declaration of the parameters of a Routine, its first elements, starting from 0, are set to the values of the parameters passed to the Routine from its position onwards (so, for example, if the parameters declared are Natural$a,Natural$b,FuzzyList{ lang.set(lang.trait(this.entryLimit),2) }$c,Natural$d,Natural$e and it gets called with 2,3,4,5,6,7,8, then that's an error because there's no place to put 6 (the 5th parameter) (but if the entryLimit weren't set, a=2,b=3,c=(4,5,6),d=7,e=8), and if it gets called with 2,3,4,5,6,7, a=2,b=3,c=(4,5),d=6,e=7).</p>
 
-                <h6>C Resource</h6>
+                <h10>C Resource</h10>
                     <dl>
                         <dt>Traits</dt><dd></dd>
                         <dt>Routines</dt><dd></dd>
@@ -1841,42 +1841,42 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
 
             <h9>System object: Routines</h9>
                 <p>Routines have camelCase names beginning with a lowercase letter, and have parameters.</p>
-                <h6>C Void:lang.run(Routine$routine,List$params)</h6>
+                <h10>C Void:lang.run(Routine$routine,List$params)</h10>
                     <dl>
                         <dt>Exceptions thrown</dt><dd>!routineSyntaxError, !parameterNumberMismatch, !parameterTypeMismatch</dd>
                         <dt>Notes</dt><dd>Determinism depends on String:$routine.code.</dd>
                     </dl>
-                <h6>C (Void|$type):lang.cast(Any$object,Type$type,(|String$return))</h6>
+                <h10>C (Void|$type):lang.cast(Any$object,Type$type,(|String$return))</h10>
                     <dl>
                         <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $type</dd>
                         <dt>Exceptions thrown</dt><dd>!incompatibleTypeError</dd>
                         <dt>Notes</dt><dd>If $return="return", determinism depends on types of objects (specifically, on value of String:$object.cast:$type.code).</dd>
                     </dl>
-                <h6>C (Void|$trait.type):lang.set(Reference$trait,Any$value,(|String$return))</h6>
+                <h10>C (Void|$trait.type):lang.set(Reference$trait,Any$value,(|String$return))</h10>
                     <dl>
                         <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $trait.type</dd>
                         <dt>Exceptions thrown</dt><dd>!targetTypeMismatch</dd>
                         <dt>Notes</dt><dd>If $return="return", determinism depends on $value.</dd>
                     </dl>
-                <h6>C $trait.type:lang.get(Reference$trait)</h6>
+                <h10>C $trait.type:lang.get(Reference$trait)</h10>
                     <dl>
                         <dt>Return value</dt><dd>An object of type $trait.type</dd>
                         <dt>Exceptions thrown</dt><dd>(none additional)</dd>
                         <dt>Notes</dt><dd>Determinism depends on $trait.</dd>
                     </dl>
-                <h6>C Reference:lang.trait(Any$object)</h6>
+                <h10>C Reference:lang.trait(Any$object)</h10>
                     <dl>
                         <dt>Return value</dt><dd>A reference to the object passed to it</dd>
                         <dt>Exceptions thrown</dt><dd>(none additional)</dd>
                         <dt>Notes</dt><dd>(none)</dd>
                     </dl>
-                <h6>C Boolean:lang.compare(Any$left,Any$right)</h6>
+                <h10>C Boolean:lang.compare(Any$left,Any$right)</h10>
                     <dl>
                         <dt>Return value</dt><dd>lang.and($left.compare($right),$right.compare($left))</dd>
                         <dt>Exceptions thrown</dt><dd>(inherit from $left.compare and $right.compare)</dd>
                         <dt>Notes</dt><dd>(none)</dd>
                     </dl>
-                <h6>S Any:lang.otherwise(Routine$left,Routine$right)</h6>
+                <h10>S Any:lang.otherwise(Routine$left,Routine$right)</h10>
                     <dl>
                         <dt>Return value</dt><dd>try { return $left }; except { return $right }</dd>
                         <dt>Exceptions thrown</dt><dd>(inherit from $left and $right)</dd>
