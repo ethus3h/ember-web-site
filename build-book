@@ -8,3 +8,4 @@ trap 'die "A fatal error was reported on ${BASH_SOURCE[0]} line ${LINENO} in $(p
 cd /Ember\ Library/Ember/ember-web-site
 eogup-single
 /Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "ember.fmwtk-book.conf"
+/Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "specification/engineering-and-tech/information-technology/software/eite.fmwtk-book.conf"
