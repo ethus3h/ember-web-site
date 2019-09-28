@@ -2,4 +2,4 @@
 
 rm -r subbooks
 mkdir subbooks
-find . -type d -name *.fmwtk-book -exec cp -r {} ./subbooks/ \;
+find . -type d -path ./subbooks -prune -or -name *.fmwtk-book -exec cp -r {} ./subbooks/ \;
