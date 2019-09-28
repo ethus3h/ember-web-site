@@ -2,4 +2,6 @@
 
 rm -r subbooks
 mkdir subbooks
-find . -path ./subbooks -prune -o -path ./.egup.stat -prune -o \( -type d -and -name *.fmwtk-book -exec cp -r {} ./subbooks/ \; \)
+find . -path ./subbooks -prune -o -path ./.egup.stat -prune -o -print
+
+\( -type d -and -name *.fmwtk-book -exec cp -r {} ./subbooks/ \; \)
