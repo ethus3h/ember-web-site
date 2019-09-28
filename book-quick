@@ -11,3 +11,6 @@ eogup-single
 
 # Sub-books
 /Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book --native-targets-only "specification/engineering-and-tech/information-technology/software/eite.fmwtk-book.conf"
+
+# Copy sub-books
+./.futuramerlin-web-toolkit/post-book-hooks
