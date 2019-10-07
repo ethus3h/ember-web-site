@@ -13,6 +13,8 @@ if [[ "--quick" == "$1" ]]; then
     quick="true"
 fi
 
+[[ "true" != "$quick" ]] && die "Pass --confirm to confirm you really want to build a bunch of rather large book files! Or pass --quick to only build the small ones."
+
 buildBook() {
     if [[ "true" == "$quick" ]]; then
         /Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book --native-targets-only "$1"
