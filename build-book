@@ -7,6 +7,12 @@ trap 'die "A fatal error was reported on ${BASH_SOURCE[0]} line ${LINENO} in $(p
 
 cd /Ember\ Library/Ember/ember-web-site
 eogup-single
+
+buildBook() {
+    if [[ "--native-targets-only" == "$1" ]]; then
+        /Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book --native-targets-only "$2"
+    fi
+}
 /Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "ember.fmwtk-book.conf"
 
 # Sub-books
