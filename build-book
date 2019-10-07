@@ -5,7 +5,7 @@ source ember_bash_setup &> /dev/null || { printf '%b' '\033[1;31m' >&2; echo "A 
 
 trap 'die "A fatal error was reported on ${BASH_SOURCE[0]} line ${LINENO} in $(pwd) at $(emdate)."' ERR
 
-# Usage: build-bo
+# Usage: build-book [--quick|--confirm] [--all]
 
 cd /Ember\ Library/Ember/ember-web-site
 eogup-single
@@ -38,10 +38,12 @@ buildBook "ember.fmwtk-book.conf"
 
 # Sub-books
 buildBook "specification/engineering-and-tech/information-technology/software/eite.fmwtk-book.conf"
-buildBook "people/elli/writings/story/story.fmwtk-book.conf"
+if [[ "true" == "$all" ]]; then
+    buildBook "people/elli/writings/story/story.fmwtk-book.conf"
 
-# Extra: big book!
-buildBook "people/elli/writings/collected.fmwtk-book.conf"
+    # Extra: big book!
+    buildBook "people/elli/writings/collected.fmwtk-book.conf"
+fi
 
 # Copy finished books
 ./.futuramerlin-web-toolkit/post-book-hooks
