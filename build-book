@@ -39,6 +39,7 @@ buildBook "ember.fmwtk-book.conf"
 # Sub-books
 buildBook "specification/engineering-and-tech/information-technology/software/eite.fmwtk-book.conf"
 if [[ "true" == "$all" ]]; then
+    buildBook "ancillary/docs.fmwtk-book.conf"
     buildBook "people/elli/writings/story/story.fmwtk-book.conf"
 
     # Extra: big book!
