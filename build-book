@@ -8,19 +8,27 @@ trap 'die "A fatal error was reported on ${BASH_SOURCE[0]} line ${LINENO} in $(p
 cd /Ember\ Library/Ember/ember-web-site
 eogup-single
 
+quick="false"
+if [[ "--quick" == "$1" ]]; then
+    quick="true"
+fi
+
 buildBook() {
-    if [[ "--native-targets-only" == "$1" ]]; then
-        /Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book --native-targets-only "$2"
+    if [[ "true" == "$quick" ]]; then
+        /Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book --native-targets-only "$1"
+    else
+        /Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "$1"
     fi
 }
-/Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "ember.fmwtk-book.conf"
+
+buildBook "ember.fmwtk-book.conf"
 
 # Sub-books
-/Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "specification/engineering-and-tech/information-technology/software/eite.fmwtk-book.conf"
-/Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "people/elli/writings/story/story.fmwtk-book.conf"
+buildBook "specification/engineering-and-tech/information-technology/software/eite.fmwtk-book.conf"
+buildBook "people/elli/writings/story/story.fmwtk-book.conf"
 
 # Extra: big book!
-/Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "people/elli/writings/collected.fmwtk-book.conf"
+buildBook "people/elli/writings/collected.fmwtk-book.conf"
 
 # Copy finished books
 ./.futuramerlin-web-toolkit/post-book-hooks
