@@ -13,8 +13,8 @@ eogup-single
 /Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "specification/engineering-and-tech/information-technology/software/eite.fmwtk-book.conf"
 /Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "people/elli/writings/story/story.fmwtk-book.conf"
 
-# Copy sub-books
-./.futuramerlin-web-toolkit/post-book-hooks
-
 # Extra: big book!
-/Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "people/elli/writings/coll.fmwtk-book.conf"
+/Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "people/elli/writings/collected.fmwtk-book.conf"
+
+# Copy finished books
+./.futuramerlin-web-toolkit/post-book-hooks
