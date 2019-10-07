@@ -11,9 +11,11 @@ eogup-single
 quick="false"
 if [[ "--quick" == "$1" ]]; then
     quick="true"
+elif [[ "--confirm" == "$1" ]]; then
+    quick="confirm"
 fi
 
-[[ "true" != "$quick" ]] && die "Pass --confirm to confirm you really want to build a bunch of rather large book files! Or pass --quick to only build the small ones."
+[[ "false" == "$quick" ]] && die "Pass --confirm to confirm you really want to build a bunch of rather large book files! Or pass --quick to only build the small ones."
 
 buildBook() {
     if [[ "true" == "$quick" ]]; then
