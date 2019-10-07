@@ -17,3 +17,4 @@ eogup-single
 ./.futuramerlin-web-toolkit/post-book-hooks
 
 # Extra: big book!
+/Ember\ Library/Ember\ satellite\ projects/futuramerlin-web-toolkit/scripts/futuramerlin-web-toolkit-build-book "people/elli/writings/coll.fmwtk-book.conf"
