@@ -5,14 +5,23 @@ source ember_bash_setup &> /dev/null || { printf '%b' '\033[1;31m' >&2; echo "A 
 
 trap 'die "A fatal error was reported on ${BASH_SOURCE[0]} line ${LINENO} in $(pwd) at $(emdate)."' ERR
 
+# Usage: build-bo
+
 cd /Ember\ Library/Ember/ember-web-site
 eogup-single
 
 quick="false"
 if [[ "--quick" == "$1" ]]; then
     quick="true"
+    shift
 elif [[ "--confirm" == "$1" ]]; then
     quick="confirm"
+    shift
+fi
+
+all="false"
+if [[ "--all" == "$1" ]]; then
+    all="true"
 fi
 
 [[ "false" == "$quick" ]] && die "Pass --confirm to confirm you really want to build a bunch of rather large book files! Or pass --quick to only build the small ones."
