@@ -87,8 +87,9 @@
         <dl>
             <dt>#</dt><dd>Comment</dd>
             <dt>Integers -1+</dt><dd>Include the specified path, adjusting its headings by the number of depth levels given. The path may be a path without extension to a .htm file in the Web toolkit's expected fragment format, or the path to a directory ending in / containing a file index.htm in the usual format, or the path with or without extension of another ebook configuration file.</dd>
-            <dt>-2</dt><dd>A path without extension of a file present with the extension of the target format(s), of which to include the contents literally. (For example, if you want the file included for the )</dd>
-            <dt>-3</dt><dd>A simple black-and-white theme. This is the theme used for the Ember project Web site.</dd>
+            <dt>-2</dt><dd>A path without extension of a file present with the extension of the native target output format(s), of which to include the contents literally. (For example, if you want the file included for the htm and plain.html output formats of the book, and your configuration line is "<code>-2 book-assets/include-me</code>", the files book-assets/include-me.htm and book-assets/include-me.plain.html need to exist.)</dd>
+            <dt>-3</dt><dd>A heading to include literally, like "<code>&lt;h3&gt;Heading Text&lt;/h3&gt;</code>". (It will be adjusted as needed if the book is included in another book.)</dd>
+            <dt>-4</dt><dd>Used as the first line of a configuration file to define the book title, e.g. "<code>-4 Book Title</code>"</dd>
         </dl>
 
     <h3>Configuration file format</h3>
