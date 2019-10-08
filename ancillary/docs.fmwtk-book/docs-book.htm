@@ -48,15 +48,15 @@
 <h2>Development documentation</h2>
 
 
-
+<h3>Ember development community standards</h3>
 
     <p>Ember has adopted <a href="http://futuramerlin.com/code-of-conduct.htm">[http://futuramerlin.com/code-of-conduct.htm]: the Contributor Covenant Code of Conduct</a>.</p>
 
-
+<h3>Issue tracker</h3>
 
     <p><a href="http://futuramerlin.com/issue-tracker">[http://futuramerlin.com/issue-tracker]: An issue tracker</a> <small>(<a href="http://futuramerlin.com/static/content/futuramerlin.com/issue-tracker/view_all_bug_page.php.html">[http://futuramerlin.com/static/content/futuramerlin.com/issue-tracker/view_all_bug_page.php.html]: static backup copy</a>)</small> is available.</p>
 
-<!-- MAINTENANCE: Keep this list in sync with repositories.lst in ember-shared. Eventually, this data could maybe be stored in and generated from that, or something, although more structured data would be needed to do that and it might be more trouble than it is worth. -->
+<h3>List of repositories</h3><!-- MAINTENANCE: Keep this list in sync with repositories.lst in ember-shared. Eventually, this data could maybe be stored in and generated from that, or something, although more structured data would be needed to do that and it might be more trouble than it is worth. -->
     <p>Note (2019 Jan. 26a27): The ember-web-site, wreathe-conf, and ember-web-site-snapshots repositories have not been publicly available for a while (leaked some possibly sensitive information in them). I've finally gotten around to doing something about it, though, by cleaning and then dropping the history from the repositories, and force pushing over the current ones. I'll set them back to public once the Git hosts do garbage collection. The versions of the repositories from before the force pushes are included in ember-library-2 to preserve the history. (I was too lazy to be selective in cleaning them up such that a sanitized copy of the repos' old commit history could stay public; this was much easier, sorry.) Anyway, that's why they've disappeared — sorry for the silence, procrastination strikes again... :P Update 2019 Apr. 9: It's necessary to re-do this, since it turns out GitHub at least doesn't do GC, or at least it hasn't yet (procedure: back up current repo, rename current remote repo, create new blank remote repo, remove old history from local copy (https://stackoverflow.com/questions/41953300/how-to-delete-the-old-git-history), push to remote, unbreak GitLab mirror by moving and then creating a new blank project and setting up mirroring for it). This is done for ember-web-site, which is now public again, yay! The other two still need it.</p>
     <h4>Top-level projects</h4>
         <dl>
@@ -122,7 +122,7 @@
             <dt>personal-private</dt><dd>Personal scratch space (not publicly available at this time)</dd>
         </dl>
 
-
+<h3>Getting the data</h3>
     <p>This section discusses how to download the data of, and the projects maintained by, Ember. These instructions will result in the creation of a development environment for the repositories similar to the one used by Ember. If you want to use the Ember tools for working with this environment, and are not using Wreathe 7.3, then additional configuration steps should be taken after getting the data (see "Configuring the environment"). If you just want to examine the contents, or use standard Git tools with it, those steps are not necessary. If you are using Wreathe 7.3, these commands for getting the development data should either be run in the root directory, or else the existing <code>/Ember Library</code> folder should be moved to the desired loctaion, and the value of the <code>EmberLibrary</code> configuration field for Crystallize set to that new location as described in the "Configuring the environment" section below.</p>
 
     <p>It is important to check the information in the "Working with Stream Registry repositories, and crystal backups" if you are concerned that you may not be getting all the data you want.</p>
@@ -151,7 +151,7 @@
     <h4>Working with Stream Registry repositories, and crystal backups</h4>
         <p>Five of the repositories (ember-library-2, ember-history, personal, personal-private, and wreathe-packages) contain contents stored using the stream registry feature of Crystallize. This method of storing data keeps pointers to the files in the Git repositories, and stores the actual file contents elsewhere (currently only the Internet Archive; additional mirrors should be added for redundancy). A copy of those file contents is necessary to be able to access the data referenced by those pointers. This means that to obtain a complete copy of these repositories, a list of the addresses of the data (the crystal addresses) that the pointers depend on must be generated from the pointers, and then those crystals must be copied locally. In addition, there are two other sources of data stored at the Internet Archive that may be desired. First, the ember-library-2 repository contains a folder <code>.rubberfs/history</code> that contains a set of files that reference incremental snapshots of the filesystem used for Ember development. These incremental snapshots are ZFS replication streams that can be used by sending them back into an empty ZFS filesystem. They are stored as crystals, and can be added to the set of crystal addresses to be backed up locally if desired. Second, the ember-web-site repostiory contains a folder <code>people/elliot/music</code> that contains files with names ending in <code>.conf</code> describing various musical works released by Elliot (only tangentially related to Ember, but described here for completeness). Some of those files contain lines beginning with "<code>ia,</code>". The part of those lines after that prefix is an Internet Archive identifier for an item containing the files of the item described in that <code>.conf</code> file. Because crystal addresses are a subset of Internet Archive identifiers, and the tools for managing Crystallize backups should work with all Internet Archive items as a general rule, these identifiers can be added to the list of crystal addresses to be backed up as well, if desired.<!-- FIXME: Getting a list of all these remaining crystal identifiers/IA addresses and backing them up should be an automatable/automated process. --></p>
 
-
+<h3>Relevant how-to articles</h3>
     <ul>
         <li><a href="http://futuramerlin.com/ancillary/wreathe/documentation/experimental/get-clean-git-branch.htm">[http://futuramerlin.com/ancillary/wreathe/documentation/experimental/get-clean-git-branch.htm]: How to get a clean, up-to-date with master branch in a forked git repository</a></li>
         <li><a href="http://futuramerlin.com/ancillary/wreathe/documentation/experimental/find-non-source-files.htm">[http://futuramerlin.com/ancillary/wreathe/documentation/experimental/find-non-source-files.htm]: Finding non-source files (e.g. in a git repository)</a></li>
@@ -191,10 +191,10 @@
 <h2>Crystallize</h2>
 
 
-
+<h3>Overview</h3>
     <p>A collection of tools for working with files and filesystems.</p>
     <p class="hatnote">Note: There is an oddity in the version numbering: version 2.15.5.9.1 was followed immediately by version 2.15.5.9.3 (skipping 2.15.5.9.2); version 2.15.5.9.2 was then released following version 2.15.5.9.3 (and is identical to version 2.15.5.9.3 aside from the version number); normal numbering then resumed with version 2.15.5.9.4, .5, .6 etc. following version 2.15.5.9.2 (skipping version 2.15.5.9.3, as that number was already used).</p>
-
+<h3>Documentation</h3>
     <h4>Usage</h4>
         <p>Crystallize provides the following primary user-facing command-line scripts.</p>
         <dl>
@@ -342,7 +342,7 @@
 
                 <p>Finally, run <code>sudo make install</code>.</p>
 
-
+<h3>Configuration file format</h3>
     <p>The configuration file is located in your system configuration directory (probably <code>/usr/local/etc</code> or <code>/etc</code>), and is named <code>crystallize.conf</code>. It is a list of key-value pairs in the format <code>Key,Value</code>, separated by a line feed (0x0A), as follows:</p>
     <dl>
         <dt>InstallationIdentifier</dt><dd>Installation UUID</dd>
@@ -355,15 +355,15 @@
     </dl>
     <p>Note that there is currently no facility for storing configuration values containing line feeds.</p>
 
-
+<h3>Development</h3>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
 <h2>ember-shared</h2>
 
 
-
+<h3>Overview</h3>
     <p>Code shared between various Ember software.</p>
 
-
+<h3>Documentation</h3>
     <h4>Usage</h4>
         <p>ember-shared provides the following command-line scripts, mainly useful for writing other scripts.</p>
         <dl>
@@ -492,7 +492,7 @@
             <h6>Copy scripts</h6>
                 <p>To install the downloaded scripts, copy them to your preferred location.</p>
 
-
+<h3>Development</h3>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
 <h2>Futuramerlin Web Toolkit</h2>
 
@@ -512,7 +512,7 @@
 </ul>
 <p>Version 2.2.35 would normally have been numbered 2.2.34, but was mistakenly given the number 2.2.35.</p>
 
-
+<h3>Documentation</h3>
 
     <h4>Command syntax</h4>
         <p><span class="hatnote-emphasis-warning">Before running the Futuramerlin Web Toolkit, <code>cd</code> to the directory that contains the contents of your Web site. Note that those should be the only files present in that directory.</span></p>
@@ -595,7 +595,7 @@
         </ul>
         <p>Note that there is currently no facility for storing configuration values containing line feeds.</p>
 
-
+<h3>Development</h3>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
 <h2>Warcdealer</h2>
 
@@ -604,7 +604,7 @@
 <p>Its source code is available <a href="https://github.com/ethus3h/warcdealer/">[https://github.com/ethus3h/warcdealer/]: at GitHub</a>.</p>
 <p>It can be used with <a href="https://github.com/ludios/grab-site/">[https://github.com/ludios/grab-site/]: grab-site</a> for a complete on-demand Web archival system.</p>
 
-
+<h3>Documentation</h3>
 
     <h4>Command syntax</h4>
         <p><span class="hatnote-emphasis-warning">Before running Warcdealer, <code>cd</code> to the directory that contains or will contain the files you would like uploaded. Note that those should be the only files present in that directory.</span></p>
@@ -672,15 +672,15 @@
         </ul>
         <p>Note that there is currently no facility for storing configuration values containing line feeds.</p>
 
-
+<h3>Release notes</h3>
     <p>See <a href="http://futuramerlin.com/release-notes.htm">[http://futuramerlin.com/release-notes.htm]: the dedicated page</a>.</p>
 
-
+<h3>Development</h3>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
 <h3>Release notes for Warcdealer</h3>
 
 
-
+<h4>Major version 3</h4>
     <h5>Version 3.1.2.1 (2016-December-16)</h5>
         <h6>Changes in this version</h6>
             <ul>
@@ -729,7 +729,7 @@
                 <li>Support a configurable target collection identifier.</li>
             </ul>
 
-
+<h4>Earlier versions</h4>
     <p>Release notes have not been written for versions prior to version 3.0.2.</p>
 <h2>Wreathe</h2>
 
@@ -741,11 +741,11 @@
     <dt>Next version</dt><dd><a href="http://futuramerlin.com/7.3">[http://futuramerlin.com/7.3]: Wreathe 7.3: Elegiac</a></dd>
 </dl>
 
-
+<h3>Documentation</h3>
 
     <p>See <a href="http://futuramerlin.com/documentation">[http://futuramerlin.com/documentation]: the dedicated Wreathe documentation page</a>.</p>
 
-
+<h3>Version history</h3>
 
     <ul>
         <li><span class="important-word"><a href="http://futuramerlin.com/7r2">[http://futuramerlin.com/7r2]: Wreathe 7 Elegy: R2 Evening Star</a></span> <small>(2014-Sept.-03, current version)</small></li>
@@ -766,10 +766,10 @@
             <li>Wreathe 8: Morning <small>(planned)</small></li>
         </ul>
 
-
+<h3>Subprojects</h3>
     <p>There are a number of subprojects maintained as parts of Wreathe. To learn about them, visit <a href="http://futuramerlin.com/subprojects">[http://futuramerlin.com/subprojects]: the index of subprojects</a>.</p>
 
-
+<h3>Development</h3>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
 <h3>Documentation &mdash; Wreathe</h3>
 
@@ -807,12 +807,12 @@
 <h3>BeHeMMOth</h3>
 
 
-
+<h4>Overview</h4>
     <p>A bullet-hell computer game with support for multiple players over the Web. It is a fork of Fabiano, and consequently is licensed under the AGPL3.</p>
 
     <p><span class="hatnote-emphasis-warning">The client is not yet confirmed to work without non-libre dependencies (it so far has only been successfully tested with Adobe Flash and the freshplayerplugin wrapper). Resolving this issue is a high priority. In addition, some of the "source code" for the project is actually binary blobs, due to the inclusion of precompiled dependencies and such; eliminating those is another high priority.</span></p>
 
-
+<h4>Documentation</h4>
 
     <h5>Usage</h5>
         <h6>Client</h6>
@@ -845,15 +845,15 @@
     <h5>Troubleshooting</h5>
         <p>If the client gives a "Error loading language" error, it was probably unable to connect to the server. Make sure the server is accessible to the client. If the client just gives a black screen, the language file (e.g. <code>en.txt</code>) probably has an incorrect syntax (it must be a UTF-8 file in the form <code>[["key1", "value", "languageAbbreviation"], ["key2", "value", "languageAbbreviation"]]</code> with a byte order mark at the beginning; incorrect whitespace (e.g. newlines) or use of commas will probably cause problems). If the client says "Loading..." on a grey background on a black screen, make sure it has been added to the Adobe Flash trust list ("Global Settings" in the context menu). If when you try to enter a realm or the Nexus it takes a long time, just give it a minute; it may say "Socket-Server Security Error: Error #2048" and "Connection failed! Retrying...": this is <a href="http://futuramerlin.com/issue-tracker/view.php?id=528">[http://futuramerlin.com/issue-tracker/view.php?id=528]: a known issue</a> but doesn't seem to adversely affect use of the software.</p>
 
-
+<h4>Development</h4>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/wreathe/subprojects/../develop.htm">[http://futuramerlin.com/wreathe/subprojects/../develop.htm]: the development page</a>.</p>
 <h3>compiz-reloaded-overlay</h3>
 
 
-
+<h4>Overview</h4>
     <p>This page lists the packages that are included within the Compiz-Reloaded overlay. This is to help distinguish which packages are included independently, and which are only included as dependencies of the top-level packages.</p>
 
-
+<h4>Top-level packages</h4>
     <h5>dev-python</h5>
         <ul>
             <li>compizconfig-python</li>
@@ -896,7 +896,7 @@
             <li>emerald</li>
         </ul>
 
-
+<h4>Dependencies</h4>
 
     <h5>media-libs</h5>
         <dl>
@@ -905,7 +905,7 @@
 <h3>wreathe-file-manager</h3>
 
 
-
+<h4>Overview</h4>
 
     <p>This project is to provide a file manager app for Wreathe, as currently available options are not sufficient.</p>
     <p>There are three avenues for attempting to implement this. One, used so far, is maintaining ebuild for Dolphin 4.7. This is impractical due to the increasing requirement of older version of libraries (poppler,dbusmenu). Second, attempt to implement miller columns in current Dolphin. This is a lot of work, although I have started on it somewhat in branch <code>wreathe/implement-miller-columns-on-current</code>. Ultimately, it would be the best strategy. Third, attempt to port Dolphin 4.7 to KF5. This is also difficult, although I have started on it somewhat in branch <code>wreathe/kf5-port</code>. Back to maintaining the old ebuild it is.</p>
@@ -922,11 +922,11 @@ endif()
 <h3>wreathe-overlay</h3>
 
 
-
+<h4>Overview</h4>
 
     <p>This page lists the packages that are included within the Wreathe overlay. This is to help distinguish which packages are included independently, and which are only included as dependencies of the top-level packages.</p>
 
-
+<h4>Ember project packages</h4>
 
     <h5>app-doc</h5>
         <ul>
@@ -969,7 +969,7 @@ endif()
             <li>wreathe-kernel</li>
         </ul>
 
-
+<h4>Top-level packages</h4>
 
     <p>Most of these packages are included because they are not packaged by Gentoo (indicated by a description being given for the package with no separate rationale specified), but separate rationales are listed for some.</p>
 
@@ -1198,7 +1198,7 @@ endif()
             <dt>x3270</dt><dd>IBM 3270 terminal emulator</dd>
         </dl>
 
-
+<h4>Dependencies</h4>
     <h5>app-misc</h5>
         <dl>
             <dt>strigi</dt><dd>kde-apps/dolphin</dd>
@@ -1305,7 +1305,7 @@ endif()
 <p>This is a project to preserve the history of discontinued Ember projects and no-longer-needed work.</p>
 <p>Its contents (with <a href="http://futuramerlin.com/#Large_files">[http://futuramerlin.com/#Large_files]: some exceptions</a>) are available <a href="https://github.com/ethus3h/ember-retired-repositories/">[https://github.com/ethus3h/ember-retired-repositories/]: at GitHub</a>.</p>
 
-
+<h3>Large files</h3>
     <p>Some contents are not available at GitHub due to being too to store conveniently. Currently, there is one such file. Files of this nature are listed here.</p>
 
     <h4>Wreathe production data</h4>
@@ -1325,16 +1325,16 @@ endif()
             <h6>Name</h6>
                 <pre><code>ProductionData_AsOf2November2013.7z</code></pre>
 
-
+<h3>Development</h3>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
 <h2>Development community standards: Contributor Covenant Code of Conduct, version 1.4</h2>
 
 
-
+<h3>Our Pledge</h3>
 
     <p>In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.</p>
 
-
+<h3>Our Standards</h3>
 
     <p>Examples of behavior that contributes to creating a positive environment include:
         <ul>
@@ -1356,7 +1356,7 @@ endif()
         </ul>
     </p>
 
-
+<h3>Our Responsibilities</h3>
 
     <p>Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.</p>
 
@@ -1364,17 +1364,17 @@ endif()
     permanently any contributor for other behaviors that they deem inappropriate, 
     threatening, offensive, or harmful.</p>
 
-
+<h3>Scope</h3>
 
     <p>This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.</p>
 
-
+<h3>Enforcement</h3>
 
     <p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at <a href="http://futuramerlin.com/info@futuramerlin.com">[http://futuramerlin.com/info@futuramerlin.com]: info@futuramerlin.com</a>. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.</p>
 
     <p>Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.</p>
 
-
+<h3>Attribution</h3>
 
     <p>This Code of Conduct is adapted from the <a href="http://contributor-covenant.org">[http://contributor-covenant.org]: Contributor Covenant</a>, version 1.4, available at <a href="http://contributor-covenant.org/version/1/4">http://contributor-covenant.org/version/1/4</a>. It is released under the <a href="https://github.com/ContributorCovenant/contributor_covenant/blob/master/LICENSE.md">[https://github.com/ContributorCovenant/contributor_covenant/blob/master/LICENSE.md]: Creative Commons Attribution 4.0 International Public License</a>.</p>
 <h2>Discontinued ancillary projects</h2>
