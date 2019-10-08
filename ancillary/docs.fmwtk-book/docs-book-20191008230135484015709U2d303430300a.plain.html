@@ -56,7 +56,7 @@
 
 <h3>Issue tracker</h3>
 
-    <p><a href="http://futuramerlin.com/issue-tracker">[http://futuramerlin.com/issue-tracker]: An issue tracker</a> <small>(<a href="http://futuramerlin.com/static/content/futuramerlin.com/issue-tracker/view_all_bug_page.php.html">[http://futuramerlin.com/static/content/futuramerlin.com/issue-tracker/view_all_bug_page.php.html]: static backup copy</a>)</small> is available.</p>
+    <p>An issue tracker is not available as of 8 October 2019.</p>
 
 <h3>List of repositories</h3><!-- MAINTENANCE: Keep this list in sync with repositories.lst in ember-shared. Eventually, this data could maybe be stored in and generated from that, or something, although more structured data would be needed to do that and it might be more trouble than it is worth. -->
     <p>Note (2019 Jan. 26a27): The ember-web-site, wreathe-conf, and ember-web-site-snapshots repositories have not been publicly available for a while (leaked some possibly sensitive information in them). I've finally gotten around to doing something about it, though, by cleaning and then dropping the history from the repositories, and force pushing over the current ones. I'll set them back to public once the Git hosts do garbage collection. The versions of the repositories from before the force pushes are included in ember-library-2 to preserve the history. (I was too lazy to be selective in cleaning them up such that a sanitized copy of the repos' old commit history could stay public; this was much easier, sorry.) Anyway, that's why they've disappeared — sorry for the silence, procrastination strikes again... :P Update 2019 Apr. 9: It's necessary to re-do this, since it turns out GitHub at least doesn't do GC, or at least it hasn't yet (procedure: back up current repo, rename current remote repo, create new blank remote repo, remove old history from local copy (https://stackoverflow.com/questions/41953300/how-to-delete-the-old-git-history), push to remote, unbreak GitLab mirror by moving and then creating a new blank project and setting up mirroring for it). This is done for ember-web-site, which is now public again, yay! The other two still need it.</p>
@@ -118,7 +118,7 @@
             <dt>cbb-status-elements</dt><dd>Status data: "elements" Ember Project copy</dd>
             <dt>cbb-status-remote</dt><dd>Status of the "remote" Ember Project copy</dd>
         </dl>
-        <p>These repositories are personal scratch spaces used by <a href="http://futuramerlin.com/people/elliot">[http://futuramerlin.com/people/elliot]: Elliot Chandler</a>. They are not officially part of Ember, but may at times contain some information of relevance to the development history of Ember. They may in the future be added to parts 2 or 3 of the Ember Library.</p>
+        <p>These repositories are personal scratch spaces used by <a href="http://futuramerlin.com/people/elli">[http://futuramerlin.com/people/elli]: Elli Chandler</a>. They are not officially part of Ember, but may at times contain some information of relevance to the development history of Ember. They may in the future be added to parts 2 or 3 of the Ember Library.</p>
         <dl>
             <dt>personal</dt><dd>Personal scratch space</dd>
             <dt>personal-private</dt><dd>Personal scratch space (not publicly available at this time)</dd>
@@ -379,6 +379,10 @@
         </dl>
         <p>In addition, ember-shared also provides the following scripts that it uses internally that are not supported for independent use.</p>
         <dl>
+        <!-- FIXME MISSING -->
+        </dl>
+        <p><code>ember_bash_setup</code> provides these bash functions.</p>
+        <dl>
             <dt><code>a</code></dt><dd>Archive a URL recursively using <code>grab-site</code>, using a default configuration. Synopsis: <code>a [&lt;additional-grab-site-argument&lt;] &lt;url&gt;...</code></dd>
             <dt><code>abspath</code></dt><dd>Get the absolute path to the specified file or directory, like <code>readlink -f</code> but without resolving symlinks by default. Optionally, symlinks can be resolved in the path (still not resolving the final path element): this is for referencing the canonical path of a symlink without following that symlink. The path must exist. Synopsis: <code>abspath &lt;path&gt; [--resolve-symlinks-in-enclosing-directory-path]</code></dd>
             <dt><code>ap</code></dt><dd>Archive a URL recursively using <code>grab-site</code> and <code>phantomjs</code>, using a default configuration. Synopsis: <code>ap [&lt;additional-grab-site-argument&lt;] &lt;url&gt;...</code></dd>
@@ -460,9 +464,6 @@
             <dt><code>ytdl-quick-audio</code></dt><dd>Call <code>youtube-dl</code> with some default options set up, to get audio only, for the specified item. Synopsis: <code>ytdl-quick-audio &lt;argument-or-item-to-fetch&gt;...</code></dd>
             <dt><code>ytdl-quick</code></dt><dd>Call <code>youtube-dl</code> with some default options set up, for the specified item. Synopsis: <code>ytdl-quick &lt;argument-or-item-to-fetch&gt;...</code></dd>
         </dl>
-        </dl>
-        <dl>
-        <p><code>ember_bash_setup</code> provides these bash functions.</p>
 
     <h4>Installation</h4>
         <p>For Wreathe 7.3, an ebuild (<code>app-misc/ember-shared</code>) is available in the <a href="http://futuramerlin.com/ancillary/wreathe">[http://futuramerlin.com/ancillary/wreathe]: Wreathe</a> overlay (this may also work for similar operating systems such as Ututo XS GNU/Linux).</p>
