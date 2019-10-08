@@ -1,6 +1,5 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <link href="/simple.css" rel="stylesheet" type="text/css"> <meta content="Ember" name="author"> <meta content="width=device-width,height=device-height,user-scalable=yes" name="viewport"> <title>Ember Ancillary Project Documentation</title> </head> <body> <main>
-<h0>Ember Ancillary Project Documentation</h0>
-<h1>Ready-to-use software</h1>
+<h1></h1>
+<h3>Ready-to-use software</h3>
 
 
 <figure class="floating-key alignright">
@@ -25,7 +24,7 @@
 
 <p>There are also some <a href="http://futuramerlin.com/ancillary/work-in-progress.htm">[http://futuramerlin.com/ancillary/work-in-progress.htm]: projects in development</a>, and development documentation for Ember in general <a href="http://futuramerlin.com/develop.htm">[http://futuramerlin.com/develop.htm]: is available</a>.</p>
 <p>See also <a href="http://futuramerlin.com/ancillary/discontinued.htm">[http://futuramerlin.com/ancillary/discontinued.htm]: the list of discontinued projects</a>.</p>
-<h1>Work-in-progress ancillary projects</h1>
+<h3>Work-in-progress ancillary projects</h3>
 
 
 <figure class="floating-key alignright">
@@ -47,20 +46,20 @@
 </ul>
 
 <p><a href="http://futuramerlin.com/develop.htm">[http://futuramerlin.com/develop.htm]: Development documentation</a></p>
-<h1>Development documentation</h1>
+<h3>Development documentation</h3>
 
 
-<h2>Ember development community standards</h2>
+<h4>Ember development community standards</h4>
 
     <p>Ember has adopted <a href="http://futuramerlin.com/code-of-conduct.htm">[http://futuramerlin.com/code-of-conduct.htm]: the Contributor Covenant Code of Conduct</a>.</p>
 
-<h2>Issue tracker</h2>
+<h4>Issue tracker</h4>
 
     <p><a href="http://futuramerlin.com/issue-tracker">[http://futuramerlin.com/issue-tracker]: An issue tracker</a> <small>(<a href="http://futuramerlin.com/static/content/futuramerlin.com/issue-tracker/view_all_bug_page.php.html">[http://futuramerlin.com/static/content/futuramerlin.com/issue-tracker/view_all_bug_page.php.html]: static backup copy</a>)</small> is available.</p>
 
-<h2>List of repositories</h2><!-- MAINTENANCE: Keep this list in sync with repositories.lst in ember-shared. Eventually, this data could maybe be stored in and generated from that, or something, although more structured data would be needed to do that and it might be more trouble than it is worth. -->
+<h4>List of repositories</h4><!-- MAINTENANCE: Keep this list in sync with repositories.lst in ember-shared. Eventually, this data could maybe be stored in and generated from that, or something, although more structured data would be needed to do that and it might be more trouble than it is worth. -->
     <p>Note (2019 Jan. 26a27): The ember-web-site, wreathe-conf, and ember-web-site-snapshots repositories have not been publicly available for a while (leaked some possibly sensitive information in them). I've finally gotten around to doing something about it, though, by cleaning and then dropping the history from the repositories, and force pushing over the current ones. I'll set them back to public once the Git hosts do garbage collection. The versions of the repositories from before the force pushes are included in ember-library-2 to preserve the history. (I was too lazy to be selective in cleaning them up such that a sanitized copy of the repos' old commit history could stay public; this was much easier, sorry.) Anyway, that's why they've disappeared — sorry for the silence, procrastination strikes again... :P Update 2019 Apr. 9: It's necessary to re-do this, since it turns out GitHub at least doesn't do GC, or at least it hasn't yet (procedure: back up current repo, rename current remote repo, create new blank remote repo, remove old history from local copy (https://stackoverflow.com/questions/41953300/how-to-delete-the-old-git-history), push to remote, unbreak GitLab mirror by moving and then creating a new blank project and setting up mirroring for it). This is done for ember-web-site, which is now public again, yay! The other two still need it.</p>
-    <h3>Top-level projects</h3>
+    <h5>Top-level projects</h5>
         <dl>
             <dt>ember</dt><dd>Core project repository (pulls in all other core repositories as submodules)</dd>
             <dt>ember-information-technology-environment</dt><dd><a href="http://futuramerlin.com/information-technology">[http://futuramerlin.com/information-technology]: Information technology environment</a></dd>
@@ -69,7 +68,7 @@
             <dt>ember-web-site</dt><dd>This Web site</dd>
         </dl>
 
-    <h3>Satellite projects</h3>
+    <h5>Satellite projects</h5>
         <dl>
             <dt>BeHeMMOth</dt><dd><a href="http://futuramerlin.com/ancillary/wreathe/">[http://futuramerlin.com/ancillary/wreathe/]: Wreathe</a>: bullet hell MMO computer game (not publicly available at this time)</dd>
             <dt>BeHeMMOth-related-submodules</dt><dd><a href="http://futuramerlin.com/ancillary/wreathe/">[http://futuramerlin.com/ancillary/wreathe/]: Wreathe</a>: Repositories related to BeHeMMOth, as submodules, for reference (not publicly available at this time)</dd>
@@ -111,7 +110,7 @@
             <dt>xulrunner</dt><dd><a href="http://futuramerlin.com/ancillary/wreathe/">[http://futuramerlin.com/ancillary/wreathe/]: Wreathe</a>: XULRunner (forked from discontinued code)</dd>
         </dl>
 
-    <h3>Miscellaneous repositories</h3>
+    <h5>Miscellaneous repositories</h5>
         <p>These two repositories hold a record of the status of copies of the Ember project data. As of this writing, neither copy is complete ("elegiac" is a small test copy of a subset of the data used for testing the software during development, and "remote" has not finished the initial process of getting a copy). (The git repositories are held separately with a copy in the computer used for development and a copy at GitHub, and the other data are held at the Internet Archive. Eventually, there should be various mirrors with the entirety of the Ember project data.)</p>
         <dl>
             <dt>cbb-status-elegiac</dt><dd>Status data: "elegiac" Ember Project copy</dd>
@@ -124,36 +123,36 @@
             <dt>personal-private</dt><dd>Personal scratch space (not publicly available at this time)</dd>
         </dl>
 
-<h2>Getting the data</h2>
+<h4>Getting the data</h4>
     <p>This section discusses how to download the data of, and the projects maintained by, Ember. These instructions will result in the creation of a development environment for the repositories similar to the one used by Ember. If you want to use the Ember tools for working with this environment, and are not using Wreathe 7.3, then additional configuration steps should be taken after getting the data (see "Configuring the environment"). If you just want to examine the contents, or use standard Git tools with it, those steps are not necessary. If you are using Wreathe 7.3, these commands for getting the development data should either be run in the root directory, or else the existing <code>/Ember Library</code> folder should be moved to the desired loctaion, and the value of the <code>EmberLibrary</code> configuration field for Crystallize set to that new location as described in the "Configuring the environment" section below.</p>
 
     <p>It is important to check the information in the "Working with Stream Registry repositories, and crystal backups" if you are concerned that you may not be getting all the data you want.</p>
 
-    <h3>Getting only the basic repositories</h3>
+    <h5>Getting only the basic repositories</h5>
         <p>Unless you are working on Wreathe or investigating the history of Ember, you probably don't need the Wreathe repositories or Ember history repositories, which are pretty big. This section does not discuss getting them. If you do want them, see the next section. To get these basic repositories, run the following command in the directory where you want the Ember development data to be stored.</p>
 
         <pre><code>declare -a emberProjects=("ember" "ember-information-technology-environment" "ember-library" "ember-web-site"); declare -a emberSatelliteProjects=("crystallize" "ember-shared" "futuramerlin-web-toolkit" "warcdealer"); set -e; mkdir -p Ember\ Library; cd Ember\ Library || exit 1; git clone --recursive https://github.com/ethus3h/ember.git Ember; cd Ember || exit 1; for i in "${emberProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ..; mkdir Ember\ satellite\ projects; cd Ember\ satellite\ projects || exit 1; for i in "${emberSatelliteProjects[@]}"; do git clone --recursive https://github.com/ethus3h/"$i".git; done; cd ../.. || exit 1; echo "Finished downloading Ember."</code></pre><br />
 
-    <h3>Getting all public repositories</h3>
+    <h5>Getting all public repositories</h5>
         <p>This section discusses getting all publicly available Ember data, which is quite large. Unless you are working on Wreathe or investigating the history of Ember, you probably don't need this, and can use the previous section to get a more limited subset of data.</p>
         <p>These main instructions do not currently get the ember-library-2, personal, or personal-private repositories, the first and third because they are not currently publicly available, and the second (and third) because they are probably of limited interest. To get this more complete set of repositories, run the following command in the directory where you want the Ember development data to be stored.</p>
         <pre><code>git clone --recursive https://github.com/ethus3h/ember-meta.git Ember\ Library</code></pre><br />
 
-        <h4>About the "ember-library-2" repository</h4>
+        <h6>About the "ember-library-2" repository</h6>
             <p>The "ember-library-2" repository is not currently publicly available, and is weird and complicated. It is an overlay on top of the ember-meta repository. To use it, clone it and then move its .git directory to <code>Ember/ember-library/ember-library-2/.egup.git</code> (within the main <code>EmberLibrary</code> folder — see the section "Configuring the environment" below). From a semantic perspective, the ember-meta repository should be considered part of the ember-library-2 repository, but having a submodule with the same working directory as the current git repository is kinda weird and confusing and I'm not really sure how to do it, so I haven't done that yet.</p>
 
-        <h4>Getting the "personal" repository (and about the "personal-private" repository)</h4>
+        <h6>Getting the "personal" repository (and about the "personal-private" repository)</h6>
             <p>If you really do want this, go to the folder where you ran the above command, and run: <code>cd Ember\ Library/Ember\ satellite\ projects; git clone https://github.com/ethus3h/personal.git</code>. (The "personal-private" repository works in the same manner as this, but is not currently publicly available.)</p>
 
-    <h3>Configuring and using the environment</h3>
+    <h5>Configuring and using the environment</h5>
         <p>This step is only needed if you want to use the Ember tools to work with the development environment, and are not using Wreathe 7.3 (which has this already taken care of). If you just want to examine its contents or develop it using standard Git tools, this is not necessary.</p>
         <p>To use these tools (egup/eogup), a copy of Crystallize must be installed and configured with the <code>EmberLibrary</code> configuration field set to the location of the folder (called "Ember Library") containing the development environment. For example, if as in the Ember setup the folder is in the root directory, the Crystallize configuration file (crystallize.conf) would contain a line reading '<code>EmberLibrary,/Ember Library</code>'. Also, the scripts with names beginning with "egup" and "eogup" that are in the <code>usr/bin</code> folder of the wreathe-base repository must be executable and available in the <code>PATH</code> for your user and the root user on your system.</p>
         <p>To synchronise your changes to the development environment, run <code>egup</code>, or <code>eogup</code> if there isn't a Web connection available or GitHub is unavailable, if you have remote commit privileges. (If you do not have remote commit privileges, use a fork of the repository you want to work on, in the traditional Git manner.) To build the Ember Web site, run <code>egup-web</code>.</p>
 
-    <h3>Working with Stream Registry repositories, and crystal backups</h3>
+    <h5>Working with Stream Registry repositories, and crystal backups</h5>
         <p>Five of the repositories (ember-library-2, ember-history, personal, personal-private, and wreathe-packages) contain contents stored using the stream registry feature of Crystallize. This method of storing data keeps pointers to the files in the Git repositories, and stores the actual file contents elsewhere (currently only the Internet Archive; additional mirrors should be added for redundancy). A copy of those file contents is necessary to be able to access the data referenced by those pointers. This means that to obtain a complete copy of these repositories, a list of the addresses of the data (the crystal addresses) that the pointers depend on must be generated from the pointers, and then those crystals must be copied locally. In addition, there are two other sources of data stored at the Internet Archive that may be desired. First, the ember-library-2 repository contains a folder <code>.rubberfs/history</code> that contains a set of files that reference incremental snapshots of the filesystem used for Ember development. These incremental snapshots are ZFS replication streams that can be used by sending them back into an empty ZFS filesystem. They are stored as crystals, and can be added to the set of crystal addresses to be backed up locally if desired. Second, the ember-web-site repostiory contains a folder <code>people/elliot/music</code> that contains files with names ending in <code>.conf</code> describing various musical works released by Elliot (only tangentially related to Ember, but described here for completeness). Some of those files contain lines beginning with "<code>ia,</code>". The part of those lines after that prefix is an Internet Archive identifier for an item containing the files of the item described in that <code>.conf</code> file. Because crystal addresses are a subset of Internet Archive identifiers, and the tools for managing Crystallize backups should work with all Internet Archive items as a general rule, these identifiers can be added to the list of crystal addresses to be backed up as well, if desired.<!-- FIXME: Getting a list of all these remaining crystal identifiers/IA addresses and backing them up should be an automatable/automated process. --></p>
 
-<h2>Relevant how-to articles</h2>
+<h4>Relevant how-to articles</h4>
     <ul>
         <li><a href="http://futuramerlin.com/ancillary/wreathe/documentation/experimental/get-clean-git-branch.htm">[http://futuramerlin.com/ancillary/wreathe/documentation/experimental/get-clean-git-branch.htm]: How to get a clean, up-to-date with master branch in a forked git repository</a></li>
         <li><a href="http://futuramerlin.com/ancillary/wreathe/documentation/experimental/find-non-source-files.htm">[http://futuramerlin.com/ancillary/wreathe/documentation/experimental/find-non-source-files.htm]: Finding non-source files (e.g. in a git repository)</a></li>
@@ -190,14 +189,14 @@
     <li>Click "Save changes".</li>
 </ul>
 -->
-<h1>Crystallize</h1>
+<h3>Crystallize</h3>
 
 
-<h2>Overview</h2>
+<h4>Overview</h4>
     <p>A collection of tools for working with files and filesystems.</p>
     <p class="hatnote">Note: There is an oddity in the version numbering: version 2.15.5.9.1 was followed immediately by version 2.15.5.9.3 (skipping 2.15.5.9.2); version 2.15.5.9.2 was then released following version 2.15.5.9.3 (and is identical to version 2.15.5.9.3 aside from the version number); normal numbering then resumed with version 2.15.5.9.4, .5, .6 etc. following version 2.15.5.9.2 (skipping version 2.15.5.9.3, as that number was already used).</p>
-<h2>Documentation</h2>
-    <h3>Usage</h3>
+<h4>Documentation</h4>
+    <h5>Usage</h5>
         <p>Crystallize provides the following primary user-facing command-line scripts.</p>
         <dl>
             <dt><code>crystal-search</code></dt><dd>Show the addresses of crystals that contain files (or, optionally, a maximum of one file per crystal) with path names matching the given pattern. Synopsis: <code>crystal-search [--single] [--] &lt;search-key&gt;</code></dd>
@@ -288,13 +287,13 @@
             <dt><code>sregi_hash_from_file</code></dt><dd>Retrieves and prints the checksum from a pointer. Synopsis: <code>sregi_hash_from_file &lt;file&gt;</code></dd>
         </dl>
 
-    <h3>Installation</h3>
+    <h5>Installation</h5>
         <p>For Wreathe 7.3, an ebuild (<code>app-misc/crystallize</code>) is available in the <a href="http://futuramerlin.com/ancillary/wreathe">[http://futuramerlin.com/ancillary/wreathe]: Wreathe</a> overlay (this may also work for similar operating systems such as Ututo XS GNU/Linux).</p>
         <p>For other operating systems, use the following installation instructions.</p>
 
-        <h4>Instructions for installation without ebuild</h4>
+        <h6>Instructions for installation without ebuild</h6>
 
-            <h5>Requirements</h5>
+            <h7>Requirements</h7>
                 <p><span class="hatnote-emphasis-warning"><a href="http://futuramerlin.com/ancillary/wreathe">[http://futuramerlin.com/ancillary/wreathe]: Wreathe</a> 7.3 is required for full support. The simple invocations of the 'crystallize' and 'decrystallize' commands (with filenames as the only arguments) are also supported on Ubuntu GNU/Linux and macOS 10.12 in the interest of promoting the preservation of knowledge (although Ember strongly advises not using non-libre software such as those operating systems), and will probably work on many other UNIX-like operating systems; these instructions only cover that basic support. This is not as well tested as using the software in Wreathe. Please <a href="http://futuramerlin.com/issue-tracker/">[http://futuramerlin.com/issue-tracker/]: report</a> issues if you encounter them.</span></p>
 
                 <ul>
@@ -332,19 +331,19 @@
                     <li><a href="http://futuramerlin.com/../futuramerlin-web-toolkit">[http://futuramerlin.com/../futuramerlin-web-toolkit]: futuramerlin-web-toolkit</a> (required to use the <code>egup-web</code> command)</li>
                 </ul>
 
-            <h5>Download</h5>
+            <h7>Download</h7>
                 <p>To download Crystallize, run:</p>
                 <pre><code>git clone https://github.com/ethus3h/crystallize.git</code></pre>
 
-            <h5>Copy scripts</h5>
+            <h7>Copy scripts</h7>
                 <p>To install the downloaded scripts, run <code>cd crystallize; make</code>.</p>
 
-            <h5>Setup</h5>
+            <h7>Setup</h7>
                 <p>Edit the configuration file; see <a href="http://futuramerlin.com/#Configuration_file_format">[http://futuramerlin.com/#Configuration_file_format]: the "Configuration file format" section</a> for documentation of this.</p>
 
                 <p>Finally, run <code>sudo make install</code>.</p>
 
-<h2>Configuration file format</h2>
+<h4>Configuration file format</h4>
     <p>The configuration file is located in your system configuration directory (probably <code>/usr/local/etc</code> or <code>/etc</code>), and is named <code>crystallize.conf</code>. It is a list of key-value pairs in the format <code>Key,Value</code>, separated by a line feed (0x0A), as follows:</p>
     <dl>
         <dt>InstallationIdentifier</dt><dd>Installation UUID</dd>
@@ -357,16 +356,16 @@
     </dl>
     <p>Note that there is currently no facility for storing configuration values containing line feeds.</p>
 
-<h2>Development</h2>
+<h4>Development</h4>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
-<h1>ember-shared</h1>
+<h3>ember-shared</h3>
 
 
-<h2>Overview</h2>
+<h4>Overview</h4>
     <p>Code shared between various Ember software.</p>
 
-<h2>Documentation</h2>
-    <h3>Usage</h3>
+<h4>Documentation</h4>
+    <h5>Usage</h5>
         <p>ember-shared provides the following command-line scripts, mainly useful for writing other scripts.</p>
         <dl>
             <dt><code>csum</code></dt><dd>Generate and check against lists of file checksums. If no action is specified, <code>save</code> is assumed; if no path is specified, the current directory is assumed; if no checksum file name is specified, stdout/stdin are used for <code>save</code> and <code>check</code> respectively. Note that at least one checksummable file must be specified for the resulting file to be usable: a single empty directory, for instance, will result in an unusable file. Synopsis: <code>csum [(--save|--check)] [&lt;path&gt;... [&lt;checksum-file-name&gt;|""|-]]</code></dd>
@@ -464,17 +463,17 @@
         <dl>
         <p><code>ember_bash_setup</code> provides these bash functions.</p>
 
-    <h3>Installation</h3>
+    <h5>Installation</h5>
         <p>For Wreathe 7.3, an ebuild (<code>app-misc/ember-shared</code>) is available in the <a href="http://futuramerlin.com/ancillary/wreathe">[http://futuramerlin.com/ancillary/wreathe]: Wreathe</a> overlay (this may also work for similar operating systems such as Ututo XS GNU/Linux).</p>
         <p>For other operating systems, use the following installation instructions.</p>
 
-        <h4>Instructions for installation without ebuild</h4>
+        <h6>Instructions for installation without ebuild</h6>
 
-            <h5>Requirements</h5>
+            <h7>Requirements</h7>
                 <ul>
                   <li>A recent version of bash</li>
                 </ul>
-            <h5>Optional requirements</h5>
+            <h7>Optional requirements</h7>
                 <p>For the <code>htmlToText.pl</code> command, the <code>HTML::Restrict</code> Perl module is required. It can be installed by running <code>sudo cpan -f -i HTML::Restrict</code>.</p>
                 <p>For the <code>ia</code> command, the following additional requirements apply.
                 <ul>
@@ -487,16 +486,16 @@
                 <p>For the <code>a</code>, <code>o</code>, <code>aq</code>, <code>oq</code>, <code>ap</code>, <code>op</code>, <code>grab-site</code>, and <code>getGrabSitePath</code> commands, <a href="https://github.com/ludios/grab-site">[https://github.com/ludios/grab-site]: <code>grab-site</code></a> is required.</p>
                 <p>For the <code>ap</code>, <code>op</code>, <code>phantomjs</code>, and <code>getPhantomjsPath</code> commands, <code>phantomjs</code> (e.g. as described <a href="https://github.com/ludios/grab-site/issues/55#issuecomment-162118702">[https://github.com/ludios/grab-site/issues/55#issuecomment-162118702]: here</a>) is required.</p>
 
-            <h5>Download</h5>
+            <h7>Download</h7>
                 <p>To download ember-shared, run:</p>
                 <pre><code>git clone https://github.com/ethus3h/ember-shared.git</code></pre>
 
-            <h5>Copy scripts</h5>
+            <h7>Copy scripts</h7>
                 <p>To install the downloaded scripts, copy them to your preferred location.</p>
 
-<h2>Development</h2>
+<h4>Development</h4>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
-<h1>Futuramerlin Web Toolkit</h1>
+<h3>Futuramerlin Web Toolkit</h3>
 
 
 <p>The Futuramerlin Web Toolkit is a static site builder and theme featuring:</p>
@@ -514,9 +513,9 @@
 </ul>
 <p>Version 2.2.35 would normally have been numbered 2.2.34, but was mistakenly given the number 2.2.35.</p>
 
-<h2>Documentation</h2>
+<h4>Documentation</h4>
 
-    <h3>Command syntax</h3>
+    <h5>Command syntax</h5>
         <p><span class="hatnote-emphasis-warning">Before running the Futuramerlin Web Toolkit, <code>cd</code> to the directory that contains the contents of your Web site. Note that those should be the only files present in that directory.</span></p>
         <p>If using Wreathe 7.3 or the ebuild from the Wreathe overlay:
         <figure class="center-figure app-syntax">
@@ -530,15 +529,15 @@
             <code>~/.futuramerlin-web-toolkit-build</code>
         </figure>
         </p>
-    <h3>Installation</h3>
+    <h5>Installation</h5>
         <p>For Wreathe 7.3, an ebuild (<code>app-misc/futuramerlin-web-toolkit</code>) is available in the <a href="http://futuramerlin.com/ancillary/wreathe">[http://futuramerlin.com/ancillary/wreathe]: Wreathe</a> overlay (this may also work for similar operating systems such as Ututo XS GNU/Linux).</p>
         <p>For other operating systems, use the following installation instructions.</p>
 
-        <h4>Download</h4>
+        <h6>Download</h6>
             <pre><code>git clone https://github.com/ethus3h/futuramerlin-web-toolkit.git</code></pre>
 
 
-        <h4>Setup</h4>
+        <h6>Setup</h6>
 
             <ol>
                 <li>Ensure your system has the correct dependencies:
@@ -569,7 +568,7 @@
                 <li>Log out and log in again, to update your shell aliases.</li>
             </ol>
 
-    <h3>Themes</h3>
+    <h5>Themes</h5>
         <dl>
             <dt>common</dt><dd>Components shared between the other themes.</dd>
             <dt>ember</dt><dd>A fancy theme designed to look like the default theme in version 7r2 of the Wreathe GNU/Linux distribution. This is the theme that was formerly used for the Ember project Web site. Despite the name, it is no longer currently used for that (the "simple" theme is used instead), and isn't actively maintained. WARNING: This theme has a bug in the CSS that causes it to malfunction badly when pages using it are viewed in Netscape 6–era Web browsers, causing the Web site to be unusable as the navigation menu fills the entire viewport.</dd>
@@ -577,7 +576,7 @@
             <dt>simple</dt><dd>A simple black-and-white theme. This is the theme used for the Ember project Web site.</dd>
         </dl>
 
-    <h3>Ebook configuration</h3>
+    <h5>Ebook configuration</h5>
         <p>Each line consists of a "depth", followed by a space, followed by the line's contents. The line may be preceded by whitespace without breaking anything, allowing for nicely formatted files. The depth can be any of the following values:</p>
         <dl>
             <dt>#</dt><dd>Comment</dd>
@@ -587,7 +586,7 @@
             <dt>-4</dt><dd>Used as the first line of a configuration file to define the book title, e.g. "<code>-4 Book Title</code>"</dd>
         </dl>
 
-    <h3>Configuration file format</h3>
+    <h5>Configuration file format</h5>
         <p>The configuration file is located at <code>~/.futuramerlin-web-toolkit.cfg</code>. It contains configuration values separated by a line feed (0x0A), as follows:</p>
         <ul>
             <li>Name for the Web site</li>
@@ -597,26 +596,26 @@
         </ul>
         <p>Note that there is currently no facility for storing configuration values containing line feeds.</p>
 
-<h2>Development</h2>
+<h4>Development</h4>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
-<h1>Warcdealer</h1>
+<h3>Warcdealer</h3>
 
 
 <p>Warcdealer is an app that uploads Web archive files to the Internet Archive.</p>
 <p>Its source code is available <a href="https://github.com/ethus3h/warcdealer/">[https://github.com/ethus3h/warcdealer/]: at GitHub</a>.</p>
 <p>It can be used with <a href="https://github.com/ludios/grab-site/">[https://github.com/ludios/grab-site/]: grab-site</a> for a complete on-demand Web archival system.</p>
 
-<h2>Documentation</h2>
+<h4>Documentation</h4>
 
-    <h3>Command syntax</h3>
+    <h5>Command syntax</h5>
         <p><span class="hatnote-emphasis-warning">Before running Warcdealer, <code>cd</code> to the directory that contains or will contain the files you would like uploaded. Note that those should be the only files present in that directory.</span></p>
         <figure class="center-figure app-syntax">
             <code>warcdealer</code>
         </figure>
 
-    <h3>Installation</h3>
+    <h5>Installation</h5>
 
-        <h4>Download</h4>
+        <h6>Download</h6>
             <p>For Wreathe 7.3, an ebuild (<code>app-misc/crystallize</code>) is available in the <a href="http://futuramerlin.com/ancillary/wreathe">[http://futuramerlin.com/ancillary/wreathe]: Wreathe</a> overlay (this may also work for similar operating systems such as Ututo XS GNU/Linux).</p>
             <p>For other operating systems, use the following installation instructions.</p>
 
@@ -651,14 +650,14 @@
                 <li>Log out and log in again, to update your shell aliases.</li>
             </ol>
 
-    <h3>Updating</h3>
+    <h5>Updating</h5>
         <ol>
             <li>Check for changes to the requirements.</li>
             <li>Check the Warcdealer version. If the major version has changed, or <a href="http://futuramerlin.com/release-notes.htm">[http://futuramerlin.com/release-notes.htm]: the release notes</a> specify that it should be reinstalled since the version you have installed, (the part before the first "." in the version number), follow the current installation instructions instead (unless you know you don't need to, <span class="foreign-text">e. g.</span> if the release notes specify that the configuration file format is compatible with the major version you have installed).</li>
             <li>As the user you chose in step 2 of the installation process, run the following command:<br /><pre><code>mkdir -p ~/.warcdealer/pending/multiseed; warcdealerPreInstallPath=$(pwd); warcdealerTemporaryUUID=$(python2 -c 'import uuid; print str(uuid.uuid4())'); cd ~; mkdir "$warcdealerTemporaryUUID"; cd "$warcdealerTemporaryUUID"; git clone https://github.com/ethus3h/ember.git; cp -f ./warcdealer/warcdealer ~/.warcdealers; chmod +x ~/.warcdealers; cp -f ./warcdealer/warcdealer-ia-upload ~/.warcdealer-ia-upload; chmod +x ~/.warcdealer-ia-upload; cp -f ./warcdealer/warcdealer-ia-upload-split ~/.warcdealer-ia-upload-split; chmod +x ~/.warcdealer-ia-upload-split; cp -f ./warcdealer/JobControlAPI.php ~/.warcdealer/JobControlApi.php; chmod +x ~/.warcdealer/JobControlApi.php; cp -f ./warcdealer/warcdealer-aliases ~/.warcdealer-aliases; chmod +x ~/.warcdealer-aliases; cp -f ./warcdealer/viewer.patch ~/.warcdealer-viewer.patch; cd ..; rm -r ./"$warcdealerTemporaryUUID"; cd "$warcdealerPreInstallPath"</code></pre></li>
         </ol>
 
-    <h3>Configuration file format</h3>
+    <h5>Configuration file format</h5>
         <p><span class="hatnote-emphasis-warning">Be careful when manually editing the configuration file. Specifically, do <b>NOT</b> use the "<code>disableWARCBundling</code>" option unless you know what you are doing.</span></p>
         <p>The configuration file is located at <code>~/.warcdealer.cfg</code>. It contains configuration values separated by a line feed (0x0A), as follows:</p>
         <ul>
@@ -674,66 +673,66 @@
         </ul>
         <p>Note that there is currently no facility for storing configuration values containing line feeds.</p>
 
-<h2>Release notes</h2>
+<h4>Release notes</h4>
     <p>See <a href="http://futuramerlin.com/release-notes.htm">[http://futuramerlin.com/release-notes.htm]: the dedicated page</a>.</p>
 
-<h2>Development</h2>
+<h4>Development</h4>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
-<h2>Release notes for Warcdealer</h2>
+<h4>Release notes for Warcdealer</h4>
 
 
-<h3>Major version 3</h3>
-    <h4>Version 3.1.2.1 (2016-December-16)</h4>
-        <h5>Changes in this version</h5>
+<h5>Major version 3</h5>
+    <h6>Version 3.1.2.1 (2016-December-16)</h6>
+        <h7>Changes in this version</h7>
             <ul>
                 <li>Bug fix.</li>
             </ul>
-    <h4>Version 3.1.2 (2016-November-30)</h4>
-        <h5>Announcements</h5>
+    <h6>Version 3.1.2 (2016-November-30)</h6>
+        <h7>Announcements</h7>
             <p><span class="hatnote-emphasis-warning">Warcdealer version 3.1.2 uses a new configuration format, and should be updated using the installation process.</span></p>
-        <h5>Features in this version</h5>
+        <h7>Features in this version</h7>
             <ul>
                 <li>Add a remote job control API.</li>
             </ul>
-    <h4>Version 3.1.1 (2016-Sept-06)</h4>
-        <h5>Changes in this version</h5>
+    <h6>Version 3.1.1 (2016-Sept-06)</h6>
+        <h7>Changes in this version</h7>
             <ul>
                 <li>Fix a bug that caused the default settings for the features introduced in version 3.1 to always be used.</li>
                 <li>Use <code>[[ ]]</code> consistently for comparisons, instead of sometimes using <code>[ ]</code></li>
             </ul>
-    <h4>Version 3.1 (2016-Sept-06)</h4>
-        <h5>Announcements</h5>
+    <h6>Version 3.1 (2016-Sept-06)</h6>
+        <h7>Announcements</h7>
             <p><span class="hatnote-emphasis-warning">Warcdealer version 3.1 uses a new configuration format, and should be updated using the installation process.</span></p>
-        <h5>Features in this version</h5>
+        <h7>Features in this version</h7>
             <ul>
                 <li>Add an archive search tool.</li>
             </ul>
-        <h5>Changes in this version</h5>
+        <h7>Changes in this version</h7>
             <ul>
                 <li>Add an option to only upload one file per item, and label items with the filename.</li>
             </ul>
-    <h4>Version 3.0.2.2</h4>
-        <h5>Changes in this version</h5>
+    <h6>Version 3.0.2.2</h6>
+        <h7>Changes in this version</h7>
             <ul>
                 <li>Fix a bug that causes mis-reading the configuration file.</li>
             </ul>
-    <h4>Version 3.0.2.1</h4>
-        <h5>Changes in this version</h5>
+    <h6>Version 3.0.2.1</h6>
+        <h7>Changes in this version</h7>
             <ul>
                 <li>Improve item titles</li>
                 <li>Remove dead code that caused a harmless error</li>
             </ul>
-    <h4>Version 3.0.2</h4>
-        <h5>Announcements</h5>
+    <h6>Version 3.0.2</h6>
+        <h7>Announcements</h7>
             <p><span class="hatnote-emphasis-warning">Warcdealer version 3.0.2 uses a new configuration format, and should be updated using the installation process.</span></p>
-        <h5>Changes in this version</h5>
+        <h7>Changes in this version</h7>
             <ul>
                 <li>Support a configurable target collection identifier.</li>
             </ul>
 
-<h3>Earlier versions</h3>
+<h5>Earlier versions</h5>
     <p>Release notes have not been written for versions prior to version 3.0.2.</p>
-<h1>Wreathe</h1>
+<h3>Wreathe</h3>
 
 
 <p class="space-above">Wreathe is a computer operating system. Eventually, it will become an interface to the <a href="http://futuramerlin.com/information-technology">[http://futuramerlin.com/information-technology]: Ember Information Technology Environment</a>, but that is not yet implemented.</p>
@@ -743,11 +742,11 @@
     <dt>Next version</dt><dd><a href="http://futuramerlin.com/7.3">[http://futuramerlin.com/7.3]: Wreathe 7.3: Elegiac</a></dd>
 </dl>
 
-<h2>Documentation</h2>
+<h4>Documentation</h4>
 
     <p>See <a href="http://futuramerlin.com/documentation">[http://futuramerlin.com/documentation]: the dedicated Wreathe documentation page</a>.</p>
 
-<h2>Version history</h2>
+<h4>Version history</h4>
 
     <ul>
         <li><span class="important-word"><a href="http://futuramerlin.com/7r2">[http://futuramerlin.com/7r2]: Wreathe 7 Elegy: R2 Evening Star</a></span> <small>(2014-Sept.-03, current version)</small></li>
@@ -761,19 +760,19 @@
         <li>Wreathe 1: Frost <small>(not released?)</small></li>
     </ul>
 
-    <h3>Roadmap</h3>
+    <h5>Roadmap</h5>
         <p>This list shows planned and not-yet-released versions of Wreathe.</p>
         <ul>
             <li><a href="http://futuramerlin.com/7.3">[http://futuramerlin.com/7.3]: Wreathe 7.3: Elegiac</a> <small>(in development)</small></li>
             <li>Wreathe 8: Morning <small>(planned)</small></li>
         </ul>
 
-<h2>Subprojects</h2>
+<h4>Subprojects</h4>
     <p>There are a number of subprojects maintained as parts of Wreathe. To learn about them, visit <a href="http://futuramerlin.com/subprojects">[http://futuramerlin.com/subprojects]: the index of subprojects</a>.</p>
 
-<h2>Development</h2>
+<h4>Development</h4>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
-<h2>Documentation &mdash; Wreathe</h2>
+<h4>Documentation &mdash; Wreathe</h4>
 
 
 <ul>
@@ -784,7 +783,7 @@
     <li><a href="http://futuramerlin.com/wreathe/experimental">[http://futuramerlin.com/wreathe/experimental]: Documentation for experimental features and versions</a></li>
     <!-- <li><a href="http://futuramerlin.com/wreathe/legacy">[http://futuramerlin.com/wreathe/legacy]: Documentation for previous versions</a></li> -->
 </ul>
-<h2>Wreathe subprojects</h2>
+<h4>Wreathe subprojects</h4>
 
 
 <figure class="floating-key alignright">
@@ -806,78 +805,78 @@
     <li class="project-completion-partly-complete"><a href="http://futuramerlin.com/wreathe/overlay/">[http://futuramerlin.com/wreathe/overlay/]: wreathe-overlay</a>, the ebuilds for Wreathe: <span>partly complete</span></li>
     <li class="project-completion-begun"><a href="http://futuramerlin.com/wreathe/file-manager/">[http://futuramerlin.com/wreathe/file-manager/]: wreathe-file-manager</a>, the file manager for Wreathe: <span>begun</span></li>
 </ul>
-<h2>BeHeMMOth</h2>
+<h4>BeHeMMOth</h4>
 
 
-<h3>Overview</h3>
+<h5>Overview</h5>
     <p>A bullet-hell computer game with support for multiple players over the Web. It is a fork of Fabiano, and consequently is licensed under the AGPL3.</p>
 
     <p><span class="hatnote-emphasis-warning">The client is not yet confirmed to work without non-libre dependencies (it so far has only been successfully tested with Adobe Flash and the freshplayerplugin wrapper). Resolving this issue is a high priority. In addition, some of the "source code" for the project is actually binary blobs, due to the inclusion of precompiled dependencies and such; eliminating those is another high priority.</span></p>
 
-<h3>Documentation</h3>
+<h5>Documentation</h5>
 
-    <h4>Usage</h4>
-        <h5>Client</h5>
-            <h6>Syntax</h6>
+    <h6>Usage</h6>
+        <h7>Client</h7>
+            <h8>Syntax</h8>
                 <figure class="center-figure app-syntax">
                     <code>behemmoth_client</code>
                 </figure>
-        <h5>Server</h5>
-            <h6>Syntax</h6>
+        <h7>Server</h7>
+            <h8>Syntax</h8>
                 <figure class="center-figure app-syntax">
                     <code>behemmoth_server</code>
                 </figure>
 
-    <h4>Installation</h4>
+    <h6>Installation</h6>
         <p>For Wreathe 7.3 and similar operating systems (e.g. Gentoo GNU/Linux), an ebuild (<code>games-roguelike/behemmoth</code>) is available in the <a href="http://futuramerlin.com/ancillary/wreathe">[http://futuramerlin.com/ancillary/wreathe]: Wreathe</a> overlay.</p>
         <p>For other operating systems, use the following installation instructions.</p>
 
-        <h5>Download</h5>
+        <h7>Download</h7>
             <p>To download BeHeMMOth, run:</p>
             <pre><code>git clone https://github.com/ethus3h/BeHeMMOth.git</code></pre>
-        <h5>Requirements</h5>
+        <h7>Requirements</h7>
             <ul>
                 <li>See the ebuild for details.</li>
             </ul>
-        <h5>Compilation</h5>
+        <h7>Compilation</h7>
             <p><code>cd</code> into the source code directory, and run <code>make</code>.</p>
-        <h5>Installation</h5>
+        <h7>Installation</h7>
             <p>Run <code>sudo make install</code>.</p>
 
-    <h4>Troubleshooting</h4>
+    <h6>Troubleshooting</h6>
         <p>If the client gives a "Error loading language" error, it was probably unable to connect to the server. Make sure the server is accessible to the client. If the client just gives a black screen, the language file (e.g. <code>en.txt</code>) probably has an incorrect syntax (it must be a UTF-8 file in the form <code>[["key1", "value", "languageAbbreviation"], ["key2", "value", "languageAbbreviation"]]</code> with a byte order mark at the beginning; incorrect whitespace (e.g. newlines) or use of commas will probably cause problems). If the client says "Loading..." on a grey background on a black screen, make sure it has been added to the Adobe Flash trust list ("Global Settings" in the context menu). If when you try to enter a realm or the Nexus it takes a long time, just give it a minute; it may say "Socket-Server Security Error: Error #2048" and "Connection failed! Retrying...": this is <a href="http://futuramerlin.com/issue-tracker/view.php?id=528">[http://futuramerlin.com/issue-tracker/view.php?id=528]: a known issue</a> but doesn't seem to adversely affect use of the software.</p>
 
-<h3>Development</h3>
+<h5>Development</h5>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/wreathe/subprojects/../develop.htm">[http://futuramerlin.com/wreathe/subprojects/../develop.htm]: the development page</a>.</p>
-<h2>compiz-reloaded-overlay</h2>
+<h4>compiz-reloaded-overlay</h4>
 
 
-<h3>Overview</h3>
+<h5>Overview</h5>
     <p>This page lists the packages that are included within the Compiz-Reloaded overlay. This is to help distinguish which packages are included independently, and which are only included as dependencies of the top-level packages.</p>
 
-<h3>Top-level packages</h3>
-    <h4>dev-python</h4>
+<h5>Top-level packages</h5>
+    <h6>dev-python</h6>
         <ul>
             <li>compizconfig-python</li>
         </ul>
-    <h4>x11-apps</h4>
+    <h6>x11-apps</h6>
         <ul>
             <li>compiz-boxmenu</li>
             <li>compiz-manager</li>
             <li>fusion-icon</li>
         </ul>
-    <h4>x11-libs</h4>
+    <h6>x11-libs</h6>
         <ul>
             <li>compiz-bcop</li>
             <li>libcompizconfig</li>
         </ul>
-    <h4>x11-misc</h4>
+    <h6>x11-misc</h6>
         <ul>
             <li>ccsm</li>
             <li>simple-ccsm</li>
             <li>compiz-debug-utils</li>
         </ul>
-    <h4>x11-plugins</h4>
+    <h6>x11-plugins</h6>
         <ul>
             <li>compicc</li>
             <li>compiz-extra-snowflake-textures</li>
@@ -887,27 +886,27 @@
             <li>compiz-plugins-main</li>
             <li>compiz-plugins-meta</li>
         </ul>
-    <h4>x11-themes</h4>
+    <h6>x11-themes</h6>
         <ul>
             <li>emerald-themes</li>
         </ul>
-    <h4>x11-wm</h4>
+    <h6>x11-wm</h6>
         <ul>
             <li>compiz</li>
             <li>compiz-meta</li>
             <li>emerald</li>
         </ul>
 
-<h3>Dependencies</h3>
+<h5>Dependencies</h5>
 
-    <h4>media-libs</h4>
+    <h6>media-libs</h6>
         <dl>
             <dt>oyranos</dt><dd>x11-plugins/compicc</dd>
         </dl>
-<h2>wreathe-file-manager</h2>
+<h4>wreathe-file-manager</h4>
 
 
-<h3>Overview</h3>
+<h5>Overview</h5>
 
     <p>This project is to provide a file manager app for Wreathe, as currently available options are not sufficient.</p>
     <p>There are three avenues for attempting to implement this. One, used so far, is maintaining ebuild for Dolphin 4.7. This is impractical due to the increasing requirement of older version of libraries (poppler,dbusmenu). Second, attempt to implement miller columns in current Dolphin. This is a lot of work, although I have started on it somewhat in branch <code>wreathe/implement-miller-columns-on-current</code>. Ultimately, it would be the best strategy. Third, attempt to port Dolphin 4.7 to KF5. This is also difficult, although I have started on it somewhat in branch <code>wreathe/kf5-port</code>. Back to maintaining the old ebuild it is.</p>
@@ -921,20 +920,20 @@ else()
     set(HAVE_NEPOMUK 0)
 endif()
 </code>
-<h2>wreathe-overlay</h2>
+<h4>wreathe-overlay</h4>
 
 
-<h3>Overview</h3>
+<h5>Overview</h5>
 
     <p>This page lists the packages that are included within the Wreathe overlay. This is to help distinguish which packages are included independently, and which are only included as dependencies of the top-level packages.</p>
 
-<h3>Ember project packages</h3>
+<h5>Ember project packages</h5>
 
-    <h4>app-doc</h4>
+    <h6>app-doc</h6>
         <ul>
             <li>ember-web-site</li>
         </ul>
-    <h4>app-misc</h4>
+    <h6>app-misc</h6>
         <ul>
             <li>crystallize</li>
             <li>ember-information-technology-environment</li>
@@ -948,47 +947,47 @@ endif()
             <li>wreathe-office-resources</li>
             <li>wreathe-overlays-redist</li>
         </ul>
-    <h4>games-arcade</h4>
+    <h6>games-arcade</h6>
         <ul>
             <li>gunmetal-gray</li>
         </ul>
-    <h4>games-roguelike</h4>
+    <h6>games-roguelike</h6>
         <ul>
             <li>behemmoth</li>
         </ul>
-    <h4>kde-apps</h4>
+    <h6>kde-apps</h6>
         <ul>
             <li>dolphin</li>
             <li>wreathe-charselect</li>
         </ul>
-    <h4>media-fonts</h4>
+    <h6>media-fonts</h6>
         <ul>
             <li>wreathe-typeface-family</li>
             <li>wreathe-typefaces-redist</li>
         </ul>
-    <h4>sys-kernel</h4>
+    <h6>sys-kernel</h6>
         <ul>
             <li>wreathe-kernel</li>
         </ul>
 
-<h3>Top-level packages</h3>
+<h5>Top-level packages</h5>
 
     <p>Most of these packages are included because they are not packaged by Gentoo (indicated by a description being given for the package with no separate rationale specified), but separate rationales are listed for some.</p>
 
-    <h4>app-accessibility</h4>
+    <h6>app-accessibility</h6>
         <dl>
             <dt>onboard</dt><dd>On-screen keyboard</dd>
         </dl>
-    <h4>app-arch</h4>
+    <h6>app-arch</h6>
         <dl>
             <dt>xar</dt><dd>xar archiver: Gentoo's package is broken (<a href="https://bugs.gentoo.org/show_bug.cgi?id=583668">[https://bugs.gentoo.org/show_bug.cgi?id=583668]: Gentoo #583668</a>)</dd>
         </dl>
-    <h4>app-crypt</h4>
+    <h6>app-crypt</h6>
         <dl>
             <dt>md5deep</dt><dd>hashdeep: Gentoo's package does not allow user patching</dd>
             <dt>smacadu</dt><dd>smart card digging utilities</dd>
         </dl>
-    <h4>app-doc</h4>
+    <h6>app-doc</h6>
         <dl>
             <dt>cldr</dt><dd>Common Locale Data Repository</dd>
             <dt>emoji</dt><dd>Unicode: Emoji Data</dd>
@@ -997,36 +996,36 @@ endif()
             <dt>unicode</dt><dd>The Unicode Standard</dd>
             <dt>unicode-docs</dt><dd>Unicode: general documents</dd>
         </dl>
-    <h4>app-emulation</h4>
+    <h6>app-emulation</h6>
         <dl>
             <dt>fuse</dt><dd>Free Unix Spectrum Emulator. Gentoo's package is outdated. ? <!-- FIXME --></dd>
             <dt>fuse-utils</dt><dd>Free Unix Spectrum Emulator: Utilities. Gentoo's package is outdated. ? <!-- FIXME --></dd>
             <dt>libspectrum</dt><dd>Free Unix Spectrum Emulator: Library. Gentoo's package is outdated. ? <!-- FIXME --></dd>
         </dl>
-    <h4>app-laptop</h4>
+    <h6>app-laptop</h6>
         <dl>
             <dt>configure-trackpoint</dt><dd>Trackpoint configuration tool</dd>
         </dl>
-    <h4>app-misc</h4>
+    <h6>app-misc</h6>
         <dl>
             <dt>gentoo-portage-tree</dt><dd>Ebuilds</dd>
             <dt>onboard-emoji</dt><dd>Keyboard layout for emoji input using Onboard</dd>
         </dl>
-    <h4>app-pda</h4>
+    <h6>app-pda</h6>
         <dl>
             <dt>synce-core</dt><dd>? <!-- FIXME --></dd>
             <dt>usbmuxd</dt><dd>iOS support: Gentoo package outdated</dd>
         </dl>
-    <h4>app-shells</h4>
+    <h6>app-shells</h6>
         <dl>
             <dt>looptest</dt><dd>Helper for app-shells/osh</dd>
             <dt>osh</dt><dd>Retro shell</dd>
         </dl>
-    <h4>dev-java</h4>
+    <h6>dev-java</h6>
         <dl>
             <dt>jd-gui</dt><dd>Java decompiler</dd>
         </dl>
-    <h4>dev-lang</h4>
+    <h6>dev-lang</h6>
         <dl>
             <dt>flex-sdk</dt><dd>? <!-- FIXME --></dd>
             <dt>flexjs</dt><dd>? <!-- FIXME --></dd>
@@ -1034,65 +1033,65 @@ endif()
             <dt>openfl</dt><dd>? <!-- FIXME --></dd>
             <dt>snap</dt><dd>Block-based programming environment</dd>
         </dl>
-    <h4>dev-libs</h4>
+    <h6>dev-libs</h6>
         <dl>
             <dt>gnulib</dt><dd>Portability kit: Gentoo only provides a live ebuild</dd>
             <dt>libdbusmenu</dt><dd>? <!-- FIXME --></dd>
         </dl>
-    <h4>dev-perl</h4>
+    <h6>dev-perl</h6>
         <dl>
             <dt>ttylog</dt><dd>? <!-- FIXME --></dd>
         </dl>
-    <h4>dev-python</h4>
+    <h6>dev-python</h6>
         <dl>
             <dt>internetarchive</dt><dd>Client for the Internet Archive</dd>
             <dt>warcprox</dt><dd>WARC-writing intercepting proxy</dd>
         </dl>
-    <h4>dev-util</h4>
+    <h6>dev-util</h6>
         <dl>
             <dt>ilspy</dt><dd>.NET decompiler</dd>
             <dt>jpexs</dt><dd>Flash decompiler</dd>
         </dl>
-    <h4>dev-vcs</h4>
+    <h6>dev-vcs</h6>
         <dl>
             <dt>bk</dt><dd>BitKeeper VCS</dd>
             <dt>sp</dt><dd>SourcePuller VCS</dd>
         </dl>
-    <h4>games-action</h4>
+    <h6>games-action</h6>
         <dl>
             <dt>extreme-tuxracer</dt><dd>Penguin game: Gentoo ebuild does not enable user patching</dd>
         </dl>
-    <h4>games-fps</h4>
+    <h6>games-fps</h6>
         <dl>
             <dt>wc-ng</dt><dd>Modified version of Sauerbraten</dd>
         </dl>
-    <h4>games-kids</h4>
+    <h6>games-kids</h6>
         <dl>
             <dt>scratch</dt><dd>Block-based programming environment</dd>
         </dl>
-    <h4>games-roguelike</h4>
+    <h6>games-roguelike</h6>
         <dl>
             <dt>muledump</dt><dd>Utility for RotMG-like computer games</dd>
         </dl>
-    <h4>gnome-extra</h4>
+    <h6>gnome-extra</h6>
         <dl>
             <dt>gnome-do</dt><dd>Launcher</dd>
             <dt>gnome-schedule</dt><dd>cron GUI</dd>
         </dl>
-    <h4>kde-apps</h4>
+    <h6>kde-apps</h6>
         <dl>
             <dt>tomoyo-kde-amor</dt><dd>Theme for AMOR</dd>
         </dl>
-    <h4>kde-misc</h4>
+    <h6>kde-misc</h6>
         <dl>
             <dt>kolor-manager</dt><dd>Color management GUI: Gentoo's package was too outdated to use with latest Oyranos <!-- FIXME: is it still outdated? --></dd>
         </dl>
-    <h4>media-gfx</h4>
+    <h6>media-gfx</h6>
         <dl>
             <dt>processing</dt><dd>Graphics-oriented programming environment</dd>
             <dt>utsushi</dt><dd>Epson scanner interface</dd>
         </dl>
-    <h4>media-fonts</h4>
+    <h6>media-fonts</h6>
         <dl>
             <dt>corefonts</dt><dd>Package that depends on media-fonts/croscorefonts to allow installing packages that depend on media-fonts/corefonts without installing the non-libre Microsoft typefaces</dd>
             <dt>crosextrafonts</dt><dd>Caladea typeface</dd>
@@ -1100,13 +1099,13 @@ endif()
             <dt>dzongkha-fonts</dt><dd>Typefaces for Dzongkha: more thorough than Gentoo's package</dd>
             <dt>infinality-ultimate-meta</dt><dd>Always installs all libre typefaces, and never installs non-libre typefaces</dd>
         </dl>
-    <h4>media-libs</h4>
+    <h6>media-libs</h6>
         <dl>
             <dt>aubio</dt><dd>? <!-- FIXME --></dd>
             <dt>audible-activator</dt><dd>Tool for listening to Audible audiobooks without proprietary software</dd>
             <dt>libdmtx</dt><dd>? <!-- FIXME --></dd>
         </dl>
-    <h4>media-plugins</h4>
+    <h6>media-plugins</h6>
         <dl>
             <dt>kodi-plugin-video-exodus</dt><dd>Video search tool</dd>
             <dt>kodi-service-subtitles-subscenter</dt><dd>Subtitles fetcher</dd>
@@ -1114,7 +1113,7 @@ endif()
             <dt>kodi-weather-openweathermap-extended</dt><dd>Weather information provider</dd>
             <dt>tap-plugins</dt><dd>Audio production resources</dd>
         </dl>
-    <h4>media-sound</h4>
+    <h6>media-sound</h6>
         <dl>
             <dt>cadence</dt><dd>Audio production workstation management</dd>
             <dt>carla</dt><dd>Audio plugin host and patchbay</dd>
@@ -1123,66 +1122,66 @@ endif()
             <dt>ladish</dt><dd>? <!-- FIXME --></dd>
             <dt>pd</dt><dd>Patcher-type programming environment</dd>
         </dl>
-    <h4>media-video</h4>
+    <h6>media-video</h6>
         <dl>
             <dt>simplescreenrecorder</dt><dd>Screen recorder</dd>
         </dl>
-    <h4>net-analyzer</h4>
+    <h6>net-analyzer</h6>
         <dl>
             <dt>linkchecker</dt><dd>Link checker: ? <!-- FIXME --></dd>
         </dl>
-    <h4>net-fs</h4>
+    <h6>net-fs</h6>
         <dl>
             <dt>samba</dt><dd>SMB implementation: Gentoo's package prevents using bundled Heimdal Kerberos implementation (<a href="https://bugs.gentoo.org/show_bug.cgi?id=490872">[https://bugs.gentoo.org/show_bug.cgi?id=490872]: Gentoo #490872</a>)</dd>
         </dl>
-    <h4>net-libs</h4>
+    <h6>net-libs</h6>
         <dl>
             <dt>xulrunner</dt><dd>Library used by various apps; also a dependency of www-plugins/moonlight</dd>
         </dl>
-    <h4>net-misc</h4>
+    <h6>net-misc</h6>
         <dl>
             <dt>jdownloader</dt><dd>Web downloader</dd>
         </dl>
-    <h4>net-news</h4>
+    <h6>net-news</h6>
         <dl>
             <dt>trn</dt><dd>News reader</dd>
         </dl>
-    <h4>net-voip</h4>
+    <h6>net-voip</h6>
         <dl>
             <dt>gnome-ring</dt><dd>VOIP app</dd>
         </dl>
-    <h4>sci-libs</h4>
+    <h6>sci-libs</h6>
         <dl>
             <dt>vtk</dt><dd>Visualization toolkit: Gentoo package is broken (<a href="https://bugs.gentoo.org/show_bug.cgi?id=552796">[https://bugs.gentoo.org/show_bug.cgi?id=552796]: Gentoo #552796</a>)</dd>
         </dl>
-    <h4>sys-apps</h4>
+    <h6>sys-apps</h6>
         <dl>
             <dt>init-system-helpers</dt><dd>Includes a helper to allow running <code>systemctl</code> using the <code>service</code> syntax</dd>
         </dl>
-    <h4>sys-fabric</h4>
+    <h6>sys-fabric</h6>
         <dl>
             <dt>libnes</dt><dd>NetEffect RNIC Userspace Library: Gentoo package is broken (<a href="https://bugs.gentoo.org/show_bug.cgi?id=514258">[https://bugs.gentoo.org/show_bug.cgi?id=514258]: Gentoo #514258</a>)</dd>
             <dt>srptools</dt><dd>Tools for discovering and connecting to SRP CSI targets on InfiniBand fabrics: Gentoo package is broken (<a href="https://bugs.gentoo.org/show_bug.cgi?id=536126">[https://bugs.gentoo.org/show_bug.cgi?id=536126]: Gentoo #536126</a>)</dd>
         </dl>
-    <h4>virtual</h4>
+    <h6>virtual</h6>
         <dl>
             <dt>liblash</dt><dd>? <!-- FIXME --></dd>
         </dl>
-    <h4>www-apps</h4>
+    <h6>www-apps</h6>
         <dl>
             <dt>mantisbt</dt><dd>Issue tracking tool</dd>
         </dl>
-    <h4>www-plugins</h4>
+    <h6>www-plugins</h6>
         <dl>
             <dt>freshplayerplugin</dt><dd>Gentoo's package depends on non-libre Flash player (also, this ebuild is for a newer version than Gentoo's package)</dd>
             <dt>lightspark</dt><dd>Player for Flash</dd>
             <dt>moonlight</dt><dd>Player for Silverlight</dd>
         </dl>
-    <h4>x11-libs</h4>
+    <h6>x11-libs</h6>
         <dl>
             <dt>bamf</dt><dd>? <!-- FIXME --></dd>
         </dl>
-    <h4>x11-misc</h4>
+    <h6>x11-misc</h6>
         <dl>
             <dt>cairo-dock</dt><dd>Dock-style launcher tool</dd>
             <dt>compiz-debug-utils</dt><dd>Tools for debugging Compiz-Reloaded</dd>
@@ -1194,23 +1193,23 @@ endif()
             <dt>xcur2png</dt><dd>Converts X cursors to PNG</dd>
             <dt>xvisbell</dt><dd>Visual bell for X</dd>
         </dl>
-    <h4>x11-terms</h4>
+    <h6>x11-terms</h6>
         <dl>
             <dt>x026</dt><dd>IBM 026 keypunch emulator</dd>
             <dt>x3270</dt><dd>IBM 3270 terminal emulator</dd>
         </dl>
 
-<h3>Dependencies</h3>
-    <h4>app-misc</h4>
+<h5>Dependencies</h5>
+    <h6>app-misc</h6>
         <dl>
             <dt>strigi</dt><dd>kde-apps/dolphin</dd>
         </dl>
-    <h4>dev-db</h4>
+    <h6>dev-db</h6>
         <dl>
             <dt>virtuoso-odbc</dt><dd>kde-apps/dolphin</dd>
             <dt>virtuoso-server</dt><dd>kde-apps/dolphin</dd>
         </dl>
-    <h4>dev-dotnet</h4>
+    <h6>dev-dotnet</h6>
         <dl>
             <dt>bouncycastle</dt><dd>games-roguelike/behemmoth</dd>
             <dt>dotnetzip-semverd</dt><dd>games-roguelike/behemmoth</dd>
@@ -1221,17 +1220,17 @@ endif()
             <dt>mimekit</dt><dd>games-roguelike/behemmoth</dd>
             <dt>nuget</dt><dd>games-roguelike/behemmoth</dd>
         </dl>
-    <h4>dev-java</h4>
+    <h6>dev-java</h6>
         <dl>
             <dt>sequence</dt><dd>net-misc/jdownloader</dd>
             <dt>svnkit</dt><dd>net-misc/jdownloader</dd>
             <dt>trilead-ssh2</dt><dd>net-misc/jdownloader</dd>
         </dl>
-    <h4>dev-lang</h4>
+    <h6>dev-lang</h6>
         <dl>
             <dt>neko</dt><dd>dev-lang/haxe</dd>
         </dl>
-    <h4>dev-libs</h4>
+    <h6>dev-libs</h6>
         <dl>
             <dt>libp8-platform</dt><dd>? <!-- FIXME --></dd>
             <dt>libplatform</dt><dd>? <!-- FIXME --></dd>
@@ -1241,12 +1240,12 @@ endif()
             <dt>shared-desktop-ontologies</dt><dd>kde-apps/dolphin</dd>
             <dt>soprano</dt><dd>kde-apps/dolphin</dd>
         </dl>
-    <h4>dev-perl</h4>
+    <h6>dev-perl</h6>
         <dl>
             <dt>HTML-GenToc</dt><dd>app-misc/futuramerlin-web-toolkit</dd>
             <dt>HTML-LinkList</dt><dd>app-misc/futuramerlin-web-toolkit</dd>
         </dl>
-    <h4>dev-python</h4>
+    <h6>dev-python</h6>
         <dl>
             <dt>certauth</dt><dd>dev-python/warcprox</dd>
             <dt>doublethink</dt><dd>dev-python/warcprox</dd>
@@ -1256,15 +1255,15 @@ endif()
             <dt>tldextract</dt><dd>dev-python/warcprox</dd>
             <dt>warctools</dt><dd>dev-python/warcprox</dd>
         </dl>
-    <h4>dev-ruby</h4>
+    <h6>dev-ruby</h6>
         <dl>
             <dt>albacore</dt><dd>games-roguelike/behemmoth</dd>
         </dl>
-    <h4>gnome-extra</h4>
+    <h6>gnome-extra</h6>
         <dl>
             <dt>gnome-do-plugins</dt><dd>gnome-extra/gnome-do</dd>
         </dl>
-    <h4>kde-apps</h4>
+    <h6>kde-apps</h6>
         <dl>
             <dt>dolphin-plugins</dt><dd>kde-apps/dolphin</dd>
             <dt>ffmpegthumbs</dt><dd>kde-apps/dolphin</dd>
@@ -1273,14 +1272,14 @@ endif()
             <dt>mplayerthumbs</dt><dd>kde-apps/dolphin</dd>
             <dt>thumbnailers</dt><dd>kde-apps/dolphin</dd>
         </dl>
-    <h4>kde-frameworks</h4>
+    <h6>kde-frameworks</h6>
         <dl>
             <dt>kdelibs</dt><dd>kde-apps/dolphin</dd>
             <dt>nepomuk</dt><dd>kde-apps/dolphin</dd>
             <dt>nepomuk-core</dt><dd>kde-apps/dolphin</dd>
             <dt>nepomuk-widgets</dt><dd>kde-apps/dolphin</dd>
         </dl>
-    <h4>media-plugins</h4>
+    <h6>media-plugins</h6>
         <dl>
             <dt>kodi-script-common-plugin-cache</dt><dd>media-plugins/kodi-service-subtitles-subscenter</dd>
             <dt>kodi-script-elysium-artwork</dt><dd>media-plugins/kodi-plugin-video-elysium</dd>
@@ -1297,46 +1296,46 @@ endif()
             <dt>kodi-script-module-urlresolver</dt><dd>media-plugins/kodi-plugin-video-elysium</dd>
             <dt>kodi-script-openweathermap-maps</dt><dd>media-plugins/kodi-weather-openweathermap-extended</dd>
         </dl>
-    <h4>x11-misc</h4>
+    <h6>x11-misc</h6>
         <dl>
             <dt>xdotool</dt><dd>x11-misc/keynav (Gentoo's xdotool package is too old to build current keynav)</dd>
         </dl>
-<h1>Ember History</h1>
+<h3>Ember History</h3>
 
 
 <p>This is a project to preserve the history of discontinued Ember projects and no-longer-needed work.</p>
 <p>Its contents (with <a href="http://futuramerlin.com/#Large_files">[http://futuramerlin.com/#Large_files]: some exceptions</a>) are available <a href="https://github.com/ethus3h/ember-retired-repositories/">[https://github.com/ethus3h/ember-retired-repositories/]: at GitHub</a>.</p>
 
-<h2>Large files</h2>
+<h4>Large files</h4>
     <p>Some contents are not available at GitHub due to being too to store conveniently. Currently, there is one such file. Files of this nature are listed here.</p>
 
-    <h3>Wreathe production data</h3>
+    <h5>Wreathe production data</h5>
         <p>This file contains data from Wreathe development before it began happening in git. Released on 2013-November-2.</p>
         <ul>
             <li><a href="http://futuramerlin.com/download-wreathe-production-data.php">[http://futuramerlin.com/download-wreathe-production-data.php]: Download</a></li>
         </ul>
-        <h4>File information</h4>
-            <h5>Size</h5>
+        <h6>File information</h6>
+            <h7>Size</h7>
                 <p>(~34.9 GB) 37496791431 bytes</p>
-            <h5>SHA-1</h5>
+            <h7>SHA-1</h7>
                 <pre><code>97f2bac6c167fd9b39db6da3663ba4f87478cbeb</code></pre>
-            <h5>MD5</h5>
+            <h7>MD5</h7>
                 <pre><code>dacd4c9561c68678a3cf75d0856aa39e</code></pre>
-            <h5>CRC32</h5>
+            <h7>CRC32</h7>
                 <pre><code>e1897c9f</code></pre>
-            <h5>Name</h5>
+            <h7>Name</h7>
                 <pre><code>ProductionData_AsOf2November2013.7z</code></pre>
 
-<h2>Development</h2>
+<h4>Development</h4>
     <p>To learn about contributing to this project, visit <a href="http://futuramerlin.com/../develop.htm">[http://futuramerlin.com/../develop.htm]: the development page</a>.</p>
-<h1>Development community standards: Contributor Covenant Code of Conduct, version 1.4</h1>
+<h3>Development community standards: Contributor Covenant Code of Conduct, version 1.4</h3>
 
 
-<h2>Our Pledge</h2>
+<h4>Our Pledge</h4>
 
     <p>In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.</p>
 
-<h2>Our Standards</h2>
+<h4>Our Standards</h4>
 
     <p>Examples of behavior that contributes to creating a positive environment include:
         <ul>
@@ -1358,7 +1357,7 @@ endif()
         </ul>
     </p>
 
-<h2>Our Responsibilities</h2>
+<h4>Our Responsibilities</h4>
 
     <p>Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.</p>
 
@@ -1366,20 +1365,20 @@ endif()
     permanently any contributor for other behaviors that they deem inappropriate, 
     threatening, offensive, or harmful.</p>
 
-<h2>Scope</h2>
+<h4>Scope</h4>
 
     <p>This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event. Representation of a project may be further defined and clarified by project maintainers.</p>
 
-<h2>Enforcement</h2>
+<h4>Enforcement</h4>
 
     <p>Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at <a href="http://futuramerlin.com/info@futuramerlin.com">[http://futuramerlin.com/info@futuramerlin.com]: info@futuramerlin.com</a>. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.</p>
 
     <p>Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.</p>
 
-<h2>Attribution</h2>
+<h4>Attribution</h4>
 
     <p>This Code of Conduct is adapted from the <a href="http://contributor-covenant.org">[http://contributor-covenant.org]: Contributor Covenant</a>, version 1.4, available at <a href="http://contributor-covenant.org/version/1/4">http://contributor-covenant.org/version/1/4</a>. It is released under the <a href="https://github.com/ContributorCovenant/contributor_covenant/blob/master/LICENSE.md">[https://github.com/ContributorCovenant/contributor_covenant/blob/master/LICENSE.md]: Creative Commons Attribution 4.0 International Public License</a>.</p>
-<h1>Discontinued ancillary projects</h1>
+<h3>Discontinued ancillary projects</h3>
 
 
 <p>List of discontinued projects (only includes projects that were formerly adopted as official projects):
@@ -1420,4 +1419,3 @@ endif()
         <dt><a href="https://github.com/ethus3h/ember-old-moved-2016apr24a25/tree/master/ember-satellite-projects/old/gunmetalgrey">[https://github.com/ethus3h/ember-old-moved-2016apr24a25/tree/master/ember-satellite-projects/old/gunmetalgrey]: Gunmetal Grey</a></dt><dd>Merged into <a href="http://futuramerlin.com/ancillary/wreathe/">[http://futuramerlin.com/ancillary/wreathe/]: Wreathe</a>.</dd>
     </dl>
 </p>
-</main> </body> </html>
