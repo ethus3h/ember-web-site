@@ -21,6 +21,10 @@
         </dl>
         <p>In addition, ember-shared also provides the following scripts that it uses internally that are not supported for independent use.</p>
         <dl>
+        <!-- FIXME MISSING -->
+        </dl>
+        <p><code>ember_bash_setup</code> provides these bash functions.</p>
+        <dl>
             <dt><code>a</code></dt><dd>Archive a URL recursively using <code>grab-site</code>, using a default configuration. Synopsis: <code>a [&lt;additional-grab-site-argument&lt;] &lt;url&gt;...</code></dd>
             <dt><code>abspath</code></dt><dd>Get the absolute path to the specified file or directory, like <code>readlink -f</code> but without resolving symlinks by default. Optionally, symlinks can be resolved in the path (still not resolving the final path element): this is for referencing the canonical path of a symlink without following that symlink. The path must exist. Synopsis: <code>abspath &lt;path&gt; [--resolve-symlinks-in-enclosing-directory-path]</code></dd>
             <dt><code>ap</code></dt><dd>Archive a URL recursively using <code>grab-site</code> and <code>phantomjs</code>, using a default configuration. Synopsis: <code>ap [&lt;additional-grab-site-argument&lt;] &lt;url&gt;...</code></dd>
@@ -102,9 +106,6 @@
             <dt><code>ytdl-quick-audio</code></dt><dd>Call <code>youtube-dl</code> with some default options set up, to get audio only, for the specified item. Synopsis: <code>ytdl-quick-audio &lt;argument-or-item-to-fetch&gt;...</code></dd>
             <dt><code>ytdl-quick</code></dt><dd>Call <code>youtube-dl</code> with some default options set up, for the specified item. Synopsis: <code>ytdl-quick &lt;argument-or-item-to-fetch&gt;...</code></dd>
         </dl>
-        </dl>
-        <dl>
-        <p><code>ember_bash_setup</code> provides these bash functions.</p>
 
     <h3>Installation</h3>
         <p>For Wreathe 7.3, an ebuild (<code>app-misc/ember-shared</code>) is available in the <a href="/ancillary/wreathe">Wreathe</a> overlay (this may also work for similar operating systems such as Ututo XS GNU/Linux).</p>
