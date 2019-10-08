@@ -709,10 +709,10 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
         <li>Brewster Kahle portrait: Sebastiaan ter Burg, 2015 March 23. Licensed under the Creative Commons Attribution 2.0 Generic license: <a href="https://creativecommons.org/licenses/by/2.0/deed">https://creativecommons.org/licenses/by/2.0/deed</a></li>
         <li>Whitfield Diffie and Martin Hellman portrait: Martin Hellman, Mary Holzer, Matt Crypto, Phr~commonswiki, and .:Ajvol:., 2006 July 21. Licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license: <a href="https://creativecommons.org/licenses/by-sa/3.0/deed">https://creativecommons.org/licenses/by-sa/3.0/deed</a></li>
     </ul>
-<h2>EITE Platforms</h2>
+<h3>EITE Platforms</h3>
 
 
-<h3>Platforms and platform notes</h3>
+<h4>Platforms and platform notes</h4>
     <table>
     <thead>
     <tr><th>Platform</th><th>Folder name</th><th>Notes</th></tr>
@@ -724,20 +724,20 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
     <tr><td>WebAssembly from C</td><td>(none yet)</td><td>This is an eventual goal of the C implementation to allow it to run faster than JavaScript.</td></tr>
     </tbody>
     </table>
-<h2>EITE Specification</h2>
+<h3>EITE Specification</h3>
 
 
-<h3>Purpose of this document</h3>
+<h4>Purpose of this document</h4>
     <p>The EITE specification indicates the various interfaces that an EITE implementation provides: APIs and tools for humans. The specific manner of implementation of these is not described here. (Partial implementations could be possible that, for instance, only provide importing and exporting (without running) documents, or that omit some supported formats, or that do not provide the tools.) The main EITE implementation software attempts to be a full implementation of this specification.</p>
     <p>This is a work in progress and will likely change as it is developed.</p>
 
-<h3>Platforms</h3>
+<h4>Platforms</h4>
     <p>For specific platforms' implementations of EITE, see <a href="http://futuramerlin.com/platforms">[http://futuramerlin.com/platforms]: the dedicated subpage</a>.</p>
 
-<h3>EITE tools</h3>
+<h4>EITE tools</h4>
     <p>The following natively implemented tools should be available in a full implementation: <a href="http://futuramerlin.com/tool-testrunner.htm">[http://futuramerlin.com/tool-testrunner.htm]: test runner</a>, <a href="http://futuramerlin.com/tool-docrunner.htm">[http://futuramerlin.com/tool-docrunner.htm]: document runner</a>, <a href="http://futuramerlin.com/tool-implrunner.htm">[http://futuramerlin.com/tool-implrunner.htm]: main EITE implementation runner</a>, and <a href="http://futuramerlin.com/tool-edit.htm">[http://futuramerlin.com/tool-edit.htm]: simple document edit tool</a>. They are not EITE documents; rather they are implemented for each platform, so they can be used in the course of developing and testing the EITE implementation. The also serve to some extent as sanity checks for the API functionality for a new implementation, as they would not work without the APIs available.</p>
 
-<h3>EITE implementation public APIs</h3>
+<h4>EITE implementation public APIs</h4>
     <p>These APIs are implemented in public-interface.stagel.</p>
     <table>
     <thead>
@@ -776,7 +776,7 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
     </tbody>
     </table>
 
-<h3>Command-line interface (mostly unimplemented)</h3>
+<h4>Command-line interface (mostly unimplemented)</h4>
     <p>The EITE should provide the following user-facing command-line scripts.</p>
     <dl>
         <dt><code>eite</code></dt><dd>This is the main interface for EITE. Synopsis: <code>eite [check|run|run-tests|source-to-tree|tree-to-source] (&lt;path-to-document&gt;|-)</code></dd>
@@ -790,54 +790,54 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
         <dt><code>eite-tree-to-source</code></dt><dd>Given an AST representation of a document, print out the source file for it. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
     </dl>
 
-<h3>Formats</h3>
+<h4>Formats</h4>
     <p>The formats that should be supported are available in data/formats.csv. Only input or output is necessary for some formats, and some formats listed are internal formats only, which do not need to be implemented for purposes of this specification. The options that should be supported for given formats are: (TODO).</p>
 
-<h3>Document transformations</h3>
+<h4>Document transformations</h4>
     <p>Some transformations are provided that operate on already-imported documents (represented as arrays of Dcs), and return an altered array of Dcs. These share the format settings API for configuring them. The options that should be supported for given transformations are: (TODO).</p>
 
-<h3>Exec options</h3>
+<h4>Exec options</h4>
     <p>The document exec options are: (TODO)</p>
 
-<h3>EITE Tool Documentation: Document Runner</h3>
+<h4>EITE Tool Documentation: Document Runner</h4>
 
 
-<h4>Document runner operation</h4>
+<h5>Document runner operation</h5>
     <p>The document runner is one of the native tools included in a full EITE implementation. It has not yet been implemented. It should prompt for the path to a document to run, and load and run that document.</p>
-<h3>EITE Tool Documentation: Edit Tool</h3>
+<h4>EITE Tool Documentation: Edit Tool</h4>
 
 
-<h4>Edit tool introduction</h4>
+<h5>Edit tool introduction</h5>
     <p>The edit tool is one of the native tools included in a full EITE implementation. It allows importing and exporting documents using the EITE library, running documents, and editing documents as dcBasenb (extended Unicode), ELS (not yet implemented), or a whitespace-separated series of integers.</p>
     <p>Here is a screenshot of the edit tool for the Web implementation (found in web/edit.htm in the EITE installation root):
         <img src="assets/a1624452a6bd8519a5c9c936dcf5f0bcac4bd8081f70d1327b58c5b90b021b85f6aeedd39b864987e2cb988401297aa07943ff8ad8aeb16d76529ad5b81fbbc9.png" alt="Screenshot of edit tool" />
     </p>
 
-<h4>Edit tool interface</h4>
+<h5>Edit tool interface</h5>
     <p>The edit tool interface for the Web implementation consists of three vertical panels, and a horizontal row of buttons below the three panels. The center panel is where the editable contents of a document are shown. At the top is a dropdown menu for choosing what format to edit the document in. Below this dropdown is a label showing what Dc is currently at the cursor position. The right panel is where the document's output will be shown when it is run. The left panel is for locating and inserting Dcs into the document; clicking one will insert it into the document at the current cursor position. The three buttons in the bottom row allow importing, exporting, or running the document. The import and export buttons have dropdown menus to choose what format to import or export documents as.</p>
     <p>Other implementations may have different user interfaces, but should offer equivalent functionality.</p>
-<h3>EITE Tool Documentation: EITE Implementation Runner</h3>
+<h4>EITE Tool Documentation: EITE Implementation Runner</h4>
 
 
-<h4>EITE implementation runner operation</h4>
+<h5>EITE implementation runner operation</h5>
     <p>The EITE implementation runner is one of the native tools included in a full EITE implementation. Its purpose is to host and run an instance of the EITE implementation document (eite.sems), by providing the necessary execution environment and running the startEite routine. It does not need to provide any user interface beyond that provided by the eite.sems document.</p>
     <p>Here is a screenshot of a very rough mockup of what this might look like:
         <img src="assets/f6fcc55bce3c19a6e3b09d783332fe1bd2148c8b27a57eb3319938fe52d0c102b5ebb8e7ca1634813f7c7ea4c475d95dcb24ba9a954bd2e8c20c3ac289932445.png" alt="Screenshot of EITE implementation runner mockup" />
     </p>
-<h3>EITE Tool Documentation: Test Runner</h3>
+<h4>EITE Tool Documentation: Test Runner</h4>
 
 
-<h4>Test runner operation</h4>
+<h5>Test runner operation</h5>
     <p>The test runner is one of the native tools included in a full EITE implementation. Its purpose is to load an instance of the EITE library, and run the unit tests included in the StageL build for the platform by running the "runTests" routine, displaying the outputs. It runs automatically, without the need for human intervention once it has been started. To do this, it needs to provide an output context that the runTests routine can use for displaying the test results.</p>
     <p>Here is a screenshot of the test runner for the Web implementation (found in web/tests.htm in the EITE installation root) while running the test suite:
         <img src="assets/3ca69ad9e4e34d144a585e3a791fba42555b5973b9f26f6d55ead2e72ff4a3b7cb327c1e83fc2192bd09aaedfc490ffe91642349963d5ae8660cd626b6fef889.png" alt="Screenshot of test runner" />
     </p>
-<h2>StageL: Simple staging language</h2>
+<h3>StageL: Simple staging language</h3>
 
 
-<h3>Overview</h3>
+<h4>Overview</h4>
     <p>A simple programming language is provided for easily writing portable algorithms to be transpiled to and used by programs in other languages. The name "StageL" comes from calling it a "staging language" (which refers to its being a tool for developing the main EITE software, which should provide a more complete language).<!-- Also, "StageL" sounds catchy, and should be relatively easy to search for. It does seem reminiscent of "stage left" in theater, but that doesn't really have anything to do with it. --> This project was inspired by the ugly code that resulted when I tried to write using these principles directly in JavaScript, needing a lot of easy-to-mess-up boilerplate code and awkward notation (largely because it is not strongly typed).</p>
-<h3>Design goals</h3>
+<h4>Design goals</h4>
     <ul>
         <li>Imperative language. Trivial to implement, learn, and read; extremely portable.</li>
         <li>Provide function calls, arrays, strings, numbers, booleans, and operators for these types with strict typing. Objects and first-class functions are out of scope for this language. (It's closer to duck-typed in practice, as e.g. in Bash there would be no distinction between string 0 and number 0.)</li>
@@ -850,12 +850,12 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
         <li>Output files should retain the structure and comments of the input files, thereby retaining readability as far as the target language permits.</li>
         <li>All behavior should be specified. Ambiguous programs should be impossible to write knowing the specification, and (as far as possible) the meaning of a program should be obvious and unambiguous <em>without</em> the language specification. Programs that do not match the specification exactly should be entirely rejected, rather than produce warnings or having a best guess of its meaning made.</li>
     </ul>
-<h3>Actual results of the design goals</h3>
+<h4>Actual results of the design goals</h4>
     <p>It works satisfactorily. It's pretty portable, I think. Things aren't fully specified because it transpiles to native constructs that behave differently between target languages. This could be resolved by implementing a virtual machine or similar in each target language, but that's a pain, so this is good enough for what this is for. Low-level facilities aren't really available yet. I guess they can be added as additional builtin routines. One option might be implementing a WebAssembly VM or something that is available implemented purely in StageL, but can be accessed natively if available to be faster.</p>
-<h3>Syntax</h3>
+<h4>Syntax</h4>
     <p>Lines are separated by 0x0A. Each line consists of printable ASCII text: a–z, 0–9, apostrophe, slash, spaces, &lt;, &gt;, [, ], (, ), {, and }, and any other printable ASCII characters in string literals or comments (apostrophe is not yet available in string literals). Within a line is a sequence of space-delimited words. Semantic levels are denoted by four spaces' indentation. The first word in a line is a command. Comments (started with #) and string literals can contain any printable ASCII (although string literals can't contain ' because it's used to indicate them; this could probably be fixed easily enough at some point (TODO)). Identifiers can contain ASCII text a-z A-Z and 0-9 (but 0-9 may not be the first character, and code that relies on case sensitivity or insensitivity by having ident references differ only in case or having two idents that differ only in case is a (possibly un-notified-about) error (these are not technical restrictions; they're just required in the interest of portability)).</p>
     <p>There are a number of built-in commands in the core language, which is in core.js or whatever your output language is. There are also commands from the standard library, which is in portable.js.</p>
-    <h4>Gotchas</h4>
+    <h5>Gotchas</h5>
     <ul>
         <li>Whitespace is (usually) significant. There isn't a 1:1 correspondence between valid source files and the parsed code, though, I don't think. Indentation must be with 4 spaces.</li>
         <li>Unexpected byte values in code files aren't allowed and should cause the parser to die; strings or comments containing byte values other than printable ASCII are an error.</li>
@@ -884,7 +884,7 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
     lt n/a 0</code></pre> would be an error; it should be written as <code>if lt n/a 0</code> instead. Previously it was intended to support splitting them onto separate lines, but it is tedious to implement, and somewhat makes the StageL code harder to read anyway. As a result, this perhaps should be an error.</li>
     <li><code>until</code> statements don't work (search for "This doesn't work. I guess it'll just be necessary to forgo split-line untils for now, although I'm not sure split-line commands are really desirable regardless. FIXME" in the code).</li>
     </ul>
-    <h4>Example</h4>
+    <h5>Example</h5>
     <pre><code>
 r/s/fbSwitcher n/num
     if eq 0 mod n/num 15
@@ -908,7 +908,7 @@ r/s/fizzBuzz # A string is an array of ASCII printable characters.
         return s/temp
 </code></pre>
 
-<h3>Special syntaxes</h3>
+<h4>Special syntaxes</h4>
     <p>For loops aren't available because they add complexity to the transpiler.</p>
     <dl>
         <dt>if</dt><dd>conditional: bool, block</dd>
@@ -936,39 +936,39 @@ while lt n/i count as/temp
 </code></pre></dd>
     </dl>
 
-<h3>Scope</h3>
+<h4>Scope</h4>
     <p>Values are available until the end of the block they are in. Whether they propagate outside of the block is undefined. Accessing them outside the block, or before the line they are defined, is an error, but there isn't anything in place to detect it. Use routine return values to move things around.</p>
 
-<h3>Errors</h3>
+<h4>Errors</h4>
     <p>When an error is encountered, it will produce a message somehow. Execution of the program may stop. Otherwise, behavior is undefined. For instance, in JavaScript in browser it will send a console log message. In bash, it will call "die" from ember-shared.</p>
 
-<h3>Types and basic commands for them</h3>
+<h4>Types and basic commands for them</h4>
     <p>Routines that have type "v" are void. These are all the primitive commands that are implemented natively for each language. Other commands are included in StageR library of useful commands. Type "g" is generic, can only be used as a parameter for a routine. It indicates it can be either string, int, or bool. Type "ga", can also only be used as a parameter, is a generic array, which is either an array of ints, an array of strings, or an array of bools (an array can't contain a mixture), and all arrays passed to a routine that accepts generic-array parameters must be the same type (e.g. all int arrays). Type "gi" (generic item(s)) is like "ga" but can also be a single bool, int, or string.</p>
-    <h4>b: Booleans</h4>
+    <h5>b: Booleans</h5>
         <p>Can be True or false. Can not be undefined (initialized to false).</p>
         <dl>
             <dt>r/b/and n/a n/b</dt><dd>Returns bool a and b</dd>
             <dt>r/b/or n/a n/b</dt><dd>Returns bool a or b</dd>
             <dt>r/b/not n/a n/b</dt><dd>Returns bool a not b</dd>
         </dl>
-    <h4>n: Numbers (integer only)</h4>
+    <h5>n: Numbers (integer only)</h5>
         <p>Can be 0, or positive integer. Can not be undefined (initialized to 0). Currently is restricted to 32-bit signed (-2,147,483,648 to 2,147,483,647), but may be increased if more are needed.</p>
         <dl>
             <dt>r/n/add b/a b/b</dt><dd>Returns the sum of two numbers a and b</dd>
             <dt>r/n/sub b/a b/b</dt><dd>Returns the difference of two numbers a and b</dd>
             <dt>r/n/mod b/a b/b</dt><dd>Returns the modulo of two numbers a and b</dd>
         </dl>
-    <h4>s: Strings</h4>
+    <h5>s: Strings</h5>
         <p>A sequence of characters: can be ASCII printable characters or space. No newlines or control characters, I guess. The string support isn't supposed to be very capable, just easy to implement lowest-common-denominator between target languages for making labels for stuff and whatever. For actual data, use arrays of integers.</p>
         <dl>
             <dt>r/s/substring s/input n/start n/end</dt><dd>Give the characters from start to end (indices as bytes (characters — no Unicode support here, sorry) into input)</dd>
             <dt>r/s/cat s/a s/b</dt><dd>Concatenates a and b</dd>
             <dt>r/n/len s/input</dt><dd>Gives the number of bytes of input.</dd>
         </dl>
-    <h4>Basic type utility routines</h4>
+    <h5>Basic type utility routines</h5>
         <p>These operate on str/int/bool.</p>
         <dt>r/s/strFrom g/input</dt><dd>Give string with contents.</dd>
-    <h4>Array utility routines</h4>
+    <h5>Array utility routines</h5>
         <p>A set of routines for managing arrays apply to any of the three array types (except the typed subset ones). Note that the push/append/prepend functions may not check that the type of the item being added to the array matches the array type; calling it with mismatched parameters is an error but may not be reported.
         <dl>
             <dt>r/a/copy gi/a gi/b</dt><dd>Set a to have the contents of b.</dd>
@@ -985,29 +985,29 @@ while lt n/i count as/temp
             <dt>r/b/contains ga/array g/value</dt><dd>Returns "true" if the array contains the specified value.</dd>
             <dt>r/a(b,n,s)/a(b,n,s)Subset a(b,n,s)/array n/start n/end</dt><dd>Return the subset of the array from start index to end.</dd>
         </dl>
-    <h4>an: Number Arrays</h4>
+    <h5>an: Number Arrays</h5>
         <p>A sequence of numbers. Starts with a ( and ends with a ). E.g. <code>( 5 6 )</code>.</p>
-    <h4>ab: Boolean Arrays</h4>
+    <h5>ab: Boolean Arrays</h5>
         <p>A sequence of bools. Starts with a &lt; and ends with a &gt;. E.g. <code>&lt; false true &gt;</code>.</p>
-    <h4>as: String Arrays</h4>
+    <h5>as: String Arrays</h5>
         <p>A sequence of strings. Starts with a [ and ends with a ]. E.g. <code>[ "foo" "bar" ]</code>.</p>
 
-<h3>StageR commands</h3>
+<h4>StageR commands</h4>
     <p>These commands are implemented in StageL by composing the basic commands for easy portability. (Sorry, not really documented yet; look in implementation/portable/*.stagel to see what's available.)</p>
-    <h4>Booleans</h4>
-    <h4>Numbers</h4>
+    <h5>Booleans</h5>
+    <h5>Numbers</h5>
         <dl>
             <dt>r/n/add n/a n/b</dt><dd>Returns the sum of two numbers a and b</dd>
             <dt>r/n/sub n/a n/b</dt><dd>Returns the difference of two numbers a and b</dd>
             <dt>r/n/mul n/a n/b</dt><dd>Returns the multiplication of two numbers a and b</dd>
             <dt>r/n/mod n/a n/b</dt><dd>Returns the modulo of two numbers a and b</dd>
         </dl>
-    <h4>Strings</h4>
+    <h5>Strings</h5>
         <dl>
             <dt>r/s/strCharAtPos s/input n/index</dt><dd>Give the character at index bytes (=characters — no Unicode support here, sorry) into input</dd>
         </dl>
-    <h4>Arrays</h4>
-<h2>Information Technology Software Environment: List of Target Solution Spaces</h2>
+    <h5>Arrays</h5>
+<h3>Information Technology Software Environment: List of Target Solution Spaces</h3>
 
 
 <ul>
