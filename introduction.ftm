@@ -11,6 +11,8 @@ This is a multifaceted project to develop a scalable environment for building an
     - The principles on which the project is based
     - The management and governance of communities
     - The engineering and technology systems to provide a community with a comfortable, sustainable, and dependable lifestyle
-- A community managed in the manner defined by the specification, and a supporting non-profit organization to manage the project
-- An implementation of the information technology infrastructure defined by the specification
+- An implementation of the specification, including:
+    - A community managed in the manner defined by the specification
+    - An implementation of the technology infrastructure defined by the specification
+- A supporting non-profit organization to manage the project
 - A library of knowledge and great cultural works
