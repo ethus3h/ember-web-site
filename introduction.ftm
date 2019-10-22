@@ -6,11 +6,12 @@
 
 This project should aim to systematically support the libre development and distribution as best as possible of the full set of knowledge and resources needed to support humans' standard of living, and to ensure the availability of communities managed in the long-term interest of their constituents, humanity, and the environment. The communities should attempt to provide a consistent and complete experience to the people who are part of them, without depending on support from external infrastructure, technology, or government. Relying on external support increases fragility.
 
-This is a multifaceted project to develop a scalable environment for building an effective, just, and efficient society; consequently, it is quite broad in scope. The project has three primary areas of focus:
+This is a multifaceted project to develop a scalable environment for building an effective, just, and efficient society; consequently, it is quite broad in scope. The project has four primary areas of focus:
 - A specification, encompassing:
     - The principles on which the project is based
     - The collective management and governance of communities
     - The engineering and technology systems to provide a community with a comfortable, sustainable, and dependable lifestyle
     - A library of knowledge and great cultural works
 - A community managed in the manner defined by the specification
+- Implementations of the knowledge assets (such as software) defined by the specification
 - A supporting non-profit organization to manage the project
