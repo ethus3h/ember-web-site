@@ -35,10 +35,11 @@ buildBook() {
 }
 
 buildBook "ember.fmwtk-book.conf"
+buildBook "ember-full.fmwtk-book.conf"
 
 # Sub-books
-buildBook "appeal/appeal.fmwtk-book.conf"
 buildBook "library/library.fmwtk-book.conf"
+buildBook "specification/community/community.fmwtk-book.conf"
 buildBook "specification/specification.fmwtk-book.conf"
 buildBook "specification/engineering-and-tech/information-technology/software/eite.fmwtk-book.conf"
 if [[ "true" == "$all" ]]; then
