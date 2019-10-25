@@ -37,7 +37,7 @@ buildBook() {
 buildBook "ember.fmwtk-book.conf"
 
 # Sub-books
-buildBook "specification/engineering-and-tech/information-technology/appeal/appeal.fmwtk-book.conf"
+buildBook "appeal/appeal.fmwtk-book.conf"
 buildBook "library/library.fmwtk-book.conf"
 buildBook "specification/specification.fmwtk-book.conf"
 buildBook "specification/engineering-and-tech/information-technology/software/eite.fmwtk-book.conf"
