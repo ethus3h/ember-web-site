@@ -8,142 +8,224 @@
     <span><a href="/specification/engineering-and-tech/information-technology/software">Information Technology Software Environment</a></span>
 
 
-This section documents the results of various user research conducted for the information technology environment.
-
-@2 User perspective interview results
-
-    To learn about how viable and helpful this project would be, I interviewed two people to learn about their use of information technology systems and how they would be affected by the tools proposed here.
-
-    @3 Interview questions
-
-        <ol>
-            <li>What tasks do you frequently use information technology (IT) systems to complete? A few examples of information technology systems, for purposes of this question, are computers, telephones, portable music players, and fax machines.</li>
-            <li>What aspects of yourself influence your use of, and experience of using, information technology systems? For example, if your job needs you to use IT systems, what is that job and what aspects of it relate to your use of IT systems? Or, if you find IT systems difficult to use because of difficulty processing complex visual stimuli, or because of physical mobility impairments.</li>
-            <li>Also, when using information technology systems, are there any other challenges that you face?</li>
-            <li>Imagine a computer or smart phone that, when you first start it, presents a list of recent projects you have worked on (such as documents you have had opened), and a list of upcoming projects you have told it about. Would you find a memory aid like that helpful in guiding you to the projects you are there to work on?</li>
-            <li>For the next two questions, imagine an IT system that gives you information about current circumstances — your name, where you are, the date and year, and recent news and messages.
-            <ol>
-                <li>Would that help you feel grounded in the present and more easily able to complete the tasks you are there to work on?</li>
-                <li>If you or someone you know has trouble remembering that sort of state information, for instance due to Alzheimer’s disease or dementia, do you think this would be helpful in dealing with that?</li>
-            </ol></li>
-            <li>Current information technology systems are generally unable to facilitate combining information from various domains of use. For example, if you are writing a textual document, it is not really possible to include a musical composition within that document in such a way that it can still be edited when you send the document to someone else, and that it is a first-class, native feeling part of the document. For the next two questions, consider an IT system that uses a single way of storing and manipulating information for all the types of information it works with. For instance, you could work with a text document and a musical recording within a single document, using a single interface, or you could use a video as the subject of an email.
-            <ol>
-                <li>Would you find such a system helpful?</li>
-                <li>What are some specific situations in your use of IT systems that would benefit from that?</li>
-            </ol></li>
-        </ol>
-        Thank you for participating in the interview!
-
-    @3 Responses
-
-        Note that these responses have been lightly edited to make them clearer. The meaning of the responses is unchanged.
-        @4 Interviewee 1
-            Interviewee 1 works as a church organist and piano teacher.
-            <ol>
-                <li>Computer: Researching music repertoire and performance techniques for my work; learning repertoire; listening to music for work. Telephone: Business and personal contacts.</li>
-                <li>No problems except for not always understanding the technology in a complete way and so not always being able to solve problems on my own.</li>
-                <li>Financial restrictions in not having all the ideal components for a virtual pipe organ. Also, sometimes information not fitting on a screen correctly, or otherwise not working as it should.</li>
-                <li>I don’t have so many projects going at once that I cant keep track of them.</li>
-                <li>
-                <ol>
-                    <li>Perhaps if I had a condition like Alzheimer's disease, but otherwise, no. Recent news would be a distraction unless that was my field of work.</li>
-                    <li>Yes, it could be helpful. I believe.</li>
-                </ol></li>
-                <li>
-                <ol>
-                    <li>Yes, that could be helpful. It would prevent the need to make two (or possibly more) separate communications, in some cases.</li>
-                    <li>Trying to share a photo with commentary attached or a musical composition with my questions attached and also to get a critique.</li>
-                </ol></li>
-            </ol>
-        @4 Interviewee 2
-            <ol>
-                <li>I use IT systems for many tasks:
+       <h4>Objective</h4>
+            <p>Develop a machine-readable language that can be used as an equivalent representation of documents represented as sequences of Dcs, for easier reading and editing by humans (using an ordinary text editor and conversion tool). It should also be able to be implemented using and transpiled into StageL.</p>
+        <h4>Language profiles</h4>
+            <p>EITE Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language, which will correspond to StageL. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
+        <h4>Dcs</h4>
+            <p>The core unit of the EITE Language is the Dc (Document Component<!-- The name comes from "DCE Character", but is redefined for this context. -->). The defined Dcs are listed in DcData.csv. An EITE Language document is a list of Dcs, and a file is considered <em>structurally valid</em> if it can be interpreted as such. A Dc can have a syntactical pattern that it can require if it is to be meaningful. For example, a marker to <em>begin</em> a section of a document might be required to have a matching <em>end</em> marker. A document is only <em>syntactically valid</em> if the usage of each Dc contained within it conforms to the Dc's defined syntax, even if the document is otherwise structurally valid.</p>
+            <h5>Reading DcData.csv</h5>
+                <p>DcData.csv contains nine columns, each of which gives some information about a given Dc.</p>
+                <p>From left to right, the columns are: ID, Name, Combining class, Bidirectional class, Simple case mapping, Type, Script, Details, and Description.</p>
+                <p>The "ID" column specifies the number used to refer to a given Dc. Once an ID has been specified in a stable version, its meaning will not change in future versions.</p>
+                <p>The "Name" column specifies an informative name for the Dc. The names may change in future versions if the current names seem suboptimal. They should not be relied on as unique or stable identifiers. If a name is prefixed with "!", then that Dc is deprecated. Names <em>should</em> be unique within any given version of DcData.csv, although errors in it could compromise that (it is not currently checked by a computer).</p>
+                <p>"Combining class" column: See below.</p>
+                <p>"Bidirectional class" column: See below.</p>
+                <p>"Simple case mapping" column: This column contains the ID of the uppercase form of characters with the "Ll" type, and the ID of the lowercase form of characters with the "Lu" type.</p>
+                <p>"Type" column: See below.</p>
+                <p>The "Script" column indicates the script or other set to which the character belongs. Values needing further explanation include "Semantic", "DCE", "DCE sheets", "Noncharacters", "DCE versions", "Encapsulation", "EL Syntax", "EL Routines", and "EL Types".</p>
+                <p>The "Details" column contains various additional information about characters, as a comma-separated list.
                     <ul>
-                        <li>Music writing and recording</li>
-                        <li>Music listening</li>
-                        <li>Video watching</li>
-                        <li>Reading books</li>
-                        <li>Reading news</li>
-                        <li>Checking the weather</li>
-                        <li>Studying Spanish</li>
-                        <li>Looking up words in English and other languages</li>
-                        <li>Finding synonyms</li>
-                        <li>Making phone calls</li>
-                        <li>Texting</li>
-                        <li>Video chatting</li>
-                        <li>Keeping my appointments straight</li>
-                        <li>As an alarm clock</li>
-                        <li>As a timer</li>
-                        <li>As a stopwatch</li>
-                        <li>Tuning my guitar</li>
-                        <li>Finding information about people and businesses</li>
-                        <li>To guide my travels via GPS</li>
-                        <li>Emailing</li>
-                        <li>Research of products and subjects of interest</li>
-                        <li>Backing up information</li>
-                        <li>Storing photos</li>
-                        <li>Digitizing music and photographic slides</li>
-                        <li>Scanning books and other documents</li>
-                        <li>Finding, creating, and sharing recipes</li>
-                        <li>Journaling</li>
-                        <li>Making and publishing videos</li>
-                        <li>Publishing digital music</li>
-                        <li>Taking photos</li>
-                        <li>Opening the garage door</li>
-                        <li>Making shopping lists</li>
-                        <li>As a metronome</li>
-                        <li>To create editable documents using OCR</li>
-                        <li>To measure the level of sound</li>
-                        <li>To create animation</li>
-                        <li>To practice piano</li>
-                        <li>To recreate orchestras</li>
-                        <li>To alter photos</li>
+                        <li>List entries beginning with "&gt;" are cross-references to related Dcs. List entries beginning with "&lt;" are decompositions.</li>
+                        <li>List entries beginning with "(" indicate the syntax (parameter type signatures) for EITE Language routines.</li>
+                        <li>List entries beginning with ":" indicate the required syntax for the given Dc, using a form similar to regular expressions:
+                            <ul>
+                                <li>a bracketed list of Dcs [] indicate a set of possible Dcs</li>
+                                <li>a bracketed list of Dcs with a ^ at the beginning indicates an inversion of the set</li>
+                                <li>+ indicates 1 or more of the preceding item</li>
+                                <li>a Dc ID in brackets with a colon before the closing brackets indicates any syntactically correct sequence of Dcs beginning with the enclosed Dc ID</li>
+                                <li>"~" represents the Dc the syntax of which is being defined</li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <li>My work is in music, and I use a computer and an iPhone extensively to support that work, as can be gleaned from the list above.<br />
-                As long as images are relatively static, I can manage OK visually, although my eyes will get tired. When things are moving quickly, it is a challenge even when my eyes are fresh. Watching a movie with subtitles can be a challenge, for instance.</li>
-                <li>Because I often interact with others via video chat, internet connection issues can often present challenges.<br />
-                Because I use IT systems so extensively in my work, I am often challenged by the fact that my formative years did not include "thinking like a computer." In other words, using IT systems is not second nature to me.</li>
-                <li>I think I would have to be shown how it would intersect with my workflow. I am used to using Calendar to keep my appointments straight, and I use Notes to make lists of projects when they become too numerous to hold in my "internal memory," so to speak. I am generally reluctant to learn new applications when what I am using is basically working for me, but when I am shown that it is in my best interest to do so, I overcome the reluctance.</li>
-                <li>
-                <ol>
-                    <li>I have such an IT system. I can ask Siri for any of that information.</li>
-                    <li>I think it could be helpful, especially if someone was still in the work force, or if they still were striving to meet the challenges of living alone, or of helping to care for others.</li>
-                </ol></li>
-                <li>
-                <ol>
-                    <li>I think it would be brilliant. Helpful? Absolutely.</li>
-                    <li>Oh, goodness. I might send a recording to a client, and in the email mention specific passages about which I wanted them to comment; with such a holistic system, focusing their attention would be easy. Again, I sometimes send links to YouTube videos I have posted, and it would be great if it weren't necessary for the recipient to leave the email client in order to view and comment.<br />
-                    When creating text documents, I often want to incorporate photos or other materials; it is always a struggle because the applications that are best for the text aren't as nimble when managing other materials. I can absolutely see the value in being able to incorporate both video and sound files, for instance, in such documents.<br />
-                    Also, it would be wonderful to be able to add recorded verbal content (or even video) as a response to emails or other documents received from others. It is often easier and faster to speak impressions and complex responses to things than to write them.</li>
-                </ol></li>
-            </ol>
-        @3 Summary of findings
-            These interview responses show that various aspects of the proposed information technology system would be helpful. The interviews find some parts of the project helpful and others not necessarily so for their specific goals. Consequently, to make the proposed system ideal for all users, a method should be provided to allow users to choose which of its capabilities they would like to use. That way, the interface they have is the most relevant to them personally, and thus the most helpful in solving the particular problems they face.
+                    The remaining list entries are aliases (alternate names for the characters, for ease of look-up).</p>
+                <p>The "Description" column contains additional comments regarding the Dc.</p>
+                <p>Three columns' contents are directly inherited from the Unicode Standard: Combining class (inherits Unicode's "Canonical_Combining_Class property"), Bidirectional class (inherits Unicode's "Bidi_Class" property), and Type (inherits Unicode's "General_Category" property). The "Simple case mapping" and "Script" columns should also be inherited from Unicode in some manner, but are not at present. For characters not included in Unicode, a reasonable value is chosen in the pattern of the values used by Unicode. If there are discrepancies between this value and Unicode's value for a given character that is in both sets, this should be reported as an error in the EITE Language standard. Unicode's values should take precedence.</p>
+                <p>"Type" column values also extend the Unicode Standard's possible values with the "!Cx" category, denoting characters that do not fit neatly into Unicode's existing categories.</p>
+            <h5>Notes on specific Dcs</h5>
+                <h6>Dcs 241–245: Mode indicators</h6>
+                    <p>Inclusion of the mode indicators in documents is <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts. This lets the resulting documents more concise and readable.</p>
+                <h6>Dcs 246–255: Source formatting control</h6>
+                    <p>Dcs 246 through 255 control the formatting of the ELS format version of a document.</p>
+        <h4>Document formats</h4>
+            <p>There are seven file formats defined by this specification. Six of them (dcBasenb, ELS, ELAD, ELQ, DELQ, and SELQ) are general-use formats, while the seventh (ERD, not yet specified) is a special-purpose format with a subset of the other formats' capabilities. DcBasenb and ELS are the primary formats, while ELAD, ELQ, DELQ, and SELQ are intended as an intermediate, more-readable format, and are not intended for information interchange (they are much larger than the other formats for a given document, in general).</p>
+            <p><!-- To allow implementations to interpret documents created using newer versions of this format, once a completed version of this specification has been released, the meaning of any given Dc will not change. That will ensure that existing documents retain their meaning when interpreted using a newer version of the specification. While they are semantically stable, they are not necessarily presentation-stable (a Dc representing "A" in one version may look different from one version to the next, but it won't change to represent a "B"). --> Implementations should be able to render a document exactly (bit-for-bit) as determined by earlier versions of the specification. A syntax should be provided to indicate the version of the specification a given Dc, region of Dcs, or document should be displayed using (exactly, not just semantically), although Dcs have not been created for this purpose yet.</p>
+            <p>There is a one-to-one correspondence within a given version of the specification and implementation between normalized dcBasenb, ELS, ELAD, ELQ, DELQ, and SELQ files (for any given document in one of those formats, there is only one way to represent it in the other formats), but not for ERD files (because ERD files can only represent a subset of EITE Language documents). That means that documents can be losslessly round-trip-converted between those six formats. <em>However</em>, when converting from an ELS file, if it does not have a version specified, its behavior may change due to changes in the mapping between source code and Dc IDs. Source form should be able to represent syntactically invalid documents unambiguously. Whether structurally invalid source-form documents should be able to be represented as structurally valid Dc sequences is debatable.</p>
+            <p>DcBasenb files are a specific interpretation of the private-use-area characters in Unicode text.</p>
+            <p>ELAD, ELS, ELQ, DELQ, and SELQ files are subsets of ASCII text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are disallowed. Files must end with 0x0A. This may later be changed to use UTF-8.</p>
+            <p>A less strictly specified formats has an implementation available: "integerList" (.dcil), which is a list of ASCII digits representing Dcs, with each Dc followed by a space (including the last one), and no trailing newline or comments.</p>
+            <p>At the end of each format's summary (except for EMR), a simple "Hello, World!" document is given in the format.</p>
+            <h5>EITE Language as Unicode Private Use Characters (dcBasenb), .dcbnb.utf8.txt (assuming UTF-8 representation of Unicode)</h5>
+                <p>This format uses Unicode characters for Dcs that have losslessly roundtrippable Unicode equivalents, while representing Dcs that are not mappable to Unicode as sequences of Unicode private use area characters. Note that there are multiple possible ways a given Dc or sequence of Dcs can be represented as private use area characters, so only the normalized form (the form output by the implementation) is strictly roundtrippable to Dcs, and only for a given version of the specification and implementation (incidentally, the implementation for importing them does not verify that the normalized form was used and warn otherwise, but it should).</p>
+                <pre><code>Hello, World!</code></pre>
+            <h5>EITE Language source files (ELS), .els</h5>
+                <p>EITE Language source files are a programming language–inspired representation of EITE Language documents. It is the most readable of the formats, but also (along with SELQ, which is defined in terms of it) the most technically complex.</p>
+                <pre><code>dc:
+    Hello, World!</code></pre>
+                <p>or more idiomatically (but not the exact equivalent of the others in terms of the Dcs used),</p>
+                <pre><code>say 'Hello, World!'</code></pre>
+                <p>which would be</p>
+                <pre><code>256 258 260 262 # . . . .
+264 263 57 86 # . . H e
+93 93 96 30 # l l o ,
+18 72 96 99 # . W o r
+93 85 19 261 # l d ! .
+259 # .</code></pre>
+                <p>in Dcs, or even more simply the <code>say</code> could be omitted since literals are printed by default: <code>'Hello, World!'</code>.</p>
+            <h5>EITE Language in ASCII documents (ELAD), .elad</h5>
+                <p>EITE Language in ASCII documents are a list of Dcs. The Dcs mappable to the permitted ASCII characters are represented by those ASCII characters, with the exception of 0x40 "<code>@</code>" (Dc 1). All other Dcs are represented by "<code>@</code>" followed by the integer Dc ID followed by a space, such that, for instance, "<code>@</code>" would be represented as "<code>@1 </code>".</p>
+                <pre><code>Hello, World!</code></pre>
+            <h5>EITE Language sequence files (ELQ), .elq</h5>
+                <p>A list of Dc numbers. Four Dcs are given per line, separated by spaces.</p>
+                <pre><code>57 86 93 93
+96 30 18 72
+96 99 93 85
+19</code></pre>
+            <h5>Documented EITE Language sequence files (DELQ), .delq</h5>
+                <p>A variant of the EMS format for easier reading: after each line, the printable ASCII equivalent of each Dc is given following <code>0x202320</code>, each separated from the next by a space. If there is no printable ASCII equivalent, or the character is a space, "." is used instead.</p>
+                <pre><code>57 86 93 93 # H e l l
+96 30 18 72 # o , . W
+96 99 93 85 # o r l d
+19 # !</code></pre>
+            <h5>Source-Documented EITE Language sequence files (SELQ), .selq</h5>
+                <p>A variant of the ELQ and ELS formats for easier reading: the ELS source version is given in a comment in the style of the DELQ format, but the number of Dcs on each line is determined by the source lines to which they correspond.</p>
+                <pre><code># dc:
+57 86 93 93 96 96 30 18 72 96 99 93 85 19 #     Hello, World!</code></pre>
+            <h5>EITE Record Documents (ERD), .erd</h5>
+                <p>This is a special format in the "Structured" mode used for structured record storage in EITE. It is not yet defined, but will most likely be a subset of one of the other formats.</p>
+        <h4>Structures in the EITE Language</h4>
+            <p>The EITE Language uses the following main types of entity to represent information:
+                <dl>
+                    <dt>Type</dt><dd>Types are templates describing the structure of objects. They are known as prototypes or classes in most programming languages, depending on whether objects described by them inherit changes to the types made after the object was created. (Objects can be used as types by casting.) Type names begin with a capital letter when in source form.</dd>
+                    <dt>Object</dt><dd>An object is an entity that conforms to a given type (an <em>instance</em> of that type). The most general type is <em>object</em>, and there is no need for an object to conform to any other type. Whether the type it inherits from is treated as a class or a prototype should be able to be specified.</dd>
+                    <dt>Block</dt><dd>A block is a group of statements.</dd>
+                    <dt>Project</dt><dd>A project is a single document, and if relevant, any other documents maintained as part of that document.</dd>
+                    <dt>Module</dt><dd>A module is one or more Library-mode documents that have a package name for addressing the things they provide.</dd>
+                    <dt>List</dt><dd>A list is an ordered list of objects.<!-- An inline list is begun by <code>[</code> and terminated by <code>]</code>. Example: <code>listName=["a" [5 6] $b]; say $listName[0]</code> stores three Objects in a list named <code>listName</code> and prints <code>a</code>. Objects can be given custom identifiers for addressing them by separating them using <code>: </code>, in which case they should be additionally separated by <code>, </code>. Example: <code>listName=[foo: "a", bar: [5, 6], baz: b]; say $listName[foo]</code>.--></dd>
+                    <dt>String</dt><dd>A string is a list of Dcs. Because all Dcs can be used in strings, any data type can be cast to a string, and all data types internally <em>are</em> strings of Dcs.<!-- An inline list is begun by <code>"</code> and terminated by a second <code>"</code>. In source form, <code>"</code> and <code>\</code> must be escaped using <code>\</code>. Example: <code>stringName="Hello, \"World\"!"</code> stores the string <code>Hello, "World"!</code> in a string named <code>stringName</code>. Strings can be concatenated by placing them beside each other: <code>a="foo"; b="baz"; say $a"bar"$b</code> prints <code>foobarbaz</code>. --></dd>
+                    <dt>Routine</dt><dd>A routine is a set of instructions for a computer to follow as part of the process of interpreting a document. Similar concepts are known as functions or subroutines in most programming languages, or as methods when used within objects. Routines have an associated structure that indicates what parameters may be passed to it.<!-- >; they will be accessible through a list named <code>!par</code>, and if named, then also through their names. Specifying a return type for a routine is optional. If none is specified, it will be treated as "void", meaning no return type is expected. It is denoted by <code>()</code> followed by a block of statements, with its structure, if desired, within the parentheses. Example: <code>String foo(String, String qux?, *){say $!par[1]$!par[2]$qux}; foo("bar" "baz"); foo("bar" 6 "qux") # qux is 6, param 0 is bar, param 1 is 6, and param 2 is qux; foo(qux=6 "bar") # qux is still 6, but now parameter 0 is 6 and 1 is bar</code> represents an unnamed (positional-only) string parameter, an optional string parameter named "qux", and an unknown number (zero or more) of additional parameters of any type, and prints <pre><code>bazbaz
+6qux6
+bar6</code></pre>. Because literals are printed by default when at the beginning of a statement, the "invoke" routine must be used to invoke a routine in some cases, such as when referencing a routine by a name stored in a variable or constant: <code>a="I! Am! An! Awkward! Identifier!"; $a(){say "blob"}; invoke $a</code>. An alternative syntax for routine invocation, omitting parentheses, can be used if desired: <code>foo(String, String qux?){}; foo qux=6 bar</code> --></dd>
+                    <dt>Operator</dt><dd>An operator is a short notation or syntax pattern for some common routines<!-- (e.g., <code>Number a + Number b</code> in place of <code>add(Number a, Number b)</code>, or <code>if true; then say 'Hello, World!'; else die</code> in place of <code>if(true, (){say 'Hello, World!'}, (){die})</code>) -->.</dd>
+                    <dt>Identifier</dt><dd>An identifier is a name for an object.<!-- They are indicated by <code>$</code>, except for identifiers for routines, which do not have the <code>$</code> prefix. Before the <code>$</code> a type signature is often present. Except for routines, <code>!</code> following the <code>$</code> indicates a language-defined identifier, and must be escaped if used as the first character of a custom identifier. For routines, the pattern is inverted: <code>!</code> before an identifier indicates that a custom routine is being referenced (it must be included in calls to <code>invoke</code>, as well). <code>(</code> following the <code>$</code> indicates a special value, not a normal identifier, using Bash's syntax: <code>$(say "foo"; say "bar")</code> represents the output of the code between the <code>(</code> and the <code>)</code>, and <code>$(&lt;foo)</code> represents the contents of the file <code>foo</code>.--></dd>
+                    <dt>Structure</dt><dd>A structure is the definition of what the structure is that an entity can have, similar to type definitions or type signatures in some programming languages. A type can contain named Structures without any values for defining an interface.</dd>
+                    <dt>Statement</dt><dd>A statement is a logical line of a document. It can be an invocation of a routine, or a declaration of an entity's structure or value.</dd>
+                </dl>
+            </p>
+<!-- 
+                <p>Routines with some dangerous properties must be labeled accordingly, as follows:
+                    <dl>
+                        <dt>cs!</dt><dd><span class="important-letter">C</span>hangeable routine <span class="important-letter">s</span>ignature (subtypes don't need to use this routine's signature when overriding it.)</dd>
+                        <dt>nd!</dt><dd><span class="important-letter">N</span>on-<span class="important-letter">d</span>eterministic</dd>
+                    </dl>
+                </p>
+            <h5>Object hierarchy</h5>
+                <p>All objects are addressed through a hierarchy:
+                <dl>
+                    <dt>lang</dt><dd>Basic language Objects and Routines (automatically included)</dd>
+                    <dt>system</dt><dd>Objects and Routines related to the Ember environment</dd>
+                    <dt>math</dt><dd>Objects and Routines related to mathematics</dd>
+                </dl>
+                </p>
 
-@2 Personas
+            <h5>Types</h5>
+                <p>Types have CamelCase names beginning with an uppercase letter.</p>
+                <h6>C Type</h6>
+                    <dl>
+                        <dt>Traits</dt><dd>C Type$type</dd>
+                        <dt>Routines</dt><dd>C cs!this.$type:new(FuzzyList$params) { lang.new(this) }</dd>
+                    </dl>
 
-    While these personas are based on the interview respondents, they are somewhat fictionalized.
-    @3 Persona 1
-        Lara is a 37-year-old professional church organist. They make extensive use of computers to manage business communications, and to simulate an organ for practice at home. Their work often requires communicating with their employer regarding music and business. To discuss music with their employer, it is often not practical to use a computer, and it is necessary to meet in person, due to the limitation of current information technology systems. If computers could provide tools for easily sharing and collaborating on scores and recorded performances of those scores, Lara’s job would be made easier by reducing travel time and the requirement of meeting in person to work on things that do not actually need an in-person meeting.
-    @3 Persona 2
-        Joseph is a 40-year-old film teacher at a large public university. They use non-linear editing software in computers to edit films, and to demonstrate film editing in class to their students, as well as to work on separate projects for independent clients. Because the people they work for often have a hard time communicating what they want in a project, several iterations of work and feedback are needed before a finished product is delivered. Consequently, Joseph would be better able to communicate with students and clients if they could work with film in the way their non-linear editing software allows, but collaboratively online with the clients and students, like cloud-based collaborative word processors allow. If there were a single editing tool for text and films, the same collaboration abilities from one medium would be available in others, making Joseph’s job a lot easier and allowing more efficient communication between Joseph and their clients.
+                <h6>C Routine</h6>
+                    <dl>
+                        <dt>Traits</dt><dd>
+                            <ul>
+                                <li>C String$code</li>
+                                <li>C (Null|Routine)$onExit</li>
+                            </ul></dd>
+                        <dt>Routines</dt><dd><ul>
+                            <li>C Any:run(FuzzyList$params) { lang.run(this,lang.cast($params,List,"return")) }</li>
+                            <li>C Boolean:compare(Any$object) { /* return true if this object is identical to $object */ }</li>
+                        </ul></dd>
+                    </dl>
 
-@2 Proposed user acceptance testing strategy</h2>
+                <h6>C List</h6>
+                    <dl>
+                        <dt>Traits</dt><dd>
+                            <ul>
+                                <li>B List{set this.$allowedTypes=lang.new(List).add(Type)}$allowedTypes: List of allowed types that can be put in this list</li>
+                                <li>C Natural$last: last valid index</li>
+                                <li>C Natural$count: number of entries</li>
+                                <li>B (Null|Natural)$entryLimit: number of entries that the list may hold; defaults to Null (meaning unlimited)</li>
+                                <li>S (Null|Natural)$indexLimit: maximum index the list may use; defaults to Null (meaning unlimited)</li>
+                            </ul></dd>
+                        <dt>Routines</dt><dd>
+                            <ul>
+                                <li>B Void:add(String$value|List$value) { this.insert(this.last()+1) }</li>
+                                <li>B Void:set(Natural$index,(String$value|List$value)) { lang.set(this.record($index),$value) }</li>
+                                <li>B Any:get(Natural$index) { lang.get(this.record($index)) }</li>
+                                <li>C Reference:record(Natural$index) { lang.getListEntry(this,$index) }</li>
+                                <li>B Void:insert(Natural$index,(String$value|List$value)): insert $value at $index, moving the current $index and following items ahead by $value.count() if it's a list, and by 1 if it's a string</li>
+                            </ul></dd>
+                    </dl>
 
-    To test the viability of this project, I would suggest developing a functional instance of it, and presenting it to a range of users who work with various challenges to using information technology systems. For testing the general viability of the project, it would not be necessary to fully implement all the features that would be needed to make it competitive with other information technology systems; rather, it would only be needed to implement a representative subset of capabilities that would allow the users to explore the general interface and the system’s basic interaction structure. To gather data on challenges that users might encounter in using the system, the testers should be presented with a task to complete using the system, and asked to give commentary on their experience of the tool, and any frustration they encounter during the process, while they work on completing the assigned task. An article from the Nielsen Norman Group states that “A scripted study of product usage is done in order to focus the insights on specific usage aspects, such as on a newly redesigned flow.” [Rohrer, 2014] Consequently, that seems like the correct user testing strategy for determining the viability of this proposal, and finding roadblocks in its usability.
+                <h6>C FuzzyList (inherits from List)</h6>
+                    <p>When a FuzzyList is used in a list, its contents are appended to the list, and it is deconstructed. When a FuzzyList is used in the declaration of the parameters of a Routine, its first elements, starting from 0, are set to the values of the parameters passed to the Routine from its position onwards (so, for example, if the parameters declared are Natural$a,Natural$b,FuzzyList{ lang.set(lang.trait(this.entryLimit),2) }$c,Natural$d,Natural$e and it gets called with 2,3,4,5,6,7,8, then that's an error because there's no place to put 6 (the 5th parameter) (but if the entryLimit weren't set, a=2,b=3,c=(4,5,6),d=7,e=8), and if it gets called with 2,3,4,5,6,7, a=2,b=3,c=(4,5),d=6,e=7).</p>
 
-@2 User Feedback on Edit Tool Web extension (March 4, 2019)
-    I have seen and attempted to use two versions of this tool. The earlier version worked more completely for testing purposes, and from that I got a clear idea of how the tool might be useful, both in general, and for me personally.
-    It would be helpful to have a succinct description of the various elements and their relationships, as the layout does not make that immediately clear. For instance, the left-to-right orientation of the tabs at the bottom of the page at first suggested to me that perhaps each of the three would be used in any one application, whereas their use is not sequential.
-    It seems as though an unnecessary amount of space is allowed for the “Click to Insert” list, both vertically and horizontally. The list itself is not in an obvious order, and so locating a desired value takes more time than seems ideal. A search feature of this list might make it more navigable.
-    Having the dropdown menus perhaps within the main buttons that they modify would help me visually.
-    When this tool is ready for use, I would find it useful on my website for displaying musical excerpts within the context of textual analysis of musical compositions. Likewise, on my YouTube channel, it will be useful for displaying the opening measures of music for multi-movement works, as an aid to navigation within a video.
-    I would also find it useful to create custom buttons for my online store.
-    I might also use this tool when collaborating with other musicians and writers for instant messaging musical ideas, especially when editing or suggesting changes for performance.
-    And it will be great to have the option of displaying mere italics in Messages on my iPhone!
+                <h6>C Resource</h6>
+                    <dl>
+                        <dt>Traits</dt><dd></dd>
+                        <dt>Routines</dt><dd></dd>
+                    </dl>
 
-@2 Storyboard
-    <a href="image-001.png"><img src="image-001.png" alt="I'm working on making a new computer game. I made a great look for a Web site for the game in a word processor. But now, the word processor won't let me put my new game into the file!"></a>
-    <a href="image-002.png"><img src="image-002.png" alt="That doesn't make any sense. Computers can hold text and games, so why not both in one document? Oh! I remember a tool someone mentioned to me. They said it is a computer document editing tool that can hold many types of data."></a>
-    <a href="image-003.png"><img src="image-003.png" alt="Great, now I can have the game in my document, and post it to the Web like I originally wanted! Problem solved!"></a>
+            <h5>System object: Traits</h5>
+                <p>Traits have camelCase names beginning with a lowercase letter. Routines are a type of trait.</p>
+                <dl>
+                    <dt>C nd!List[Resource]:system.resources</dt><dd>List of resources (I/O, etc) available.</dd>
+                    <dt>C nd!String:system.implementation</dt><dd>Description of the language backend.</dd>
+                </dl>
+
+            <h5>System object: Routines</h5>
+                <p>Routines have camelCase names beginning with a lowercase letter, and have parameters.</p>
+                <h6>C Void:lang.run(Routine$routine,List$params)</h6>
+                    <dl>
+                        <dt>Exceptions thrown</dt><dd>!routineSyntaxError, !parameterNumberMismatch, !parameterTypeMismatch</dd>
+                        <dt>Notes</dt><dd>Determinism depends on String:$routine.code.</dd>
+                    </dl>
+                <h6>C (Void|$type):lang.cast(Any$object,Type$type,(|String$return))</h6>
+                    <dl>
+                        <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $type</dd>
+                        <dt>Exceptions thrown</dt><dd>!incompatibleTypeError</dd>
+                        <dt>Notes</dt><dd>If $return="return", determinism depends on types of objects (specifically, on value of String:$object.cast:$type.code).</dd>
+                    </dl>
+                <h6>C (Void|$trait.type):lang.set(Reference$trait,Any$value,(|String$return))</h6>
+                    <dl>
+                        <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $trait.type</dd>
+                        <dt>Exceptions thrown</dt><dd>!targetTypeMismatch</dd>
+                        <dt>Notes</dt><dd>If $return="return", determinism depends on $value.</dd>
+                    </dl>
+                <h6>C $trait.type:lang.get(Reference$trait)</h6>
+                    <dl>
+                        <dt>Return value</dt><dd>An object of type $trait.type</dd>
+                        <dt>Exceptions thrown</dt><dd>(none additional)</dd>
+                        <dt>Notes</dt><dd>Determinism depends on $trait.</dd>
+                    </dl>
+                <h6>C Reference:lang.trait(Any$object)</h6>
+                    <dl>
+                        <dt>Return value</dt><dd>A reference to the object passed to it</dd>
+                        <dt>Exceptions thrown</dt><dd>(none additional)</dd>
+                        <dt>Notes</dt><dd>(none)</dd>
+                    </dl>
+                <h6>C Boolean:lang.compare(Any$left,Any$right)</h6>
+                    <dl>
+                        <dt>Return value</dt><dd>lang.and($left.compare($right),$right.compare($left))</dd>
+                        <dt>Exceptions thrown</dt><dd>(inherit from $left.compare and $right.compare)</dd>
+                        <dt>Notes</dt><dd>(none)</dd>
+                    </dl>
+                <h6>S Any:lang.otherwise(Routine$left,Routine$right)</h6>
+                    <dl>
+                        <dt>Return value</dt><dd>try { return $left }; except { return $right }</dd>
+                        <dt>Exceptions thrown</dt><dd>(inherit from $left and $right)</dd>
+                        <dt>Notes</dt><dd>(none)</dd>
+                    </dl>
+-->
