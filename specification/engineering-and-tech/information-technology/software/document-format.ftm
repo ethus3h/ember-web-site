@@ -7,225 +7,224 @@
     <span><a href="/specification/engineering-and-tech/information-technology">Information technology</a></span>
     <span><a href="/specification/engineering-and-tech/information-technology/software">Information Technology Software Environment</a></span>
 
-
-       <h4>Objective</h4>
-            <p>Develop a machine-readable language that can be used as an equivalent representation of documents represented as sequences of Dcs, for easier reading and editing by humans (using an ordinary text editor and conversion tool). It should also be able to be implemented using and transpiled into StageL.</p>
-        <h4>Language profiles</h4>
-            <p>EITE Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language, which will correspond to StageL. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
-        <h4>Dcs</h4>
-            <p>The core unit of the EITE Language is the Dc (Document Component<!-- The name comes from "DCE Character", but is redefined for this context. -->). The defined Dcs are listed in DcData.csv. An EITE Language document is a list of Dcs, and a file is considered <em>structurally valid</em> if it can be interpreted as such. A Dc can have a syntactical pattern that it can require if it is to be meaningful. For example, a marker to <em>begin</em> a section of a document might be required to have a matching <em>end</em> marker. A document is only <em>syntactically valid</em> if the usage of each Dc contained within it conforms to the Dc's defined syntax, even if the document is otherwise structurally valid.</p>
-            <h5>Reading DcData.csv</h5>
-                <p>DcData.csv contains nine columns, each of which gives some information about a given Dc.</p>
-                <p>From left to right, the columns are: ID, Name, Combining class, Bidirectional class, Simple case mapping, Type, Script, Details, and Description.</p>
-                <p>The "ID" column specifies the number used to refer to a given Dc. Once an ID has been specified in a stable version, its meaning will not change in future versions.</p>
-                <p>The "Name" column specifies an informative name for the Dc. The names may change in future versions if the current names seem suboptimal. They should not be relied on as unique or stable identifiers. If a name is prefixed with "!", then that Dc is deprecated. Names <em>should</em> be unique within any given version of DcData.csv, although errors in it could compromise that (it is not currently checked by a computer).</p>
-                <p>"Combining class" column: See below.</p>
-                <p>"Bidirectional class" column: See below.</p>
-                <p>"Simple case mapping" column: This column contains the ID of the uppercase form of characters with the "Ll" type, and the ID of the lowercase form of characters with the "Lu" type.</p>
-                <p>"Type" column: See below.</p>
-                <p>The "Script" column indicates the script or other set to which the character belongs. Values needing further explanation include "Semantic", "DCE", "DCE sheets", "Noncharacters", "DCE versions", "Encapsulation", "EL Syntax", "EL Routines", and "EL Types".</p>
-                <p>The "Details" column contains various additional information about characters, as a comma-separated list.
+<h2>Objective</h2>
+    <p>Develop a machine-readable language that can be used as an equivalent representation of documents represented as sequences of Dcs, for easier reading and editing by humans (using an ordinary text editor and conversion tool). It should also be able to be implemented using and transpiled into StageL.</p>
+<h2>Language profiles</h2>
+    <p>EITE Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language, which will correspond to StageL. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases.</p>
+<h2>Dcs</h2>
+    <p>The core unit of the EITE Language is the Dc (Document Component<!-- The name comes from "DCE Character", but is redefined for this context. -->). The defined Dcs are listed in DcData.csv. An EITE Language document is a list of Dcs, and a file is considered <em>structurally valid</em> if it can be interpreted as such. A Dc can have a syntactical pattern that it can require if it is to be meaningful. For example, a marker to <em>begin</em> a section of a document might be required to have a matching <em>end</em> marker. A document is only <em>syntactically valid</em> if the usage of each Dc contained within it conforms to the Dc's defined syntax, even if the document is otherwise structurally valid.</p>
+    <h3>Reading DcData.csv</h3>
+        <p>DcData.csv contains nine columns, each of which gives some information about a given Dc.</p>
+        <p>From left to right, the columns are: ID, Name, Combining class, Bidirectional class, Simple case mapping, Type, Script, Details, and Description.</p>
+        <p>The "ID" column specifies the number used to refer to a given Dc. Once an ID has been specified in a stable version, its meaning will not change in future versions.</p>
+        <p>The "Name" column specifies an informative name for the Dc. The names may change in future versions if the current names seem suboptimal. They should not be relied on as unique or stable identifiers. If a name is prefixed with "!", then that Dc is deprecated. Names <em>should</em> be unique within any given version of DcData.csv, although errors in it could compromise that (it is not currently checked by a computer).</p>
+        <p>"Combining class" column: See below.</p>
+        <p>"Bidirectional class" column: See below.</p>
+        <p>"Simple case mapping" column: This column contains the ID of the uppercase form of characters with the "Ll" type, and the ID of the lowercase form of characters with the "Lu" type.</p>
+        <p>"Type" column: See below.</p>
+        <p>The "Script" column indicates the script or other set to which the character belongs. Values needing further explanation include "Semantic", "DCE", "DCE sheets", "Noncharacters", "DCE versions", "Encapsulation", "EL Syntax", "EL Routines", and "EL Types".</p>
+        <p>The "Details" column contains various additional information about characters, as a comma-separated list.
+            <ul>
+                <li>List entries beginning with "&gt;" are cross-references to related Dcs. List entries beginning with "&lt;" are decompositions.</li>
+                <li>List entries beginning with "(" indicate the syntax (parameter type signatures) for EITE Language routines.</li>
+                <li>List entries beginning with ":" indicate the required syntax for the given Dc, using a form similar to regular expressions:
                     <ul>
-                        <li>List entries beginning with "&gt;" are cross-references to related Dcs. List entries beginning with "&lt;" are decompositions.</li>
-                        <li>List entries beginning with "(" indicate the syntax (parameter type signatures) for EITE Language routines.</li>
-                        <li>List entries beginning with ":" indicate the required syntax for the given Dc, using a form similar to regular expressions:
-                            <ul>
-                                <li>a bracketed list of Dcs [] indicate a set of possible Dcs</li>
-                                <li>a bracketed list of Dcs with a ^ at the beginning indicates an inversion of the set</li>
-                                <li>+ indicates 1 or more of the preceding item</li>
-                                <li>a Dc ID in brackets with a colon before the closing brackets indicates any syntactically correct sequence of Dcs beginning with the enclosed Dc ID</li>
-                                <li>"~" represents the Dc the syntax of which is being defined</li>
-                            </ul>
-                        </li>
+                        <li>a bracketed list of Dcs [] indicate a set of possible Dcs</li>
+                        <li>a bracketed list of Dcs with a ^ at the beginning indicates an inversion of the set</li>
+                        <li>+ indicates 1 or more of the preceding item</li>
+                        <li>a Dc ID in brackets with a colon before the closing brackets indicates any syntactically correct sequence of Dcs beginning with the enclosed Dc ID</li>
+                        <li>"~" represents the Dc the syntax of which is being defined</li>
                     </ul>
-                    The remaining list entries are aliases (alternate names for the characters, for ease of look-up).</p>
-                <p>The "Description" column contains additional comments regarding the Dc.</p>
-                <p>Three columns' contents are directly inherited from the Unicode Standard: Combining class (inherits Unicode's "Canonical_Combining_Class property"), Bidirectional class (inherits Unicode's "Bidi_Class" property), and Type (inherits Unicode's "General_Category" property). The "Simple case mapping" and "Script" columns should also be inherited from Unicode in some manner, but are not at present. For characters not included in Unicode, a reasonable value is chosen in the pattern of the values used by Unicode. If there are discrepancies between this value and Unicode's value for a given character that is in both sets, this should be reported as an error in the EITE Language standard. Unicode's values should take precedence.</p>
-                <p>"Type" column values also extend the Unicode Standard's possible values with the "!Cx" category, denoting characters that do not fit neatly into Unicode's existing categories.</p>
-            <h5>Notes on specific Dcs</h5>
-                <h6>Dcs 241–245: Mode indicators</h6>
-                    <p>Inclusion of the mode indicators in documents is <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts. This lets the resulting documents more concise and readable.</p>
-                <h6>Dcs 246–255: Source formatting control</h6>
-                    <p>Dcs 246 through 255 control the formatting of the ELS format version of a document.</p>
-        <h4>Document formats</h4>
-            <p>There are seven file formats defined by this specification. Six of them (dcBasenb, ELS, ELAD, ELQ, DELQ, and SELQ) are general-use formats, while the seventh (ERD, not yet specified) is a special-purpose format with a subset of the other formats' capabilities. DcBasenb and ELS are the primary formats, while ELAD, ELQ, DELQ, and SELQ are intended as an intermediate, more-readable format, and are not intended for information interchange (they are much larger than the other formats for a given document, in general).</p>
-            <p><!-- To allow implementations to interpret documents created using newer versions of this format, once a completed version of this specification has been released, the meaning of any given Dc will not change. That will ensure that existing documents retain their meaning when interpreted using a newer version of the specification. While they are semantically stable, they are not necessarily presentation-stable (a Dc representing "A" in one version may look different from one version to the next, but it won't change to represent a "B"). --> Implementations should be able to render a document exactly (bit-for-bit) as determined by earlier versions of the specification. A syntax should be provided to indicate the version of the specification a given Dc, region of Dcs, or document should be displayed using (exactly, not just semantically), although Dcs have not been created for this purpose yet.</p>
-            <p>There is a one-to-one correspondence within a given version of the specification and implementation between normalized dcBasenb, ELS, ELAD, ELQ, DELQ, and SELQ files (for any given document in one of those formats, there is only one way to represent it in the other formats), but not for ERD files (because ERD files can only represent a subset of EITE Language documents). That means that documents can be losslessly round-trip-converted between those six formats. <em>However</em>, when converting from an ELS file, if it does not have a version specified, its behavior may change due to changes in the mapping between source code and Dc IDs. Source form should be able to represent syntactically invalid documents unambiguously. Whether structurally invalid source-form documents should be able to be represented as structurally valid Dc sequences is debatable.</p>
-            <p>DcBasenb files are a specific interpretation of the private-use-area characters in Unicode text.</p>
-            <p>ELAD, ELS, ELQ, DELQ, and SELQ files are subsets of ASCII text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are disallowed. Files must end with 0x0A. This may later be changed to use UTF-8.</p>
-            <p>A less strictly specified formats has an implementation available: "integerList" (.dcil), which is a list of ASCII digits representing Dcs, with each Dc followed by a space (including the last one), and no trailing newline or comments.</p>
-            <p>At the end of each format's summary (except for EMR), a simple "Hello, World!" document is given in the format.</p>
-            <h5>EITE Language as Unicode Private Use Characters (dcBasenb), .dcbnb.utf8.txt (assuming UTF-8 representation of Unicode)</h5>
-                <p>This format uses Unicode characters for Dcs that have losslessly roundtrippable Unicode equivalents, while representing Dcs that are not mappable to Unicode as sequences of Unicode private use area characters. Note that there are multiple possible ways a given Dc or sequence of Dcs can be represented as private use area characters, so only the normalized form (the form output by the implementation) is strictly roundtrippable to Dcs, and only for a given version of the specification and implementation (incidentally, the implementation for importing them does not verify that the normalized form was used and warn otherwise, but it should).</p>
-                <pre><code>Hello, World!</code></pre>
-            <h5>EITE Language source files (ELS), .els</h5>
-                <p>EITE Language source files are a programming language–inspired representation of EITE Language documents. It is the most readable of the formats, but also (along with SELQ, which is defined in terms of it) the most technically complex.</p>
-                <pre><code>dc:
-    Hello, World!</code></pre>
-                <p>or more idiomatically (but not the exact equivalent of the others in terms of the Dcs used),</p>
-                <pre><code>say 'Hello, World!'</code></pre>
-                <p>which would be</p>
-                <pre><code>256 258 260 262 # . . . .
+                </li>
+            </ul>
+            The remaining list entries are aliases (alternate names for the characters, for ease of look-up).</p>
+        <p>The "Description" column contains additional comments regarding the Dc.</p>
+        <p>Three columns' contents are directly inherited from the Unicode Standard: Combining class (inherits Unicode's "Canonical_Combining_Class property"), Bidirectional class (inherits Unicode's "Bidi_Class" property), and Type (inherits Unicode's "General_Category" property). The "Simple case mapping" and "Script" columns should also be inherited from Unicode in some manner, but are not at present. For characters not included in Unicode, a reasonable value is chosen in the pattern of the values used by Unicode. If there are discrepancies between this value and Unicode's value for a given character that is in both sets, this should be reported as an error in the EITE Language standard. Unicode's values should take precedence.</p>
+        <p>"Type" column values also extend the Unicode Standard's possible values with the "!Cx" category, denoting characters that do not fit neatly into Unicode's existing categories.</p>
+    <h3>Notes on specific Dcs</h3>
+        <h4>Dcs 241–245: Mode indicators</h4>
+            <p>Inclusion of the mode indicators in documents is <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts. This lets the resulting documents more concise and readable.</p>
+        <h4>Dcs 246–255: Source formatting control</h4>
+            <p>Dcs 246 through 255 control the formatting of the ELS format version of a document.</p>
+<h2>Document formats</h2>
+    <p>There are seven file formats defined by this specification. Six of them (dcBasenb, ELS, ELAD, ELQ, DELQ, and SELQ) are general-use formats, while the seventh (ERD, not yet specified) is a special-purpose format with a subset of the other formats' capabilities. DcBasenb and ELS are the primary formats, while ELAD, ELQ, DELQ, and SELQ are intended as an intermediate, more-readable format, and are not intended for information interchange (they are much larger than the other formats for a given document, in general).</p>
+    <p><!-- To allow implementations to interpret documents created using newer versions of this format, once a completed version of this specification has been released, the meaning of any given Dc will not change. That will ensure that existing documents retain their meaning when interpreted using a newer version of the specification. While they are semantically stable, they are not necessarily presentation-stable (a Dc representing "A" in one version may look different from one version to the next, but it won't change to represent a "B"). --> Implementations should be able to render a document exactly (bit-for-bit) as determined by earlier versions of the specification. A syntax should be provided to indicate the version of the specification a given Dc, region of Dcs, or document should be displayed using (exactly, not just semantically), although Dcs have not been created for this purpose yet.</p>
+    <p>There is a one-to-one correspondence within a given version of the specification and implementation between normalized dcBasenb, ELS, ELAD, ELQ, DELQ, and SELQ files (for any given document in one of those formats, there is only one way to represent it in the other formats), but not for ERD files (because ERD files can only represent a subset of EITE Language documents). That means that documents can be losslessly round-trip-converted between those six formats. <em>However</em>, when converting from an ELS file, if it does not have a version specified, its behavior may change due to changes in the mapping between source code and Dc IDs. Source form should be able to represent syntactically invalid documents unambiguously. Whether structurally invalid source-form documents should be able to be represented as structurally valid Dc sequences is debatable.</p>
+    <p>DcBasenb files are a specific interpretation of the private-use-area characters in Unicode text.</p>
+    <p>ELAD, ELS, ELQ, DELQ, and SELQ files are subsets of ASCII text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are disallowed. Files must end with 0x0A. This may later be changed to use UTF-8.</p>
+    <p>A less strictly specified formats has an implementation available: "integerList" (.dcil), which is a list of ASCII digits representing Dcs, with each Dc followed by a space (including the last one), and no trailing newline or comments.</p>
+    <p>At the end of each format's summary (except for EMR), a simple "Hello, World!" document is given in the format.</p>
+    <h3>EITE Language as Unicode Private Use Characters (dcBasenb), .dcbnb.utf8.txt (assuming UTF-8 representation of Unicode)</h3>
+        <p>This format uses Unicode characters for Dcs that have losslessly roundtrippable Unicode equivalents, while representing Dcs that are not mappable to Unicode as sequences of Unicode private use area characters. Note that there are multiple possible ways a given Dc or sequence of Dcs can be represented as private use area characters, so only the normalized form (the form output by the implementation) is strictly roundtrippable to Dcs, and only for a given version of the specification and implementation (incidentally, the implementation for importing them does not verify that the normalized form was used and warn otherwise, but it should).</p>
+        <pre><code>Hello, World!</code></pre>
+    <h3>EITE Language source files (ELS), .els</h3>
+        <p>EITE Language source files are a programming language–inspired representation of EITE Language documents. It is the most readable of the formats, but also (along with SELQ, which is defined in terms of it) the most technically complex.</p>
+        <pre><code>dc:
+Hello, World!</code></pre>
+        <p>or more idiomatically (but not the exact equivalent of the others in terms of the Dcs used),</p>
+        <pre><code>say 'Hello, World!'</code></pre>
+        <p>which would be</p>
+        <pre><code>256 258 260 262 # . . . .
 264 263 57 86 # . . H e
 93 93 96 30 # l l o ,
 18 72 96 99 # . W o r
 93 85 19 261 # l d ! .
 259 # .</code></pre>
-                <p>in Dcs, or even more simply the <code>say</code> could be omitted since literals are printed by default: <code>'Hello, World!'</code>.</p>
-            <h5>EITE Language in ASCII documents (ELAD), .elad</h5>
-                <p>EITE Language in ASCII documents are a list of Dcs. The Dcs mappable to the permitted ASCII characters are represented by those ASCII characters, with the exception of 0x40 "<code>@</code>" (Dc 1). All other Dcs are represented by "<code>@</code>" followed by the integer Dc ID followed by a space, such that, for instance, "<code>@</code>" would be represented as "<code>@1 </code>".</p>
-                <pre><code>Hello, World!</code></pre>
-            <h5>EITE Language sequence files (ELQ), .elq</h5>
-                <p>A list of Dc numbers. Four Dcs are given per line, separated by spaces.</p>
-                <pre><code>57 86 93 93
+        <p>in Dcs, or even more simply the <code>say</code> could be omitted since literals are printed by default: <code>'Hello, World!'</code>.</p>
+    <h3>EITE Language in ASCII documents (ELAD), .elad</h3>
+        <p>EITE Language in ASCII documents are a list of Dcs. The Dcs mappable to the permitted ASCII characters are represented by those ASCII characters, with the exception of 0x40 "<code>@</code>" (Dc 1). All other Dcs are represented by "<code>@</code>" followed by the integer Dc ID followed by a space, such that, for instance, "<code>@</code>" would be represented as "<code>@1 </code>".</p>
+        <pre><code>Hello, World!</code></pre>
+    <h3>EITE Language sequence files (ELQ), .elq</h3>
+        <p>A list of Dc numbers. Four Dcs are given per line, separated by spaces.</p>
+        <pre><code>57 86 93 93
 96 30 18 72
 96 99 93 85
 19</code></pre>
-            <h5>Documented EITE Language sequence files (DELQ), .delq</h5>
-                <p>A variant of the EMS format for easier reading: after each line, the printable ASCII equivalent of each Dc is given following <code>0x202320</code>, each separated from the next by a space. If there is no printable ASCII equivalent, or the character is a space, "." is used instead.</p>
-                <pre><code>57 86 93 93 # H e l l
+    <h3>Documented EITE Language sequence files (DELQ), .delq</h3>
+        <p>A variant of the EMS format for easier reading: after each line, the printable ASCII equivalent of each Dc is given following <code>0x202320</code>, each separated from the next by a space. If there is no printable ASCII equivalent, or the character is a space, "." is used instead.</p>
+        <pre><code>57 86 93 93 # H e l l
 96 30 18 72 # o , . W
 96 99 93 85 # o r l d
 19 # !</code></pre>
-            <h5>Source-Documented EITE Language sequence files (SELQ), .selq</h5>
-                <p>A variant of the ELQ and ELS formats for easier reading: the ELS source version is given in a comment in the style of the DELQ format, but the number of Dcs on each line is determined by the source lines to which they correspond.</p>
-                <pre><code># dc:
+    <h3>Source-Documented EITE Language sequence files (SELQ), .selq</h3>
+        <p>A variant of the ELQ and ELS formats for easier reading: the ELS source version is given in a comment in the style of the DELQ format, but the number of Dcs on each line is determined by the source lines to which they correspond.</p>
+        <pre><code># dc:
 57 86 93 93 96 96 30 18 72 96 99 93 85 19 #     Hello, World!</code></pre>
-            <h5>EITE Record Documents (ERD), .erd</h5>
-                <p>This is a special format in the "Structured" mode used for structured record storage in EITE. It is not yet defined, but will most likely be a subset of one of the other formats.</p>
-        <h4>Structures in the EITE Language</h4>
-            <p>The EITE Language uses the following main types of entity to represent information:
-                <dl>
-                    <dt>Type</dt><dd>Types are templates describing the structure of objects. They are known as prototypes or classes in most programming languages, depending on whether objects described by them inherit changes to the types made after the object was created. (Objects can be used as types by casting.) Type names begin with a capital letter when in source form.</dd>
-                    <dt>Object</dt><dd>An object is an entity that conforms to a given type (an <em>instance</em> of that type). The most general type is <em>object</em>, and there is no need for an object to conform to any other type. Whether the type it inherits from is treated as a class or a prototype should be able to be specified.</dd>
-                    <dt>Block</dt><dd>A block is a group of statements.</dd>
-                    <dt>Project</dt><dd>A project is a single document, and if relevant, any other documents maintained as part of that document.</dd>
-                    <dt>Module</dt><dd>A module is one or more Library-mode documents that have a package name for addressing the things they provide.</dd>
-                    <dt>List</dt><dd>A list is an ordered list of objects.<!-- An inline list is begun by <code>[</code> and terminated by <code>]</code>. Example: <code>listName=["a" [5 6] $b]; say $listName[0]</code> stores three Objects in a list named <code>listName</code> and prints <code>a</code>. Objects can be given custom identifiers for addressing them by separating them using <code>: </code>, in which case they should be additionally separated by <code>, </code>. Example: <code>listName=[foo: "a", bar: [5, 6], baz: b]; say $listName[foo]</code>.--></dd>
-                    <dt>String</dt><dd>A string is a list of Dcs. Because all Dcs can be used in strings, any data type can be cast to a string, and all data types internally <em>are</em> strings of Dcs.<!-- An inline list is begun by <code>"</code> and terminated by a second <code>"</code>. In source form, <code>"</code> and <code>\</code> must be escaped using <code>\</code>. Example: <code>stringName="Hello, \"World\"!"</code> stores the string <code>Hello, "World"!</code> in a string named <code>stringName</code>. Strings can be concatenated by placing them beside each other: <code>a="foo"; b="baz"; say $a"bar"$b</code> prints <code>foobarbaz</code>. --></dd>
-                    <dt>Routine</dt><dd>A routine is a set of instructions for a computer to follow as part of the process of interpreting a document. Similar concepts are known as functions or subroutines in most programming languages, or as methods when used within objects. Routines have an associated structure that indicates what parameters may be passed to it.<!-- >; they will be accessible through a list named <code>!par</code>, and if named, then also through their names. Specifying a return type for a routine is optional. If none is specified, it will be treated as "void", meaning no return type is expected. It is denoted by <code>()</code> followed by a block of statements, with its structure, if desired, within the parentheses. Example: <code>String foo(String, String qux?, *){say $!par[1]$!par[2]$qux}; foo("bar" "baz"); foo("bar" 6 "qux") # qux is 6, param 0 is bar, param 1 is 6, and param 2 is qux; foo(qux=6 "bar") # qux is still 6, but now parameter 0 is 6 and 1 is bar</code> represents an unnamed (positional-only) string parameter, an optional string parameter named "qux", and an unknown number (zero or more) of additional parameters of any type, and prints <pre><code>bazbaz
+    <h3>EITE Record Documents (ERD), .erd</h3>
+        <p>This is a special format in the "Structured" mode used for structured record storage in EITE. It is not yet defined, but will most likely be a subset of one of the other formats.</p>
+<h2>Structures in the EITE Language</h2>
+    <p>The EITE Language uses the following main types of entity to represent information:
+        <dl>
+            <dt>Type</dt><dd>Types are templates describing the structure of objects. They are known as prototypes or classes in most programming languages, depending on whether objects described by them inherit changes to the types made after the object was created. (Objects can be used as types by casting.) Type names begin with a capital letter when in source form.</dd>
+            <dt>Object</dt><dd>An object is an entity that conforms to a given type (an <em>instance</em> of that type). The most general type is <em>object</em>, and there is no need for an object to conform to any other type. Whether the type it inherits from is treated as a class or a prototype should be able to be specified.</dd>
+            <dt>Block</dt><dd>A block is a group of statements.</dd>
+            <dt>Project</dt><dd>A project is a single document, and if relevant, any other documents maintained as part of that document.</dd>
+            <dt>Module</dt><dd>A module is one or more Library-mode documents that have a package name for addressing the things they provide.</dd>
+            <dt>List</dt><dd>A list is an ordered list of objects.<!-- An inline list is begun by <code>[</code> and terminated by <code>]</code>. Example: <code>listName=["a" [5 6] $b]; say $listName[0]</code> stores three Objects in a list named <code>listName</code> and prints <code>a</code>. Objects can be given custom identifiers for addressing them by separating them using <code>: </code>, in which case they should be additionally separated by <code>, </code>. Example: <code>listName=[foo: "a", bar: [5, 6], baz: b]; say $listName[foo]</code>.--></dd>
+            <dt>String</dt><dd>A string is a list of Dcs. Because all Dcs can be used in strings, any data type can be cast to a string, and all data types internally <em>are</em> strings of Dcs.<!-- An inline list is begun by <code>"</code> and terminated by a second <code>"</code>. In source form, <code>"</code> and <code>\</code> must be escaped using <code>\</code>. Example: <code>stringName="Hello, \"World\"!"</code> stores the string <code>Hello, "World"!</code> in a string named <code>stringName</code>. Strings can be concatenated by placing them beside each other: <code>a="foo"; b="baz"; say $a"bar"$b</code> prints <code>foobarbaz</code>. --></dd>
+            <dt>Routine</dt><dd>A routine is a set of instructions for a computer to follow as part of the process of interpreting a document. Similar concepts are known as functions or subroutines in most programming languages, or as methods when used within objects. Routines have an associated structure that indicates what parameters may be passed to it.<!-- >; they will be accessible through a list named <code>!par</code>, and if named, then also through their names. Specifying a return type for a routine is optional. If none is specified, it will be treated as "void", meaning no return type is expected. It is denoted by <code>()</code> followed by a block of statements, with its structure, if desired, within the parentheses. Example: <code>String foo(String, String qux?, *){say $!par[1]$!par[2]$qux}; foo("bar" "baz"); foo("bar" 6 "qux") # qux is 6, param 0 is bar, param 1 is 6, and param 2 is qux; foo(qux=6 "bar") # qux is still 6, but now parameter 0 is 6 and 1 is bar</code> represents an unnamed (positional-only) string parameter, an optional string parameter named "qux", and an unknown number (zero or more) of additional parameters of any type, and prints <pre><code>bazbaz
 6qux6
 bar6</code></pre>. Because literals are printed by default when at the beginning of a statement, the "invoke" routine must be used to invoke a routine in some cases, such as when referencing a routine by a name stored in a variable or constant: <code>a="I! Am! An! Awkward! Identifier!"; $a(){say "blob"}; invoke $a</code>. An alternative syntax for routine invocation, omitting parentheses, can be used if desired: <code>foo(String, String qux?){}; foo qux=6 bar</code> --></dd>
-                    <dt>Operator</dt><dd>An operator is a short notation or syntax pattern for some common routines<!-- (e.g., <code>Number a + Number b</code> in place of <code>add(Number a, Number b)</code>, or <code>if true; then say 'Hello, World!'; else die</code> in place of <code>if(true, (){say 'Hello, World!'}, (){die})</code>) -->.</dd>
-                    <dt>Identifier</dt><dd>An identifier is a name for an object.<!-- They are indicated by <code>$</code>, except for identifiers for routines, which do not have the <code>$</code> prefix. Before the <code>$</code> a type signature is often present. Except for routines, <code>!</code> following the <code>$</code> indicates a language-defined identifier, and must be escaped if used as the first character of a custom identifier. For routines, the pattern is inverted: <code>!</code> before an identifier indicates that a custom routine is being referenced (it must be included in calls to <code>invoke</code>, as well). <code>(</code> following the <code>$</code> indicates a special value, not a normal identifier, using Bash's syntax: <code>$(say "foo"; say "bar")</code> represents the output of the code between the <code>(</code> and the <code>)</code>, and <code>$(&lt;foo)</code> represents the contents of the file <code>foo</code>.--></dd>
-                    <dt>Structure</dt><dd>A structure is the definition of what the structure is that an entity can have, similar to type definitions or type signatures in some programming languages. A type can contain named Structures without any values for defining an interface.</dd>
-                    <dt>Statement</dt><dd>A statement is a logical line of a document. It can be an invocation of a routine, or a declaration of an entity's structure or value.</dd>
-                </dl>
-            </p>
+            <dt>Operator</dt><dd>An operator is a short notation or syntax pattern for some common routines<!-- (e.g., <code>Number a + Number b</code> in place of <code>add(Number a, Number b)</code>, or <code>if true; then say 'Hello, World!'; else die</code> in place of <code>if(true, (){say 'Hello, World!'}, (){die})</code>) -->.</dd>
+            <dt>Identifier</dt><dd>An identifier is a name for an object.<!-- They are indicated by <code>$</code>, except for identifiers for routines, which do not have the <code>$</code> prefix. Before the <code>$</code> a type signature is often present. Except for routines, <code>!</code> following the <code>$</code> indicates a language-defined identifier, and must be escaped if used as the first character of a custom identifier. For routines, the pattern is inverted: <code>!</code> before an identifier indicates that a custom routine is being referenced (it must be included in calls to <code>invoke</code>, as well). <code>(</code> following the <code>$</code> indicates a special value, not a normal identifier, using Bash's syntax: <code>$(say "foo"; say "bar")</code> represents the output of the code between the <code>(</code> and the <code>)</code>, and <code>$(&lt;foo)</code> represents the contents of the file <code>foo</code>.--></dd>
+            <dt>Structure</dt><dd>A structure is the definition of what the structure is that an entity can have, similar to type definitions or type signatures in some programming languages. A type can contain named Structures without any values for defining an interface.</dd>
+            <dt>Statement</dt><dd>A statement is a logical line of a document. It can be an invocation of a routine, or a declaration of an entity's structure or value.</dd>
+        </dl>
+    </p>
 <!-- 
-                <p>Routines with some dangerous properties must be labeled accordingly, as follows:
-                    <dl>
-                        <dt>cs!</dt><dd><span class="important-letter">C</span>hangeable routine <span class="important-letter">s</span>ignature (subtypes don't need to use this routine's signature when overriding it.)</dd>
-                        <dt>nd!</dt><dd><span class="important-letter">N</span>on-<span class="important-letter">d</span>eterministic</dd>
-                    </dl>
-                </p>
-            <h5>Object hierarchy</h5>
-                <p>All objects are addressed through a hierarchy:
-                <dl>
-                    <dt>lang</dt><dd>Basic language Objects and Routines (automatically included)</dd>
-                    <dt>system</dt><dd>Objects and Routines related to the Ember environment</dd>
-                    <dt>math</dt><dd>Objects and Routines related to mathematics</dd>
-                </dl>
-                </p>
+        <p>Routines with some dangerous properties must be labeled accordingly, as follows:
+            <dl>
+                <dt>cs!</dt><dd><span class="important-letter">C</span>hangeable routine <span class="important-letter">s</span>ignature (subtypes don't need to use this routine's signature when overriding it.)</dd>
+                <dt>nd!</dt><dd><span class="important-letter">N</span>on-<span class="important-letter">d</span>eterministic</dd>
+            </dl>
+        </p>
+    <h3>Object hierarchy</h3>
+        <p>All objects are addressed through a hierarchy:
+        <dl>
+            <dt>lang</dt><dd>Basic language Objects and Routines (automatically included)</dd>
+            <dt>system</dt><dd>Objects and Routines related to the Ember environment</dd>
+            <dt>math</dt><dd>Objects and Routines related to mathematics</dd>
+        </dl>
+        </p>
 
-            <h5>Types</h5>
-                <p>Types have CamelCase names beginning with an uppercase letter.</p>
-                <h6>C Type</h6>
-                    <dl>
-                        <dt>Traits</dt><dd>C Type$type</dd>
-                        <dt>Routines</dt><dd>C cs!this.$type:new(FuzzyList$params) { lang.new(this) }</dd>
-                    </dl>
+    <h3>Types</h3>
+        <p>Types have CamelCase names beginning with an uppercase letter.</p>
+        <h4>C Type</h4>
+            <dl>
+                <dt>Traits</dt><dd>C Type$type</dd>
+                <dt>Routines</dt><dd>C cs!this.$type:new(FuzzyList$params) { lang.new(this) }</dd>
+            </dl>
 
-                <h6>C Routine</h6>
-                    <dl>
-                        <dt>Traits</dt><dd>
-                            <ul>
-                                <li>C String$code</li>
-                                <li>C (Null|Routine)$onExit</li>
-                            </ul></dd>
-                        <dt>Routines</dt><dd><ul>
-                            <li>C Any:run(FuzzyList$params) { lang.run(this,lang.cast($params,List,"return")) }</li>
-                            <li>C Boolean:compare(Any$object) { /* return true if this object is identical to $object */ }</li>
-                        </ul></dd>
-                    </dl>
+        <h4>C Routine</h4>
+            <dl>
+                <dt>Traits</dt><dd>
+                    <ul>
+                        <li>C String$code</li>
+                        <li>C (Null|Routine)$onExit</li>
+                    </ul></dd>
+                <dt>Routines</dt><dd><ul>
+                    <li>C Any:run(FuzzyList$params) { lang.run(this,lang.cast($params,List,"return")) }</li>
+                    <li>C Boolean:compare(Any$object) { /* return true if this object is identical to $object */ }</li>
+                </ul></dd>
+            </dl>
 
-                <h6>C List</h6>
-                    <dl>
-                        <dt>Traits</dt><dd>
-                            <ul>
-                                <li>B List{set this.$allowedTypes=lang.new(List).add(Type)}$allowedTypes: List of allowed types that can be put in this list</li>
-                                <li>C Natural$last: last valid index</li>
-                                <li>C Natural$count: number of entries</li>
-                                <li>B (Null|Natural)$entryLimit: number of entries that the list may hold; defaults to Null (meaning unlimited)</li>
-                                <li>S (Null|Natural)$indexLimit: maximum index the list may use; defaults to Null (meaning unlimited)</li>
-                            </ul></dd>
-                        <dt>Routines</dt><dd>
-                            <ul>
-                                <li>B Void:add(String$value|List$value) { this.insert(this.last()+1) }</li>
-                                <li>B Void:set(Natural$index,(String$value|List$value)) { lang.set(this.record($index),$value) }</li>
-                                <li>B Any:get(Natural$index) { lang.get(this.record($index)) }</li>
-                                <li>C Reference:record(Natural$index) { lang.getListEntry(this,$index) }</li>
-                                <li>B Void:insert(Natural$index,(String$value|List$value)): insert $value at $index, moving the current $index and following items ahead by $value.count() if it's a list, and by 1 if it's a string</li>
-                            </ul></dd>
-                    </dl>
+        <h4>C List</h4>
+            <dl>
+                <dt>Traits</dt><dd>
+                    <ul>
+                        <li>B List{set this.$allowedTypes=lang.new(List).add(Type)}$allowedTypes: List of allowed types that can be put in this list</li>
+                        <li>C Natural$last: last valid index</li>
+                        <li>C Natural$count: number of entries</li>
+                        <li>B (Null|Natural)$entryLimit: number of entries that the list may hold; defaults to Null (meaning unlimited)</li>
+                        <li>S (Null|Natural)$indexLimit: maximum index the list may use; defaults to Null (meaning unlimited)</li>
+                    </ul></dd>
+                <dt>Routines</dt><dd>
+                    <ul>
+                        <li>B Void:add(String$value|List$value) { this.insert(this.last()+1) }</li>
+                        <li>B Void:set(Natural$index,(String$value|List$value)) { lang.set(this.record($index),$value) }</li>
+                        <li>B Any:get(Natural$index) { lang.get(this.record($index)) }</li>
+                        <li>C Reference:record(Natural$index) { lang.getListEntry(this,$index) }</li>
+                        <li>B Void:insert(Natural$index,(String$value|List$value)): insert $value at $index, moving the current $index and following items ahead by $value.count() if it's a list, and by 1 if it's a string</li>
+                    </ul></dd>
+            </dl>
 
-                <h6>C FuzzyList (inherits from List)</h6>
-                    <p>When a FuzzyList is used in a list, its contents are appended to the list, and it is deconstructed. When a FuzzyList is used in the declaration of the parameters of a Routine, its first elements, starting from 0, are set to the values of the parameters passed to the Routine from its position onwards (so, for example, if the parameters declared are Natural$a,Natural$b,FuzzyList{ lang.set(lang.trait(this.entryLimit),2) }$c,Natural$d,Natural$e and it gets called with 2,3,4,5,6,7,8, then that's an error because there's no place to put 6 (the 5th parameter) (but if the entryLimit weren't set, a=2,b=3,c=(4,5,6),d=7,e=8), and if it gets called with 2,3,4,5,6,7, a=2,b=3,c=(4,5),d=6,e=7).</p>
+        <h4>C FuzzyList (inherits from List)</h4>
+            <p>When a FuzzyList is used in a list, its contents are appended to the list, and it is deconstructed. When a FuzzyList is used in the declaration of the parameters of a Routine, its first elements, starting from 0, are set to the values of the parameters passed to the Routine from its position onwards (so, for example, if the parameters declared are Natural$a,Natural$b,FuzzyList{ lang.set(lang.trait(this.entryLimit),2) }$c,Natural$d,Natural$e and it gets called with 2,3,4,5,6,7,8, then that's an error because there's no place to put 6 (the 5th parameter) (but if the entryLimit weren't set, a=2,b=3,c=(4,5,6),d=7,e=8), and if it gets called with 2,3,4,5,6,7, a=2,b=3,c=(4,5),d=6,e=7).</p>
 
-                <h6>C Resource</h6>
-                    <dl>
-                        <dt>Traits</dt><dd></dd>
-                        <dt>Routines</dt><dd></dd>
-                    </dl>
+        <h4>C Resource</h4>
+            <dl>
+                <dt>Traits</dt><dd></dd>
+                <dt>Routines</dt><dd></dd>
+            </dl>
 
-            <h5>System object: Traits</h5>
-                <p>Traits have camelCase names beginning with a lowercase letter. Routines are a type of trait.</p>
-                <dl>
-                    <dt>C nd!List[Resource]:system.resources</dt><dd>List of resources (I/O, etc) available.</dd>
-                    <dt>C nd!String:system.implementation</dt><dd>Description of the language backend.</dd>
-                </dl>
+    <h3>System object: Traits</h3>
+        <p>Traits have camelCase names beginning with a lowercase letter. Routines are a type of trait.</p>
+        <dl>
+            <dt>C nd!List[Resource]:system.resources</dt><dd>List of resources (I/O, etc) available.</dd>
+            <dt>C nd!String:system.implementation</dt><dd>Description of the language backend.</dd>
+        </dl>
 
-            <h5>System object: Routines</h5>
-                <p>Routines have camelCase names beginning with a lowercase letter, and have parameters.</p>
-                <h6>C Void:lang.run(Routine$routine,List$params)</h6>
-                    <dl>
-                        <dt>Exceptions thrown</dt><dd>!routineSyntaxError, !parameterNumberMismatch, !parameterTypeMismatch</dd>
-                        <dt>Notes</dt><dd>Determinism depends on String:$routine.code.</dd>
-                    </dl>
-                <h6>C (Void|$type):lang.cast(Any$object,Type$type,(|String$return))</h6>
-                    <dl>
-                        <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $type</dd>
-                        <dt>Exceptions thrown</dt><dd>!incompatibleTypeError</dd>
-                        <dt>Notes</dt><dd>If $return="return", determinism depends on types of objects (specifically, on value of String:$object.cast:$type.code).</dd>
-                    </dl>
-                <h6>C (Void|$trait.type):lang.set(Reference$trait,Any$value,(|String$return))</h6>
-                    <dl>
-                        <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $trait.type</dd>
-                        <dt>Exceptions thrown</dt><dd>!targetTypeMismatch</dd>
-                        <dt>Notes</dt><dd>If $return="return", determinism depends on $value.</dd>
-                    </dl>
-                <h6>C $trait.type:lang.get(Reference$trait)</h6>
-                    <dl>
-                        <dt>Return value</dt><dd>An object of type $trait.type</dd>
-                        <dt>Exceptions thrown</dt><dd>(none additional)</dd>
-                        <dt>Notes</dt><dd>Determinism depends on $trait.</dd>
-                    </dl>
-                <h6>C Reference:lang.trait(Any$object)</h6>
-                    <dl>
-                        <dt>Return value</dt><dd>A reference to the object passed to it</dd>
-                        <dt>Exceptions thrown</dt><dd>(none additional)</dd>
-                        <dt>Notes</dt><dd>(none)</dd>
-                    </dl>
-                <h6>C Boolean:lang.compare(Any$left,Any$right)</h6>
-                    <dl>
-                        <dt>Return value</dt><dd>lang.and($left.compare($right),$right.compare($left))</dd>
-                        <dt>Exceptions thrown</dt><dd>(inherit from $left.compare and $right.compare)</dd>
-                        <dt>Notes</dt><dd>(none)</dd>
-                    </dl>
-                <h6>S Any:lang.otherwise(Routine$left,Routine$right)</h6>
-                    <dl>
-                        <dt>Return value</dt><dd>try { return $left }; except { return $right }</dd>
-                        <dt>Exceptions thrown</dt><dd>(inherit from $left and $right)</dd>
-                        <dt>Notes</dt><dd>(none)</dd>
-                    </dl>
+    <h3>System object: Routines</h3>
+        <p>Routines have camelCase names beginning with a lowercase letter, and have parameters.</p>
+        <h4>C Void:lang.run(Routine$routine,List$params)</h4>
+            <dl>
+                <dt>Exceptions thrown</dt><dd>!routineSyntaxError, !parameterNumberMismatch, !parameterTypeMismatch</dd>
+                <dt>Notes</dt><dd>Determinism depends on String:$routine.code.</dd>
+            </dl>
+        <h4>C (Void|$type):lang.cast(Any$object,Type$type,(|String$return))</h4>
+            <dl>
+                <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $type</dd>
+                <dt>Exceptions thrown</dt><dd>!incompatibleTypeError</dd>
+                <dt>Notes</dt><dd>If $return="return", determinism depends on types of objects (specifically, on value of String:$object.cast:$type.code).</dd>
+            </dl>
+        <h4>C (Void|$trait.type):lang.set(Reference$trait,Any$value,(|String$return))</h4>
+            <dl>
+                <dt>Return value</dt><dd>None, unless $return="return" in which case it returns an object of type $trait.type</dd>
+                <dt>Exceptions thrown</dt><dd>!targetTypeMismatch</dd>
+                <dt>Notes</dt><dd>If $return="return", determinism depends on $value.</dd>
+            </dl>
+        <h4>C $trait.type:lang.get(Reference$trait)</h4>
+            <dl>
+                <dt>Return value</dt><dd>An object of type $trait.type</dd>
+                <dt>Exceptions thrown</dt><dd>(none additional)</dd>
+                <dt>Notes</dt><dd>Determinism depends on $trait.</dd>
+            </dl>
+        <h4>C Reference:lang.trait(Any$object)</h4>
+            <dl>
+                <dt>Return value</dt><dd>A reference to the object passed to it</dd>
+                <dt>Exceptions thrown</dt><dd>(none additional)</dd>
+                <dt>Notes</dt><dd>(none)</dd>
+            </dl>
+        <h4>C Boolean:lang.compare(Any$left,Any$right)</h4>
+            <dl>
+                <dt>Return value</dt><dd>lang.and($left.compare($right),$right.compare($left))</dd>
+                <dt>Exceptions thrown</dt><dd>(inherit from $left.compare and $right.compare)</dd>
+                <dt>Notes</dt><dd>(none)</dd>
+            </dl>
+        <h4>S Any:lang.otherwise(Routine$left,Routine$right)</h4>
+            <dl>
+                <dt>Return value</dt><dd>try { return $left }; except { return $right }</dd>
+                <dt>Exceptions thrown</dt><dd>(inherit from $left and $right)</dd>
+                <dt>Notes</dt><dd>(none)</dd>
+            </dl>
 -->

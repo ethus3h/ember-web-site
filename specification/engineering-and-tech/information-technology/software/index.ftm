@@ -288,6 +288,6 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
         <dt>ept</dt><dd>EITE parse test: given an input document in a specified format, parse it and compare its representation as a Dc list to the expected representation.</dd>
     </dl>-->
     <h3>EITE Language</h3>
- - <a href="mockups.html">Mockups</a>
+- <a href="mockups.html">Mockups</a>
 - <a href="user-research.html">User research</a>
 - <a href="references.html">References</a>
