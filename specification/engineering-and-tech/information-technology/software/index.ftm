@@ -509,9 +509,6 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
                         <dt>Notes</dt><dd>(none)</dd>
                     </dl>
 -->
-<h2>Mockups</h2>
-    <p>Two interactive mockups are available for this project, to allow you to explore a more completed version of the proposed tools as if you were using them.</p>
-    <p>The earlier interactive prototype is available in work-docs/Mockups/12799819e/index.html, while the more recent one is available in work-docs/Mockups/Web-Mockup/index.html.</p>
 - <a href="mockups.html">Mockups</a>
 - <a href="user-research.html">User research</a>
 - <a href="references.html">References</a>
