@@ -122,8 +122,6 @@
         <p>Current computerized information technology systems do not live up to their full potential. So, by developing tools to allow combining media types together, new opportunities arise in the use of information technology systems, including in structured data, the arts, and an append-only decentralized archive of a community's knowledge, giving many advantages in usability, accessibility, and preservation.</p>
 
 <h2>Installation</h2>
-    <p>Using the ebuild to install the software through Portage is suggested. Simple installation (untested) in case Portage or the ebuild is not suitable for your system: <code>git clone --depth 1 https://github.com/ethus3h/ember-information-technology-environment; cd ember-information-technology-environment; make autodep; ./configure; make; sudo make install</code>. <code>curl</code> must be available already.</p>
-    <p>If you just build EITE without installing it, the built software will be placed in the "built/" folder. The structure of that folder corresponds to the /usr/share/eite/ folder when the software is installed. This is what is meant by the "EITE installation root" in this documentation.</p>
 
 - <a href="overview-and-introduction.html">Overview and introduction</a>
 - <a href="installation.html">Installation</a>
