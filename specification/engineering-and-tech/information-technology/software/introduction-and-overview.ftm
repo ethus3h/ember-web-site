@@ -1,0 +1,12 @@
+@1 <web>Information Technology Software Environment: </web>Installation
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/components.htm">Core project components</a></span>
+    <span><a href="/specification">Specification</a></span>
+    <span><a href="/specification/engineering-and-tech">Engineering and Technology</a></span>
+    <span><a href="/specification/engineering-and-tech/information-technology">Information technology</a></span>
+    <span><a href="/specification/engineering-and-tech/information-technology/software">Information Technology Software Environment</a></span>
+</p>
+
+Using the ebuild to install the software through Portage is suggested. Simple installation (untested) in case Portage or the ebuild is not suitable for your system: <code>git clone --depth 1 https://github.com/ethus3h/ember-information-technology-environment; cd ember-information-technology-environment; make autodep; ./configure; make; sudo make install</code>. <code>curl</code> must be available already.
+If you just build EITE without installing it, the built software will be placed in the "built/" folder. The structure of that folder corresponds to the /usr/share/eite/ folder when the software is installed. This is what is meant by the "EITE installation root" in this documentation.
