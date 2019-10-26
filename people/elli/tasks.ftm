@@ -1,4 +1,4 @@
-<h1>Tasks</h1>
+@1 Tasks
 
 <p class="breadcrumbs">Page location: <span><a href="/people">People</a></span>
     <span><a href="/people/elli">Elli Chandler</a></span>
@@ -6,7 +6,7 @@
 
 <p>See also: <a href="./practical-notes.htm">Practical notes</a></p>
 
-<h2>Useful</h2>
+@2 Useful
 
     <ul>
         <li>Job search; employment</li>
