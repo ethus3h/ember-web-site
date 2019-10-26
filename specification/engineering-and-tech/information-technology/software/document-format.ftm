@@ -44,7 +44,7 @@
         <p>"Type" column values also extend the Unicode Standard's possible values with the "!Cx" category, denoting characters that do not fit neatly into Unicode's existing categories.</p>
     <h3>Notes on specific Dcs</h3>
         <h4>Dcs 241–245: Mode indicators</h4>
-            <p>Inclusion of the mode indicators in documents is <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts. This lets the resulting documents more concise and readable.</p>
+            <p>Inclusion of the mode indicators in documents is <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts. This lets the resulting documents be more concise and readable.</p>
         <h4>Dcs 246–255: Source formatting control</h4>
             <p>Dcs 246 through 255 control the formatting of the ELS format version of a document.</p>
 <h2>Document formats</h2>
