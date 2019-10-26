@@ -15,7 +15,7 @@
     - Study and practice Laravel, Vue, and Vuex
     - Write to Meg; family
     - Test portage on debian for running Wreathe parts
-    - Fsck/repair sreg repos: Example report for easier repairing: (hint: use C code folding in Kate)<pre><code>
+    <li> Fsck/repair sreg repos: Example report for easier repairing: (hint: use C code folding in Kate)<pre><code>
         Stream bbb... could not be read. {
             Provided by: C3-... {
                 Provides: bbb... {
