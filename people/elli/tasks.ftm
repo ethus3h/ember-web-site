@@ -15,22 +15,22 @@
     - Study and practice Laravel, Vue, and Vuex
     - Write to Meg; family
     - Test portage on debian for running Wreathe parts
-    <li> Fsck/repair sreg repos: Example report for easier repairing: (hint: use C code folding in Kate)<pre><code>
-        Stream bbb... could not be read. {
-            Provided by: C3-... {
-                Provides: bbb... {
-                    Used by: foo/bar/baz.txt
-                    Used by: foo/bar/qux.txt
-                }
-                Provides: b44... {
-                    Used by: foo/baz/bar.png
-                    Used by: foo/bar/qux.png
+        <li> Fsck/repair sreg repos: Example report for easier repairing: (hint: use C code folding in Kate)<pre><code>
+            Stream bbb... could not be read. {
+                Provided by: C3-... {
+                    Provides: bbb... {
+                        Used by: foo/bar/baz.txt
+                        Used by: foo/bar/qux.txt
+                    }
+                    Provides: b44... {
+                        Used by: foo/baz/bar.png
+                        Used by: foo/bar/qux.png
+                    }
                 }
             }
-        }
-        etc...
-        </code></pre>
-    </li>
+            etc...
+            </code></pre>
+        </li>
     - Ember library physical
     - Ember specification
     - EITE development and specification
