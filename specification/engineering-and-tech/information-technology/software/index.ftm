@@ -157,7 +157,6 @@
 <h2>Design goals</h2>
 
 - <a href="design-goals.html">Design goals</a>
-- <a href="implementation-procedures.html">Implementation procedures and practices</a>
 - <a href="implementation-principles.html">Implementation principles</a>
 - <a href="stagel.html">Portable implementation language: StageL</a>
 - <a href="implementation-components.html">Implementation components</a>
@@ -170,4 +169,5 @@
     - <a href="commentary-network-negotiation.html">Decentralized networked systems: Ad-hoc Computer Network Negotiation</a>
     - <a href="commentary-new-media.html">EITE in the context of new media studies</a>
     - <a href="commentary-challenges-and-state.html">Implementation challenges; state of the project</a>
+    - <a href="commentary-development-practices.html">Development practices</a>
 - <a href="references.html">References</a>
