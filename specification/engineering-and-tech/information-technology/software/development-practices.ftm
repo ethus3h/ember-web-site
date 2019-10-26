@@ -1,0 +1,37 @@
+@1 <web>Information Technology Software Environment: </web>Development practices
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/components.htm">Core project components</a></span>
+    <span><a href="/specification">Specification</a></span>
+    <span><a href="/specification/engineering-and-tech">Engineering and Technology</a></span>
+    <span><a href="/specification/engineering-and-tech/information-technology">Information technology</a></span>
+    <span><a href="/specification/engineering-and-tech/information-technology/software">Information Technology Software Environment</a></span>
+</p>
+
+<!-- These are the principles the project is intended to follow. I did not follow them during this capstone project, because they do not prioritize creating working prototype software for demonstration, and instead prioritize creating reliable software that aligns with documentation and specification. Consequently, the code in its state at the end of the capstone has a range of capabilities, but is quite unreliable and poorly documented. Future work should adhere to these principles closely to get the software to work well again. -->
+    <ul>
+        <li>Never remove a feature, capability, or option. If the development of an improved architecture or addition of new features involves scrapping existing code, reintroduce all previously existing capabilities before releasing the changes to the software.</li>
+        <li>Make sure that all tests pass when releasing changes to the software.</li>
+        <li>Thorough automated unit tests should be provided and kept passing.</li>
+    </ul>
+    <h3>Prerequisites for code to be added to the repository</h3>
+        <ul>
+            <li>Code must be readable and documented.</li>
+            <li>Code must not cause or have failing tests.</li>
+            <li>Code should include thorough automatic test coverage.</li>
+            <li>To keep the software in line with the specification, code must address a deviation from the current specification (bug, missing feature, <span class="foreign-text">etc.</span>), and may not contain code unrelated to that.</li>
+        </ul>
+    <h3>How issues should be prioritized</h3>
+        <p>Ordered from highest priority to lowest priority:</p>
+        <ol>
+            <li>Potential for data loss</li>
+            <li>Security vulnerabilities</li>
+            <li>Functional regressions</li>
+            <li>Incorrect results</li>
+            <li>Crashes, lack of accessibility/internationalization, and similar critical usability issues</li>
+            <li>Slow code with a significant impact on usability</li>
+            <li>Aesthetic regressions</li>
+            <li>Minor usability issues</li>
+            <li>Slow code with a moderate impact on usability</li>
+            <li>Missing features</li>
+        </ol>
