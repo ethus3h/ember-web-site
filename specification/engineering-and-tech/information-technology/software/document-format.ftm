@@ -6,6 +6,7 @@
     <span><a href="/specification/engineering-and-tech">Engineering and Technology</a></span>
     <span><a href="/specification/engineering-and-tech/information-technology">Information technology</a></span>
     <span><a href="/specification/engineering-and-tech/information-technology/software">Information Technology Software Environment</a></span>
+</p>
 
 <h2>Objective</h2>
     <p>Develop a machine-readable language that can be used as an equivalent representation of documents represented as sequences of Dcs, for easier reading and editing by humans (using an ordinary text editor and conversion tool). It should also be able to be implemented using and transpiled into StageL.</p>
