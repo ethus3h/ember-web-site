@@ -8,15 +8,15 @@
 
 @0 Useful
 
-    —Job search; employment</li>
-        - Dsp login password bug</li>
-        - Dsp pwa</li>
-        - Deferred crystallize</li>
-        - Study and practice Laravel, Vue, and Vuex</li>
-        - Write to Meg; family</li>
-        - Learn about car maintenance</li>
-        - Prepare config files: ranger, compiz</li>
-        - Test portage on debian for running Wreathe parts</li>
+    —Job search; employment
+        - Dsp login password bug
+        - Dsp pwa
+        - Deferred crystallize
+        - Study and practice Laravel, Vue, and Vuex
+        - Write to Meg; family
+        - Learn about car maintenance
+        - Prepare config files: ranger, compiz
+        - Test portage on debian for running Wreathe parts
         - Fsck/repair sreg repos: Example report for easier repairing: (hint: use C code folding in Kate)<pre><code>
         Stream bbb... could not be read. {
             Provided by: C3-... {
@@ -32,20 +32,20 @@
         }
         etc...
         </code></pre>
-        </li>
-        - Ember library physical</li>
-        - Ember specification</li>
-        - EITE development and specification</li>
-        - Music production</li>
-        - Ember library electronic</li>
-        - Other software development</li>
-        - Fiction writing</li>
-        - Philosophy writings</li>
+        
+        - Ember library physical
+        - Ember specification
+        - EITE development and specification
+        - Music production
+        - Ember library electronic
+        - Other software development
+        - Fiction writing
+        - Philosophy writings
     </ul>
 
 @0 Not really
     <ul>
-        - Entertainment</li>
+        - Entertainment
     </ul>
 
 @0 Done
