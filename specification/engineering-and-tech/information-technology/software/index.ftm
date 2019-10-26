@@ -282,8 +282,9 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 
 <h2>Data formats</h2>
 
-- <a href="stagel.html">Implementation language: StageL</a>
-- <a href="document-format.html">Document format</a>
+- <a href="stagel.html">Portable implementation language: StageL</a>
+- <a href="document-format.html">Native document format</a>
+- <a href="document-format.html">Implementation process flow</a>
 - <a href="mockups.html">Mockups</a>
 - <a href="user-research.html">User research</a>
 - <a href="references.html">References</a>
