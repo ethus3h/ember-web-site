@@ -125,7 +125,7 @@
     <p>Using the ebuild to install the software through Portage is suggested. Simple installation (untested) in case Portage or the ebuild is not suitable for your system: <code>git clone --depth 1 https://github.com/ethus3h/ember-information-technology-environment; cd ember-information-technology-environment; make autodep; ./configure; make; sudo make install</code>. <code>curl</code> must be available already.</p>
     <p>If you just build EITE without installing it, the built software will be placed in the "built/" folder. The structure of that folder corresponds to the /usr/share/eite/ folder when the software is installed. This is what is meant by the "EITE installation root" in this documentation.</p>
 
-<h2>Development principles</h2>
+<h2>Development procedures</h2>
 <!-- These are the principles the project is intended to follow. I did not follow them during this capstone project, because they do not prioritize creating working prototype software for demonstration, and instead prioritize creating reliable software that aligns with documentation and specification. Consequently, the code in its state at the end of the capstone has a range of capabilities, but is quite unreliable and poorly documented. Future work should adhere to these principles closely to get the software to work well again. -->
     <ul>
         <li>Never remove a feature, capability, or option. If the development of an improved architecture or addition of new features involves scrapping existing code, reintroduce all previously existing capabilities before releasing the changes to the software.</li>
@@ -156,6 +156,8 @@
 
 <h2>Design goals</h2>
 
+- <a href="design-goals.html">Design goals</a>
+- <a href="implementation-procedures.html">Implementation procedures and practices</a>
 - <a href="implementation-principles.html">Implementation principles</a>
 - <a href="stagel.html">Portable implementation language: StageL</a>
 - <a href="implementation-components.html">Implementation components</a>
