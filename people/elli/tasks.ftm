@@ -14,8 +14,6 @@
     - Deferred crystallize
     - Study and practice Laravel, Vue, and Vuex
     - Write to Meg; family
-    - Learn about car maintenance
-    - Prepare config files: ranger, compiz
     - Test portage on debian for running Wreathe parts
     - Fsck/repair sreg repos: Example report for easier repairing: (hint: use C code folding in Kate)<pre><code>
         Stream bbb... could not be read. {
@@ -47,3 +45,4 @@
 
 @0 Done
     - Job search; employment
+    - Learn about car maintenance
