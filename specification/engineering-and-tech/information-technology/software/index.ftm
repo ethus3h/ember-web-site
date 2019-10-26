@@ -282,12 +282,7 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 
 <h2>Data formats</h2>
 
-<!--    <h3>Test suite</h3>
-    <dl>
-        <dt>eet</dt><dd>EITE execution test: given an input document in a specified format, run it and compare its output (the printable state of the document after it exits) to the expected output.</dd>
-        <dt>ept</dt><dd>EITE parse test: given an input document in a specified format, parse it and compare its representation as a Dc list to the expected representation.</dd>
-    </dl>-->
-    <h3>EITE Language</h3>
+- <a href="document-format.html">Document format</a>
 - <a href="mockups.html">Mockups</a>
 - <a href="user-research.html">User research</a>
 - <a href="references.html">References</a>
