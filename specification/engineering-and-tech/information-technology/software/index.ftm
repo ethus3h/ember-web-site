@@ -255,36 +255,10 @@
 <h2>StageL</h2>
     <p>A simple programming language is provided for easily writing portable algorithms to be transpiled to and used by programs in other languages. It is the language in which the implementation of the Dc-based document format is implemented. See <a href="stagel.htm">its documentation page</a> for more information.</p>
 
-<h2>Implementation process flow</h2>
-    <p>This diagram shows conceptually how data flows at a high level in the process of running an EITE document using an interpreter (a compile-then-run system would use different data flows, but the overall effect would be equivalent). The non-bracketed elements represent programmed processes. The bracketed elements represent data structures. A circle ○ represents data storage persists for the lifetime of the document being open or being executed (not necessarily in RAM: for a long-running background task, like a periodic mail fetcher, this data could be moved to disk or the cloud if useful to free up local memory). Other data structures can be buffered/streaming FIFOs that discard input as it becomes unneccesary. The arrows represent data flows into and out of data storage or the system. This diagram assumes a Dc sequence as input; other forms of input would need a separate conversion/interpretation step for this.</p>
-    <pre>         External I/O: document source ──────────────╮
-               (as Dc sequence)                      │
-                                                     ↓
-   [○ Document execution state] ╮    ╭ [○ Document as Dc sequence] ←╮
-                ↑               ↓    ↓                              │
-                ╰───── Document execution loop:  ───────────────────╯
-  Other External I/O ← iterates over tokens (Dcs)
-                                   ↓
-                              Renderer: converts and
-                              and writes to renderer
-                              buffer visible document
-                              elements
-                                     ↓
-                              ⎡ Renderer buffer: holds     ⎤
-                              ⎢ representation of document ⎥
-                              ⎢ in the format desired for  ⎥
-External I/O: render target ← ⎢ output (terminal text for  ⎥
-(e.g. terminal or browser)    ⎢ a CLI, HTML for a browser, ⎥
-                              ⎢ bitmap for a raster        ⎥
-                              ⎢ monitor or HTML Canvas,    ⎥
-                              ⎢ other formats for export,  ⎥
-                              ⎣ etc.)                      ⎦</pre>
-
 <h2>Data formats</h2>
 
 - <a href="stagel.html">Portable implementation language: StageL</a>
-- <a href="document-format.html">Native document format</a>
-- <a href="document-format.html">Implementation process flow</a>
+- <a href="document-format.html">Native document format (Dc-based)</a>
 - <a href="mockups.html">Mockups</a>
 - <a href="user-research.html">User research</a>
 - <a href="references.html">References</a>

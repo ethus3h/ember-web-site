@@ -1,4 +1,4 @@
-@1 Information Technology Software Environment: Document format
+@1 Information Technology Software Environment: Native document format
 
 <p class="breadcrumbs">Page location:
     <span><a href="/components.htm">Core project components</a></span>
@@ -233,3 +233,29 @@ bar6</code></pre>. Because literals are printed by default when at the beginning
         <dt>eet</dt><dd>EITE execution test: given an input document in a specified format, run it and compare its output (the printable state of the document after it exits) to the expected output.</dd>
         <dt>ept</dt><dd>EITE parse test: given an input document in a specified format, parse it and compare its representation as a Dc list to the expected representation.</dd>
     </dl>-->
+
+<h2>Basic implementation process flow</h2>
+    <p>This diagram shows conceptually how data flows at a high level in the process of running an EITE document using an interpreter (a compile-then-run system would use different data flows, but the overall effect would be equivalent). The non-bracketed elements represent programmed processes. The bracketed elements represent data structures. A circle ○ represents data storage persists for the lifetime of the document being open or being executed (not necessarily in RAM: for a long-running background task, like a periodic mail fetcher, this data could be moved to disk or the cloud if useful to free up local memory). Other data structures can be buffered/streaming FIFOs that discard input as it becomes unneccesary. The arrows represent data flows into and out of data storage or the system. This diagram assumes a Dc sequence as input; other forms of input would need a separate conversion/interpretation step for this.</p>
+    <pre>         External I/O: document source ──────────────╮
+               (as Dc sequence)                      │
+                                                     ↓
+   [○ Document execution state] ╮    ╭ [○ Document as Dc sequence] ←╮
+                ↑               ↓    ↓                              │
+                ╰───── Document execution loop:  ───────────────────╯
+  Other External I/O ← iterates over tokens (Dcs)
+                                   ↓
+                              Renderer: converts and
+                              and writes to renderer
+                              buffer visible document
+                              elements
+                                     ↓
+                              ⎡ Renderer buffer: holds     ⎤
+                              ⎢ representation of document ⎥
+                              ⎢ in the format desired for  ⎥
+External I/O: render target ← ⎢ output (terminal text for  ⎥
+(e.g. terminal or browser)    ⎢ a CLI, HTML for a browser, ⎥
+                              ⎢ bitmap for a raster        ⎥
+                              ⎢ monitor or HTML Canvas,    ⎥
+                              ⎢ other formats for export,  ⎥
+                              ⎣ etc.)                      ⎦</pre>
+
