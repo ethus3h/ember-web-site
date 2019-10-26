@@ -1,4 +1,4 @@
-@1 Tasks
+@t Tasks
 
 <p class="breadcrumbs">Page location: <span><a href="/people">People</a></span>
     <span><a href="/people/elli">Elli Chandler</a></span>
@@ -6,18 +6,18 @@
 
 <p>See also: <a href="./practical-notes.htm">Practical notes</a></p>
 
-@2 Useful
+@0 Useful
 
     —Job search; employment</li>
-        <li>Dsp login password bug</li>
-        <li>Dsp pwa</li>
-        <li>Deferred crystallize</li>
-        <li>Study and practice Laravel, Vue, and Vuex</li>
-        <li>Write to Meg; family</li>
-        <li>Learn about car maintenance</li>
-        <li>Prepare config files: ranger, compiz</li>
-        <li>Test portage on debian for running Wreathe parts</li>
-        <li>Fsck/repair sreg repos: Example report for easier repairing: (hint: use C code folding in Kate)<pre><code>
+        - Dsp login password bug</li>
+        - Dsp pwa</li>
+        - Deferred crystallize</li>
+        - Study and practice Laravel, Vue, and Vuex</li>
+        - Write to Meg; family</li>
+        - Learn about car maintenance</li>
+        - Prepare config files: ranger, compiz</li>
+        - Test portage on debian for running Wreathe parts</li>
+        - Fsck/repair sreg repos: Example report for easier repairing: (hint: use C code folding in Kate)<pre><code>
         Stream bbb... could not be read. {
             Provided by: C3-... {
                 Provides: bbb... {
@@ -33,19 +33,19 @@
         etc...
         </code></pre>
         </li>
-        <li>Ember library physical</li>
-        <li>Ember specification</li>
-        <li>EITE development and specification</li>
-        <li>Music production</li>
-        <li>Ember library electronic</li>
-        <li>Other software development</li>
-        <li>Fiction writing</li>
-        <li>Philosophy writings</li>
+        - Ember library physical</li>
+        - Ember specification</li>
+        - EITE development and specification</li>
+        - Music production</li>
+        - Ember library electronic</li>
+        - Other software development</li>
+        - Fiction writing</li>
+        - Philosophy writings</li>
     </ul>
 
-<h2>Not really</h2>
+@0 Not really
     <ul>
-        <li>Entertainment</li>
+        - Entertainment</li>
     </ul>
 
-@1 Done
+@0 Done
