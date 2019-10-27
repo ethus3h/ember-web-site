@@ -1378,8 +1378,16 @@ The extensive focus on the information technology aspects in the proposal is lar
 <h3>Information Technology</h3>
 <h4>Hardware</h4>
 <h4>Ember Information Technology Environment</h4>
-<h5>Information Technology Software Environment: Introduction and overview</h5>
+<h5></h5>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <h6>Introduction</h6>
     <h7>Abstract</h7>
@@ -1414,6 +1422,8 @@ The extensive focus on the information technology aspects in the proposal is lar
         </ul>
     </li>
 </ul>
+</ul>
+
 
 <h6>Development tasks and process</h6>
 <ul>
@@ -1422,7 +1432,9 @@ The extensive focus on the information technology aspects in the proposal is lar
             <li>Information technology information and specifications, without external (non-libre) dependencies (enough information should be included to enable full construction of all technologies starting from nature, without any existing knowledge or technology/machinery; this should be <em>tested</em>)</li>
         </ul>
     </li>
+    </ul>
     <li>Continue development of support software</li>
+
     <li>Develop software for information technology environment (EITE)
         <ul>
             <li>Provide and implement StageL inside EITE</li>
@@ -1438,6 +1450,8 @@ The extensive focus on the information technology aspects in the proposal is lar
         </ul>
     </li>
 </ul>
+</ul>
+
 
 <h6>Overview and introduction</h6>
     <h7>Components of the project</h7>
@@ -1450,7 +1464,9 @@ The extensive focus on the information technology aspects in the proposal is lar
                     <li>Reference implementation</li>
                 </ul>
             </li>
+            </ul>
             <li>Data storage system and infrastructure: mechanism for storing append-only set of records, each comprising a unique ID paired with a node document</li>
+
             <li>Software system, including:
             <ul>
                 <li>Client component</li>
@@ -1461,7 +1477,9 @@ The extensive focus on the information technology aspects in the proposal is lar
                         <li>Storage backend</li>
                     </ul>
                 </li>
+            </ul>
             </ul></li>
+
         </ul>
     <h7>Premise</h7>
         <p>Current computerized information technology systems do not live up to their potential. By developing tools to allow blending media types together, new opportunities arise in the use of information technology systems, including in structured data and the arts. An append-only decentralized archive of a community’s knowledge gives many advantages in usability, accessibility, and preservation.</p>
@@ -1495,14 +1513,30 @@ The extensive focus on the information technology aspects in the proposal is lar
     <h7>Summary</h7>
         <p>Current computerized information technology systems do not live up to their full potential. So, by developing tools to allow combining media types together, new opportunities arise in the use of information technology systems, including in structured data, the arts, and an append-only decentralized archive of a community's knowledge, giving many advantages in usability, accessibility, and preservation.</p>
 
-<h5>Information Technology Software Environment: Installation</h5>
+<h5></h5>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <p>Using the ebuild to install the software through Portage is suggested. Simple installation (untested) in case Portage or the ebuild is not suitable for your system: <code>git clone --depth 1 https://github.com/ethus3h/ember-information-technology-environment; cd ember-information-technology-environment; make autodep; ./configure; make; sudo make install</code>. <code>curl</code> must be available already.</p>
 <p>If you just build EITE without installing it, the built software will be placed in the "built/" folder. The structure of that folder corresponds to the /usr/share/eite/ folder when the software is installed. This is what is meant by the "EITE installation root" in this documentation.</p>
 
-<h5>Information Technology Software Environment: Design goals</h5>
+<h5></h5>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <p>The goal of developing the EITE is to provide an information technology system that allows various types of data to be given a first-class role. The proposed system is a centralized but non-centralization-dependent append-only information store, a computer operating system integrated with that information store, and related specifications.</p>
 <p>Web-based information technology companies such as Google, Amazon, and Facebook have a disproportionately large amount of power, have a disproportionately large role in how individuals are able to conduct their daily lives, and are single points of failure for a large portion of the modern lifestyle. These corporations are private institutions with little to no public oversight and control, despite having a large and visible role (perhaps even larger than any one government) in individuals’ lives. To begin to challenge that power structure, this semi-decentralized document-oriented computing platform should be developed that can integrate the abilities of traditional information technology systems into a single, cohesive system. Such a system should be free/libre software, and should be designed in such a way that it can adapt when needed to functioning as a fully decentralized, serverless system, transparently adjusting to the networking capabilities or lack thereof available to it on an ad-hoc basis. The existence of this project as a replacement would prevent single IT companies’ systems being single points of failure, and its distributed model would prevent it itself from being a single point of failure. Additionally, by being fully free/libre software, and by using a single system and data format for the full range of services, this proposal would reduce the dangers created by vendor lock-in, proprietary products, and incompatible IT systems.</p>
@@ -1514,8 +1548,16 @@ The extensive focus on the information technology aspects in the proposal is lar
 <p>Another goal of this work is to create an information technology system that will help guide people with dementia and other mental disabilities. The WHO estimates that 47 million people have dementia. [WHO 2017] Another group of people who would likely find such tools useful is those with autism-spectrum learning disabilities. Entire worldwide population statistics for autism-spectrum disorders are not accurately known [Miller-Wilson, n.d.], but according to the WHO [WHO 2017b], estimated 1 in 160 children worldwide have autism-spectrum disorders, and according to the NIH [NIH, n.d.], estimated 1 in 68 within the United States. Finally, ordinary computer users would likely be able to benefit somewhat from the same systems, simply because while optimally designed tools may provide the greatest amount of benefit to those with challenges that affect their ability to use current systems, such tools would likely help everyone to some extent.</p>
 <p>Because there are so many people affected by these challenges, and many others would likely benefit as well, there is a large group of people who would potentially find the proposed tools helpful. Consequently, working towards developing such a system is a valuable and important goal. The large potential benefit that could be gained from having such a system could, even if the individual increase in productivity were relatively small, have a substantial impact on the overall ability of humans to be productive and educated. In addition, a smaller group of people who are less able to use current information technology systems would probably see even larger gains in their productivity.</p>
 
-<h5>Information Technology Software Environment: Development practices</h5>
+<h5></h5>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <!-- These are the principles the project is intended to follow. I did not follow them during this capstone project, because they do not prioritize creating working prototype software for demonstration, and instead prioritize creating reliable software that aligns with documentation and specification. Consequently, the code in its state at the end of the capstone has a range of capabilities, but is quite unreliable and poorly documented. Future work should adhere to these principles closely to get the software to work well again. -->
 <ul>
@@ -1524,7 +1566,7 @@ The extensive focus on the information technology aspects in the proposal is lar
     <li>Thorough automated unit tests should be provided and kept passing.</li>
 </ul>
 
-<h6>Prerequisites for code to be added to the repository</h6>
+<p>@2 Prerequisites for code to be added to the repository</p>
     <ul>
         <li>Code must be readable and documented.</li>
         <li>Code must not cause or have failing tests.</li>
@@ -1532,7 +1574,7 @@ The extensive focus on the information technology aspects in the proposal is lar
         <li>To keep the software in line with the specification, code must address a deviation from the current specification (bug, missing feature, <span class="foreign-text">etc.</span>), and may not contain code unrelated to that.</li>
     </ul>
 
-<h6>How issues should be prioritized</h6>
+<p>@2 How issues should be prioritized</p>
     <p>Ordered from highest priority to lowest priority:</p>
     <ol>
         <li>Potential for data loss</li>
@@ -1547,8 +1589,16 @@ The extensive focus on the information technology aspects in the proposal is lar
         <li>Missing features</li>
     </ol>
 
-<h5>Information Technology Software Environment: Implementation principles</h5>
+<h5></h5>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <p>One of the fundamental elements of the information technology environment would be the creation of a decentralized information storage system, intended to provide effective and efficient information storage and retrieval (ISR). This would likely use an append-only NoSQL database to store a softly directed concept graph. Most or all knowledge can be effectively represented using two basic structures: nodes and relationships. Relationships would be specific types of nodes. Each node would correspond to a document stored as a sequence of character-like digital identifiers ("Dcs") analogous to both characters in a computer character encoding and to assembly language opcodes, allowing all types of electronic data to be stored as strings. These strings would be able to hold any structured data through the use of specific Dcs, such that when a document was added to the ISR system, it could be indexed deterministically into a separate database which would cache the structured information extracted from that document.</p>
 <p>The nodes of a graph are the individual records that it stores. Relationships between those nodes are the edges of the graph, although it is possible that the system being developed will provide for more complex relationships, for example by allowing relationships to connect several nodes to each other in a variety of ways, although whether that proves necessary or useful remains to be seen. Metadata are an item’s traits: information such as the title of a node, or a description of it. The way the system is designed, placing all three of these types of entity into one table, allows relationships and metadata to have the attributes of nodes: for example, metadata could be attached to a relationship or another metadatum, or relationships could be specified that connect any combination of the three. There are many existing ISR systems, such as flat files and flat searching, flat-search filterable record sets, sorted records, a variety of tree and tree-like structures, tagged or labeled records, traditional tabular databases, relational databases, sparse tables, sparse matrices and entity-attribute-value models, graphs and digraphs, Boolean-queriable datasets, hierarchies, automated natural-language document acquisition and indexing, metadata-enriched natural-language document acquisition and indexing, and selective-display intelligent query results. The system proposed here would primarily leverage a graph structure augmented through the use of richly labeled nodes, providing great flexibility in the structures it can manage; in addition, the above structures could be emulated within a graph-driven environment for when they are preferred.</p>
@@ -1561,11 +1611,11 @@ The extensive focus on the information technology aspects in the proposal is lar
 <p>Thorough user group and subgroup support should be provided. This would be especially useful for facilitating collaboration between individuals, such as in business use of the software.</p>
 <p>The EITE should be capable of ad-hoc computer network negotiation to ensure effective and practical decentralized operation.</p>
 
-<h6>Target solution spaces</h6>
+<p>@2 Target solution spaces</p>
 
     <p>In summary, any current uses for software above the operating system level are reasonable areas to attempt development. An outline list of some is provided below. (Operating system development and hypothetical software use cases outside of exploration of the possibilities introduced by the novel information representation method may be of interest but are not priorities for this project at this time.)</p>
 
-<h6>Semantic representation</h6>
+<p>@2 Semantic representation</p>
 
     <p>There are two principle structural levels for which elements need to be described: documents and texts. A document is a complete unit such as a book or journal article, which would comprise various textual regions (note that in typesetting some items, such as database records of titles or filenames, only one textual region would be used; in the first, either a "Document Title" or a "Standard" region type would be used, depending on how the database was being queried, that is, the presentation style of the information as a title or as standard text (such as if it were being displayed in a page that contained a list of database fields), and in the second, a "Standard" region type would be used for interface display in lists (other region types might be used at other times) (note that in any use cases when it is in a "Standard" textual region, it would still have the text type Title)). A textual region is a section of content that has one semantic componency, <em>e.g.</em> the body of a document or the title; a document is therefore comprised of texts.</p>
     <ul>
@@ -1575,7 +1625,7 @@ The extensive focus on the information technology aspects in the proposal is lar
     <p>A node is a document, represented as a sequence of Dcs, stored in the EITE system. A document created by an individual would presumably, when stored as a node, have additional information not managed by the individual, such as who has the right to read and edit it. Thus, the document an individual would work with would be stored as a portion of a larger document representing its corresponding node. Because the system is append-only, nodes would have revisions, representing each time it was changed. For letter-by-letter changes, produced while typing without saving, instead of saving a new revision, letter-by-letter change tracking and storage could be used, such as is used by Etherpad.</p>
     <p>Various fully featured ways to interact with the system should be provided. For instance, a graphical interface, a command-line interface, and a UNIX-style "everything is a file" interface. (Filesystems, especially APIs exposed as filesystem entities have their own challenges and risks, such as confusing scripts that aren't designed to work with anything except plain old files, having unusual structures such as files not present in any directory, infinite directory trees resulting from hardlinks to directories, files with multiple forks, or named pipes, and if providing nodes by filename, having files and directories with the same names or directories with a data fork; these issues will need work and research to resolve well and provide good user experiences.)</p>
 
-    <h7>Complex Dc sequences, Sequence Builders, and Dynamic Sets</h7>
+    <p>@3 Complex Dc sequences, Sequence Builders, and Dynamic Sets</p>
 
         <p>A complex sequence of Dcs could be built using special-purpose input tools for constructing them. For instance, purpose-built tools could be provided for constructing a sequence of Dcs representing a mathematical equation, or a sequence of Dcs representing a given time or color.</p>
         <p>Similarly, a special type of sequence builder could be used to build sets of values. For instance, for selecting a document to send to someone, a document set builder dialog could be provided. It would allow selecting one or more documents to send manually, or selecting one or more documents by specifying rules for their selection. Then, the set containing the chosen node or nodes (optionally, at their present revision) is saved as a node; that set node is then provided to the person one is communicating to; the same interface could be used for selecting files for working with in an app. Sets could have restrictions, such as regarding how many documents they could contain, whether they could contain complex structures (such as a directory tree), whether one document could be swapped out with another or not, or whether the set should automatically gather new nodes matching the specified rules. Sets could also be driven by search criteria (<em>e.g.</em> the most relevant 10 nodes for a given keyword or given Boolean search conditions, or all four nodes with type Musician and a "is member of" relationship to "The Beatles", or the rapidly changing set of nodes with type Musician and a current or past "is member of" relationship to "Yes"), or built programmatically from new or existing nodes. Sets could also hold non-node strings. (Node IDs, as with everything else, can be considered as special cases of strings.) This would allow file uploads, searches, etc. to all be driven using the same basic user interface module, which would essentially be an extension of traditional file pickers. The set node would have a Dc sequence representation, as do all nodes, so this is really a Dc sequence builder. Like anything else in EITE, by virtue of being an append-only system, a set could "time travel": a set could display its contents as they would be at any past time. Another application of the set builder could be creating a document that displayed the current top 10 tracks on the Billboard Hot 100 — a set could be created representing the top 10, and a rule could be created if desired to deal with the condition if the Hot 100 was discontinued: the set could be configured to return nothing, to return a fixed list, to return the top 10 from the final edition of the charts, <em>et cetera</em>. A set builder could also be used to select dynamic and non-finite groups of things, such as the set of all integers, or all strings matching a given language syntax; this ability would be similar to the lazy evaluation used frequently in functional programming.</p>
@@ -1755,8 +1805,16 @@ while lt n/i count as/temp
             <dt>r/s/strCharAtPos s/input n/index</dt><dd>Give the character at index bytes (=characters — no Unicode support here, sorry) into input</dd>
         </dl>
     <h7>Arrays</h7>
-<h5>Information Technology Software Environment: Implementation components</h5>
+<h5></h5>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <table>
 <thead><tr><th>Component</th><th>Implementation language</th><th>Description</th><th>Code location</th></tr></thead>
@@ -1775,8 +1833,16 @@ while lt n/i count as/temp
 </tbody>
 </table>
 
-<h5>Information Technology Software Environment: Interface Specification</h5>
+<h5></h5>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <h6>Purpose of this document</h6>
     <p>The EITE specification indicates the various interfaces that an EITE implementation provides: APIs and tools for humans. The specific manner of implementation of these is not described here. (Partial implementations could be possible that, for instance, only provide importing and exporting (without running) documents, or that omit some supported formats, or that do not provide the tools.) The main EITE implementation software attempts to be a full implementation of this specification.</p>
@@ -1881,8 +1947,16 @@ while lt n/i count as/temp
     <p>Here is a screenshot of the test runner for the Web implementation (found in web/tests.htm in the EITE installation root) while running the test suite:
         <img src="assets/0b63149bc8a9c5bdb2e90c9aeae6be4ee706ccb57c23b5e94d4973cb1a6d2dbfbd16ded7eae5b24ae50970c7f4de99594e4b3209e362e17318845aaeedc38f6e.png" alt="Screenshot of test runner" />
     </p>
-<h5>Information Technology Software Environment: Native document format</h5>
+<h5></h5>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <h6>Objective</h6>
     <p>Develop a machine-readable language that can be used as an equivalent representation of documents represented as sequences of Dcs, for easier reading and editing by humans (using an ordinary text editor and conversion tool). It should also be able to be implemented using and transpiled into StageL.</p>
@@ -1914,13 +1988,15 @@ while lt n/i count as/temp
                     </ul>
                 </li>
             </ul>
+            </ul>
+
             <p>The remaining list entries are aliases (alternate names for the characters, for ease of look-up).</p></p>
         <p>The "Description" column contains additional comments regarding the Dc.</p>
         <p>Three columns' contents are directly inherited from the Unicode Standard: Combining class (inherits Unicode's "Canonical_Combining_Class property"), Bidirectional class (inherits Unicode's "Bidi_Class" property), and Type (inherits Unicode's "General_Category" property). The "Simple case mapping" and "Script" columns should also be inherited from Unicode in some manner, but are not at present. For characters not included in Unicode, a reasonable value is chosen in the pattern of the values used by Unicode. If there are discrepancies between this value and Unicode's value for a given character that is in both sets, this should be reported as an error in the EITE Language standard. Unicode's values should take precedence.</p>
         <p>"Type" column values also extend the Unicode Standard's possible values with the "!Cx" category, denoting characters that do not fit neatly into Unicode's existing categories.</p>
     <h7>Notes on specific Dcs</h7>
         <h8>Dcs 241–245: Mode indicators</h8>
-            <p>Inclusion of the mode indicators in documents is <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts. This lets the resulting documents more concise and readable.</p>
+            <p>Inclusion of the mode indicators in documents is <em>optional</em>. The selected mode expresses information about the document's expected execution environment. These modes are shortcuts that set up the environment in advance so that the document does not need to contain specific code to set up these contexts. This lets the documents making use of these indicators be more concise and readable.</p>
         <h8>Dcs 246–255: Source formatting control</h8>
             <p>Dcs 246 through 255 control the formatting of the ELS format version of a document.</p>
 <h6>Document formats</h6>
@@ -1929,7 +2005,7 @@ while lt n/i count as/temp
     <p>There is a one-to-one correspondence within a given version of the specification and implementation between normalized dcBasenb, ELS, ELAD, ELQ, DELQ, and SELQ files (for any given document in one of those formats, there is only one way to represent it in the other formats), but not for ERD files (because ERD files can only represent a subset of EITE Language documents). That means that documents can be losslessly round-trip-converted between those six formats. <em>However</em>, when converting from an ELS file, if it does not have a version specified, its behavior may change due to changes in the mapping between source code and Dc IDs. Source form should be able to represent syntactically invalid documents unambiguously. Whether structurally invalid source-form documents should be able to be represented as structurally valid Dc sequences is debatable.</p>
     <p>DcBasenb files are a specific interpretation of the private-use-area characters in Unicode text.</p>
     <p>ELAD, ELS, ELQ, DELQ, and SELQ files are subsets of ASCII text files, with lines delimited by 0x0A (line feed). Bytes 0x00 through 0x09, 0x0B through 0x1F, and 0x7F through 0xFF (all ranges inclusive) are disallowed. Files must end with 0x0A. This may later be changed to use UTF-8.</p>
-    <p>A less strictly specified formats has an implementation available: "integerList" (.dcil), which is a list of ASCII digits representing Dcs, with each Dc followed by a space (including the last one), and no trailing newline or comments.</p>
+    <p>A less strictly specified format has an implementation available: "integerList" (.dcil), which is a list of ASCII digits representing Dcs, with each Dc followed by a space (including the last one), and no trailing newline or comments.</p>
     <p>At the end of each format's summary (except for EMR), a simple "Hello, World!" document is given in the format.</p>
     <h7>EITE Language as Unicode Private Use Characters (dcBasenb), .dcbnb.utf8.txt (assuming UTF-8 representation of Unicode)</h7>
         <p>This format uses Unicode characters for Dcs that have losslessly roundtrippable Unicode equivalents, while representing Dcs that are not mappable to Unicode as sequences of Unicode private use area characters. Note that there are multiple possible ways a given Dc or sequence of Dcs can be represented as private use area characters, so only the normalized form (the form output by the implementation) is strictly roundtrippable to Dcs, and only for a given version of the specification and implementation (incidentally, the implementation for importing them does not verify that the normalized form was used and warn otherwise, but it should).</p>
@@ -1942,10 +2018,10 @@ while lt n/i count as/temp
         <pre><code>say 'Hello, World!'</code></pre>
         <p>which would be</p>
         <pre><code>256 258 260 262 # . . . .
-<p>264 263 57 86 # . . H e</p>
-<p>93 93 96 30 # l l o ,</p>
-<p>18 72 96 99 # . W o r</p>
-<p>93 85 19 261 # l d ! .</p>
+264 263 57 86 # . . H e
+93 93 96 30 # l l o ,
+18 72 96 99 # . W o r
+93 85 19 261 # l d ! .
 <p>259 # .</code></pre></p>
         <p>in Dcs, or even more simply the <code>say</code> could be omitted since literals are printed by default: <code>'Hello, World!'</code>.</p>
     <h7>EITE Language in ASCII documents (ELAD), .elad</h7>
@@ -1954,14 +2030,14 @@ while lt n/i count as/temp
     <h7>EITE Language sequence files (ELQ), .elq</h7>
         <p>A list of Dc numbers. Four Dcs are given per line, separated by spaces.</p>
         <pre><code>57 86 93 93
-<p>96 30 18 72</p>
-<p>96 99 93 85</p>
+96 30 18 72
+96 99 93 85
 <p>19</code></pre></p>
     <h7>Documented EITE Language sequence files (DELQ), .delq</h7>
         <p>A variant of the EMS format for easier reading: after each line, the printable ASCII equivalent of each Dc is given following <code>0x202320</code>, each separated from the next by a space. If there is no printable ASCII equivalent, or the character is a space, "." is used instead.</p>
         <pre><code>57 86 93 93 # H e l l
-<p>96 30 18 72 # o , . W</p>
-<p>96 99 93 85 # o r l d</p>
+96 30 18 72 # o , . W
+96 99 93 85 # o r l d
 <p>19 # !</code></pre></p>
     <h7>Source-Documented EITE Language sequence files (SELQ), .selq</h7>
         <p>A variant of the ELQ and ELS formats for easier reading: the ELS source version is given in a comment in the style of the DELQ format, but the number of Dcs on each line is determined by the source lines to which they correspond.</p>
@@ -1980,7 +2056,7 @@ while lt n/i count as/temp
             <dt>List</dt><dd>A list is an ordered list of objects.<!-- An inline list is begun by <code>[</code> and terminated by <code>]</code>. Example: <code>listName=["a" [5 6] $b]; say $listName[0]</code> stores three Objects in a list named <code>listName</code> and prints <code>a</code>. Objects can be given custom identifiers for addressing them by separating them using <code>: </code>, in which case they should be additionally separated by <code>, </code>. Example: <code>listName=[foo: "a", bar: [5, 6], baz: b]; say $listName[foo]</code>.--></dd>
             <dt>String</dt><dd>A string is a list of Dcs. Because all Dcs can be used in strings, any data type can be cast to a string, and all data types internally <em>are</em> strings of Dcs.<!-- An inline list is begun by <code>"</code> and terminated by a second <code>"</code>. In source form, <code>"</code> and <code>\</code> must be escaped using <code>\</code>. Example: <code>stringName="Hello, \"World\"!"</code> stores the string <code>Hello, "World"!</code> in a string named <code>stringName</code>. Strings can be concatenated by placing them beside each other: <code>a="foo"; b="baz"; say $a"bar"$b</code> prints <code>foobarbaz</code>. --></dd>
             <dt>Routine</dt><dd>A routine is a set of instructions for a computer to follow as part of the process of interpreting a document. Similar concepts are known as functions or subroutines in most programming languages, or as methods when used within objects. Routines have an associated structure that indicates what parameters may be passed to it.<!-- >; they will be accessible through a list named <code>!par</code>, and if named, then also through their names. Specifying a return type for a routine is optional. If none is specified, it will be treated as "void", meaning no return type is expected. It is denoted by <code>()</code> followed by a block of statements, with its structure, if desired, within the parentheses. Example: <code>String foo(String, String qux?, *){say $!par[1]$!par[2]$qux}; foo("bar" "baz"); foo("bar" 6 "qux") # qux is 6, param 0 is bar, param 1 is 6, and param 2 is qux; foo(qux=6 "bar") # qux is still 6, but now parameter 0 is 6 and 1 is bar</code> represents an unnamed (positional-only) string parameter, an optional string parameter named "qux", and an unknown number (zero or more) of additional parameters of any type, and prints <pre><code>bazbaz
-<p>6qux6</p>
+6qux6
 <p>bar6</code></pre>. Because literals are printed by default when at the beginning of a statement, the "invoke" routine must be used to invoke a routine in some cases, such as when referencing a routine by a name stored in a variable or constant: <code>a="I! Am! An! Awkward! Identifier!"; $a(){say "blob"}; invoke $a</code>. An alternative syntax for routine invocation, omitting parentheses, can be used if desired: <code>foo(String, String qux?){}; foo qux=6 bar</code> --></dd></p>
             <dt>Operator</dt><dd>An operator is a short notation or syntax pattern for some common routines<!-- (e.g., <code>Number a + Number b</code> in place of <code>add(Number a, Number b)</code>, or <code>if true; then say 'Hello, World!'; else die</code> in place of <code>if(true, (){say 'Hello, World!'}, (){die})</code>) -->.</dd>
             <dt>Identifier</dt><dd>An identifier is a name for an object.<!-- They are indicated by <code>$</code>, except for identifiers for routines, which do not have the <code>$</code> prefix. Before the <code>$</code> a type signature is often present. Except for routines, <code>!</code> following the <code>$</code> indicates a language-defined identifier, and must be escaped if used as the first character of a custom identifier. For routines, the pattern is inverted: <code>!</code> before an identifier indicates that a custom routine is being referenced (it must be included in calls to <code>invoke</code>, as well). <code>(</code> following the <code>$</code> indicates a special value, not a normal identifier, using Bash's syntax: <code>$(say "foo"; say "bar")</code> represents the output of the code between the <code>(</code> and the <code>)</code>, and <code>$(&lt;foo)</code> represents the contents of the file <code>foo</code>.--></dd>
@@ -2114,26 +2190,26 @@ while lt n/i count as/temp
 <h6>Basic implementation process flow</h6>
     <p>This diagram shows conceptually how data flows at a high level in the process of running an EITE document using an interpreter (a compile-then-run system would use different data flows, but the overall effect would be equivalent). The non-bracketed elements represent programmed processes. The bracketed elements represent data structures. A circle ○ represents data storage persists for the lifetime of the document being open or being executed (not necessarily in RAM: for a long-running background task, like a periodic mail fetcher, this data could be moved to disk or the cloud if useful to free up local memory). Other data structures can be buffered/streaming FIFOs that discard input as it becomes unneccesary. The arrows represent data flows into and out of data storage or the system. This diagram assumes a Dc sequence as input; other forms of input would need a separate conversion/interpretation step for this.</p>
     <pre>         External I/O: document source ──────────────╮
-               <p>(as Dc sequence)                      │</p>
-                                                     <p>↓</p>
-   <p>[○ Document execution state] ╮    ╭ [○ Document as Dc sequence] ←╮</p>
-                <p>↑               ↓    ↓                              │</p>
-                <p>╰───── Document execution loop:  ───────────────────╯</p>
-  <p>Other External I/O ← iterates over tokens (Dcs)</p>
-                                   <p>↓</p>
-                              <p>Renderer: converts and</p>
-                              <p>and writes to renderer</p>
-                              <p>buffer visible document</p>
-                              <p>elements</p>
-                                     <p>↓</p>
-                              <p>⎡ Renderer buffer: holds     ⎤</p>
-                              <p>⎢ representation of document ⎥</p>
-                              <p>⎢ in the format desired for  ⎥</p>
-<p>External I/O: render target ← ⎢ output (terminal text for  ⎥</p>
-<p>(e.g. terminal or browser)    ⎢ a CLI, HTML for a browser, ⎥</p>
-                              <p>⎢ bitmap for a raster        ⎥</p>
-                              <p>⎢ monitor or HTML Canvas,    ⎥</p>
-                              <p>⎢ other formats for export,  ⎥</p>
+               (as Dc sequence)                      │
+                                                     ↓
+   [○ Document execution state] ╮    ╭ [○ Document as Dc sequence] ←╮
+                ↑               ↓    ↓                              │
+                ╰───── Document execution loop:  ───────────────────╯
+  Other External I/O ← iterates over tokens (Dcs)
+                                   ↓
+                              Renderer: converts and
+                              and writes to renderer
+                              buffer visible document
+                              elements
+                                     ↓
+                              ⎡ Renderer buffer: holds     ⎤
+                              ⎢ representation of document ⎥
+                              ⎢ in the format desired for  ⎥
+External I/O: render target ← ⎢ output (terminal text for  ⎥
+(e.g. terminal or browser)    ⎢ a CLI, HTML for a browser, ⎥
+                              ⎢ bitmap for a raster        ⎥
+                              ⎢ monitor or HTML Canvas,    ⎥
+                              ⎢ other formats for export,  ⎥
                               <p>⎣ etc.)                      ⎦</pre></p>
 
 
@@ -2156,7 +2232,9 @@ while lt n/i count as/temp
             <li>…</li>
         </ul>
     </li>
+    </ul>
     <li>Media consumption and browsing
+
         <ul>
             <li>Reading and interacting with documents/apps</li>
             <li>Browsing a Web site</li>
@@ -2187,7 +2265,9 @@ while lt n/i count as/temp
             <li>…</li>
         </ul>
     </li>
+    </ul>
     <li>Document creation and sharing
+
         <ul>
             <li>Writing a paper</li>
             <li>Collaborative document editing / creation</li>
@@ -2219,7 +2299,9 @@ while lt n/i count as/temp
             <li>…</li>
         </ul>
     </li>
+    </ul>
     <li>Working with structured information (this is mostly also document creation / management)
+
         <ul>
             <li>Managing a genealogy using Ember records</li>
             <li>Managing a calendar / schedule</li>
@@ -2240,7 +2322,9 @@ while lt n/i count as/temp
             <li>…</li>
         </ul>
     </li>
+    </ul>
     <li>Using resources/tools
+
         <ul>
             <li>Dictionary</li>
             <li>Thesaurus</li>
@@ -2262,7 +2346,9 @@ while lt n/i count as/temp
             <li>…</li>
         </ul>
     </li>
+    </ul>
     <li>Management
+
         <ul>
             <li>Database creation and administration (this is really “Document creation”, but also listed here)</li>
             <li>Network administration</li>
@@ -2282,7 +2368,9 @@ while lt n/i count as/temp
             <li>…</li>
         </ul>
     </li>
+    </ul>
     <li>Exchange
+
         <ul>
             <li>Buying and selling goods</li>
             <li>Trading stocks and cryptocurrencies</li>
@@ -2292,7 +2380,9 @@ while lt n/i count as/temp
             <li>…</li>
         </ul>
     </li>
+    </ul>
     <li>Searching
+
         <ul>
             <li>Answers (<em>e.g.</em> facts, math questions)</li>
             <li>Finding media (<em>e.g.</em> news, movies, music, etc.)</li>
@@ -2300,7 +2390,9 @@ while lt n/i count as/temp
             <li>…</li>
         </ul>
     </li>
+    </ul>
     <li>Guided time use and content consumption
+
         <ul>
             <li>Notifications</li>
             <li>Emergencies</li>
@@ -2332,7 +2424,9 @@ while lt n/i count as/temp
             <li>…</li>
         </ul>
     </li>
+    </ul>
     <li>Communication
+
         <ul>
             <li>Instant messaging</li>
             <li>Email</li>
@@ -2351,17 +2445,41 @@ while lt n/i count as/temp
         </ul>
     </li>
 </ul>
+</ul>
 
-<h5>Information Technology Software Environment: User research</h5>
 
+<h5></h5>
+
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
+
+<p>Two interactive mockups are available for this project, to allow you to explore a more completed version of the proposed tools as if you were using them.</p>
+<p>The earlier interactive prototype is available in work-docs/Mockups/12799819e/index.html, while the more recent one is available in work-docs/Mockups/Web-Mockup/index.html.</p>
+
+<h5></h5>
+
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <p>This section documents the results of various user research conducted for the information technology environment.</p>
 
-<h6>User perspective interview results</h6>
+<p>@2 User perspective interview results</p>
 
     <p>To learn about how viable and helpful this project would be, I interviewed two people to learn about their use of information technology systems and how they would be affected by the tools proposed here.</p>
 
-    <h7>Interview questions</h7>
+    <p>@3 Interview questions</p>
 
         <ol>
             <li>What tasks do you frequently use information technology (IT) systems to complete? A few examples of information technology systems, for purposes of this question, are computers, telephones, portable music players, and fax machines.</li>
@@ -2381,10 +2499,10 @@ while lt n/i count as/temp
         </ol>
         <p>Thank you for participating in the interview!</p>
 
-    <h7>Responses</h7>
+    <p>@3 Responses</p>
 
         <p>Note that these responses have been lightly edited to make them clearer. The meaning of the responses is unchanged.</p>
-        <h8>Interviewee 1</h8>
+        <p>@4 Interviewee 1</p>
             <p>Interviewee 1 works as a church organist and piano teacher.</p>
             <ol>
                 <li>Computer: Researching music repertoire and performance techniques for my work; learning repertoire; listening to music for work. Telephone: Business and personal contacts.</li>
@@ -2402,7 +2520,7 @@ while lt n/i count as/temp
                     <li>Trying to share a photo with commentary attached or a musical composition with my questions attached and also to get a critique.</li>
                 </ol></li>
             </ol>
-        <h8>Interviewee 2</h8>
+        <p>@4 Interviewee 2</p>
             <ol>
                 <li>I use IT systems for many tasks:
                     <ul>
@@ -2447,7 +2565,9 @@ while lt n/i count as/temp
                         <li>To alter photos</li>
                     </ul>
                 </li>
+                </ul>
                 <li>My work is in music, and I use a computer and an iPhone extensively to support that work, as can be gleaned from the list above.<br />
+
                 <p>As long as images are relatively static, I can manage OK visually, although my eyes will get tired. When things are moving quickly, it is a challenge even when my eyes are fresh. Watching a movie with subtitles can be a challenge, for instance.</li></p>
                 <li>Because I often interact with others via video chat, internet connection issues can often present challenges.<br />
                 <p>Because I use IT systems so extensively in my work, I am often challenged by the fact that my formative years did not include "thinking like a computer." In other words, using IT systems is not second nature to me.</li></p>
@@ -2465,22 +2585,22 @@ while lt n/i count as/temp
                     <p>Also, it would be wonderful to be able to add recorded verbal content (or even video) as a response to emails or other documents received from others. It is often easier and faster to speak impressions and complex responses to things than to write them.</li></p>
                 </ol></li>
             </ol>
-        <h7>Summary of findings</h7>
+        <p>@3 Summary of findings</p>
             <p>These interview responses show that various aspects of the proposed information technology system would be helpful. The interviews find some parts of the project helpful and others not necessarily so for their specific goals. Consequently, to make the proposed system ideal for all users, a method should be provided to allow users to choose which of its capabilities they would like to use. That way, the interface they have is the most relevant to them personally, and thus the most helpful in solving the particular problems they face.</p>
 
-<h6>Personas</h6>
+<p>@2 Personas</p>
 
     <p>While these personas are based on the interview respondents, they are somewhat fictionalized.</p>
-    <h7>Persona 1</h7>
+    <p>@3 Persona 1</p>
         <p>Lara is a 37-year-old professional church organist. They make extensive use of computers to manage business communications, and to simulate an organ for practice at home. Their work often requires communicating with their employer regarding music and business. To discuss music with their employer, it is often not practical to use a computer, and it is necessary to meet in person, due to the limitation of current information technology systems. If computers could provide tools for easily sharing and collaborating on scores and recorded performances of those scores, Lara’s job would be made easier by reducing travel time and the requirement of meeting in person to work on things that do not actually need an in-person meeting.</p>
-    <h7>Persona 2</h7>
+    <p>@3 Persona 2</p>
         <p>Joseph is a 40-year-old film teacher at a large public university. They use non-linear editing software in computers to edit films, and to demonstrate film editing in class to their students, as well as to work on separate projects for independent clients. Because the people they work for often have a hard time communicating what they want in a project, several iterations of work and feedback are needed before a finished product is delivered. Consequently, Joseph would be better able to communicate with students and clients if they could work with film in the way their non-linear editing software allows, but collaboratively online with the clients and students, like cloud-based collaborative word processors allow. If there were a single editing tool for text and films, the same collaboration abilities from one medium would be available in others, making Joseph’s job a lot easier and allowing more efficient communication between Joseph and their clients.</p>
 
-<h6>Proposed user acceptance testing strategy</h6></h6>
+<p>@2 Proposed user acceptance testing strategy</h6></p>
 
     <p>To test the viability of this project, I would suggest developing a functional instance of it, and presenting it to a range of users who work with various challenges to using information technology systems. For testing the general viability of the project, it would not be necessary to fully implement all the features that would be needed to make it competitive with other information technology systems; rather, it would only be needed to implement a representative subset of capabilities that would allow the users to explore the general interface and the system’s basic interaction structure. To gather data on challenges that users might encounter in using the system, the testers should be presented with a task to complete using the system, and asked to give commentary on their experience of the tool, and any frustration they encounter during the process, while they work on completing the assigned task. An article from the Nielsen Norman Group states that “A scripted study of product usage is done in order to focus the insights on specific usage aspects, such as on a newly redesigned flow.” [Rohrer, 2014] Consequently, that seems like the correct user testing strategy for determining the viability of this proposal, and finding roadblocks in its usability.</p>
 
-<h6>User Feedback on Edit Tool Web extension (March 4, 2019)</h6>
+<p>@2 User Feedback on Edit Tool Web extension (March 4, 2019)</p>
     <p>I have seen and attempted to use two versions of this tool. The earlier version worked more completely for testing purposes, and from that I got a clear idea of how the tool might be useful, both in general, and for me personally.</p>
     <p>It would be helpful to have a succinct description of the various elements and their relationships, as the layout does not make that immediately clear. For instance, the left-to-right orientation of the tabs at the bottom of the page at first suggested to me that perhaps each of the three would be used in any one application, whereas their use is not sequential.</p>
     <p>It seems as though an unnecessary amount of space is allowed for the “Click to Insert” list, both vertically and horizontally. The list itself is not in an obvious order, and so locating a desired value takes more time than seems ideal. A search feature of this list might make it more navigable.</p>
@@ -2490,13 +2610,21 @@ while lt n/i count as/temp
     <p>I might also use this tool when collaborating with other musicians and writers for instant messaging musical ideas, especially when editing or suggesting changes for performance.</p>
     <p>And it will be great to have the option of displaying mere italics in Messages on my iPhone!</p>
 
-<h6>Storyboard</h6>
+<p>@2 Storyboard</p>
     <a href="http://futuramerlin.com/image-001.png">[http://futuramerlin.com/image-001.png]: <img src="assets/3660a46204b0983338a08f457310bc9e0e8a5dbdc8fa16aee28120cd695c1d388b6860ee1b654d80e285caa1c0e883faa38a283a3d6583cebb652f154cb7954b.png" alt="I'm working on making a new computer game. I made a great look for a Web site for the game in a word processor. But now, the word processor won't let me put my new game into the file!"></a>
     <a href="http://futuramerlin.com/image-002.png">[http://futuramerlin.com/image-002.png]: <img src="assets/04d409aa3a41c8aa02f5887864f3eb9346b8e984635651f23a54b196da56a8d01558f8a0191e129debccdc2aa258367b43d50d07681d60b16bc3a7f8e9d9b18d.png" alt="That doesn't make any sense. Computers can hold text and games, so why not both in one document? Oh! I remember a tool someone mentioned to me. They said it is a computer document editing tool that can hold many types of data."></a>
     <a href="http://futuramerlin.com/image-003.png">[http://futuramerlin.com/image-003.png]: <img src="assets/41085b20ef9329c69201d81f73219fadbf51b9fdd17edffe2d9ae89b72c74342762b64bb90ac4abb2b754635d62140edf30a27b524cb6a997685c6fadaebc26b.png" alt="Great, now I can have the game in my document, and post it to the Web like I originally wanted! Problem solved!"></a>
 
-<h5>Information Technology Software Environment: Implementation platform documentation</h5>
+<h5></h5>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <table>
 <thead>
@@ -2511,8 +2639,16 @@ while lt n/i count as/temp
 </table>
 
 <h5>Commentaries</h5>
-<h6>Information Technology Software Environment: Commentary: Decentralized networked systems: Ad-hoc Computer Network Negotiation</h6>
+<h6></h6>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <p>Ad-hoc computer network negotiation is an emerging technology that holds significant promise for facilitating access to information and communication services in situations where traditional centralized Internet connectivity is limited or unavailable, such as in rural areas, during natural disasters, in war zones, and in other situations where traditional centralized Internet connectivity is limited or unavailable. The premise of the technology is to find ways to allow electronic equipment to communicate and establish connections to one another without depending on a central authority or centrally maintained resources such as an Internet service provider, commercially operated cables, or a name authority service. The technology allows electronic equipment to communicate and establish connections to one another without depending on a central authority or centrally maintained resources. There are some technical barriers to achieving the full potential of this technology, but various developments are leading towards its more widespread adoption.</p>
 <p>Research into ad-hoc computer network negotiation is ongoing, and implementing this widely, effectively, and practically is a difficult problem. In an ad-hoc computer network, individuals’ privately owned, portable equipment could perform all the necessary routing to establish a connection to any other node of the network.</p>
@@ -2542,8 +2678,16 @@ while lt n/i count as/temp
 <p>The most likely solution is that one or more large equipment manufacturers will see the potential benefit of the technology and implement it in their products despite the additional cost. If it is provided and made available with new equipment when it is purchased, its benefits would be felt at least in part by consumers, driving other manufacturers to adopt it. Another possible solution for this issue is that governments, businesses, nonprofits, or other organizations will develop and produce equipment implementing this technology and use it for their work, and that this would provide the seed needed for its adoption.</p>
 <p>In any regard, this technology has huge potential benefits, because of the access to information it can provide: this facilitates, makes more effective, and democratizes access to emergency response and safety, business work in areas without established infrastructure, personal access to education and communication technologies, military operations, and the many other benefits afforded by access to the Internet.</p>
 
-<h6>Information Technology Software Environment: Commentary: EITE in the context of new media studies: Alignment of the project approach to the traits of the currently emerging new media</h6>
+<h6></h6>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <p>Henry Jenkins's article "Eight Traits of the New Media Landscape" (<a href="http://nmdprojects.net/teaching_resources/jenkins_eight_traits_of_new_media.pdf">http://nmdprojects.net/teaching_resources/jenkins_eight_traits_of_new_media.pdf</a>) provides eight traits that its author observes in the prominent currently emerging new media. This section of the proposal evaluates this project's expression of this set of traits.</p>
 <p>The first of these traits is <em>innovation</em>. This project proposal is arguably merely an extension and refinement of existing systems, and so may not be considered true innovation, depending on perspective. Even in that case, however, because those existing systems are themselves innovative, this project remains a work within new media, even if it is not itself a new medium.</p>
@@ -2556,13 +2700,30 @@ while lt n/i count as/temp
 <p>The eighth trait is <em>inequality</em>. Unfortunately, this likely may affect the project initially, particularly due to economic barriers to access to information technology systems. Working to reduce undesired inequality as much as possible should be a design goal of the project, while promoting diversity and freedom.</p>
 
 
-<h6>Information Technology Software Environment: Commentary: Implementation challenges; state of the project</h6>
+<h6></h6>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+
+<p>An implementation of a simple state-machine–driven interpreter of the token-based document format specification for the information technology environment aspect of the project is planned. There have been several previous attempts at developing this, but they have not worked out for various reasons. The first implementation was in PHP, and had poor architecture and rather unmaintainable code. A second attempt in Java was excessively ambitious in attempting to parse a programming-language-style document format interactively, without any specification and only minimal planning or architecture, as well as being highly overengineered. An attempt in PHP and JQuery to build a user interface toolkit based on these principles crashed and burned due to poor code architecture and attempting to “put the cart before the horse” in developing a UI toolkit without any specification for it, and without consideration of the existing (specified) aspects of the format. A fresh attempt in PHP stalled due to also being rather unmaintainable and awkwardly written, specifically in its use of dynamically written JavaScript, and trouble storing arbitrary binary content, independent of character encoding, in HTML text boxes (which are really the wrong tool for the job). An implementation in Bash was considered and a command-line interface designed for it, but probably this will simply become a wrapper around the JavaScript implementation. The JavaScript implementation here will attempt to avoid these issues by only implementing what has already been specified, not attempting to handle the programming-language-style format yet, using extensive unit tests (which was very helpful in the Java implementation), and using modularized code (which has been helpful in successful projects undertaken in the interim), and by planning the architecture of the code (shown in the diagram below) before implementing it. A staging language has been implemented in JavaScript to allow the code written for the project to be trivially portable to other platforms and languages.</p>
 
 <p>What has been developed so far, practically speaking, is simply a technology demo and beginning of an implementation of a tool with larger scope. Consequently, it is rather limited in its practical utility, making it not suitable for a general audience, and mainly useful as a tool for demonstrating some of the principles used in this project, and as a core starting-point for the implementation of a more substantial and practically useful set of capabilities. StageL and the StageL-implemented library developed so far provide a solid technological foundation for further implementation of this project, and have practical applications outside of it as well.</p>
 
-<h5>Information Technology Software Environment: References</h5>
+<h5></h5>
 
+
+<p class="breadcrumbs">Page location:
+    <span><a href="http://futuramerlin.com/components.htm">[http://futuramerlin.com/components.htm]: Core project components</a></span>
+    <span><a href="http://futuramerlin.com/specification">[http://futuramerlin.com/specification]: Specification</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech">[http://futuramerlin.com/specification/engineering-and-tech]: Engineering and Technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology">[http://futuramerlin.com/specification/engineering-and-tech/information-technology]: Information technology</a></span>
+    <span><a href="http://futuramerlin.com/specification/engineering-and-tech/information-technology/software">[http://futuramerlin.com/specification/engineering-and-tech/information-technology/software]: Information Technology Software Environment</a></span>
+</p>
 
 <ul>
     <li>[WHO 2017] WHO. “10 facts on dementia”. April, 2017. <a href="http://www.who.int/features/factfiles/dementia/en/">http://www.who.int/features/factfiles/dementia/en/</a></li>
