@@ -1418,7 +1418,7 @@ The extensive focus on the information technology aspects in the proposal is lar
 <h5>Information Technology</h5>
 <h6>Hardware</h6>
 <h6></h6>
-<h7></h7>
+<h7>Information Technology Software Environment: Introduction and overview</h7>
 
 
 <h8>Introduction</h8>
@@ -1545,13 +1545,13 @@ The extensive focus on the information technology aspects in the proposal is lar
     <h9>Summary</h9>
         <p>Current computerized information technology systems do not live up to their full potential. So, by developing tools to allow combining media types together, new opportunities arise in the use of information technology systems, including in structured data, the arts, and an append-only decentralized archive of a community's knowledge, giving many advantages in usability, accessibility, and preservation.</p>
 
-<h7></h7>
+<h7>Information Technology Software Environment: Installation</h7>
 
 
 <p>Using the ebuild to install the software through Portage is suggested. Simple installation (untested) in case Portage or the ebuild is not suitable for your system: <code>git clone --depth 1 https://github.com/ethus3h/ember-information-technology-environment; cd ember-information-technology-environment; make autodep; ./configure; make; sudo make install</code>. <code>curl</code> must be available already.</p>
 <p>If you just build EITE without installing it, the built software will be placed in the "built/" folder. The structure of that folder corresponds to the /usr/share/eite/ folder when the software is installed. This is what is meant by the "EITE installation root" in this documentation.</p>
 
-<h7></h7>
+<h7>Information Technology Software Environment: Design goals</h7>
 
 
 <p>The goal of developing the EITE is to provide an information technology system that allows various types of data to be given a first-class role. The proposed system is a centralized but non-centralization-dependent append-only information store, a computer operating system integrated with that information store, and related specifications.</p>
@@ -1564,7 +1564,7 @@ The extensive focus on the information technology aspects in the proposal is lar
 <p>Another goal of this work is to create an information technology system that will help guide people with dementia and other mental disabilities. The WHO estimates that 47 million people have dementia. [WHO 2017] Another group of people who would likely find such tools useful is those with autism-spectrum learning disabilities. Entire worldwide population statistics for autism-spectrum disorders are not accurately known [Miller-Wilson, n.d.], but according to the WHO [WHO 2017b], estimated 1 in 160 children worldwide have autism-spectrum disorders, and according to the NIH [NIH, n.d.], estimated 1 in 68 within the United States. Finally, ordinary computer users would likely be able to benefit somewhat from the same systems, simply because while optimally designed tools may provide the greatest amount of benefit to those with challenges that affect their ability to use current systems, such tools would likely help everyone to some extent.</p>
 <p>Because there are so many people affected by these challenges, and many others would likely benefit as well, there is a large group of people who would potentially find the proposed tools helpful. Consequently, working towards developing such a system is a valuable and important goal. The large potential benefit that could be gained from having such a system could, even if the individual increase in productivity were relatively small, have a substantial impact on the overall ability of humans to be productive and educated. In addition, a smaller group of people who are less able to use current information technology systems would probably see even larger gains in their productivity.</p>
 
-<h7></h7>
+<h7>Information Technology Software Environment: Development practices</h7>
 
 
 <!-- These are the principles the project is intended to follow. I did not follow them during this capstone project, because they do not prioritize creating working prototype software for demonstration, and instead prioritize creating reliable software that aligns with documentation and specification. Consequently, the code in its state at the end of the capstone has a range of capabilities, but is quite unreliable and poorly documented. Future work should adhere to these principles closely to get the software to work well again. -->
@@ -1574,7 +1574,7 @@ The extensive focus on the information technology aspects in the proposal is lar
     <li>Thorough automated unit tests should be provided and kept passing.</li>
 </ul>
 
-<h10>Prerequisites for code to be added to the repository</h10>
+<h8>Prerequisites for code to be added to the repository</h8>
     <ul>
         <li>Code must be readable and documented.</li>
         <li>Code must not cause or have failing tests.</li>
@@ -1582,7 +1582,7 @@ The extensive focus on the information technology aspects in the proposal is lar
         <li>To keep the software in line with the specification, code must address a deviation from the current specification (bug, missing feature, <span class="foreign-text">etc.</span>), and may not contain code unrelated to that.</li>
     </ul>
 
-<h10>How issues should be prioritized</h10>
+<h8>How issues should be prioritized</h8>
     <p>Ordered from highest priority to lowest priority:</p>
     <ol>
         <li>Potential for data loss</li>
@@ -1597,7 +1597,7 @@ The extensive focus on the information technology aspects in the proposal is lar
         <li>Missing features</li>
     </ol>
 
-<h7></h7>
+<h7>Information Technology Software Environment: Implementation principles</h7>
 
 
 <p>One of the fundamental elements of the information technology environment would be the creation of a decentralized information storage system, intended to provide effective and efficient information storage and retrieval (ISR). This would likely use an append-only NoSQL database to store a softly directed concept graph. Most or all knowledge can be effectively represented using two basic structures: nodes and relationships. Relationships would be specific types of nodes. Each node would correspond to a document stored as a sequence of character-like digital identifiers ("Dcs") analogous to both characters in a computer character encoding and to assembly language opcodes, allowing all types of electronic data to be stored as strings. These strings would be able to hold any structured data through the use of specific Dcs, such that when a document was added to the ISR system, it could be indexed deterministically into a separate database which would cache the structured information extracted from that document.</p>
@@ -1611,11 +1611,11 @@ The extensive focus on the information technology aspects in the proposal is lar
 <p>Thorough user group and subgroup support should be provided. This would be especially useful for facilitating collaboration between individuals, such as in business use of the software.</p>
 <p>The EITE should be capable of ad-hoc computer network negotiation to ensure effective and practical decentralized operation.</p>
 
-<h10>Target solution spaces</h10>
+<h8>Target solution spaces</h8>
 
     <p>In summary, any current uses for software above the operating system level are reasonable areas to attempt development. An outline list of some is provided below. (Operating system development and hypothetical software use cases outside of exploration of the possibilities introduced by the novel information representation method may be of interest but are not priorities for this project at this time.)</p>
 
-<h10>Semantic representation</h10>
+<h8>Semantic representation</h8>
 
     <p>There are two principle structural levels for which elements need to be described: documents and texts. A document is a complete unit such as a book or journal article, which would comprise various textual regions (note that in typesetting some items, such as database records of titles or filenames, only one textual region would be used; in the first, either a "Document Title" or a "Standard" region type would be used, depending on how the database was being queried, that is, the presentation style of the information as a title or as standard text (such as if it were being displayed in a page that contained a list of database fields), and in the second, a "Standard" region type would be used for interface display in lists (other region types might be used at other times) (note that in any use cases when it is in a "Standard" textual region, it would still have the text type Title)). A textual region is a section of content that has one semantic componency, <em>e.g.</em> the body of a document or the title; a document is therefore comprised of texts.</p>
     <ul>
@@ -1625,7 +1625,7 @@ The extensive focus on the information technology aspects in the proposal is lar
     <p>A node is a document, represented as a sequence of Dcs, stored in the EITE system. A document created by an individual would presumably, when stored as a node, have additional information not managed by the individual, such as who has the right to read and edit it. Thus, the document an individual would work with would be stored as a portion of a larger document representing its corresponding node. Because the system is append-only, nodes would have revisions, representing each time it was changed. For letter-by-letter changes, produced while typing without saving, instead of saving a new revision, letter-by-letter change tracking and storage could be used, such as is used by Etherpad.</p>
     <p>Various fully featured ways to interact with the system should be provided. For instance, a graphical interface, a command-line interface, and a UNIX-style "everything is a file" interface. (Filesystems, especially APIs exposed as filesystem entities have their own challenges and risks, such as confusing scripts that aren't designed to work with anything except plain old files, having unusual structures such as files not present in any directory, infinite directory trees resulting from hardlinks to directories, files with multiple forks, or named pipes, and if providing nodes by filename, having files and directories with the same names or directories with a data fork; these issues will need work and research to resolve well and provide good user experiences.)</p>
 
-    <h11>Complex Dc sequences, Sequence Builders, and Dynamic Sets</h11>
+    <h9>Complex Dc sequences, Sequence Builders, and Dynamic Sets</h9>
 
         <p>A complex sequence of Dcs could be built using special-purpose input tools for constructing them. For instance, purpose-built tools could be provided for constructing a sequence of Dcs representing a mathematical equation, or a sequence of Dcs representing a given time or color.</p>
         <p>Similarly, a special type of sequence builder could be used to build sets of values. For instance, for selecting a document to send to someone, a document set builder dialog could be provided. It would allow selecting one or more documents to send manually, or selecting one or more documents by specifying rules for their selection. Then, the set containing the chosen node or nodes (optionally, at their present revision) is saved as a node; that set node is then provided to the person one is communicating to; the same interface could be used for selecting files for working with in an app. Sets could have restrictions, such as regarding how many documents they could contain, whether they could contain complex structures (such as a directory tree), whether one document could be swapped out with another or not, or whether the set should automatically gather new nodes matching the specified rules. Sets could also be driven by search criteria (<em>e.g.</em> the most relevant 10 nodes for a given keyword or given Boolean search conditions, or all four nodes with type Musician and a "is member of" relationship to "The Beatles", or the rapidly changing set of nodes with type Musician and a current or past "is member of" relationship to "Yes"), or built programmatically from new or existing nodes. Sets could also hold non-node strings. (Node IDs, as with everything else, can be considered as special cases of strings.) This would allow file uploads, searches, etc. to all be driven using the same basic user interface module, which would essentially be an extension of traditional file pickers. The set node would have a Dc sequence representation, as do all nodes, so this is really a Dc sequence builder. Like anything else in EITE, by virtue of being an append-only system, a set could "time travel": a set could display its contents as they would be at any past time. Another application of the set builder could be creating a document that displayed the current top 10 tracks on the Billboard Hot 100 — a set could be created representing the top 10, and a rule could be created if desired to deal with the condition if the Hot 100 was discontinued: the set could be configured to return nothing, to return a fixed list, to return the top 10 from the final edition of the charts, <em>et cetera</em>. A set builder could also be used to select dynamic and non-finite groups of things, such as the set of all integers, or all strings matching a given language syntax; this ability would be similar to the lazy evaluation used frequently in functional programming.</p>
@@ -1805,7 +1805,7 @@ while lt n/i count as/temp
             <dt>r/s/strCharAtPos s/input n/index</dt><dd>Give the character at index bytes (=characters — no Unicode support here, sorry) into input</dd>
         </dl>
     <h9>Arrays</h9>
-<h7></h7>
+<h7>Information Technology Software Environment: Implementation components</h7>
 
 
 <table>
@@ -1931,7 +1931,7 @@ while lt n/i count as/temp
     <p>Here is a screenshot of the test runner for the Web implementation (found in web/tests.htm in the EITE installation root) while running the test suite:
         <img src="assets/310dbb98be48e941b3c4aeb334501f84d911ed0bca5efdeb1e288d8740d43bc76ec2ffaf7d0648abdf5cff25b1d66939745a464e13e841f76c0dcefbb0e70fa3.png" alt="Screenshot of test runner" />
     </p>
-<h7></h7>
+<h7>Information Technology Software Environment: Native document format</h7>
 
 
 <h8>Objective</h8>
@@ -2424,22 +2424,22 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 </ul>
 
 
-<h7></h7>
+<h7>Information Technology Software Environment: Mockups</h7>
 
 
 <p>Two interactive mockups are available for this project, to allow you to explore a more completed version of the proposed tools as if you were using them.</p>
 <p>The earlier interactive prototype is available in work-docs/Mockups/12799819e/index.html, while the more recent one is available in work-docs/Mockups/Web-Mockup/index.html.</p>
 
-<h7></h7>
+<h7>Information Technology Software Environment: User research</h7>
 
 
 <p>This section documents the results of various user research conducted for the information technology environment.</p>
 
-<h10>User perspective interview results</h10>
+<h8>User perspective interview results</h8>
 
     <p>To learn about how viable and helpful this project would be, I interviewed two people to learn about their use of information technology systems and how they would be affected by the tools proposed here.</p>
 
-    <h11>Interview questions</h11>
+    <h9>Interview questions</h9>
 
         <ol>
             <li>What tasks do you frequently use information technology (IT) systems to complete? A few examples of information technology systems, for purposes of this question, are computers, telephones, portable music players, and fax machines.</li>
@@ -2459,10 +2459,10 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
         </ol>
         <p>Thank you for participating in the interview!</p>
 
-    <h11>Responses</h11>
+    <h9>Responses</h9>
 
         <p>Note that these responses have been lightly edited to make them clearer. The meaning of the responses is unchanged.</p>
-        <h12>Interviewee 1</h12>
+        <h10>Interviewee 1</h10>
             <p>Interviewee 1 works as a church organist and piano teacher.</p>
             <ol>
                 <li>Computer: Researching music repertoire and performance techniques for my work; learning repertoire; listening to music for work. Telephone: Business and personal contacts.</li>
@@ -2480,7 +2480,7 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
                     <li>Trying to share a photo with commentary attached or a musical composition with my questions attached and also to get a critique.</li>
                 </ol></li>
             </ol>
-        <h12>Interviewee 2</h12>
+        <h10>Interviewee 2</h10>
             <ol>
                 <li>I use IT systems for many tasks:
                     <ul>
@@ -2545,22 +2545,22 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
                     <p>Also, it would be wonderful to be able to add recorded verbal content (or even video) as a response to emails or other documents received from others. It is often easier and faster to speak impressions and complex responses to things than to write them.</li></p>
                 </ol></li>
             </ol>
-        <h11>Summary of findings</h11>
+        <h10>Summary of findings</h10>
             <p>These interview responses show that various aspects of the proposed information technology system would be helpful. The interviews find some parts of the project helpful and others not necessarily so for their specific goals. Consequently, to make the proposed system ideal for all users, a method should be provided to allow users to choose which of its capabilities they would like to use. That way, the interface they have is the most relevant to them personally, and thus the most helpful in solving the particular problems they face.</p>
 
-<h10>Personas</h10>
+<h8>Personas</h8>
 
     <p>While these personas are based on the interview respondents, they are somewhat fictionalized.</p>
-    <h11>Persona 1</h11>
+    <h9>Persona 1</h9>
         <p>Lara is a 37-year-old professional church organist. They make extensive use of computers to manage business communications, and to simulate an organ for practice at home. Their work often requires communicating with their employer regarding music and business. To discuss music with their employer, it is often not practical to use a computer, and it is necessary to meet in person, due to the limitation of current information technology systems. If computers could provide tools for easily sharing and collaborating on scores and recorded performances of those scores, Lara’s job would be made easier by reducing travel time and the requirement of meeting in person to work on things that do not actually need an in-person meeting.</p>
-    <h11>Persona 2</h11>
+    <h9>Persona 2</h9>
         <p>Joseph is a 40-year-old film teacher at a large public university. They use non-linear editing software in computers to edit films, and to demonstrate film editing in class to their students, as well as to work on separate projects for independent clients. Because the people they work for often have a hard time communicating what they want in a project, several iterations of work and feedback are needed before a finished product is delivered. Consequently, Joseph would be better able to communicate with students and clients if they could work with film in the way their non-linear editing software allows, but collaboratively online with the clients and students, like cloud-based collaborative word processors allow. If there were a single editing tool for text and films, the same collaboration abilities from one medium would be available in others, making Joseph’s job a lot easier and allowing more efficient communication between Joseph and their clients.</p>
 
-<h10>Proposed user acceptance testing strategy</h8></h10>
+<h8>Proposed user acceptance testing strategy</h8></h8>
 
     <p>To test the viability of this project, I would suggest developing a functional instance of it, and presenting it to a range of users who work with various challenges to using information technology systems. For testing the general viability of the project, it would not be necessary to fully implement all the features that would be needed to make it competitive with other information technology systems; rather, it would only be needed to implement a representative subset of capabilities that would allow the users to explore the general interface and the system’s basic interaction structure. To gather data on challenges that users might encounter in using the system, the testers should be presented with a task to complete using the system, and asked to give commentary on their experience of the tool, and any frustration they encounter during the process, while they work on completing the assigned task. An article from the Nielsen Norman Group states that “A scripted study of product usage is done in order to focus the insights on specific usage aspects, such as on a newly redesigned flow.” [Rohrer, 2014] Consequently, that seems like the correct user testing strategy for determining the viability of this proposal, and finding roadblocks in its usability.</p>
 
-<h10>User Feedback on Edit Tool Web extension (March 4, 2019)</h10>
+<h8>User Feedback on Edit Tool Web extension (March 4, 2019)</h8>
     <p>I have seen and attempted to use two versions of this tool. The earlier version worked more completely for testing purposes, and from that I got a clear idea of how the tool might be useful, both in general, and for me personally.</p>
     <p>It would be helpful to have a succinct description of the various elements and their relationships, as the layout does not make that immediately clear. For instance, the left-to-right orientation of the tabs at the bottom of the page at first suggested to me that perhaps each of the three would be used in any one application, whereas their use is not sequential.</p>
     <p>It seems as though an unnecessary amount of space is allowed for the “Click to Insert” list, both vertically and horizontally. The list itself is not in an obvious order, and so locating a desired value takes more time than seems ideal. A search feature of this list might make it more navigable.</p>
@@ -2570,7 +2570,7 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
     <p>I might also use this tool when collaborating with other musicians and writers for instant messaging musical ideas, especially when editing or suggesting changes for performance.</p>
     <p>And it will be great to have the option of displaying mere italics in Messages on my iPhone!</p>
 
-<h10>Storyboard</h10>
+<h8>Storyboard</h8>
     <a href="http://futuramerlin.com/image-001.png">[http://futuramerlin.com/image-001.png]: <img src="assets/a0961050a9ffa0896e557c8e13785a715ca39f28ea7387740dbd20012694d0b04df111eb2b7fe8cf192103e094b9c60083ba6aa6133bc48af0d49bdc61046002.png" alt="I'm working on making a new computer game. I made a great look for a Web site for the game in a word processor. But now, the word processor won't let me put my new game into the file!"></a>
     <a href="http://futuramerlin.com/image-002.png">[http://futuramerlin.com/image-002.png]: <img src="assets/6fe2efe0e23b5cbd44e111d81299840a0d0bde0b9107a2ea38df139471ecb85671f3bfb7ef01e43f53aaa2a2029d708990be3672e03a2c77259066a9de76c4fd.png" alt="That doesn't make any sense. Computers can hold text and games, so why not both in one document? Oh! I remember a tool someone mentioned to me. They said it is a computer document editing tool that can hold many types of data."></a>
     <a href="http://futuramerlin.com/image-003.png">[http://futuramerlin.com/image-003.png]: <img src="assets/878188bb05759181e98e289cb0ddef54c850463dc41f4ce1f8a4fd1b213d145d58e59f71272f5e309527c68947c3fa70f78df96946f91e32088932f7f7ce8455.png" alt="Great, now I can have the game in my document, and post it to the Web like I originally wanted! Problem solved!"></a>
@@ -2591,7 +2591,7 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 </table>
 
 <h7>Commentaries</h7>
-<h8></h8>
+<h8>Information Technology Software Environment: Commentary: Decentralized networked systems: Ad-hoc Computer Network Negotiation</h8>
 
 
 <p>Ad-hoc computer network negotiation is an emerging technology that holds significant promise for facilitating access to information and communication services in situations where traditional centralized Internet connectivity is limited or unavailable, such as in rural areas, during natural disasters, in war zones, and in other situations where traditional centralized Internet connectivity is limited or unavailable. The premise of the technology is to find ways to allow electronic equipment to communicate and establish connections to one another without depending on a central authority or centrally maintained resources such as an Internet service provider, commercially operated cables, or a name authority service. The technology allows electronic equipment to communicate and establish connections to one another without depending on a central authority or centrally maintained resources. There are some technical barriers to achieving the full potential of this technology, but various developments are leading towards its more widespread adoption.</p>
@@ -2622,7 +2622,7 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 <p>The most likely solution is that one or more large equipment manufacturers will see the potential benefit of the technology and implement it in their products despite the additional cost. If it is provided and made available with new equipment when it is purchased, its benefits would be felt at least in part by consumers, driving other manufacturers to adopt it. Another possible solution for this issue is that governments, businesses, nonprofits, or other organizations will develop and produce equipment implementing this technology and use it for their work, and that this would provide the seed needed for its adoption.</p>
 <p>In any regard, this technology has huge potential benefits, because of the access to information it can provide: this facilitates, makes more effective, and democratizes access to emergency response and safety, business work in areas without established infrastructure, personal access to education and communication technologies, military operations, and the many other benefits afforded by access to the Internet.</p>
 
-<h8></h8>
+<h8>Information Technology Software Environment: Commentary: EITE in the context of new media studies: Alignment of the project approach to the traits of the currently emerging new media</h8>
 
 
 <p>Henry Jenkins's article "Eight Traits of the New Media Landscape" (<a href="http://nmdprojects.net/teaching_resources/jenkins_eight_traits_of_new_media.pdf">http://nmdprojects.net/teaching_resources/jenkins_eight_traits_of_new_media.pdf</a>) provides eight traits that its author observes in the prominent currently emerging new media. This section of the proposal evaluates this project's expression of this set of traits.</p>
@@ -2636,12 +2636,12 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 <p>The eighth trait is <em>inequality</em>. Unfortunately, this likely may affect the project initially, particularly due to economic barriers to access to information technology systems. Working to reduce undesired inequality as much as possible should be a design goal of the project, while promoting diversity and freedom.</p>
 
 
-<h8></h8>
+<h8>Information Technology Software Environment: Commentary: Implementation challenges; state of the project</h8>
 
 
 <p>What has been developed so far, practically speaking, is simply a technology demo and beginning of an implementation of a tool with larger scope. Consequently, it is rather limited in its practical utility, making it not suitable for a general audience, and mainly useful as a tool for demonstrating some of the principles used in this project, and as a core starting-point for the implementation of a more substantial and practically useful set of capabilities. StageL and the StageL-implemented library developed so far provide a solid technological foundation for further implementation of this project, and have practical applications outside of it as well.</p>
 
-<h7></h7>
+<h7>Information Technology Software Environment: References</h7>
 
 
 <ul>
