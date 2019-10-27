@@ -1,4 +1,4 @@
-@1 <web>Information Technology Software Environment: </web>User research
+@t <web>Information Technology Software Environment: </web>User research
 
 <p class="breadcrumbs">Page location:
     <span><a href="/components.htm">Core project components</a></span>
@@ -10,11 +10,11 @@
 
 This section documents the results of various user research conducted for the information technology environment.
 
-@2 User perspective interview results
+@0 User perspective interview results
 
     To learn about how viable and helpful this project would be, I interviewed two people to learn about their use of information technology systems and how they would be affected by the tools proposed here.
 
-    @3 Interview questions
+    @1 Interview questions
 
         <ol>
             <li>What tasks do you frequently use information technology (IT) systems to complete? A few examples of information technology systems, for purposes of this question, are computers, telephones, portable music players, and fax machines.</li>
@@ -34,10 +34,10 @@ This section documents the results of various user research conducted for the in
         </ol>
         Thank you for participating in the interview!
 
-    @3 Responses
+    @1 Responses
 
         Note that these responses have been lightly edited to make them clearer. The meaning of the responses is unchanged.
-        @4 Interviewee 1
+        @2 Interviewee 1
             Interviewee 1 works as a church organist and piano teacher.
             <ol>
                 <li>Computer: Researching music repertoire and performance techniques for my work; learning repertoire; listening to music for work. Telephone: Business and personal contacts.</li>
@@ -55,7 +55,7 @@ This section documents the results of various user research conducted for the in
                     <li>Trying to share a photo with commentary attached or a musical composition with my questions attached and also to get a critique.</li>
                 </ol></li>
             </ol>
-        @4 Interviewee 2
+        @2 Interviewee 2
             <ol>
                 <li>I use IT systems for many tasks:
                     <ul>
@@ -118,22 +118,22 @@ This section documents the results of various user research conducted for the in
                     Also, it would be wonderful to be able to add recorded verbal content (or even video) as a response to emails or other documents received from others. It is often easier and faster to speak impressions and complex responses to things than to write them.</li>
                 </ol></li>
             </ol>
-        @3 Summary of findings
+        @2 Summary of findings
             These interview responses show that various aspects of the proposed information technology system would be helpful. The interviews find some parts of the project helpful and others not necessarily so for their specific goals. Consequently, to make the proposed system ideal for all users, a method should be provided to allow users to choose which of its capabilities they would like to use. That way, the interface they have is the most relevant to them personally, and thus the most helpful in solving the particular problems they face.
 
-@2 Personas
+@0 Personas
 
     While these personas are based on the interview respondents, they are somewhat fictionalized.
-    @3 Persona 1
+    @1 Persona 1
         Lara is a 37-year-old professional church organist. They make extensive use of computers to manage business communications, and to simulate an organ for practice at home. Their work often requires communicating with their employer regarding music and business. To discuss music with their employer, it is often not practical to use a computer, and it is necessary to meet in person, due to the limitation of current information technology systems. If computers could provide tools for easily sharing and collaborating on scores and recorded performances of those scores, Lara’s job would be made easier by reducing travel time and the requirement of meeting in person to work on things that do not actually need an in-person meeting.
-    @3 Persona 2
+    @1 Persona 2
         Joseph is a 40-year-old film teacher at a large public university. They use non-linear editing software in computers to edit films, and to demonstrate film editing in class to their students, as well as to work on separate projects for independent clients. Because the people they work for often have a hard time communicating what they want in a project, several iterations of work and feedback are needed before a finished product is delivered. Consequently, Joseph would be better able to communicate with students and clients if they could work with film in the way their non-linear editing software allows, but collaboratively online with the clients and students, like cloud-based collaborative word processors allow. If there were a single editing tool for text and films, the same collaboration abilities from one medium would be available in others, making Joseph’s job a lot easier and allowing more efficient communication between Joseph and their clients.
 
-@2 Proposed user acceptance testing strategy</h2>
+@0 Proposed user acceptance testing strategy</h2>
 
     To test the viability of this project, I would suggest developing a functional instance of it, and presenting it to a range of users who work with various challenges to using information technology systems. For testing the general viability of the project, it would not be necessary to fully implement all the features that would be needed to make it competitive with other information technology systems; rather, it would only be needed to implement a representative subset of capabilities that would allow the users to explore the general interface and the system’s basic interaction structure. To gather data on challenges that users might encounter in using the system, the testers should be presented with a task to complete using the system, and asked to give commentary on their experience of the tool, and any frustration they encounter during the process, while they work on completing the assigned task. An article from the Nielsen Norman Group states that “A scripted study of product usage is done in order to focus the insights on specific usage aspects, such as on a newly redesigned flow.” [Rohrer, 2014] Consequently, that seems like the correct user testing strategy for determining the viability of this proposal, and finding roadblocks in its usability.
 
-@2 User Feedback on Edit Tool Web extension (March 4, 2019)
+@0 User Feedback on Edit Tool Web extension (March 4, 2019)
     I have seen and attempted to use two versions of this tool. The earlier version worked more completely for testing purposes, and from that I got a clear idea of how the tool might be useful, both in general, and for me personally.
     It would be helpful to have a succinct description of the various elements and their relationships, as the layout does not make that immediately clear. For instance, the left-to-right orientation of the tabs at the bottom of the page at first suggested to me that perhaps each of the three would be used in any one application, whereas their use is not sequential.
     It seems as though an unnecessary amount of space is allowed for the “Click to Insert” list, both vertically and horizontally. The list itself is not in an obvious order, and so locating a desired value takes more time than seems ideal. A search feature of this list might make it more navigable.
@@ -143,7 +143,7 @@ This section documents the results of various user research conducted for the in
     I might also use this tool when collaborating with other musicians and writers for instant messaging musical ideas, especially when editing or suggesting changes for performance.
     And it will be great to have the option of displaying mere italics in Messages on my iPhone!
 
-@2 Storyboard
+@0 Storyboard
     <a href="image-001.png"><img src="image-001.png" alt="I'm working on making a new computer game. I made a great look for a Web site for the game in a word processor. But now, the word processor won't let me put my new game into the file!"></a>
     <a href="image-002.png"><img src="image-002.png" alt="That doesn't make any sense. Computers can hold text and games, so why not both in one document? Oh! I remember a tool someone mentioned to me. They said it is a computer document editing tool that can hold many types of data."></a>
     <a href="image-003.png"><img src="image-003.png" alt="Great, now I can have the game in my document, and post it to the Web like I originally wanted! Problem solved!"></a>

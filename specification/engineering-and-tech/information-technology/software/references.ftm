@@ -1,4 +1,4 @@
-@1 <web>Information Technology Software Environment: </web>References
+@t <web>Information Technology Software Environment: </web>References
 
 <p class="breadcrumbs">Page location:
     <span><a href="/components.htm">Core project components</a></span>
@@ -25,7 +25,7 @@
     <li>Wikipedia. “Mobile ad hoc network”; “Martin Hellman”; “Mesh network”;  “Network topology”; “Public-key cryptography”; “Wireless ad hoc network”</li>
 </ul>
 
-<h2>Photograph credits and licensing</h2>
+@0 Photograph credits and licensing
     <ul>
         <li>Brewster Kahle portrait: Sebastiaan ter Burg, 2015 March 23. Licensed under the Creative Commons Attribution 2.0 Generic license: <a href="https://creativecommons.org/licenses/by/2.0/deed">https://creativecommons.org/licenses/by/2.0/deed</a></li>
         <li>Whitfield Diffie and Martin Hellman portrait: Martin Hellman, Mary Holzer, Matt Crypto, Phr~commonswiki, and .:Ajvol:., 2006 July 21. Licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license: <a href="https://creativecommons.org/licenses/by-sa/3.0/deed">https://creativecommons.org/licenses/by-sa/3.0/deed</a></li>
