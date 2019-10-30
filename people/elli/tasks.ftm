@@ -12,6 +12,24 @@
     - Lobster pot 2 October 2019 : Mixed B & Under Epee Sat 11/02 10:30 AM / Unrated Mixed Epee Sat 11/02 11:00 AM
     - Change dsl router password
     - Pianoteq and piano world forums have people discussing controllers that know what they are talking about. https://www.sweetwater.com/store/detail/Keystation88--m-audio-keystation-88-keyboard-controller https://www.sweetwater.com/store/detail/Hammer88--m-audio-hammer-88-keyboard-controller/reviews https://www.sweetwater.com/store/detail/D1pianoWT--korg-d1-88-key-stage-piano-controller-white https://www.sweetwater.com/store/detail/SL88Studio--studiologic-sl88-studio-keyboard-controller
+    - "We want your opinion on the wage proposal!" emailed survey
+- Get pim hooks
+- Crystallize local version
+- ed, demo
+- eogup gitignore
+- window manager prompt
+- https://web.archive.org/save/https://stackoverflow.blog/2019/09/05/they-didnt-teach-us-this-a-crash-course-for-your-first-job-in-software/?cb=1
+- http://web.archive.org/web/20190910153802/https://phpdelusions.net/pdo
+- https://stackoverflow.com/questions/5071601/how-do-i-use-regex-in-a-sqlite-query
+- https://fideloper.com/laravel-raw-queries
+- https://stackoverflow.com/questions/1220309/git-difftool-open-all-diff-files-immediately-not-in-serial
+- "PHP Objects, Patterns, and Practice by Matt Zandstra." and "The books that allowed me to really understand objects, without crowding out my thinking with unnecessary details, like examples in Smalltalk, were by David A Taylor, being <i>Object Oriented Technology: A Manager's Guide</i> and <i>Business Engineering with Object Teechnology</i>. Both are only 100 pages, and each easy enough to read in an afternoon. Of course, there is Gamma et al's <i>Design Patterns</i>" (referenced from https://stackoverflow.com/questions/4361553/what-is-the-difference-between-public-private-and-protected)
+- Art supplies
+- https://www.laravel-vuejs.com/laravel-eager-loading
+- https://stackoverflow.com/questions/42056724/select-from-as-and-join-in-laravel
+- https://stackoverflow.com/questions/38732587/laravel-query-builder-general-error-2031
+- "As a rule of thumb, unit test checks imperative part, i.e. logic of a single class, mocking everything (reasonable) else. Integration tests checks declarative part, i.e. configs, templates, etc. Functional tests checks functionality of the application as defined in the spec. " https://stackoverflow.com/questions/33281614/how-to-test-file-upload-with-laravel-and-phpunit 
+
     - Schedule appointment for car
     - Deferred crystallize
     - Study and practice Laravel, Vue, and Vuex
