@@ -30,7 +30,8 @@
 - https://stackoverflow.com/questions/38732587/laravel-query-builder-general-error-2031
 - "As a rule of thumb, unit test checks imperative part, i.e. logic of a single class, mocking everything (reasonable) else. Integration tests checks declarative part, i.e. configs, templates, etc. Functional tests checks functionality of the application as defined in the spec. " https://stackoverflow.com/questions/33281614/how-to-test-file-upload-with-laravel-and-phpunit 
 
-    - Schedule appointment for car
+    - Schedule appointment for car. (207) 622-7327
+Open · Closes 8 PM
     - Deferred crystallize
     - Study and practice Laravel, Vue, and Vuex
     - Write to Meg; family
