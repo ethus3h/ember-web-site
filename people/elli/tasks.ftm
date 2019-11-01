@@ -27,6 +27,7 @@
 - Art supplies
 - https://www.laravel-vuejs.com/laravel-eager-loading
 - https://stackoverflow.com/questions/42056724/select-from-as-and-join-in-laravel
+- ytdl-quick https://www.youtube.com/watch?v=ZJ3FdAFXR_U https://www.youtube.com/watch?v=eEsaIodO0YU https://www.youtube.com/watch?v=FmTJUeVA74c https://www.youtube.com/watch?v=T-ddfrhVIf0 https://www.youtube.com/watch?v=zAZlfRh2opo https://www.youtube.com/watch?v=jqNDQWPcyhE https://www.youtube.com/watch?v=55pHVbS3LxM
 - https://stackoverflow.com/questions/38732587/laravel-query-builder-general-error-2031
 - "As a rule of thumb, unit test checks imperative part, i.e. logic of a single class, mocking everything (reasonable) else. Integration tests checks declarative part, i.e. configs, templates, etc. Functional tests checks functionality of the application as defined in the spec. " https://stackoverflow.com/questions/33281614/how-to-test-file-upload-with-laravel-and-phpunit 
 
