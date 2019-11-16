@@ -14,14 +14,7 @@
     - ed, demo
     - eogup gitignore
     - window manager prompt
-    - https://web.archive.org/save/https://stackoverflow.blog/2019/09/05/they-didnt-teach-us-this-a-crash-course-for-your-first-job-in-software/?cb=1
-    - http://web.archive.org/web/20190910153802/https://phpdelusions.net/pdo
-    - https://stackoverflow.com/questions/1220309/git-difftool-open-all-diff-files-immediately-not-in-serial
-    - "PHP Objects, Patterns, and Practice by Matt Zandstra." and "The books that allowed me to really understand objects, without crowding out my thinking with unnecessary details, like examples in Smalltalk, were by David A Taylor, being <i>Object Oriented Technology: A Manager's Guide</i> and <i>Business Engineering with Object Teechnology</i>. Both are only 100 pages, and each easy enough to read in an afternoon. Of course, there is Gamma et al's <i>Design Patterns</i>" (referenced from https://stackoverflow.com/questions/4361553/what-is-the-difference-between-public-private-and-protected)
-    - https://www.laravel-vuejs.com/laravel-eager-loading
-    - https://stackoverflow.com/questions/42056724/select-from-as-and-join-in-laravel
     - ytdl-quick https://www.youtube.com/watch?v=ZJ3FdAFXR_U https://www.youtube.com/watch?v=eEsaIodO0YU https://www.youtube.com/watch?v=T-ddfrhVIf0 https://www.youtube.com/watch?v=zAZlfRh2opo https://www.youtube.com/watch?v=jqNDQWPcyhE https://www.youtube.com/watch?v=55pHVbS3LxM https://www.youtube.com/watch?v=S1xxcKCGljY https://www.youtube.com/watch?v=jD-PbF3ywGo https://www.youtube.com/watch?v=L75tI8qZhIc https://www.youtube.com/watch?v=5Hi6j2UXEZM
-    - edgewood-nursery.com/class
     - uni mail
     - "As a rule of thumb, unit test checks imperative part, i.e. logic of a single class, mocking everything (reasonable) else. Integration tests checks declarative part, i.e. configs, templates, etc. Functional tests checks functionality of the application as defined in the spec. " https://stackoverflow.com/questions/33281614/how-to-test-file-upload-with-laravel-and-phpunit 
     - Schedule appointment for car. (207) 622-7327 Open · Closes 8 PM Compare prices to consider whether I want wheels or just tires? SCHEDULED FOR Saturday 30 November 2019 at 10:15AM.Address 448 WESTERN AVENUE AUGUSTA. Confirmation code is in the email.
@@ -68,6 +61,13 @@
     - https://stackoverflow.com/questions/5071601/how-do-i-use-regex-in-a-sqlite-query
     - https://stackoverflow.com/questions/38732587/laravel-query-builder-general-error-2031
     - https://fideloper.com/laravel-raw-queries
+    - https://stackoverflow.com/questions/1220309/git-difftool-open-all-diff-files-immediately-not-in-serial
+    - https://www.laravel-vuejs.com/laravel-eager-loading
+    - edgewood-nursery.com/class
+    - https://web.archive.org/save/https://stackoverflow.blog/2019/09/05/they-didnt-teach-us-this-a-crash-course-for-your-first-job-in-software/?cb=1
+    - "PHP Objects, Patterns, and Practice by Matt Zandstra." and "The books that allowed me to really understand objects, without crowding out my thinking with unnecessary details, like examples in Smalltalk, were by David A Taylor, being <i>Object Oriented Technology: A Manager's Guide</i> and <i>Business Engineering with Object Teechnology</i>. Both are only 100 pages, and each easy enough to read in an afternoon. Of course, there is Gamma et al's <i>Design Patterns</i>" (referenced from https://stackoverflow.com/questions/4361553/what-is-the-difference-between-public-private-and-protected)
+    - http://web.archive.org/web/20190910153802/https://phpdelusions.net/pdo
+    - https://stackoverflow.com/questions/42056724/select-from-as-and-join-in-laravel
 
 @0 Notes
     - Fairfield dsl line number is 2072383511
