@@ -22,7 +22,6 @@
     - https://www.laravel-vuejs.com/laravel-eager-loading
     - https://stackoverflow.com/questions/42056724/select-from-as-and-join-in-laravel
     - ytdl-quick https://www.youtube.com/watch?v=ZJ3FdAFXR_U https://www.youtube.com/watch?v=eEsaIodO0YU https://www.youtube.com/watch?v=T-ddfrhVIf0 https://www.youtube.com/watch?v=zAZlfRh2opo https://www.youtube.com/watch?v=jqNDQWPcyhE https://www.youtube.com/watch?v=55pHVbS3LxM https://www.youtube.com/watch?v=S1xxcKCGljY https://www.youtube.com/watch?v=jD-PbF3ywGo https://www.youtube.com/watch?v=L75tI8qZhIc https://www.youtube.com/watch?v=5Hi6j2UXEZM
-    - https://stackoverflow.com/questions/38732587/laravel-query-builder-general-error-2031
     - "As a rule of thumb, unit test checks imperative part, i.e. logic of a single class, mocking everything (reasonable) else. Integration tests checks declarative part, i.e. configs, templates, etc. Functional tests checks functionality of the application as defined in the spec. " https://stackoverflow.com/questions/33281614/how-to-test-file-upload-with-laravel-and-phpunit 
     - Schedule appointment for car. (207) 622-7327 Open · Closes 8 PM Compare prices to consider whether I want wheels or just tires? SCHEDULED FOR Saturday 30 November 2019 at 10:15AM.Address 448 WESTERN AVENUE AUGUSTA. Confirmation code is in the email.
     - Deferred crystallize
@@ -66,6 +65,7 @@
     - Lobster pot 2 October 2019 : Mixed B & Under Epee Sat 11/02 10:30 AM / Unrated Mixed Epee Sat 11/02 11:00 AM
     - "We want your opinion on the wage proposal!" emailed survey
     - https://stackoverflow.com/questions/5071601/how-do-i-use-regex-in-a-sqlite-query
+    - https://stackoverflow.com/questions/38732587/laravel-query-builder-general-error-2031
 
 @0 Notes
     - Fairfield dsl line number is 2072383511
