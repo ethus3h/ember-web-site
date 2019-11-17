@@ -1,0 +1,149 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <link href="/simple.css" rel="stylesheet" type="text/css"> <meta content="Ember" name="author"> <meta content="width=device-width,height=device-height,user-scalable=yes" name="viewport"> <title>Ember Information Technology Environment</title> </head> <body> <main>
+<h1>Ember Information Technology Environment</h1>
+<h2>Information Technology Software Environment: Introduction and overview</h2>
+
+
+<h3>Introduction</h3>
+    <h4>Abstract</h4>
+        <p>This section of the Ember project specification introduces and documents the Ember computing environment, a project to develop a document-centric computing environment and data format. It is a proposal, design, specification, and (as of now prototype) implementation for an information technology system. The computing environment would be comprised of a centralized append-only information store, a computer operating system user interface integrated with that information store, and related specifications. The computing environment proposed here is distinct from existing technologies in that it attempts to provide superior flexibility by representing all information and documents it uses or processes (including its own software) as strings of text in a Unicode-based character encoding extended for this purpose. This is a work-in-progress draft, and everything here is subject to change and is not presently suited for implementation.</p>
+
+    <h4>The Problem</h4>
+        <p>Existing information technology systems have various unnecessary limitations. In addition, many existing information technology systems are not libre software. "Libre" refers to the ethical principle of freedom of knowledge, whereby knowledge is provided with the legal protection of rights such as modification and redistribution. (For specifics on this project's goals and strategies in libre licensing, see the "Licensing" section below.) This results in wasted effort on developing redundant proprietary technologies (for instance, multiple non-interoperable word processing apps), regressions in standards of living caused by the unavailability of proprietary systems (for instance, not being able to use the features of a previous version of a word processing app the more recent versions of which have had some capabilities removed), and the incalculable loss of shared cultural heritage through inconsistent or nonexistent archival practices (and in many cases active hostility towards historical preservation, especially in the interest of short-term personal economic gain) (for instance, the loss of many historic films and television series to neglect or deliberate destruction).</p>
+        <p>These problems are not hypothetical. They are very real and ongoing problems, and are actively causing very real and ongoing harm.</p>
+        <p>While current computing hardware, and many other processes and aspects of society, have many of the same and similar problems as the problems in software that this subproject aims to address, this section only focuses on software. Other parts of the Ember project deal with computing hardware, industry and industrial designs, and social organization, so these areas are not addressed here.</p>
+        <p>Information technology systems are not connected to each other effectively. While standard protocols for some types of data interchange are available, a single integrated IT system for building documents that leverage the full array of diverse types of information that can be represented using IT does not yet exist. In addition, current IT systems do not effectively orient their users and give them a sense of groundedness in regard to what they are doing.</p>
+
+        <h5>Existing work towards solving this problem</h5>
+            <p>Many existing projects address various aspects of the issues this project addresses. None seems to cohesively aim to integrate these aspects into a comprehensive libre framework and model implementation, though, driving the need for this project. For an annotated list of related projects and inspirations to this project, see the "Related projects and inspirations" section of the bibliography at the end of this document.</p>
+
+<h3>General approach</h3>
+    <p>This project should aim to systematically support the libre development and distribution as best as possible of an innovative information technology environment.</p>
+
+    <h4>Current project status</h4>
+        <p>"Ember Information Technology Environment" is the current name of this project.</p>
+        <p>This project is a part of "Ember", a project to develop and facilitate collaboration on a specification, a library, and a model community, to serve as resources and infrastructure for innovative communities. More information about Ember is available at the Web site for the project, <a href="http://futuramerlin.com/">http://futuramerlin.com/</a>.</p>
+        <p>The primary components comprising the project are currently unfinished, but a variety of software maintained to facilitate the development of the project is available.</p>
+        <p>A preliminary implementation of the computerized document representation format proposed herein is under development. An interpreter, several format converters, preliminary editing tool, and test suite and runner have been developed so far, as has a demonstration Web browser extension that allows authoring text in Web site text fields using the editing tool and automatically rendering sections of text in the document format embedded in Web pages. Continued work on the interpreter and implementation of the computing environment itself remain.</p>
+        <p>The main functional output of the project so far has been the successful development of three well-tested, partially completed software applications that are currently used to facilitate the further development of the project. The first of these is a portable, easy-to-write, transpiled programming language for portable rapid application prototyping being used to develop the prototype implementation. The second of these is a static Web site generator, which is used to build the project's Web site (it includes working features for theming using CSS, with some included themes, automatic blog pagination, and discography Web site generation for musicians). The third of these is a suite of tools for working with file version tracking, document archiving, and data storage and distribution. It is currently in use for storing and managing the more than eleven million files and forty version control repositories used now for this proposal's parent project, as well as the structured archiving of more than eighteen million additional documents outside of the project.</p>
+
+<h3>Intended outcomes</h3>
+<ul>
+    <li>The end goal of this work is the development of a completed, stable software environment used for developing the project, consisting of:
+        <ul>
+            <li>Specifications</li>
+            <li>Information technology environment software implementation</li>
+            <li>The cloud computing infrastructure should use a decentralized, asynchronously resolving append-only data store, similar to blockchains, to ensure the preservation and longevity of data stored using it as best as possible.</li>
+        </ul>
+    </li>
+</ul>
+</ul>
+
+
+<h3>Development tasks and process</h3>
+<ul>
+    <li>Develop, write, test, and document specifications
+        <ul>
+            <li>Information technology information and specifications, without external (non-libre) dependencies (enough information should be included to enable full construction of all technologies starting from nature, without any existing knowledge or technology/machinery; this should be <em>tested</em>)</li>
+        </ul>
+    </li>
+    </ul>
+    <li>Continue development of support software</li>
+
+    <li>Develop software for information technology environment (EITE)
+        <ul>
+            <li>Provide and implement StageL inside EITE</li>
+            <li>UI widgets</li>
+            <li>Implement simple document editor in EITE</li>
+            <li>Other EITE development tasks: networking, data storage and distribution, etc.</li>
+            <li>Add C target to StageL</li>
+            <li>Benchmark JavaScript implementation versus C→WebAssembly, out of curiosity. WASM would require clang in the toolchain, which wouldn't be ideal until clang can be run on non-WASM EITE, but anyway...</li>
+            <li>Support WebAssembly in EITE</li>
+            <li>Get text rendering and raster output implemented in EITE</li>
+            <li>Complex text rendering support</li>
+            <li>An alternative strategy could omit implementing the technology, and only focusing on developing the specification, although that strategy would risk increasing the problems the project is intended to fix (by providing existing IT companies with the project’s technological innovations, but not having a free/libre implementation of them to prevent companies using distorted clones of the idea to further their proprietary goals and vendor lock-in).</li>
+        </ul>
+    </li>
+</ul>
+</ul>
+
+
+<h3>Overview and introduction</h3>
+    <h4>Components of the project</h4>
+        <p>The computing environment will consist of the following components:</p>
+        <ul>
+            <li>Development principles, describing the process to use for creating the computing environment</li>
+            <li>Data format and its representations
+                <ul>
+                    <li>Specification</li>
+                    <li>Reference implementation</li>
+                </ul>
+            </li>
+            </ul>
+            <li>Data storage system and infrastructure: mechanism for storing append-only set of records, each comprising a unique ID paired with a node document</li>
+
+            <li>Software system, including:
+            <ul>
+                <li>Client component</li>
+                <li>Server components, including:
+                    <ul>
+                        <li>Public-facing API</li>
+                        <li>Search engine</li>
+                        <li>Storage backend</li>
+                    </ul>
+                </li>
+            </ul>
+            </ul></li>
+
+        </ul>
+    <h4>Premise</h4>
+        <p>Current computerized information technology systems do not live up to their potential. By developing tools to allow blending media types together, new opportunities arise in the use of information technology systems, including in structured data and the arts. An append-only decentralized archive of a community’s knowledge gives many advantages in usability, accessibility, and preservation.</p>
+    <h4>Goals of the project</h4>
+        <ul>
+            <li>Proposing, prototyping, and developing a new form of computerized information technology system</li>
+            <li>Basing that system on the potential of such systems, rather than mimicing the roles and restrictions of analog media</li>
+            <li>Part of a project to develop tools and resources to make it easier to experiment with changes to society and technology in local communities</li>
+        </ul>
+    <h4>Why is this important?</h4>
+        <p>Current computerized information technology systems do not fully explore and use the potential of the medium. Many popular computerized information technology systems are too complicated to understand well (this applies to hardware, too). Many popular computerized information technology systems cannot be relied on or trusted. Knowledge is not systematically protected for historical preservation. Current structured knowledge databases are unable to hold any types of information they are wanted to, as databases are restricted to an artificial subset of documents considered to be “text”. Current systems often are not easily flexible and customizable for end users.</p>
+    <h4>Project strategies</h4>
+        <ul>
+            <li>Treating all media as sequences of units analogous to characters in text</li>
+            <li>Allowing all types of media to coexist in a document, and avoiding restrictions on what can go where in a document</li>
+            <li>Trying to ensure easy portability of software</li>
+        </ul>
+    <h4>Current status</h4>
+        <p>The most practical product of this work is a transpiled programming language that can be easily converted to other languages. That way, you can write a program in one language, and have it run in many. A prototype document format interpreter is available, demonstrating unit-oriented document representation. A software library is available that provides APIs for running, importing, transforming, and exporting documents using this representation, and for data storage and Web interface access control. Documents can be exported as Unicode text, with non-Unicode contents stored using the Unicode private use area. A Web browser extension is available that can display text in Web pages represented using those Unicode extensions as the original document. A graphical tool for editing documents stored using this unit-oriented document representation is available, intended to facilitate the implementation of the next stages of the project. Documentation of the prototype is available, as is this document discussing the project.</p>
+    <h4>Future goals and plans</h4>
+        <p>This should serve as a demonstration of the potential of this type of information technology system. It should be extended to be usable as a practical computing environment. Unit-centric document representation allows structured data to represent information that is not supported by current database systems, and presents new opportunities for electronic media artists. As a computing environment, an append-only distributed data store should be provided, so that a community can use a network of computers running this software to share and track a shared machine-readable knowledge base of the community’s history and knowledge.</p>
+        <p>All interactions with the computing environment should be continually recorded in the knowledge base, so that any computer in the network always has its data backed up, and (by using an append-only data store) be able to return to any previous state. All interactions with a computer could be recorded in real time, so that whenever you want you could see a previous state of your computer, so that you wouldn't have to wonder exactly how you got from point A to point B when working on a project; if you go back to it years later and wonder what you were thinking, you could actually see what you did as you were creating it. The user interface of the computing environment should be implemented using the same unit-oriented document format as the rest of the system, allowing it to be customized as desired to ensure it can serve each person in the manner they prefer.</p>
+        <p>Having a community’s knowledge and history stored as structured, machine-readable data allows additional flexibility:
+        <ul>
+            <li>It can allow people to configure how they want to see information (such as ensuring the text size is always large enough).</li>
+            <li>It can allow people to configure what information they want to be given (for instance, filtering out documents that have not been screened for being dangerous to people with photosensitive epilepsy).</li>
+            <li>It ensures all knowledge in the system is preserved for future history.</li>
+            <li>It can allow people to keep their information private, rather than having it slurped up for advertising.</li>
+            <li>It can allow people to access, copy, back up, and conduct research using the information easily, rather than knowledge being locked up in commercial databases.</li>
+        </ul></p>
+    <h4>Summary</h4>
+        <p>Current computerized information technology systems do not live up to their full potential. So, by developing tools to allow combining media types together, new opportunities arise in the use of information technology systems, including in structured data, the arts, and an append-only decentralized archive of a community's knowledge, giving many advantages in usability, accessibility, and preservation.</p>
+
+ <h2>Information Technology Software Environment: Installation</h2>
+
+
+<p>Using the ebuild to install the software through Portage is suggested. Simple installation (untested) in case Portage or the ebuild is not suitable for your system: <code>git clone --depth 1 https://github.com/ethus3h/ember-information-technology-environment; cd ember-information-technology-environment; make autodep; ./configure; make; sudo make install</code>. <code>curl</code> must be available already.</p>
+<p>If you just build EITE without installing it, the built software will be placed in the "built/" folder. The structure of that folder corresponds to the /usr/share/eite/ folder when the software is installed. This is what is meant by the "EITE installation root" in this documentation.</p>
+
+ <h2>Information Technology Software Environment: Design goals</h2>
+
+
+<p>The goal of developing the EITE is to provide an information technology system that allows various types of data to be given a first-class role. The proposed system is a centralized but non-centralization-dependent append-only information store, a computer operating system integrated with that information store, and related specifications.</p>
+<p>Web-based information technology companies such as Google, Amazon, and Facebook have a disproportionately large amount of power, have a disproportionately large role in how individuals are able to conduct their daily lives, and are single points of failure for a large portion of the modern lifestyle. These corporations are private institutions with little to no public oversight and control, despite having a large and visible role (perhaps even larger than any one government) in individuals’ lives. To begin to challenge that power structure, this semi-decentralized document-oriented computing platform should be developed that can integrate the abilities of traditional information technology systems into a single, cohesive system. Such a system should be free/libre software, and should be designed in such a way that it can adapt when needed to functioning as a fully decentralized, serverless system, transparently adjusting to the networking capabilities or lack thereof available to it on an ad-hoc basis. The existence of this project as a replacement would prevent single IT companies’ systems being single points of failure, and its distributed model would prevent it itself from being a single point of failure. Additionally, by being fully free/libre software, and by using a single system and data format for the full range of services, this proposal would reduce the dangers created by vendor lock-in, proprietary products, and incompatible IT systems.</p>
+<p>An important basic principle of EITE is flexibility. It should allow the user do what they want in an elegant manner, without undue shenanigans, difficult workarounds, or unwanted assistance. It should accommodate various workflows, and be thoroughly customizable. Its default configuration should be simple and easy to use. User interfaces should abstract away technical complexities by default while remaining fully usable, while allowing access to those complexities if desired.</p>
+<p>The system should use a single, libre, fully specified data format to store all types of information it processes, and development of the system should strive to ensure that a thorough selection of capabilities are provided out of the box using a consistent and customizable user interface, obviating the need for external apps (which often tend to be inconsistent in things such as internationalization and accessibility). The use of a single data format would allow, for instance, text, structured data, sound, and interactive media such as computer games to all be practically equivalent to each other, such that wherever one could be used, another could be used instead, ensuring thorough flexibility. This will prevent frustration of users when they are unable to combine disparate types of data into a single logical document, as would be their reasonable expectation. To make a system that is effective and useful, it should provide an interface, described here, to orient users and give them a guided workflow based on the information the IT system knows regarding them to help them get what they need to do done. (External apps should be possible to use, for instance as references to facilitate developing libre alternatives, as well as to provide historical access and allow verifying that libre alternatives are actually equivalent, but while they should be possible to use, they should never be <em>necessary</em> to use.)</p>
+<p>For instance, there is no technical reason that italicized text can not be used in email subject lines, or for that matter, that an entire computer game could not be used as someone's email address. These restrictions are arbitrary and frustrating to people trying to work around them, and this computer system should resolve that by considering all types of information to be stored as simple strings of tokens, similar to current character encodings.</p>
+<p>The data format used should provide mechanisms for storing the meanings of text, so that text in one language can be marked up in a manner that allows it to be machine-read without the ambiguities of a natural lanugage, and a facility provided for exporting that annotated text to various languages in the same manner that content can be exported to various data formats. This could make it easier to localize documents, by providing a way to tell the computer what text means and let it produce translations, without having to translate it to other languages by hand.</p>
+<p>Developing an information technology system that integrates diverse types of data would improve efficiency and reduce frustration from unexpected, artificial limitations within computer systems for nearly any user of information technology systems. The number of personal computers was estimated to be “0.17 computers per person worldwide” in 2015 [Statista, n.d.]. 3.58 billion people are estimated to use the Internet [Statista, n.d. (b)]. This represents an enormous amount of people who use information technology systems, and it is likely that the majority of these would benefit from this proposal, especially those who work often with multimedia.</p>
+<p>Another goal of this work is to create an information technology system that will help guide people with dementia and other mental disabilities. The WHO estimates that 47 million people have dementia. [WHO 2017] Another group of people who would likely find such tools useful is those with autism-spectrum learning disabilities. Entire worldwide population statistics for autism-spectrum disorders are not accurately known [Miller-Wilson, n.d.], but according to the WHO [WHO 2017b], estimated 1 in 160 children worldwide have autism-spectrum disorders, and according to the NIH [NIH, n.d.], estimated 1 in 68 within the United States. Finally, ordinary computer users would likely be able to benefit somewhat from the same systems, simply because while optimally designed tools may provide the greatest amount of benefit to those with challenges that affect their ability to use current systems, such tools would likely help everyone to some extent.</p>
+<p>Because there are so many people affected by these challenges, and many others would likely benefit as well, there is a large group of people who would potentially find the proposed tools helpful. Consequently, working towards developing such a system is a valuable and important goal. The large potential benefit that could be gained from having such a system could, even if the individual increase in productivity were relatively small, have a substantial impact on the overall ability of humans to be productive and educated. In addition, a smaller group of people who are less able to use current information technology systems would probably see even larger gains in their productivity.</p>
+
+ 
