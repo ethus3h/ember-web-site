@@ -387,4 +387,130 @@ while lt n/i count as/temp
             <dt>r/s/strCharAtPos s/input n/index</dt><dd>Give the character at index bytes (=characters — no Unicode support here, sorry) into input</dd>
         </dl>
     <h4>Arrays</h4>
+ <h2>Information Technology Software Environment: Implementation components</h2>
+
+
+<table>
+<thead><tr><th>Component</th><th>Implementation language</th><th>Description</th><th>Code location</th></tr></thead>
+<tbody>
+    <tr><td><a href="http://futuramerlin.com/stagel.htm">[http://futuramerlin.com/stagel.htm]: StageL</a> transpiler</td><td>bash</td><td>Translate .stagel files to other languages</td><td>cli/stagel-convert</td></tr>
+    <tr><td>StageL's language-specific implementations</td><td>Implemented once for each StageL target language</td><td>Implementations of routines for StageL that are not implemented in StageL itself, but are instead implemented in its target languages.</td><td>implementation/core-implementations/</td></tr>
+    <tr><td>Portable implementation</td><td>StageL</td><td>This is the software that parses and runs documents stored in the EITE document format. It comprises a set of routines implementing the EITE document format. This is a batch of StageL-native routines that are available to the programs implemented in StageL (which are, collectively, this portable implementation).</td><td>implementation/portable/</td></tr>
+    <tr><td>Optional speedup code</td><td>Optionally implemented for each StageL target language</td><td>Functions can be provided here that are optimized, native implementations of existing StageR functions. Since StageR is unoptimized lowest-common-denominator code to keep things simple, this can help things run faster. These should only be <em>equivalent</em> to already existing StageR functions, and should not provide extra features, approximate implementations (<em>e.g.</em> if floats were supported, don't provide a fast inverse square root implementation here that produces different results than the one it's overriding), entirely new code, or (usually) functions that duplicate existing StageL core-implementation code (instead, optimize those, unless it makes them really unwieldy). If a language implementation includes these, it should be tested sometimes without them to make sure they aren't inadvertently required.</td><td>implementation/speedups/</td></tr>
+    <tr><td>Data files</td><td>N/A</td><td>Data files used to implement EITE.</td><td>implementation/portable/</td></tr>
+    <tr><td>Build scripts</td><td>bash (dep. on StageL transpiler)</td><td>Build EITE (usually invoked by "<code>make</code>"): builds StageL libraries (StageR at implementation/portable/portable.js, and StageL's language-specific native implementations of things at implementation/core-implementations/(lang)/core.(lang)) in various languages. Also combines and copies the finished JavaScript code into web/eite.js.</td><td>support/build-scripts/</td></tr>
+    <tr><td>EITE document testing quick-runner</td><td>For now, bash, I guess? Or maybe js and run it in node to avoid having to add new StageL target language (dep. on EITE document format implementation)</td><td>Thin wrapper around the EITE document format implementation that gets the output of a document in its state after it's finished loading, for automated testing (would ignore things that are <em>e.g.</em> interactive or whatever).</td><td>(TODO)</td></tr>
+    <tr><td>EITE document format tests</td><td>StageL</td><td>Test suite for EITE implementation.</td><td>web/tests.htm</td></tr>
+    <tr><td>EITE document runner</td><td>Various platforms possible. For now, HTML+JS. (dep. on EITE document format implementation)</td><td>Thin wrapper around the EITE document format implementation that runs and displays a specified document.</td><td>(TODO)</td></tr>
+    <tr><td>EITE non-native document editing tool</td><td>HTML, JavaScript (dep. on EITE document runner)</td><td>Tool for editing and running EITE-format documents before an EITE-native editing tool is available.</td><td>web/edit.htm (WIP)</td></tr>
+    <tr><td>EITE-native user interface and platform, including document editing tool, and optional servers for search, ad-hoc networking, encryption keys, and node data storage and synchronization (optionally, able to be a master server, storing all nodes in the network).</td><td>EITE</td><td>A user interface and document editing tool. This is what's shown in the mockups <em>e.g.</em> <a href="http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/">[http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/]: here</a>. It would be used by running it using the EITE document format implementation. Thus, it could be used as the main interface to a computer, by booting directly into it. (I probably won't get it running outside of a Web browser this semester, as that's not a big priority for me right now, and it almost certainly won't be nearly as useful as mainstream operating systems or Web desktops, but I think that such capabilities would ultimately be ideal.)</td><td>web/main.htm (WIP)</td></tr>
+</tbody>
+</table>
+
+ <h2></h2>
+
+
+<h3>Purpose of this document</h3>
+    <p>The EITE specification indicates the various interfaces that an EITE implementation provides: APIs and tools for humans. The specific manner of implementation of these is not described here. (Partial implementations could be possible that, for instance, only provide importing and exporting (without running) documents, or that omit some supported formats, or that do not provide the tools.) The main EITE implementation software attempts to be a full implementation of this specification.</p>
+    <p>This is a work in progress and will likely change as it is developed.</p>
+
+<h3>EITE tools</h3>
+    <p>The following natively implemented tools should be available in a full implementation: <a href="http://futuramerlin.com/tool-testrunner.htm">[http://futuramerlin.com/tool-testrunner.htm]: test runner</a>, <a href="http://futuramerlin.com/tool-docrunner.htm">[http://futuramerlin.com/tool-docrunner.htm]: document runner</a>, <a href="http://futuramerlin.com/tool-implrunner.htm">[http://futuramerlin.com/tool-implrunner.htm]: main EITE implementation runner</a>, and <a href="http://futuramerlin.com/tool-edit.htm">[http://futuramerlin.com/tool-edit.htm]: simple document edit tool</a>. They are not EITE documents; rather they are implemented for each platform, so they can be used in the course of developing and testing the EITE implementation. The also serve to some extent as sanity checks for the API functionality for a new implementation, as they would not work without the APIs available.</p>
+
+<h3>EITE implementation public APIs</h3>
+    <p>These APIs are implemented in public-interface.stagel.</p>
+    <table>
+    <thead>
+    <tr><th>Routine name</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+    <tr><td>r/v/startEite</td><td>Start EITE, using the default startup document. Does not return while EITE is still running.</td></tr>
+    <tr><td>r/v/loadAndRun s/format s/path</td><td>Load and run the specified document. Does not return while the document is still running.</td></tr>
+    <tr><td>r/an/loadAndConvert s/inputFormat s/outputFormat s/path</td><td>Load the specified document, and return it converted to the specified outputFormat as an array of bytes.</td></tr>
+    <tr><td>r/v/runDocument an/contents</td><td>Run the provided document. Does not return while the document is still running. Takes care of events and I/O automatically.</td></tr>
+    <tr><td>r/n/runDocumentPrepare an/contents</td><td>Prepare to run the provided document. Use this followed by runDocumentGo if you want to configure execution settings before starting the document.</td></tr>
+    <tr><td>r/v/runDocumentGo n/execId</td><td>Run a document, once it's been prepared to run by calling runDocumentPrepare.</td></tr>
+    <tr><td>r/s/getExecOption n/execId s/key</td><td>Get the value of an execution option for a document.</td></tr>
+    <tr><td>r/as/getExecOptions n/execId</td><td>Get the execution options set for a document.</td></tr>
+    <tr><td>r/v/setExecOption n/execId s/key s/value</td><td>Set an execution option for a document.</td></tr>
+    <tr><td>r/an/exportDocument s/format an/contents</td><td># Convert a document stored as an array of dcs to the specified format, and return it as an array of bytes.</td></tr>
+    <tr><td>r/an/importDocument s/format an/contents</td><td>Convert a document stored as an array of bytes in the specified format, and return it as an array of dc.</td></tr>
+    <tr><td>r/an/importAndExport s/inputFormat s/outputFormat an/contents</td><td>Convert a document stored as an array of bytes in the specified input format, and return it as an array of bytes in the specified output format.</td></tr>
+    <tr><td>r/s/getFormatImportSetting s/format s/key</td><td>Return the value of the specified import setting for the specified format.</td></tr>
+    <tr><td>r/s/getFormatExportSetting s/format s/key</td><td>Return the value of the specified export setting for the specified format.</td></tr>
+    <tr><td>r/v/setFormatImportSetting s/format s/key s/value</td><td>Set the value of the specified import setting for the specified format.</td></tr>
+    <tr><td>r/v/setFormatExportSetting s/format s/key s/value</td><td>Set the value of the specified export setting for the specified format.</td></tr>
+    <tr><td>r/v/pushFormatImportSetting s/format s/key s/value</td><td>Temporarily set the value of the specified import setting for the specified format. Call setFormatImportSetting with the value this returns when you want to put the setting back.</td></tr>
+    <tr><td>r/v/pushFormatExportSetting s/format s/key s/value</td><td>Temporarily set the value of the specified export setting for the specified format. Call setFormatExportSetting with the value this returns when you want to put the setting back.</td></tr>
+    <tr><td>r/as/getFormatImportSettings s/format</td><td>Return the import settings array for the specified format.</td></tr>
+    <tr><td>r/as/getFormatExportSettings s/format</td><td>Return the export settings array for the specified format.</td></tr>
+    <tr><td>r/v/setFormatImportSettings s/format as/settings</td><td>Replace the import settings array for the specified format.</td></tr>
+    <tr><td>r/v/setFormatExportSettings s/format as/settings</td><td>Replace the export settings array for the specified format.</td></tr>
+    <tr><td>r/an/transformDocument an/inputDocument s/transformation</td><td>Apply one of the supported document transformations to the provided document, and return the result.</td></tr>
+    <tr><td>r/an/loadStoredDocument s/format s/path</td><td>Load and return the specified document as a Dc array.</td></tr>
+    <tr><td>r/as/getDesiredEventNotifications n/execId</td><td>Return list of event types (e.g. keystrokes, mouse movement, elapsed time) that the document wants to be notified of.</td></tr>
+    <tr><td>r/an/sendEvent n/execId an/eventData</td><td>Send the provided event or events data to the specified document.</td></tr>
+    <tr><td>r/an/getDocumentFrame n/execId s/format</td><td>Return the most recently available output for the given document in the requested format.</td></tr>
+    <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
+    <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
+    </tbody>
+    </table>
+
+<h3>Command-line interface (mostly unimplemented)</h3>
+    <p>The EITE should provide the following user-facing command-line scripts.</p>
+    <dl>
+        <dt><code>eite</code></dt><dd>This is the main interface for EITE. Synopsis: <code>eite [check|run|run-tests|source-to-tree|tree-to-source] (&lt;path-to-document&gt;|-)</code></dd>
+    </dl>
+    <p>The EITE provides the following additional command-line scripts that it uses internally.</p>
+    <dl>
+        <dt><code>eite-check</code></dt><dd>Return false if the specified source document cannot be parsed. Synopsis: <code>eite-check (&lt;path-to-document&gt;|-)</code></dd>
+        <dt><code>eite-run</code></dt><dd>Run the specified document. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+        <dt><code>eite-run-tests</code></dt><dd>Run test suite. Synopsis: <code>eite-run-tests</code></dd>
+        <dt><code>eite-source-to-tree</code></dt><dd>Given a source file, print out an AST representation of the document. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+        <dt><code>eite-tree-to-source</code></dt><dd>Given an AST representation of a document, print out the source file for it. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+    </dl>
+
+<h3>Formats</h3>
+    <p>The formats that should be supported are available in data/formats.csv. Only input or output is necessary for some formats, and some formats listed are internal formats only, which do not need to be implemented for purposes of this specification. The options that should be supported for given formats are: (TODO).</p>
+
+<h3>Document transformations</h3>
+    <p>Some transformations are provided that operate on already-imported documents (represented as arrays of Dcs), and return an altered array of Dcs. These share the format settings API for configuring them. The options that should be supported for given transformations are: (TODO).</p>
+
+<h3>Exec options</h3>
+    <p>The document exec options are: (TODO)</p>
+
+
+ <h3>EITE Tool Documentation: Document Runner</h3>
+
+
+<h4>Document runner operation</h4>
+    <p>The document runner is one of the native tools included in a full EITE implementation. It has not yet been implemented. It should prompt for the path to a document to run, and load and run that document.</p>
+ <h3>EITE Tool Documentation: Edit Tool</h3>
+
+
+<h4>Edit tool introduction</h4>
+    <p>The edit tool is one of the native tools included in a full EITE implementation. It allows importing and exporting documents using the EITE library, running documents, and editing documents as dcBasenb (extended Unicode), ELS (not yet implemented), or a whitespace-separated series of integers.</p>
+    <p>Here is a screenshot of the edit tool for the Web implementation (found in web/edit.htm in the EITE installation root):
+        <img src="assets/a1624452a6bd8519a5c9c936dcf5f0bcac4bd8081f70d1327b58c5b90b021b85f6aeedd39b864987e2cb988401297aa07943ff8ad8aeb16d76529ad5b81fbbc9.png" alt="Screenshot of edit tool" />
+    </p>
+
+<h4>Edit tool interface</h4>
+    <p>The edit tool interface for the Web implementation consists of three vertical panels, and a horizontal row of buttons below the three panels. The center panel is where the editable contents of a document are shown. At the top is a dropdown menu for choosing what format to edit the document in. Below this dropdown is a label showing what Dc is currently at the cursor position. The right panel is where the document's output will be shown when it is run. The left panel is for locating and inserting Dcs into the document; clicking one will insert it into the document at the current cursor position. The three buttons in the bottom row allow importing, exporting, or running the document. The import and export buttons have dropdown menus to choose what format to import or export documents as.</p>
+    <p>Other implementations may have different user interfaces, but should offer equivalent functionality.</p>
+ <h3>EITE Tool Documentation: EITE Implementation Runner</h3>
+
+
+<h4>EITE implementation runner operation</h4>
+    <p>The EITE implementation runner is one of the native tools included in a full EITE implementation. Its purpose is to host and run an instance of the EITE implementation document (eite.sems), by providing the necessary execution environment and running the startEite routine. It does not need to provide any user interface beyond that provided by the eite.sems document.</p>
+    <p>Here is a screenshot of a very rough mockup of what this might look like:
+        <img src="assets/f6fcc55bce3c19a6e3b09d783332fe1bd2148c8b27a57eb3319938fe52d0c102b5ebb8e7ca1634813f7c7ea4c475d95dcb24ba9a954bd2e8c20c3ac289932445.png" alt="Screenshot of EITE implementation runner mockup" />
+    </p>
+ <h3>EITE Tool Documentation: Test Runner</h3>
+
+
+<h4>Test runner operation</h4>
+    <p>The test runner is one of the native tools included in a full EITE implementation. Its purpose is to load an instance of the EITE library, and run the unit tests included in the StageL build for the platform by running the "runTests" routine, displaying the outputs. It runs automatically, without the need for human intervention once it has been started. To do this, it needs to provide an output context that the runTests routine can use for displaying the test results.</p>
+    <p>Here is a screenshot of the test runner for the Web implementation (found in web/tests.htm in the EITE installation root) while running the test suite:
+        <img src="assets/3ca69ad9e4e34d144a585e3a791fba42555b5973b9f26f6d55ead2e72ff4a3b7cb327c1e83fc2192bd09aaedfc490ffe91642349963d5ae8660cd626b6fef889.png" alt="Screenshot of test runner" />
+    </p>
  
