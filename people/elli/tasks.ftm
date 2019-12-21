@@ -20,6 +20,7 @@
     - Car registration punched out for January
     - uni mail
     - Deferred crystallize
+    - GCC x86_64-pc-linux-gnu-8.3.1 can build kdelibs; x86_64-pc-linux-gnu-9.2.0 cannot
     - bookmark http://gunnerkrigg.proboards.com/post/125726/thread
     - Study and practice Laravel, Vue, and Vuex
     - Write to Meg; family
