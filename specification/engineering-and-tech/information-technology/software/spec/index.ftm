@@ -101,6 +101,7 @@
     <tr><td>r/an/networkRequest s/remoteInstance s/sessionKey s/requestPath</td><td>Request the specified path from the specified remote instance.</td></tr>
 
     <tr><td colspan="2">Storage</td></tr>
+    <tr><td>r/as/storageList s/path</td><td>List the contents of StageR's semi-persistent memory at the specified directory.</td></tr>
     <tr><td>r/an/storageGet s/path</td><td>Dump the contents of StageR's semi-persistent memory at the specified path.</td></tr>
     <tr><td>r/v/storagePut s/path</td><td>Set the contents of StageR's semi-persistent memory at the specified path.</td></tr>
 
