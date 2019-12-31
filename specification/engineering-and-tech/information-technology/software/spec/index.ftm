@@ -95,11 +95,11 @@
 
     <tr><td colspan="2">Storage</td></tr>
     <tr><td>r/an/storageGet s/path</td><td>Dump the contents of StageR's semi-persistent memory at the specified path.</td></tr>
-    <tr><td>r/v/storagePut s/path</td><td>Replace the contents of StageR's semi-persistent memory at the specified path.</td></tr>
+    <tr><td>r/v/storagePut s/path</td><td>Set the contents of StageR's semi-persistent memory at the specified path.</td></tr>
 
     <tr><td colspan="2">Semi-persistent memory</td></tr>
     <tr><td>r/an/memoryGet s/path</td><td>Get the contents of StageR's semi-persistent memory at the specified path.</td></tr>
-    <tr><td>r/v/memoryPut s/path</td><td>Replace the contents of StageR's semi-persistent memory at the specified path.</td></tr>
+    <tr><td>r/v/memoryPut s/path</td><td>Set the contents of StageR's semi-persistent memory at the specified path.</td></tr>
     <tr><td>r/an/getState</td><td>Dump the contents of StageR's semi-persistent memory.</td></tr>
     </tbody>
     </table>
