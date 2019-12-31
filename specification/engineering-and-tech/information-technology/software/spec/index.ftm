@@ -90,8 +90,8 @@
     <tr><td colspan="2">Networking</td></tr>
     <tr><td colspan="2">Storage</td></tr>
     <tr><td colspan="2">Semi-persistent memory</td></tr>
-    <tr><td>r/v/memoryWrite s/path</td><td>Dump the contents of StageR's semi-persistent memory at the specified path.</td></tr>
     <tr><td>r/an/memoryFetch s/path</td><td>Dump the contents of StageR's semi-persistent memory at the specified path.</td></tr>
+    <tr><td>r/v/memoryWrite s/path</td><td>Replace the contents of StageR's semi-persistent memory at the specified path.</td></tr>
     <tr><td>r/an/getState</td><td>Dump the contents of StageR's semi-persistent memory.</td></tr>
     </tbody>
     </table>
