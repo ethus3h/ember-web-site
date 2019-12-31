@@ -73,6 +73,10 @@
     <p>The document exec options are: (TODO)</p>
 
 <h2>EITE NDW APIs</h2>
+    <p>Storage path layout:</p>
+    <dl>
+        <dt>
+    </dl>
     <table>
     <thead>
     <tr><th>Routine name</th><th>Description</th></tr>
