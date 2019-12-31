@@ -75,7 +75,8 @@
 <h2>EITE NDW APIs</h2>
     <p>Storage path layout:</p>
     <dl>
-        <dt>
+        <dt></dt><dd>Configuration</dd>
+
     </dl>
     <table>
     <thead>
