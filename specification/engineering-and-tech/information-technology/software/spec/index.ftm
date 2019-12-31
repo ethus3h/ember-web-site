@@ -84,7 +84,7 @@
     <tr><td>r/v/startEite</td><td>Start EITE, using the default startup document. Does not return while EITE is still running.</td></tr>
     <tr><td>r/v/loadAndRun s/format s/path</td><td>Load and run the specified document. Does not return while the document is still running.</td></tr>
     <tr><td>r/v/runDocument an/contents</td><td>Run the provided document. Does not return while the document is still running. Takes care of events and I/O automatically.</td></tr>
-    <tr><td>r/v/runDocumentGo n/execId</td><td>Run a document, once it's been prepared to run by calling runDocumentPrepare.</td></tr>
+    <tr><td>r/v/runDocumentGo n/execId</td><td>Run a document, once it's been prepared to run by calling runDocumentPrepare. This is the main document execution loop.</td></tr>
     <tr><td>r/an/loadStoredDocument s/format s/path</td><td>Load and return the specified document as a Dc array.</td></tr>
     <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
     <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
