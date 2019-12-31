@@ -79,6 +79,7 @@
     <tr><th>Routine name</th><th>Description</th></tr>
     </thead>
     <tbody>
+    
     <tr><td colspan="2">Document routines</td></tr>
     <tr><td>r/v/startEite</td><td>Start EITE, using the default startup document. Does not return while EITE is still running.</td></tr>
     <tr><td>r/v/loadAndRun s/format s/path</td><td>Load and run the specified document. Does not return while the document is still running.</td></tr>
@@ -87,13 +88,16 @@
     <tr><td>r/an/loadStoredDocument s/format s/path</td><td>Load and return the specified document as a Dc array.</td></tr>
     <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
     <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
+    
     <tr><td colspan="2">Networking</td></tr>
     <tr><td>r/an/networkAuth s/remoteInstance s/publicKey s/secretKey</td><td>Get a session key from the specified remote instance.</td></tr>
     <tr><td>r/as/networkGetStatus s/remoteInstance s/sessionKey s/requestPath</td><td>Get the key-value results indicating the status of the specified remote resource (availability; authorization).</td></tr>
     <tr><td>r/an/networkRequest s/remoteInstance s/sessionKey s/requestPath</td><td>Request the specified path from the specified remote instance.</td></tr>
+    
     <tr><td colspan="2">Storage</td></tr>
     <tr><td>r/an/storageGet s/path</td><td>Dump the contents of StageR's semi-persistent memory at the specified path.</td></tr>
     <tr><td>r/v/storagePut s/path</td><td>Replace the contents of StageR's semi-persistent memory at the specified path.</td></tr>
+    
     <tr><td colspan="2">Semi-persistent memory</td></tr>
     <tr><td>r/an/memoryGet s/path</td><td>Get the contents of StageR's semi-persistent memory at the specified path.</td></tr>
     <tr><td>r/v/memoryPut s/path</td><td>Replace the contents of StageR's semi-persistent memory at the specified path.</td></tr>
