@@ -89,7 +89,7 @@
     <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
     <tr><td colspan="2">Networking</td></tr>
     <tr><td>r/an/networkAuth s/remoteInstance s/publicKey s/secretKey</td><td>Get a session key from the specified remote instance.</td></tr>
-    <tr><td>r/v/networkRequest s/remoteInstance s/sessionKey s/requestPath</td><td>Replace the contents of StageR's semi-persistent memory at the specified path.</td></tr>
+    <tr><td>r/an/networkRequest s/remoteInstance s/sessionKey s/requestPath</td><td>Request the specified path from the specified remote instance.</td></tr>
     <tr><td colspan="2">Storage</td></tr>
     <tr><td>r/an/storageGet s/path</td><td>Dump the contents of StageR's semi-persistent memory at the specified path.</td></tr>
     <tr><td>r/v/storagePut s/path</td><td>Replace the contents of StageR's semi-persistent memory at the specified path.</td></tr>
