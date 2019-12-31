@@ -90,5 +90,6 @@
     <tr><td colspan="2">Networking</td></tr>
     <tr><td colspan="2">Storage</td></tr>
     <tr><td colspan="2">Persistent memory</td></tr>
+    <tr><td>r/an/getState</td><td>Dump the contents of </td></tr>
     </tbody>
     </table>
