@@ -41,8 +41,7 @@
     <tr><td>r/v/setFormatImportSettings s/format as/settings</td><td>Replace the import settings array for the specified format.</td></tr>
     <tr><td>r/v/setFormatExportSettings s/format as/settings</td><td>Replace the export settings array for the specified format.</td></tr>
     <tr><td>r/an/transformDocument an/inputDocument s/transformation</td><td>Apply one of the supported document transformations to the provided document, and return the result.</td></tr>
-    <tr><td>r/an/loadStoredDocument s/format s/path</td><td>Load and return the specified document as a Dc array.</td></tr>
-    <tr><td>r/as/getDesiredEventNotifications n/execId</td><td>Return list of event types (e.g. keystrokes, mouse movement, elapsed time) that the document wants to be notified of.</td></tr>
+    <tr><td>r/as/getDesiredEventNotifications n/execId</td><td>Return list of event types (e.g. keystrokes, network response, storage request response, mouse movement, elapsed time) that the document wants to be notified of.</td></tr>
     <tr><td>r/an/sendEvent n/execId an/eventData</td><td>Send the provided event or events data to the specified document.</td></tr>
     <tr><td>r/an/getDocumentFrame n/execId s/format</td><td>Return the most recently available output for the given document in the requested format.</td></tr>
     <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
