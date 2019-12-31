@@ -88,7 +88,7 @@
     <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
     <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
     <tr><td colspan="2">Networking</td></tr>
-    <tr><td>r/an/networkAuth s/peer s/publicKey s/secretKey</td><td>Get a session token from the specified peer</td></tr>
+    <tr><td>r/an/networkAuth s/peerInstance s/publicKey s/secretKey</td><td>Get a session token from the specified peer instance.</td></tr>
     <tr><td>r/v/network s/path</td><td>Replace the contents of StageR's semi-persistent memory at the specified path.</td></tr>
     <tr><td colspan="2">Storage</td></tr>
     <tr><td>r/an/storageGet s/path</td><td>Dump the contents of StageR's semi-persistent memory at the specified path.</td></tr>
