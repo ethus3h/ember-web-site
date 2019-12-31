@@ -73,10 +73,11 @@
     <p>The document exec options are: (TODO)</p>
 
 <h2>EITE NDW APIs</h2>
-    <p>Storage path layout:</p>
+    <p>Storage path layout (read-only unless noted):</p>
     <dl>
         <dt>eite/config/eite.conf</dt><dd>NDW system-specific configuration overrides.</dd>
         <dt>eite/data/</dt><dd>Data files provided with EITE. Should be deterministic within an EITE version.</dd>
+        <dt>eite/var/</dt><dd>Data files to be managed persistently by EITE.</dd>
     </dl>
     <table>
     <thead>
