@@ -77,8 +77,9 @@
     <dl>
         <dt>eite/1/config/eite.conf</dt><dd>NDW system-specific configuration overrides.</dd>
         <dt>eite/1/data/</dt><dd>Data files provided with EITE. Should be deterministic within an EITE version.</dd>
-        <dt>eite/1/var/</dt><dd>Data files to be managed persistently by EITE.</dd>
+        <dt>eite/1/var/</dt><dd>Data files to be managed persistently by EITE. Writeable.</dd>
     </dl>
+
     <table>
     <thead>
     <tr><th>Routine name</th><th>Description</th></tr>
