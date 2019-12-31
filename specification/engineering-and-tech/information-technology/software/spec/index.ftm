@@ -88,9 +88,6 @@
     <tr><td>r/v/runDocument an/contents</td><td>Run the provided document. Does not return while the document is still running. Takes care of events and I/O automatically.</td></tr>
     <tr><td>r/v/runDocumentGo n/execId</td><td>Run a document, once it's been prepared to run by calling runDocumentPrepare.</td></tr>
     <tr><td>r/an/loadStoredDocument s/format s/path</td><td>Load and return the specified document as a Dc array.</td></tr>
-    <tr><td>r/as/getDesiredEventNotifications n/execId</td><td>Return list of event types (e.g. keystrokes, mouse movement, elapsed time) that the document wants to be notified of.</td></tr>
-    <tr><td>r/an/sendEvent n/execId an/eventData</td><td>Send the provided event or events data to the specified document.</td></tr>
-    <tr><td>r/an/getDocumentFrame n/execId s/format</td><td>Return the most recently available output for the given document in the requested format.</td></tr>
     <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
     <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
     </tbody>
