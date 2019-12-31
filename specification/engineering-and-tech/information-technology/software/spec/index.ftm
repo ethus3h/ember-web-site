@@ -106,7 +106,7 @@
     <tr><td>r/as/storageList s/path</td><td>List the contents of StageR's persistent storage at the specified directory.</td></tr>
     <tr><td>r/v/storagePut s/path</td><td>Set the contents of StageR's persistent storage at the specified path.</td></tr>
 
-    <tr><td colspan="2">Semi-persistent memory (FIXME: Should this exist? It's useful, but )</td></tr>
+    <tr><td colspan="2">Semi-persistent memory (FIXME: How to ensure this doesn't result in nasty tendency for non-replayable runs?)</td></tr>
     <tr><td>r/an/memoryGet s/path</td><td>Get the contents of StageR's semi-persistent memory at the specified path.</td></tr>
     <tr><td>r/an/memoryList s/path</td><td>List the contents of StageR's semi-persistent memory at the specified directory.</td></tr>
     <tr><td>r/v/memoryPut s/path</td><td>Set the contents of StageR's semi-persistent memory at the specified path.</td></tr>
