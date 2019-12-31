@@ -85,27 +85,8 @@
     <tbody>
     <tr><td>r/v/startEite</td><td>Start EITE, using the default startup document. Does not return while EITE is still running.</td></tr>
     <tr><td>r/v/loadAndRun s/format s/path</td><td>Load and run the specified document. Does not return while the document is still running.</td></tr>
-    <tr><td>r/an/loadAndConvert s/inputFormat s/outputFormat s/path</td><td>Load the specified document, and return it converted to the specified outputFormat as an array of bytes.</td></tr>
     <tr><td>r/v/runDocument an/contents</td><td>Run the provided document. Does not return while the document is still running. Takes care of events and I/O automatically.</td></tr>
-    <tr><td>r/n/runDocumentPrepare an/contents</td><td>Prepare to run the provided document. Use this followed by runDocumentGo if you want to configure execution settings before starting the document.</td></tr>
     <tr><td>r/v/runDocumentGo n/execId</td><td>Run a document, once it's been prepared to run by calling runDocumentPrepare.</td></tr>
-    <tr><td>r/s/getExecOption n/execId s/key</td><td>Get the value of an execution option for a document.</td></tr>
-    <tr><td>r/as/getExecOptions n/execId</td><td>Get the execution options set for a document.</td></tr>
-    <tr><td>r/v/setExecOption n/execId s/key s/value</td><td>Set an execution option for a document.</td></tr>
-    <tr><td>r/an/exportDocument s/format an/contents</td><td># Convert a document stored as an array of dcs to the specified format, and return it as an array of bytes.</td></tr>
-    <tr><td>r/an/importDocument s/format an/contents</td><td>Convert a document stored as an array of bytes in the specified format, and return it as an array of dc.</td></tr>
-    <tr><td>r/an/importAndExport s/inputFormat s/outputFormat an/contents</td><td>Convert a document stored as an array of bytes in the specified input format, and return it as an array of bytes in the specified output format.</td></tr>
-    <tr><td>r/s/getFormatImportSetting s/format s/key</td><td>Return the value of the specified import setting for the specified format.</td></tr>
-    <tr><td>r/s/getFormatExportSetting s/format s/key</td><td>Return the value of the specified export setting for the specified format.</td></tr>
-    <tr><td>r/v/setFormatImportSetting s/format s/key s/value</td><td>Set the value of the specified import setting for the specified format.</td></tr>
-    <tr><td>r/v/setFormatExportSetting s/format s/key s/value</td><td>Set the value of the specified export setting for the specified format.</td></tr>
-    <tr><td>r/v/pushFormatImportSetting s/format s/key s/value</td><td>Temporarily set the value of the specified import setting for the specified format. Call setFormatImportSetting with the value this returns when you want to put the setting back.</td></tr>
-    <tr><td>r/v/pushFormatExportSetting s/format s/key s/value</td><td>Temporarily set the value of the specified export setting for the specified format. Call setFormatExportSetting with the value this returns when you want to put the setting back.</td></tr>
-    <tr><td>r/as/getFormatImportSettings s/format</td><td>Return the import settings array for the specified format.</td></tr>
-    <tr><td>r/as/getFormatExportSettings s/format</td><td>Return the export settings array for the specified format.</td></tr>
-    <tr><td>r/v/setFormatImportSettings s/format as/settings</td><td>Replace the import settings array for the specified format.</td></tr>
-    <tr><td>r/v/setFormatExportSettings s/format as/settings</td><td>Replace the export settings array for the specified format.</td></tr>
-    <tr><td>r/an/transformDocument an/inputDocument s/transformation</td><td>Apply one of the supported document transformations to the provided document, and return the result.</td></tr>
     <tr><td>r/an/loadStoredDocument s/format s/path</td><td>Load and return the specified document as a Dc array.</td></tr>
     <tr><td>r/as/getDesiredEventNotifications n/execId</td><td>Return list of event types (e.g. keystrokes, mouse movement, elapsed time) that the document wants to be notified of.</td></tr>
     <tr><td>r/an/sendEvent n/execId an/eventData</td><td>Send the provided event or events data to the specified document.</td></tr>
