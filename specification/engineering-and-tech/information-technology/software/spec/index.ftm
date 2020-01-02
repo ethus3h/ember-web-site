@@ -46,6 +46,13 @@
     <tr><td>r/an/getDocumentFrame n/execId s/format</td><td>Return the most recently available output for the given document in the requested format.</td></tr>
     <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
     <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
+    <tr><td>r/v/startEite</td><td>Start EITE, using the default startup document. Does not return while EITE is still running.</td></tr>
+    <tr><td>r/v/loadAndRun s/format s/path</td><td>Load and run the specified document. Does not return while the document is still running.</td></tr>
+    <tr><td>r/v/runDocument an/contents</td><td>Run the provided document. Does not return while the document is still running.</td></tr>
+    <tr><td>r/v/runDocumentGo n/execId</td><td>Run a document, once it's been prepared to run by calling runDocumentPrepare. This is the main document execution loop. Takes care of events and I/O automatically, by using the other NDW APIs in conjunction with StageR.</td></tr>
+    <tr><td>r/an/loadStoredDocument s/format s/path</td><td>Load and return the specified document as a Dc array.</td></tr>
+    <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
+    <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
     </tbody>
     </table>
 
@@ -87,13 +94,6 @@
     <tbody>
 
     <tr><td colspan="2">Document routines</td></tr>
-    <tr><td>r/v/startEite</td><td>Start EITE, using the default startup document. Does not return while EITE is still running.</td></tr>
-    <tr><td>r/v/loadAndRun s/format s/path</td><td>Load and run the specified document. Does not return while the document is still running.</td></tr>
-    <tr><td>r/v/runDocument an/contents</td><td>Run the provided document. Does not return while the document is still running.</td></tr>
-    <tr><td>r/v/runDocumentGo n/execId</td><td>Run a document, once it's been prepared to run by calling runDocumentPrepare. This is the main document execution loop. Takes care of events and I/O automatically, by using the other NDW APIs in conjunction with StageR.</td></tr>
-    <tr><td>r/an/loadStoredDocument s/format s/path</td><td>Load and return the specified document as a Dc array.</td></tr>
-    <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
-    <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
 
     <tr><td colspan="2">Networking</td></tr>
     <tr><td>r/an/networkAuth s/remoteInstance s/publicKey s/secretKey</td><td>Get a session key from the specified remote instance.</td></tr>
@@ -102,9 +102,9 @@
     <tr><td>r/an/networkRequest s/remoteInstance s/sessionKey s/requestPath</td><td>Request the specified path from the specified remote instance.</td></tr>
 
     <tr><td colspan="2">Storage</td></tr>
-    <tr><td>r/an/storageGet s/path</td><td>Dump the contents of StageR's persistent storage at the specified path.</td></tr>
+    <tr><td>r/an/storageGet s/path</td><td>Get the contents of StageR's persistent storage at the specified path.</td></tr>
     <tr><td>r/as/storageList s/path</td><td>List the contents of StageR's persistent storage at the specified directory.</td></tr>
-    <tr><td>r/v/storagePut s/path</td><td>Set the contents of StageR's persistent storage at the specified path.</td></tr>
+    <tr><td>r/v/storagePut s/path an/data</td><td>Set the contents of StageR's persistent storage at the specified path.</td></tr>
 
     <tr><td colspan="2">Semi-persistent memory (FIXME: How to ensure this doesn't result in a nasty tendency for non-replayable runs? I don't like just trusting that StageR is written well enough. But getting rid of this would destroy performance and/or use way too much storage.)</td></tr>
     <tr><td>r/an/memoryGet s/path</td><td>Get the contents of StageR's semi-persistent memory at the specified path.</td></tr>
