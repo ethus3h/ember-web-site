@@ -94,7 +94,7 @@
     <tbody>
 
     <tr><td colspan="2">Document routines</td></tr>
-    <tr><td>r/n/ndw</td><td>Get a session key from the specified remote instance.</td></tr>
+    <tr><td>r/n/ndw</td><td>Start the EITE main loop, which is implemented as a set of routines provided by StageR.</td></tr>
 
     <tr><td colspan="2">Networking</td></tr>
     <tr><td>r/an/networkAuth s/remoteInstance s/publicKey s/secretKey</td><td>Get a session key from the specified remote instance.</td></tr>
