@@ -13,13 +13,13 @@
 <h2>Design goals</h2>
     <ul>
         <li>Imperative language. Trivial to implement, learn, and read; extremely portable.</li>
-        <li>Provide function calls, arrays, strings, numbers, booleans, and operators for these types with strict typing. Objects and first-class functions are out of scope for this language. (It's closer to duck-typed in practice, as e.g. in Bash there would be no distinction between string 0 and number 0.)</li>
+        <li>Provide function calls, arrays, strings, numbers, booleans, and operators for these types with strict typing. Objects and first-class functions are out of scope for this language. TODO: Implement a table of values and scopes, and track their types for strict type checking. (It's currently closer to duck-typed in practice, as e.g. in Bash there would be no distinction between string 0 and number 0.)</li>
         <li>Implemented as a transpiler that accepts a file as input and produces a file in the target language as output.</li>
         <li>Have an implementation of itself using itself, to provide testing and portability of the language.</li>
         <li>Have an implementation in Bash.</li>
         <li>Should transpile to (eventually) JavaScript, C, Java, Bash, PHP, Microsoft CIL, Lisp, x86 assembly, and Python, at least, in roughly that order of priority. (JavaScript has been completed for work on the main EITE software; C and Java should follow soon thereafter for their portability; the other languages are nice to have to cover a diverse range of development environments, and additionally, in the case of CIL/x86 assembly/Lisp, of providing interesting challenges in ensuring that the language really is easily portable due to their difference from the others.)</li>
         <li>Focus on simplicity and portability: it should purely be an algorithm representation format, without input/output capabilities. It is for implementing the algorithms of a program once, and having it be available in various languages. Things such as input/output and native calls should be provided as an API specification for the StageL source file: at the top of the file, it should declare all the implementation-dependent functions that it requires; these would then be provided separately by the programmer and/or by a set of functions provided with StageL for each target language. (This was loosened in practice and a standard library with some basic I/O is required.)</li>
-        <li>All input/output to/from the language is as functions. All code must be in a function, with declared parameters, parameter types, variables needed, and return type. (The expense of the simple type system is that changing return values would break functions' API, since "out" parameters and/or pointers would not be available, but this should allow the code to be simple and readable, which is a priority for this language.)</li>
+        <li>All input/output to/from the language is as routines. All code must be in a function, with declared parameters, parameter types, variables needed, and return type. (The expense of the simple type system is that changing return values would break routines' API, since "out" parameters and/or pointers would not be available, but this should allow the code to be simple and readable, which is a priority for this language.)</li>
         <li>Output files should retain the structure and comments of the input files, thereby retaining readability as far as the target language permits.</li>
         <li>All behavior should be specified. Ambiguous programs should be impossible to write knowing the specification, and (as far as possible) the meaning of a program should be obvious and unambiguous <em>without</em> the language specification. Programs that do not match the specification exactly should be entirely rejected, rather than produce warnings or having a best guess of its meaning made.</li>
     </ul>
@@ -142,7 +142,7 @@ while lt n/i count as/temp
         <p>These operate on str/int/bool.</p>
         <dt>r/s/strFrom g/input</dt><dd>Give string with contents.</dd>
     <h3>Array utility routines</h3>
-        <p>A set of routines for managing arrays apply to any of the three array types (except the typed subset ones). Note that the push/append/prepend functions may not check that the type of the item being added to the array matches the array type; calling it with mismatched parameters is an error but may not be reported.
+        <p>A set of routines for managing arrays apply to any of the three array types (except the typed subset ones). Note that the push/append/prepend routines may not check that the type of the item being added to the array matches the array type; calling it with mismatched parameters is an error but may not be reported.
         <dl>
             <dt>r/a/copy gi/a gi/b</dt><dd>Set a to have the contents of b.</dd>
             <dt>r/a/push ga/array gi/value</dt><dd>Append the value to array. Same as r/an/append</dd>
