@@ -13,7 +13,7 @@
 <h2>Design goals</h2>
     <ul>
         <li>Imperative language. Trivial to implement, learn, and read; extremely portable.</li>
-        <li>Provide function calls, arrays, strings, numbers, booleans, and operators for these types with strict typing. Objects and first-class functions are out of scope for this language. TODO: Implement a table of values and scopes, and track their types for strict type checking. (It's currently closer to duck-typed in practice, as e.g. in Bash there would be no distinction between string 0 and number 0.)</li>
+        <li>Provide function calls, strings, numbers, booleans, and operators for these types with strict type checking. Objects and first-class functions are out of scope for this language. TODO: Implement a table of values and scopes, and track their types for strict type checking. (It's currently closer to duck-typed in practice, as e.g. in Bash there would be no distinction between string 0 and number 0.)</li>
         <li>Implemented as a transpiler that accepts a file as input and produces a file in the target language as output.</li>
         <li>Have an implementation of itself using itself, to provide testing and portability of the language.</li>
         <li>Have an implementation in Bash.</li>
