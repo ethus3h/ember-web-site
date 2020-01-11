@@ -18,7 +18,7 @@
 
 @0 Specific to do
     - Car registration punched out for January
-    - Web hosting renewal: when is it due?
+    - Web hosting renewal: when is it due? WhoisGuard: Jun 21, 2020 / hosting : Dec 12, 2021 / Domain name: Dec 9, 2022
     - uni mail
     - Deferred crystallize
     - GCC x86_64-pc-linux-gnu-8.3.1 can build kdelibs; x86_64-pc-linux-gnu-9.2.0 cannot
@@ -75,7 +75,7 @@
     - "PHP Objects, Patterns, and Practice by Matt Zandstra." and "The books that allowed me to really understand objects, without crowding out my thinking with unnecessary details, like examples in Smalltalk, were by David A Taylor, being <i>Object Oriented Technology: A Manager's Guide</i> and <i>Business Engineering with Object Teechnology</i>. Both are only 100 pages, and each easy enough to read in an afternoon. Of course, there is Gamma et al's <i>Design Patterns</i>" (referenced from https://stackoverflow.com/questions/4361553/what-is-the-difference-between-public-private-and-protected)
     - http://web.archive.org/web/20190910153802/https://phpdelusions.net/pdo
     - https://stackoverflow.com/questions/42056724/select-from-as-and-join-in-laravel
-    - "As a rule of thumb, unit test checks imperative part, i.e. logic of a single class, mocking everything (reasonable) else. Integration tests checks declarative part, i.e. configs, templates, etc. Functional tests checks functionality of the application as defined in the spec. " https://stackoverflow.com/questions/33281614/how-to-test-file-upload-with-laravel-and-phpunit 
+    - "As a rule of thumb, unit test checks imperative part, i.e. logic of a single class, mocking everything (reasonable) else. Integration tests checks declarative part, i.e. configs, templates, etc. Functional tests checks functionality of the application as defined in the spec. " https://stackoverflow.com/questions/33281614/how-to-test-file-upload-with-laravel-and-phpunit
     - ed, demo
 
 @0 Notes
