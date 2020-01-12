@@ -168,3 +168,6 @@ https://github.com/Eignar17/compiz-plugins-main.git
 https://github.com/Eignar17/compiz-rubik.git
 https://github.com/coz/compiz-cube-models.git
 https://github.com/smspillaz/compiz-fusion-icons.git
+git://github.com/mono/mono.git
+git://anongit.freedesktop.org/mesa/mesa
+git://github.com/mono/mono-basic.git
