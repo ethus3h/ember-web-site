@@ -1,4 +1,8 @@
 
 QTabBar::tab {
-    min-width: 100px
+    min-width: 300px
+}
+
+QTabBar::tab {
+    max-width: 600px
 }
