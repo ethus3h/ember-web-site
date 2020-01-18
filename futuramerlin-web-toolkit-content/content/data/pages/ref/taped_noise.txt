@@ -1,0 +1,23 @@
+**taped noise** is a record label. Possibly a reincarnation of [[distorter records]]? (see the discussion at that page)
+
+====== Logo ======
+
+{{:ref:tapednoise_logo_grammara_2-bgsm.png?200|}}
+
+====== Website ======
+
+http://www.tapednoise.com/
+
+
+===== Whois =====
+
+From http://whois.domaintools.com/tapednoise.com (retrieved 29 January 2014)
+<code>
+Domain Name: TAPEDNOISE.COM
+Registrar URL: http://www.godaddy.com
+Registrant Name: John Murphy
+Registrant Organization: Taped Noise, Inc.
+Name Server: NS51.1AND1.COM
+Name Server: NS52.1AND1.COM
+DNSSEC: unsigned
+</code>

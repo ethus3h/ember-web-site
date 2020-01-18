@@ -1,0 +1,14 @@
+===== Gnome-Do keyboard shortcut runs Gnome-Do twice =====
+
+==== Problem ====
+Gnome-Do keyboard shortcut runs Gnome-Do twice
+
+Can incorrectly appear to be related to this terminal output message:
+
+<code>(Do:11035): Wnck-CRITICAL **: wnck_set_client_type got called multiple times.</code>
+
+This message is apparently normal (see bug report: https://bugs.launchpad.net/ubuntu/+source/gnome-do/+bug/471567 ) and can "safely be ignored" (https://bugs.launchpad.net/ubuntu/+source/gnome-do/+bug/471567/comments/2) (See also [[Gnome-Do error message "Wnck-CRITICAL ** wnck_set_client_type got called multiple times."|this troubleshooting entry]])
+
+==== Solution ====
+
+Have the keybinding execute the jack-do script instead; that script was included to resolve this issue.

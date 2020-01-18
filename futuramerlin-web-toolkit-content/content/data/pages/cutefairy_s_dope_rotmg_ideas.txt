@@ -1,0 +1,208 @@
+====== CuteFairy's Dope RotMG Ideas ======
+
+I just died (2015-Sept-29a30) on my Knight, which was my first-ever 8/8. Thoughts on why (writing this inspired by http://community.kabam.com/forums/showthread.php?239783-Life-of-Kirikomori-a-blog): 
+  * I was soloing a manor, and despite having read the wiki was unfamiliar with how the boss fight worked. (I'd never fought it or seen it fought.)
+  * I was tired (it was after midnight).
+  * I wasn't watching my HP closely enough, and the bar underneath my character I think was obscured by bats.
+  * I didn't know confuse controls, so couldn't really run away effectively.
+  * I didn't max my pet first.
+  * I didn't kill flashplayer-plugin, nexus, or drink HP pots soon enough — by the time I saw that my health was low, it was very late, and instead of immediately killing the plugin, I tried to drink HP pots (probably so as not to lose the 100 gold I had spent on the dungeon key). That took too long, and I think that before I'd drunk any, I was dead.
+  * I may have been over-confident.
+What I lost: my gear, my 8/8 stats, a sup dex, and whatever HP/MP potions I was carrying.
+
+===== Gameplay =====
+
+  * Distinctive color for invulnerable enemies on the minimap
+  * Distinctive color for locked players on the minimap
+  * Distinctive color for cloaked rogues on the minimap?
+  * Have weak (from urgles) status effect display timed to indicate accurately when the status goes away
+  * Have confused status effect display timed to indicate accurately when the status effect goes away
+  * Cloak of invisibility for rogues: invisible both to enemies and other players (risk: getting things dragged on you)?
+  * Have HP bars remember if they were enabled
+  * 2 seconds of taking no damage after teleport, during which one isn't able to use one's weapon or ability
+  * Legitimize RWT, with an in-game UI — players can trade items for realm gold, but Kabam takes a cut
+
+
+==== Winch ====
+
+  * User can click on a player and from the menu select "Winch".
+  * The other player then can approve or decline the winch attachment.
+  * User will then move with the player to whom they are winched.
+  * User's shooting, aim, and use of ability is independent of the other player.
+  * Only one user can winch to another user.
+  * A user who is winched to another user cannot be winched to. (In other words, no "winch trains".)
+  * User can use the arrow keys to move away from the player to whom they are winched, while remaining winched; they will snap back to the other player when the arrow keys are released.
+  * Either player can detach the winch at any time, using a hotkey.
+
+==== Auto-nexus ====
+
+  * User can toggle an automatic-teleport-to-nexus-on-low-health trigger.
+  * Auto-nexus is togglable using a hotkey.
+  * User cannot earn XP/Fame while using auto-nexus.
+  * User cannot get loot drops while using auto-nexus.
+  * User's damage *does* count toward soulbound damage while using auto-nexus, to attempt to prevent using it for multiboxing.
+  * Items looted by players within xp-gain-range of a player using auto-nexus cannot ever be traded to the player who is/was using auto-nexus.
+  * Basically, this is a way a player can help a friend out without dying.
+
+==== PvP arena ====
+
+  * An area in the nexus where users can pay fame or gold to be able to fight each other in duels.
+  * Users must be winched together to enter the PvP arena.
+  * Users can select to enter as a spectator, for a smaller amount of fame or gold (or free?), and see a list of ongoing matches from which they can select to spectate.
+  * Users dueling can select non-permadeath, or permadeath. In non-permadeath mode, character and items are restored after losing a match.
+  * In permadeath mode, the losing player's gravestone is lootable, but soulbound items are lost.
+  * Users do not earn XP/Fame from fights in the PvP arena.
+
+==== Gravestone Looting ====
+
+  * Users can select to have their gravestones be lootable
+  * Items looted from a user's gravestone can never be traded back to the owner from whose gravestone they were looted.
+  * Soulbound items are generally lost upon death.
+  * Users can also set their gravestone to allow soulbound items to be looted from it, but if this setting is enabled, their account will be completely reset upon death, whether the soulbound items were picked up by another player or not. That includes deletion of all extras such as pets, character slots, vault chests, inventory, etc., and the account's realm gold is set to 0 (starter gold is not restored). The account retains its name, and it still costs the standard amount of gold to change that name.
+
+==== Vehicles ====
+
+  * Vehicles can occasionally spawn in realms.
+  * Each vehicle can be driven by one player.
+  * Players can enter a vehicle by walking up to it and clicking "Enter" in the lower-left-corner panel.
+  * Players can leave a vehicle by clicking "Leave" in the lower-left-corner panel.
+  * Players cannot teleport while driving a vehicle.
+  * Players cannot receive soulbound loot drops while driving a vehicle.
+  * Damage done by a player in a vehicle counts toward soulbound damage for an enemy.
+  * Players can receive XP/Fame while driving a vehicle, at a rate multiplied by that vehicle's XP rate multiplier.
+  * When a vehicle is destroyed with a player in it, the character driving it is killed.
+
+=== Tank ===
+
+  * 10,000 HP
+  * 5,000 Def
+  * Fires 1 shot, which does 1,000 damage. Range 10 tiles.
+  * Fires 1 shot every second.
+  * Drives at half the character's speed.
+  * XP rate multiplier: 0.25
+  * Running into walls, trees, stones etc. does 50 armor-piercing damage each time.
+
+=== Lifted truck ===
+
+  * 4,000 HP
+  * 1,000 Def
+  * Fires 4 shots, which do 100 damage each, in the pattern of the Pixie Sword. Range 3 tiles.
+  * Fires twice per second.
+  * Drives at the character's speed.
+  * XP rate multiplier: 0.25
+  * Running into walls, trees, stones etc. does 100 armor-piercing damage each time.
+
+=== Bicycle ===
+  * 1,500 HP
+  * 50 Def
+  * Fires 1 shot, which does 200 damage. Range 5 tiles.
+  * Fires twice per second.
+  * Drives at twice the character's speed.
+  * XP rate multiplier: 0.75
+  * Running into walls, trees, stones etc. does 100 armor-piercing damage each time.
+
+===== Statuses =====
+
+  * Flying. See in the section on the Angelfey class below for how this works.
+
+===== Classes =====
+
+==== Angelfey ====
+
+  * Switches between 8 sets of ability, stats, items, and inventory slots 1–4 (the top row).
+  * Basically, there are 8 tabs above the inventory area when playing this class, they can be clicked between to switch those attributes of the character. These tabs can be bound to hotkeys.
+  * When switching from one attribute set to another, hp/mana damage is transferred at a percentage — if one attribute set has 500/1000 hp (50%), then when they switch to an attribute set with 500 max hp, the character will then have 250/500 hp (also 50%).
+  * Stats for each of the 8 attribute sets must be maxed independently.
+  * Player does not gain XP/Fame on this class from their own solo kills — they must be leveled up by another player. (This is sort of analogous to how a player cannot gain XP/Fame from their pet's solo kills.)
+  * After reaching level 20, player does not gain XP/Fame.
+  * Player cannot get loot drops while playing this class.
+  * Player damage does count toward soulbound damage, to attempt to prevent the class from being used for multiboxing.
+  * To unlock, reach level 20 with Manamancer, Sorceror, and Paladin.
+  * See this class's Skins section for what the "Indicator pixel" is.
+
+=== Attribute sets ===
+
+== Angel ==
+
+  * Indicator pixel is black.
+  * Weapon: Can be either staff or sword.
+  * Ability: Bomb.
+  * Armor: Can be either robe or heavy armor. If staff is equipped, armor must be robe. If a sword or no weapon is equipped, armor can be either.
+  * Ring
+
+  * When using the ability:
+    * the player flies to the position of the cursor.
+    * The arrow keys have no effect while the player is flying.
+    * If a bullet passes under the player while the player is flying, the player is quieted, but takes no damage.
+    * The bomb is immediately dropped in the opposite direction of the direction the player flies, the same distance away from the player's original position as the player is flying.
+
+== Fey ==
+
+  * Indicator pixel is white.
+  * Weapon: Can be either staff or sword.
+  * Ability: Bomb
+  * Armor: Can be either robe or heavy armor. If staff is equipped, armor must be robe. If a sword or no weapon is equipped, armor can be either.
+  * Ring
+
+  * When using the ability:
+    * The player flies to the position of the cursor.
+    * Halfway through the flight, the bomb is dropped directly under the player. It does double the specified damage within half of its specified radius; 5% of this damage is removed from the player's mana. It does half the specified damage within double its specified radius; 5% of this damage is granted to the player's health.
+    * 10 times the number of tiles the player flies is removed from the player's mana.
+    * If a normal bullet passes under the player while the player is flying, the player takes no damage.
+    * If a Quieting bullet passes under the player while the player is flying, the player is quieted, but takes no damage.
+
+== Wizard ==
+
+  * Indicator pixel is red.
+  * Otherwise the same as the Wizard class.
+
+== Sorceror ==
+
+  * Indicator pixel is orange.
+  * Otherwise the same as the Sorceror class.
+
+== Knight ==
+
+  * Indicator pixel is yellow.
+  * Otherwise the same as the Knight class.
+
+== Paladin ==
+
+  * Indicator pixel is green.
+  * Otherwise the same as the Paladin class.
+
+== Necromancer ==
+
+  * Indicator pixel is cobalt blue.
+  * Otherwise the same as the Necromancer class.
+
+== Priest ==
+
+  * Indicator pixel is purple.
+  * Otherwise the same as the Priest class.
+
+=== Skins ===
+
+  * Classic
+  * Chibi Angelfey
+  * Nekomimi Angelfey
+  * Dark/Goth Angelfey
+
+  * Each skin other than Classic costs 10,000 gold.
+  * These skins can be traded.
+  * Trading these skins costs each party in the trade 11,500 fame or 4,500 gold. (I've chosen the fame cost as a shout-out to the cost of the old Amulet of Resurrection.) This should prevent duping the skins.
+  * Each skin has a pixel that is an "indicator pixel", and changes color depending on the attribute mode the player is using. See the attribute mode descriptions for the indicator pixel colors.
+
+==== Manamancer ====
+
+  * Weapon: staff.
+  * Ability: bomb.
+  * Armor: heavy armor.
+  * Ring
+
+  * To unlock, reach level 20 with Necromancer and Knight.
+
+Shooting an enemy with the staff: 1) draws the enemy 0.5 tiles closer to the player for every shot that hits (shots that hit simultaneously are counted as 1 shot for purposes of this), 2) deals damage to the player at a rate of 1% of the damage dealt to the enemy, 3) restores mana to the player at a rate of 5% of the damage dealt to the enemy, 4) has no effect on the enemy's health.
+
+Using the ability: 1) drops a bomb directly under the player, 2) costs mana, 3) damages all enemies within a given radius around the player, 4) does the same amount of damage to the player as it would do to a single enemy, 5) transfers damage done to the enemies into health for the player, 6) transfers damage done to the enemies into mana for players in the bomb area at a 5% rate.
+

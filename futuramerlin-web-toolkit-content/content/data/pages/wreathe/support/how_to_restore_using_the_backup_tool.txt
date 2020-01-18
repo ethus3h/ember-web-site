@@ -1,0 +1,30 @@
+=====How to restore using the Backup tool=====
+
+To restore from a backup after a system reinstall:
+
+====Using Wreathe 7r2a:====
+**WARNINGS**: Don't attempt to use rsync to copy the files, since permissions are not retained with the main backup files, instead being stored in a separate data file. Be very careful restoring system files and directories; things **can** get broken.
+
+  - Find the path of your latest known-good backup snapshot (i. e., what directory it's stored in). In the next command, replace /[backup folder]/ with this path.
+  - Run in the Terminal: <code>sudo cp /[backup folder]/backup/root/.config/backintime/config /root/.config/backintime/config</code>
+  - Open the Backup tool.
+  - The desired snapshots should show up correctly. If they didn't, something went wrong, and you should:
+    - Verify that the backup path you specified is correct
+    - Try following the longer procedure for other operating systems below
+  - Select the snapshot from which you would like to restore from the column in the left.
+  - Restore files and/or directories as desired by right clicking on the item and choosing Restore.
+
+====Using another standard Linux operating system, or pre-7r2a versions of Wreathe:====
+**WARNINGS**: Don't attempt to use rsync to copy the files, since permissions are not retained with the main backup files, instead being stored in a separate data file. Be very careful restoring system files and directories; things **can** get broken.
+
+  - Make sure the Backup tool (Back In Time — http://backintime.le-web.org) is installed; ideally version 1.0.23.
+  - Find the path of your latest known-good backup snapshot (i. e., what directory it's stored in). In the next command, replace /[backup folder]/ with this path.
+  - Run in the Terminal: <code>sudo cp /[backup folder]/backup/root/.config/backintime/config /root/.config/backintime/config</code>
+  - Open Back In Time. Configure it to save backups to a destination on the same device as your backups to restore. Select a trivial item to back up.
+  - Create a new backup snapshot of this trivial item.
+  - Move your existing snapshots to the directory where this new snapshot is. (To open a file manager with root permissions in Wreathe 4+, run: <code>gksu dolphin</code>.) Look at the directory naming pattern of the new snapshot, and change your existing snapshot directory names to match this convention if necessary (e. g. one version has a three-digits-after-a-hyphen suffix on the folder names that another does not; without adjusting the directory names the other version will not recognize these snapshots).
+  - Click Refresh Snapshots in the Back In Time interface.
+  - Assuming the desired snapshots showed up correctly (if it didn't, something went wrong), replace the trivial item added in step 2 with your desired backup target to the list of items to back up. Save your settings.
+  - Delete the new trivial-item snapshot (unless you want it for some reason). (This is to make sure that any new snapshots in this same directory are diffed with the last full snapshot, rather than the trivial-item snapshot, so as to avoid duplication. I'm not sure that it would result in duplication though, that's just an assumption I'm making.)
+  - Select the snapshot from which you would like to restore from the column in the left.
+  - Restore files and/or directories as desired by right clicking on the item and choosing Restore.

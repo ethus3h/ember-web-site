@@ -1,0 +1,25 @@
+**CDCE** means **Coded [[DCE]]**.
+
+It is a way of easily representing [[DCE]] content using [[FMNP]]-style [[@-codes]].
+
+The @-codes for CDCE are the same as the numeric [[DCE]] ids for each character, rather than HTML-alias–style named representations.
+
+I haven't defined any values yet.
+
+For some thoughts about what I'm going to do with this see [[CDCE ideas]].
+
+Any code can be converted into HTML display text. The function [[c]] will handle this, taking one CDCE-formatted argument and replacing it with the HTML output. The comment in the code reads:
+		#Parse a supplied CDCE string and return it as HTML
+It will do that using the database to provide an [[intf]]-style table of DCE codes and HTML replacements in Unicode.  A single DCE code does not need to map to a single Unicode character, because that would defeat the entire purpose of it.
+
+
+CDCE is Unicode text with the @-codes embedded in it as desired.
+
+The character @ obviously may need to be expressed using DCE itself to avoid syntactical confusion. It probably always should be.
+
+===== Example=====
+
+This is an invalid @27@DCE-form@21@tted string@560237@
+
+
+

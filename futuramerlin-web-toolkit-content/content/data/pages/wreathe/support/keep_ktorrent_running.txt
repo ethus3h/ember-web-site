@@ -1,0 +1,3 @@
+=====Keep KTorrent running=====
+Keep KTorrent running:
+  for i in {1..20000}; do sleep 30; ktorrent; done

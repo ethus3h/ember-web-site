@@ -1,0 +1,36 @@
+Also look at http://www.archiveteam.org/index.php?title=Restoring
+
+2015-Dec-4a5:
+<code> <kyan_> Thanks :)
+ <kyan_> So there is a trick to getting the original file
+ <kyan_> not a WARC, but the unmodified document
+ <kyan_> also to getting some things that are blocked by robots.txt
+ <kyan_> I don't know if either of those tricks would help your use case, 
+ <jleclanch> yea?
+ <kyan_> but anyway, they exist. Or did last I knew of them
+ <kyan_> It's best to stay quiet about them, though
+ <jleclanch> sure
+ <kyan_> I don't remember them right off, but I'll look for them if you're interested
+ <jleclanch> always interested
+ <kyan_> Ok, just a sec :)
+ <kyan_> Ok, one of them is stick "im_" onto the end of the date in the Wayback URL
+ <kyan_> https://web.archive.org/web/20000407082332im_/http://www.msnbc.com/modules/tvnews/today/today_left.jpg
+ <kyan_> That I think sometimes gets around Robots.txt
+ <jleclanch> interesting
+ <kyan_> The other one is "id_" at the end of the date
+ <kyan_> e.g. http://web.archive.org/web/19991012140308id_/http://google.com/
+ <kyan_> returns the original source code
+ <kyan_> (without the JavaScript toolbar and such)
+ <kyan_> sorry it took me a minute to find them again
+ <jleclanch> ok, yeah that helps
+ <kyan_> Also: it's fairly hit or miss, but if the server isn't serving the page correctly, then it'll often say "The machine that serves this file is down" blah blah blah, with a link to the WARC
+ <kyan_> thing is, those WARCs are mostly darked,
+ <kyan_> except for e.g. the ArchiveBot ones
+ <kyan_> That's sort of depending on something being broken,though :P
+ <jleclanch> mmk
+ <kyan_> Anyway, sorry I don't have a real way to get the WARC, though
+ <kyan_> but hope those are useful :)
+ <jleclanch> they are yeah 
+ <jleclanch> thanks
+ <kyan_> glad to hear it! :) np :)
+</code>

@@ -1,0 +1,40 @@
+This is the documentation website for [[http://futuramerlin.com/d/s/w/Wreathe%20web/index.html|Wreathe]]. Suggestions for fixing various problems are presented here for the convenience of the user. Bug reports should go to the [[http://futuramerlin.com/d/s/mantis/login_page.php?return=%2Fd%2Fs%2Fmantis%2Fmy_view_page.php|issue tracker]] (click the "Signup for a new account" hyperlink below the log-in box to be able to report bugs, if you have not already created an account).
+
+
+======Website:======
+[[http://futuramerlin.com/r.php?c=Wreathe&a=main]]
+
+====== How to ======
+
+[[Wreathe How-to]]
+
+====== Troubleshooting ======
+
+[[Troubleshooting Wreathe]]
+
+====== Useful notes ======
+
+[[Useful notes 6|Wreathe: Useful notes]]
+
+
+====== Glossary ======
+
+[[Wreathe glossary]]
+
+====== IRC channel: ======
+
+[[irc://irc.futuramerlin.com:53126/#wreathe]]: Support channel for Wreathe. (If anyone's there.) Type "kyan" before your question to make sure I get dinged if I'm there.
+
+===== Channel guidelines: =====
+  * The channel is, ideally, logged (unless something goes wrong with irssi's logging)
+  * I may publish the logs if I feel like it / get around to it
+  * I may hang onto the logs indefinitely
+  * Anyone is free to retain/publish their own logs if they care to do so; rock and roll archival
+  * Be civil, etc.
+  * My word is the final say when it comes to administering the channel
+  * Don't try to take over a channel or anything; I'll just turn off the server and take it back
+
+====== Asking questions: ======
+
+To ask a question in the support website (here), go to [[publicquestions:home|public questions]] to do so.
+

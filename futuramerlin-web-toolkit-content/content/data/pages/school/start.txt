@@ -1,0 +1,12 @@
+Things related to my school career.
+====== year 1 ======
+
+  * [[:school:HON170]]
+  * [[:school:COS225 Spring 2014]]
+  * [[:school:HON112]]
+====== year 2 fall ======
+
+  * [[:school:MAT126]]
+  * [[:school:HON211]]
+
+See also: [[:ref:Mathematics topics]]

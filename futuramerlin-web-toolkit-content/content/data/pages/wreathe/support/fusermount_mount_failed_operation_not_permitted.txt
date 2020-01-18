@@ -1,0 +1,13 @@
+=====fusermount: mount failed: Operation not permitted=====
+====Problem====
+When trying to mount using sshfs, an error is given:
+<code>
+fusermount: mount failed: Operation not permitted
+</code>
+
+====Solution====
+Run:
+<code>
+# chmod 4755 /usr/bin/fusermount
+</code>
+(from: http://forums.debian.net/viewtopic.php?p=442891#p442891 )

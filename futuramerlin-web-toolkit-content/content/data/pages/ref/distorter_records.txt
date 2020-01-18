@@ -1,0 +1,50 @@
+**distorter records** is a record label. Their label page was apparently at [[http://www.last.fm/label/distorter+records]] (saved in Wayback Machine in case it is taken down: https://web.archive.org/web/20140126193106/http://www.last.fm/label/distorter+records ) but has been deleted. Google-search turns up [[:ref:taped noise|taped noise]]'s website http://www.tapednoise.com/ when searching for distorter records, and given the similarity in the logos I would speculate that perhaps that is a new incarnation of the same label. distorter records's name & logo are still shown on last.fm page: http://www.last.fm/music/1/Untitled+Album (saved in Wayback Machine in case it is taken down: https://web.archive.org/web/20140126192554/http://www.last.fm/music/1/Untitled+Album ).
+
+====== Observation 29 January 2014 ======
+
+http://distorterrecords.com/ redirects to http://www.tapednoise.com/. I think that pretty much settles it that taped noise is a newer incarnation of the same label.
+
+====== Whois information ======
+
+===== distorterrecords.com =====
+
+From http://whois.domaintools.com/distorterrecords.com (retrieved 29 January 2014)
+<code>
+Domain Name: DISTORTERRECORDS.COM
+Registrar URL: http://www.godaddy.com
+Registrant Name: John Murphy
+Registrant Organization: Taped Noise, Inc.
+Name Server: NS57.1AND1.COM
+Name Server: NS58.1AND1.COM
+DNSSEC: unsigned
+</code>
+
+===== tapednoise.com =====
+
+From http://whois.domaintools.com/tapednoise.com (retrieved 29 January 2014)
+<code>
+Domain Name: TAPEDNOISE.COM
+Registrar URL: http://www.godaddy.com
+Registrant Name: John Murphy
+Registrant Organization: Taped Noise, Inc.
+Name Server: NS51.1AND1.COM
+Name Server: NS52.1AND1.COM
+DNSSEC: unsigned
+</code>
+
+====== Logos ======
+
+
+
+distorter records logo (IA: https://web.archive.org/web/20140126220118/http://userserve-ak.last.fm/serve/_/25579311.jpg ):
+
+{{:ref:25579311_.jpg?200|}}
+
+taped noise logo (IA: https://web.archive.org/web/20130822165740/http://www.tapednoise.com/images/tapednoise_logo_grammara_2-BGsm.png ):
+
+{{:ref:tapednoise_logo_grammara_2-bgsm.png?200|}}
+
+====== Releases ======
+
+  * [[Untitled Album (distorter records|Untitled Album]]
+

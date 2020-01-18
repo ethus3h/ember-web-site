@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC1091
+source ember_bash_setup &> /dev/null
+# set -x
+
+cat futuramerlin-web-toolkit-output/people/elli/music/futuramerlin-web-toolkit-discography.iaidentifiers >> "identifiers.lst" || true
+removeDuplicateLines 'identifiers.lst' | sponge 'identifiers.lst'
