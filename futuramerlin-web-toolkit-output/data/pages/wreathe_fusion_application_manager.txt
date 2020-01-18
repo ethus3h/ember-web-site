@@ -1,2 +1,0 @@
-The **Wreathe Fusion Application Manager** is the Wreathe desktop environment. It's a specific configuration of KDE Plasma Workspaces + GNOME 2 + Compiz. It's got global window controls when windows are maximized, a global menu bar, and tabs instead of a taskbar/dock/launcher. Introduced in [[Wreathe 7 alpha]].
-As of [[Wreathe 7r2a]], global window controls have been removed due to the switch to the Emerald window decorator.

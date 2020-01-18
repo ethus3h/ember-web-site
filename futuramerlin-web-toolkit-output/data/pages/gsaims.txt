@@ -1,1 +1,0 @@
-**GSAIMS** is the [[General Standard for Arbitrary Information Management System Structures]].

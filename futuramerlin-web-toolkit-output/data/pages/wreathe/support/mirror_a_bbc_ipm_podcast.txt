@@ -1,3 +1,0 @@
-=====Mirror a BBC iPM podcast=====
-Mirror a BBC iPM podcast…
-  wget -m -H -l 1 --warc-file=podcast-rip-`date -u +%Y.%m.%d.%H.%M.%S.%N.%Z` http://www.bbc.co.uk/podcasts/series/ipm;

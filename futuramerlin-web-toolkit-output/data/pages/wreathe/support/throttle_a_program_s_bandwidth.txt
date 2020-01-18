@@ -1,7 +1,0 @@
-=====Throttle a program's bandwidth=====
-Force a program to use less bandwidth (throttle a program's bandwidth):
-
-  trickle -u [bandwidth] /path/to/program
-(Replace [bandwidth] with the amount you want to grant the program, e. g.
-  trickle -u 1750 /path/to/program
-)

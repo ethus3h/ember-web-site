@@ -1,3 +1,0 @@
-=====Back up a wiki using dumpgenerator.py=====
-Back up a wiki using dumpgenerator.py:
-  python ../dumpgenerator.py --api=http://www.example.com/api.php --xml --images

@@ -1,1 +1,0 @@
-**Futuramerlin IDs** are sequential, unique numbers assigned. The current registration data is the [[Futuramerlin Document Registry]]. These are not the same as [[Token Registry]] keys.

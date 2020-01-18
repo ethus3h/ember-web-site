@@ -423,9 +423,13 @@ class FractureDB
     }
     function setField($table, $field, $value, $id = '')
     {
-        $query = 'INSERT INTO ' . $table . ' (id, ' . $field . ') VALUES (' . $id . ',\'' . $value . '\') ON DUPLICATE KEY UPDATE ' . $field . ' = \'' . $value . '\';';
+        $dbh      = $this->db;
+        $query = $dbh->prepare('INSERT INTO ' . $table . ' (id, ' . $field . ') VALUES (' . '?' . ',' . '?' . ') ON DUPLICATE KEY UPDATE ' . $field . ' = ' . '?' . ';');
+        $query->bindParam(1, $id);
+        $query->bindParam(2, $value);
+        $query->bindParam(3, $value);
         //echo $query;
-        $this->query($query);
+        $query->execute();
     }
     function getPrimaryKey($table) {
 		$query = "SHOW KEYS FROM " . $table . " WHERE key_name = 'PRIMARY'";

@@ -1,3 +1,0 @@
-A list of answered [[:publicquestions:home|public questions]].
-
-<nspages -exclude:start -title>

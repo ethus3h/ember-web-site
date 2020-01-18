@@ -1,1 +1,0 @@
-Representing ranges in [[DCE]] is handled using the [[DCE range character]], as such: [start value] - [range] - [end value].

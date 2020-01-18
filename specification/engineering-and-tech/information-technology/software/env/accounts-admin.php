@@ -41,34 +41,50 @@ function getParam($name) {
 include('active.fracturedb.php');
 $database=new FractureDB($mysqlTablePrefix.'eite_node', $mysqlUser, $mysqlPassword, $mysqlServer);
 $accessKey=getParam('accessKey');
+$action=getParam('action');
 $oldPermissions=getParam('oldPermissions');
 $accountId=getParam('accountId');
+$zipcode=getParam('zipcode');
+$town=getParam('town');
+$areaOfCountry=getParam('areaOfCountry');
+$country=getParam('country');
 if($accessKey === '') {
     echo '<!DOCTYPE html>
     <html lang="en">
     <head>
     <meta charset="utf-8" />
+    <meta content="width=device-width, height=device-height, user-scalable=yes" name="viewport">
     <link href="accounts.css" rel="stylesheet" type="text/css">
     <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
     <title>User Access Management</title>
     </head>
     <body><a href="/">← Home</a><br><br>';
-    echo '<form method="post" action="accounts-admin.php"><label for="accessKey">Login ID: </label> <input type="password" name="accessKey" id="accessKey" required><input type="submit" value="Log in to admin panel"></form>';
+    echo '<form method="post" action="accounts-admin.php"><label for="accessKey">Login ID: </label> <input type="password" name="accessKey" id="accessKey" required><br><input type="submit" value="Log in to admin panel"></form>';
     echo '</body></html>';
 }
 else {
     if($accessKey === $mysqlPassword) {
-        if($oldPermissions === '') {
+        if($oldPermissions === '' && $action === '') {
             echo '<!DOCTYPE html>
             <html lang="en">
             <head>
             <meta charset="utf-8" />
+            <meta content="width=device-width, height=device-height, user-scalable=yes" name="viewport">
             <link href="accounts.css" rel="stylesheet" type="text/css">
+            <script src="sorttable.js"></script>
+            <script type="text/javascript">
+                function sortByCompanyName() {
+                    let companyNameHeader=document.getElementById(\'companyNameHeader\');
+                    sorttable.innerSortFunction.apply(companyNameHeader, []);
+                }
+            </script>
             <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
             <title>User Access Management</title>
             </head>
-            <body><a href="/">← Home</a><br><br>
-            <table><thead><tr><th>ID</th><th>Public ID</th><th>Name</th><th>Location</th><th>Employees Count</th><th>Payment Method</th><th>Email</th><th>Other</th><th>Account approved?</th><th>(Dis)Approve</th></tr></thead>
+            <body class="noBodyBackground" onLoad="javascript:sortByCompanyName();"><a href="/">← Home</a><br><br>
+            <a href="#AddZIPCode">→ Add ZIP Code...</a><br><br>
+            <p>Click column headers to sort the table.</p>
+            <table class="sortable"><thead><tr><th>ID</th><th>Public ID</th><th>Name</th><th id="companyNameHeader">Company Name</th><th>Referred by</th><th>Email</th><th>Location</th><th>Employees Count</th><th>Payment Method</th><th>Other</th><th>Date added</th><th>Account approved?</th><th>(Dis)Approve</th></tr></thead>
             <tbody>';
             $resultsArray=$database->getTable('idxPerson');
             $counter = 0;
@@ -78,22 +94,40 @@ else {
                 if($userRow['permissions'] === '0') {
                     $permissionWord='No';
                 }
-                echo '<tr><td>'.$userRow['id'].'</td><td>'.$userRow['publicId'].'</td><td>'.$userRow['name'].'</td><td>'.$userRow['location'].'</td><td>'.$userRow['employeesCount'].'</td><td>'.$userRow['paymentMethod'].'</td><td>'.$userRow['email'].'</td><td>'.$userRow['other'].'</td><td>'.$permissionWord.'</td><td><form method="post" action="accounts-admin.php"><input type="hidden" name="oldPermissions" value="'.$userRow['permissions'].'"><input type="hidden" name="accountId" value="'.$userRow['id'].'"><input type="hidden" name="accessKey" value="'.$accessKey.'"><input type="submit" value="Toggle"></form></td></tr>';
+                $employeeCountDisplay=$userRow['employeesCount'];
+                if($employeeCountDisplay === '0') {
+                    $employeeCountDisplay='';
+                }
+                echo '<tr><td>'.$userRow['id'].'</td><td>'.$userRow['publicId'].'</td><td>'.$userRow['personName'].'</td><td>'.$userRow['name'].'</td><td>'.$userRow['referrer'].'</td><td>'.$userRow['email'].'</td><td>'.$userRow['location'].'</td><td>'.$employeeCountDisplay.'</td><td>'.$userRow['paymentMethod'].'</td><td>'.$userRow['other'].'</td><td>'.$userRow['accountCreationDate'].'</td><td>'.$permissionWord.'</td><td><form method="post" action="accounts-admin.php"><input type="hidden" name="oldPermissions" value="'.$userRow['permissions'].'"><input type="hidden" name="accountId" value="'.$userRow['id'].'"><input type="hidden" name="accessKey" value="'.$accessKey.'"><input type="submit" value="Toggle"></form></td></tr>';
                 $counter++;
             }
-            echo '</tbody></table></body></html>';
+            echo '</tbody></table>
+            <h2 id="AddZIPCode">Add ZIP Code</h2>
+            <form method="post" action="accounts-admin.php"><input type="hidden" name="action" value="zipCodeUpdate"><input type="hidden" name="accessKey" value="'.$accessKey.'">
+                <label for="zipcode">ZIP Code: </label> <input type="text" placeholder="00000" name="zipcode" id="zipcode" required><br>
+                <label for="town">Town: </label> <input type="text" placeholder="" name="town" id="town" required><br>
+                <label for="areaOfCountry">Area of country (state/province/subdivision): </label> <input type="text" placeholder="" name="areaOfCountry" id="areaOfCountry" required><br>
+                <label for="country">Country: </label> <input type="text" placeholder="" name="country" id="country" required><br>
+            <input type="submit" value="Add"></form>
+            </body></html>';
         }
         else {
-            if ($oldPermissions === '0') {
-                $database->setField('idxPerson', 'permissions', '1', $accountId);
+            if ($action === 'zipCodeUpdate') {
+                $database->addRowFromArrays('ZIPCodes', ['id', 'zipcode', 'town', 'areaOfCountry', 'country'], ['NULL', $zipcode, $town, $areaOfCountry, $country]);
             }
             else {
-                $database->setField('idxPerson', 'permissions', '0', $accountId);
+                if ($oldPermissions === '0') {
+                    $database->setField('idxPerson', 'permissions', '1', $accountId);
+                }
+                else {
+                    $database->setField('idxPerson', 'permissions', '0', $accountId);
+                }
             }
             echo '<!DOCTYPE html>
             <html lang="en">
             <head>
             <meta charset="utf-8" />
+            <meta content="width=device-width, height=device-height, user-scalable=yes" name="viewport">
             <link href="accounts.css" rel="stylesheet" type="text/css">
             <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
             <title>User Access Management</title>
@@ -109,6 +143,7 @@ else {
         <html lang="en">
         <head>
         <meta charset="utf-8" />
+        <meta content="width=device-width, height=device-height, user-scalable=yes" name="viewport">
         <link href="accounts.css" rel="stylesheet" type="text/css">
         <style type="text/css" media="all">table,tr,td{border:1px dotted maroon;}"</style>
         <title>User Access Management</title>
