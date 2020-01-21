@@ -1,0 +1,8 @@
+Notes on mirroring websites.
+
+  * [[:Structure of The Summit Church Worship Ministry's audio downloads|Structure of The Summit Church Worship Ministry's audio downloads]]
+  * [[:Notes for trying to mirror Chomikuj.pl|Notes for trying to mirror Chomikuj.pl]]
+  * [[:Notes for mirroring Oen Kennedy's website|Notes for mirroring Oen Kennedy's website]]
+  * [[Notes on mirroring DJ Contacreast's songs]]
+  * [[Useful youtube-dl options]]
+  * [[Mirroring Naxos]]

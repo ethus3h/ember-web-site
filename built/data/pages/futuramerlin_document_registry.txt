@@ -1,0 +1,46 @@
+The [[Futuramerlin Document Registry]] is the index of assigned [[Futuramerlin IDs]]. Eventually it should be managed as a MySQL database administered through a [[Fracture//Active]] utility.
+
+====== Current fields ======
+===== Table: dr_main =====
+
+id: ID [bigint]
+
+class: Class → dr_classes.id
+
+type: Type → dr_types.id
+
+title: Title [longtext]
+
+ia_id: Identifier (Internet Archive) [text]
+
+location: Location → dr_main.id
+
+seed: Seed status [bool]
+
+date: Date [text]
+
+description: Description [longtext]
+
+size: Size [text]
+
+creator: Creator [text]
+
+note: Note [longtext]
+
+condition: Condition [longtext]
+
+move: Needs moving? [bool]
+
+node: Ember node ID [bigint]
+
+===== Table: dr_classes =====
+
+id: ID [bigint]
+
+name: Class [text]
+
+===== Table: dr_types =====
+
+id: ID [bigint]
+
+name: Type [text]

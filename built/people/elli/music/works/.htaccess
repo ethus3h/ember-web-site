@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteCond "" !-f
+RewriteRule "releases/(.*).htm$" "../releases/$1.htm"

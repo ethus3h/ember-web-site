@@ -1,0 +1,10 @@
+**Websites** are, like, sites. On the web. FIXME
+
+====== By topic: ======
+
+===== Libraries =====
+
+* [[:ref:Library Genesis]]
+
+===== Software =====
+  * [[:ref:RSAS (Random Short AppleScripts) Incorporated!]]

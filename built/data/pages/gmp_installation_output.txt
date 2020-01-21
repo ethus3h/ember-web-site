@@ -1,0 +1,225 @@
+  kyan@elegy:/media/MyBook/gmp-5.1.2$ sudo make install
+  [sudo] password for kyan: 
+  make  install-recursive
+  make[1]: Entering directory `/media/MyBook/gmp-5.1.2'
+  Making install in tests
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/tests'
+  Making install in .
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/tests'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/tests'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/tests'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/tests'
+  Making install in devel
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/tests/devel'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/tests/devel'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/devel'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/devel'
+  Making install in mpn
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/tests/mpn'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/tests/mpn'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/mpn'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/mpn'
+  Making install in mpz
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/tests/mpz'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/tests/mpz'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/mpz'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/mpz'
+  Making install in mpq
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/tests/mpq'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/tests/mpq'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/mpq'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/mpq'
+  Making install in mpf
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/tests/mpf'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/tests/mpf'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/mpf'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/mpf'
+  Making install in rand
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/tests/rand'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/tests/rand'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/rand'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/rand'
+  Making install in misc
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/tests/misc'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/tests/misc'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/misc'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/misc'
+  Making install in cxx
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/tests/cxx'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/tests/cxx'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/cxx'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/tests/cxx'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/tests'
+  Making install in mpn
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/mpn'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/mpn'
+  make[3]: Nothing to be done for `install-exec-am'.
+  make[3]: Nothing to be done for `install-data-am'.
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/mpn'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/mpn'
+  Making install in mpz
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/mpz'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/mpz'
+  make[3]: Nothing to be done for `install-exec-am'.
+  make[3]: Nothing to be done for `install-data-am'.
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/mpz'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/mpz'
+  Making install in mpq
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/mpq'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/mpq'
+  make[3]: Nothing to be done for `install-exec-am'.
+  make[3]: Nothing to be done for `install-data-am'.
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/mpq'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/mpq'
+  Making install in mpf
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/mpf'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/mpf'
+  make[3]: Nothing to be done for `install-exec-am'.
+  make[3]: Nothing to be done for `install-data-am'.
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/mpf'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/mpf'
+  Making install in printf
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/printf'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/printf'
+  make[3]: Nothing to be done for `install-exec-am'.
+  make[3]: Nothing to be done for `install-data-am'.
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/printf'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/printf'
+  Making install in scanf
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/scanf'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/scanf'
+  make[3]: Nothing to be done for `install-exec-am'.
+  make[3]: Nothing to be done for `install-data-am'.
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/scanf'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/scanf'
+  Making install in rand
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/rand'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/rand'
+  make[3]: Nothing to be done for `install-exec-am'.
+  make[3]: Nothing to be done for `install-data-am'.
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/rand'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/rand'
+  Making install in cxx
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/cxx'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/cxx'
+  make[3]: Nothing to be done for `install-exec-am'.
+  make[3]: Nothing to be done for `install-data-am'.
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/cxx'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/cxx'
+  Making install in demos
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/demos'
+  Making install in calc
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/demos/calc'
+  make  install-am
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/demos/calc'
+  make[5]: Entering directory `/media/MyBook/gmp-5.1.2/demos/calc'
+  make[5]: Nothing to be done for `install-exec-am'.
+  make[5]: Nothing to be done for `install-data-am'.
+  make[5]: Leaving directory `/media/MyBook/gmp-5.1.2/demos/calc'
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/demos/calc'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/demos/calc'
+  Making install in expr
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/demos/expr'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/demos/expr'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/demos/expr'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/demos/expr'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/demos'
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2/demos'
+  make[4]: Nothing to be done for `install-exec-am'.
+  make[4]: Nothing to be done for `install-data-am'.
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2/demos'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/demos'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/demos'
+  Making install in tune
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/tune'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/tune'
+  make[3]: Nothing to be done for `install-exec-am'.
+  make[3]: Nothing to be done for `install-data-am'.
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/tune'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/tune'
+  Making install in doc
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2/doc'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2/doc'
+  make[3]: Nothing to be done for `install-exec-am'.
+   /bin/mkdir -p '/Technical/Wreathe/Wreathe/Development/share/info'
+   /usr/bin/install -c -m 644 ./gmp.info ./gmp.info-1 ./gmp.info-2 '/Technical/Wreathe/Wreathe/Development/share/info'
+   install-info --info-dir='/Technical/Wreathe/Wreathe/Development/share/info' '/Technical/Wreathe/Wreathe/Development/share/info/gmp.info'
+  This is not dpkg install-info anymore, but GNU install-info
+  See the man page for ginstall-info for command line arguments
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2/doc'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2/doc'
+  make[2]: Entering directory `/media/MyBook/gmp-5.1.2'
+  make[3]: Entering directory `/media/MyBook/gmp-5.1.2'
+   /bin/mkdir -p '/Technical/Wreathe/Wreathe/Development/lib'
+   /bin/bash ./libtool   --mode=install /usr/bin/install -c   libgmp.la '/Technical/Wreathe/Wreathe/Development/lib'
+  libtool: install: /usr/bin/install -c .libs/libgmp.so.10.1.2 /Technical/Wreathe/Wreathe/Development/lib/libgmp.so.10.1.2
+  libtool: install: (cd /Technical/Wreathe/Wreathe/Development/lib && { ln -s -f libgmp.so.10.1.2 libgmp.so.10 || { rm -f libgmp.so.10 && ln -s libgmp.so.10.1.2 libgmp.so.10; }; })
+  libtool: install: (cd /Technical/Wreathe/Wreathe/Development/lib && { ln -s -f libgmp.so.10.1.2 libgmp.so || { rm -f libgmp.so && ln -s libgmp.so.10.1.2 libgmp.so; }; })
+  libtool: install: /usr/bin/install -c .libs/libgmp.lai /Technical/Wreathe/Wreathe/Development/lib/libgmp.la
+  libtool: install: /usr/bin/install -c .libs/libgmp.a /Technical/Wreathe/Wreathe/Development/lib/libgmp.a
+  libtool: install: chmod 644 /Technical/Wreathe/Wreathe/Development/lib/libgmp.a
+  libtool: install: ranlib /Technical/Wreathe/Wreathe/Development/lib/libgmp.a
+  libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin:/sbin" ldconfig -n /Technical/Wreathe/Wreathe/Development/lib
+  /sbin/ldconfig.real: /Technical/Wreathe/Wreathe/Development/lib/libisl.so.10.1.1-gdb.py is not an ELF file - it has the wrong magic bytes at the start.
+  
+  ----------------------------------------------------------------------
+  Libraries have been installed in:
+     /Technical/Wreathe/Wreathe/Development/lib
+  
+  If you ever happen to want to link against installed libraries
+  in a given directory, LIBDIR, you must either use libtool, and
+  specify the full pathname of the library, or use the `-LLIBDIR'
+  flag during linking and do at least one of the following:
+     - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+       during execution
+     - add LIBDIR to the `LD_RUN_PATH' environment variable
+       during linking
+     - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+     - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+  
+  See any operating system documentation about shared libraries for
+  more information, such as the ld(1) and ld.so(8) manual pages.
+  ----------------------------------------------------------------------
+   /bin/mkdir -p '/Technical/Wreathe/Wreathe/Development/include'
+   /usr/bin/install -c -m 644 gmp.h '/Technical/Wreathe/Wreathe/Development/include'
+  make  install-data-hook
+  make[4]: Entering directory `/media/MyBook/gmp-5.1.2'
+  
+  +-------------------------------------------------------------+
+  | CAUTION:                                                    |
+  |                                                             |
+  | If you have not already run "make check", then we strongly  |
+  | recommend you do so.                                        |
+  |                                                             |
+  | GMP has been carefully tested by its authors, but compilers |
+  | are all too often released with serious bugs.  GMP tends to |
+  | explore interesting corners in compilers and has hit bugs   |
+  | on quite a few occasions.                                   |
+  |                                                             |
+  +-------------------------------------------------------------+
+  
+  make[4]: Leaving directory `/media/MyBook/gmp-5.1.2'
+  make[3]: Leaving directory `/media/MyBook/gmp-5.1.2'
+  make[2]: Leaving directory `/media/MyBook/gmp-5.1.2'
+  make[1]: Leaving directory `/media/MyBook/gmp-5.1.2'
+  kyan@elegy:/media/MyBook/gmp-5.1.2$

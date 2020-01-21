@@ -1,0 +1,8 @@
+**%%http://userserve-ak.last.fm/serve/%%** is the url Last.fm pictures begin with. For example http://userserve-ak.last.fm/serve/500/25579311.jpg (IA: https://web.archive.org/web/20140126192740/http://userserve-ak.last.fm/serve/500/25579311.jpg )
+
+====== Structure ======
+The structure of one of these URLs is:
+  http://userserve-ak.last.fm/serve/{size}/{id}.{extension}
+where {size} is the width of the image in pixels, {id} is the numeric image ID, and {extension} is the [[:ref:file-name extension]]. The size is only available for a predefined set of possible values; if a size that is not available is requested, it will return "Unknown image size" (e. g. http://userserve-ak.last.fm/serve/243/25579311.jpg (IA: https://web.archive.org/save/http://userserve-ak.last.fm/serve/243/25579311.jpg ). The file-name extension can be set to png even if png format is not available; it will return an image with a png extension but the data will be jpeg, for example http://userserve-ak.last.fm/serve/_/25579311.png (IA https://web.archive.org/web/20140126222331/http://userserve-ak.last.fm/serve/_/25579311.png )
+
+To get the full size version of a last.fm image, enter _ (an [[:ref:underscore]]) as {size}.

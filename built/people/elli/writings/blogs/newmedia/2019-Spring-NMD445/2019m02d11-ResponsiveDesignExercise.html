@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, height=device-height, user-scalable=yes" name="viewport">
+    <title>Mockup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav, main {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            width: 100vw;
+        }
+        nav {
+            height: 10vh;
+            min-height: 1rem;
+            max-height: 3rem;
+        }
+        main {
+            bottom: 0;
+            height: 90vh;
+            max-height: calc(100vh - 1rem);
+            min-height: calc(100vh - 3rem);
+            flex-direction: column;
+            z-index: 2;
+        }
+        button {
+            font-size: 100%;
+            /* flex-shrink: 0; */
+        }
+        #calendar {
+            font-size: 50%;
+        }
+        nav button:not(#calendar) {
+            width: 10vh;
+            min-width: 1rem;
+            max-width: 3rem;
+        }
+        nav button, nav input {
+            height: 100%;
+        }
+        nav button:first-of-type::before {
+            content: unset;
+        }
+        #actions button {
+            height: 15vh;
+            min-height: 1.5rem;
+            max-height: 4.5rem;
+            width: 15vh;
+            min-width: 1.5rem;
+            max-width: 4.5rem;
+        }
+        #edit, #expand, #weather, #calendar, #play, #overview {
+            align-self: end;
+        }
+        #greeting, #actions, #search {
+            flex-shrink: 1;
+        }
+        #greeting .right-align {
+            float: right;
+        }
+        #tabbar {
+            width: 3rem;
+            flex-grow: 1;
+        }
+        #search-input {
+            width: 0;
+            flex-grow: 1
+        }
+        main > section:not(:last-of-type) {
+            padding: 0.25rem 20vw;
+        }
+        main > section:first-of-type {
+            padding-top: 0.5rem;
+        }
+        main > section:last-of-type {
+            padding-bottom: 0rem;
+        }
+        #tools {
+            flex-shrink: 1;
+            overflow: hidden;
+        }
+        #tools > section {
+            overflow-y: scroll;
+            margin: 1rem 0.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.9);
+        }
+        #tools > section:first-of-type {
+            margin-left: 1rem;
+        }
+        #tools > section:last-of-type {
+            margin-right: 1rem;
+        }
+        #tools > section > button {
+            max-height: 2rem;
+            min-height: 2rem;
+        }
+        #tools > section > *:not(h2) {
+            flex-grow: 1;
+            overflow-y: scroll;
+        }
+        .to-do-priority, .notification-time, .notification-priority, .folder-chevron {
+            float: right;
+        }
+        li, h2 {
+            padding: 0.5rem;
+        }
+        h2 {
+            text-align: center;
+        }
+        #to-do {
+            display: flex;
+        }
+        #to-do > ul {
+            flex-grow: 1;
+            padding: 0 0 0 0.5rem;
+        }
+        ul {
+            list-style: none;
+        }
+        #schedule-calendar {
+            width: 100%;
+        }
+        #schedule-calendar td {
+            vertical-align: text-top;
+        }
+        #schedule-calendar td:last-of-type {
+            padding: 0 0 0 0.5rem;
+        }
+        #schedule-calendar table {
+            width: 100%;
+        }
+        body, #background {
+            /*width: 375px;
+            height: 665px;
+            max-width: 375px;
+            max-height: 665px;
+            overflow: hidden;*/
+        }
+        #background {
+            background-image: url('/specification/engineering-and-tech/information-technology/env/web/DSCN0001.JPG');
+            /* background-image: url('/Wreathe/Backgrounds/DSCN0001.JPG'); */
+            background-size: cover;
+        }
+        #background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100vw;
+            height: 100vh;
+        }
+        #actions button:last-of-type {
+            border-width: 0;
+        }
+        nav button {
+            border-width: 0;
+        }
+        button {
+            background-color: rgba(255,255,255,0.7);
+            border-width: 0 0 0.1rem 0;
+            border-color: white;
+            border-style: solid;
+            transition: 0.1s all;
+            position: relative;
+        }
+        nav button::before {
+            content: ' ';
+            display: block;
+            height: 100%;
+            float: left;
+            position: absolute;
+            width: 0.1rem;
+            background-color: white;
+            top: 0;
+            left: 0;
+        }
+        button:hover {
+            background-color: rgba(255,255,255,0.8);
+        }
+        button:active {
+            background-color: rgba(200,200,200,0.7);
+        }
+        #edit, #expand, #weather, #calendar, #play, #overview {
+            align-self: end;
+        }
+        #greeting {
+            padding: 1rem;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 0 0.5rem white, 0 0 1rem white, 0 0 1rem white, 0 0 1rem white, 0 0 2rem white, 0 0 2rem white;
+            justify-content: center;
+        }
+        #greeting .right-align {
+            float: right;
+        }
+        nav::before, #actions::before {
+            background:-moz-element(#background) no-repeat fixed;
+            filter:url(#f1);
+            content: ' ';
+            width: calc(100% + 6rem);
+            height: calc(100% + 6rem);
+            position: absolute;
+            top: -3rem;
+            left: -3rem;
+            clip-path: inset(3rem 3rem 3rem 3rem);
+        }
+        main > section {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        main > section:not(#actions) {
+            z-index: 1;
+        }
+        #actions > button::after {
+            content: '❭';
+            float: right;
+            padding-right: 1rem;
+        }
+        #tabbar-button, #searchbutton, #projectsbutton, #schedulebutton, #updatesbutton {
+            display: none;
+        }
+        .eiteEditToolFrame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        @media only screen and (max-device-width: 640px) {
+            #greeting > .right-align, #tabbar, #edit, #weather, #play, #overview, #search, #tools {
+                display: none;
+            }
+            #tabbar-button, #searchbutton, #projectsbutton, #schedulebutton, #updatesbutton {
+                display: block;
+            }
+            main {
+                height: 90vh;
+                max-height: calc(100vh - 1rem);
+            }
+            nav {
+                height: 10vh;
+                min-height: 1rem;
+            }
+            #actions button {
+                width: 100%;
+                min-width: 1.5rem;
+                height: 100%;
+                min-height: unset;
+                max-height: unset;
+                max-width: unset;
+            }
+            main > section {
+                justify-content: unset;
+            }
+            nav button:not(#calendar) {
+                width: 10vh;
+            }
+            main, button {
+                font-size: 2rem;
+            }
+            #calendar {
+                min-width: 4rem;
+                width: 100%;
+                font-size: unset;
+            }
+            main > section:not(:last-of-type) {
+                padding: 0 0;
+            }
+            main > section:first-of-type {
+                padding-top: 0;
+            }
+            #actions {
+                flex-direction: column;
+                flex-grow: 1;
+                position: relative;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+    window.onload = () => {
+        let createClicked = () => {
+            let elem=document.importNode(document.getElementById('editFrameTemplate').content, true);
+            let main=document.getElementsByTagName('main')[0];
+            main.innerHTML='';
+            main.appendChild(elem.firstChild);
+        }
+        let startClicked = () => {
+            let main=document.getElementsByTagName('main')[0];
+            main.remove();
+            let elem=document.importNode(document.getElementById('startPageTemplate').content, true);
+            document.body.appendChild(elem.firstChild);
+            document.getElementById('create').onclick=createClicked;
+        }
+        document.getElementById('start').onclick=startClicked;
+        let elem=document.importNode(document.getElementById('startPageTemplate').content, true);
+        document.body.appendChild(elem.firstChild);
+        document.getElementById('create').onclick=createClicked;
+    };
+    </script>
+</head>
+<body>
+<nav>
+    <button id="start">Start</button>
+    <button id="tabbar-button">⯐</button>
+    <input type="text" id="tabbar">
+    <button id="edit">🖉</button>
+    <button id="expand">❬</button>
+    <button id="weather">🌤</button>
+    <button id="calendar">5 Dec. 2017<br />0:41 AM</button>
+    <button id="play">⏵</button>
+    <button id="overview">⠶</button>
+</nav>
+<template id="startPageTemplate"><main>
+    <section id="greeting">
+        <p>Hello, Name.</p>
+        <p class="right-align">Today is 5 December, 2017.</p>
+    </section>
+    <section id="search">
+        <input type="text" id="search-input" value="Type to search or open…">
+        <button id="search-button">Search</button>
+    </section>
+    <section id="actions">
+        <button id="searchbutton">Search</button>
+        <button id="create">Create</button>
+        <button id="open">Open</button>
+        <button id="media">Media</button>
+        <button id="projectsbutton">Current projects</button>
+        <button id="schedulebutton">Schedule</button>
+        <button id="updatesbutton">Updates</button>
+        <button id="help">Help</button>
+    </section>
+        <section id="tools">
+        <section id="projects">
+            <h2>Current projects</h2>
+            <ul>
+                <li class="project">Fisheries report</li>
+                <li class="project">Leedsville bridge proposal</li>
+                <li class="project">Latest IWG minutes</li>
+                <li class="project"><p class="folder-chevron">❭</p><p>Music compositions</p></li>
+                <li class="project">Hidden item</li>
+            </ul>
+            <button id="projects-button">Open project journal…</button>
+        </section>
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <section id="schedule-calendar">
+                <table>
+                    <tr>
+                        <td>8 AM</td>
+                        <td rowspan="2">
+                            <p>8:00 AM–8:45 AM:</p>
+                            <p>Meeting with James</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9 AM</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </section>
+            <section id="to-do">
+                <h3>To do</h3>
+                <ul>
+                    <li class="to-do-item"><p class="to-do-priority">[!!!]</p><p>Phone Kerry</p></li>
+                    <li class="to-do-item"><p class="to-do-priority">[!!]</p><p>Fix typo in p…</p></li>
+                    <li class="to-do-item">Research boats</li>
+                    <li class="to-do-item">Hidden item</li>
+                    <li class="to-do-item">Hidden item</li>
+                </ul>
+            </section>
+            <button id="schedule-button">Open schedule…</button>
+        </section>
+        <section id="updates">
+            <h2>Updates</h2>
+            <ul>
+                <li class="notification">
+                    <p class="notification-time">[10:00 PM]</p>
+                    <p>Jolene wrote:</p>
+                    <p>Hey, party 6PM here :)</p>
+                </li>
+                <li class="notification notification-urgent">
+                    <p class="notification-time">[9:12 PM]</p>
+                    <p class="notification-priority">[URGENT]</p>
+                    <p>Bob wrote:</p>
+                    <p>The production server is down!</p>
+                </li>
+                <li class="notification notification-emergency">
+                    <p class="notification-time">[Yesterday]</p>
+                    <p>Flood watch: Orono</p>
+                </li>
+            </ul>
+            <button id="notifications-button">Open update log…</button>
+        </section>
+    </section>
+</main></template>
+<template id="editFrameTemplate"><iframe class="eiteEditToolFrame" src="/specification/engineering-and-tech/information-technology/env/web/edit.html"></iframe></template>
+<div id="background"></div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="f1" x="0" y="0">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+            <feComponentTransfer>
+                <feFuncA type="discrete" tableValues="1 1"/>
+            </feComponentTransfer>
+        </filter>
+    </defs>
+</svg>
+</body>
+</html>
