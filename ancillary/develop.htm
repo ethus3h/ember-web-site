@@ -47,6 +47,19 @@
             <dt>wreathe-web-filters</dt><dd><a href="/ancillary/wreathe/">Wreathe</a>: Web filters</dd>
         </dl>
 -- clean up finished except cb-*, and making big repos smaller.
+    <h3>Miscellaneous repositories</h3>
+        <p>These two repositories hold a record of the status of copies of the Ember project data. As of this writing, neither copy is complete ("elegiac" is a small test copy of a subset of the data used for testing the software during development, and "remote" has not finished the initial process of getting a copy). (The git repositories are held separately with a copy in the computer used for development and a copy at GitHub, and the other data are held at the Internet Archive. Eventually, there should be various mirrors with the entirety of the Ember project data.)</p>
+        <dl>
+            <dt>cb-status-elegiac</dt><dd>Status data: "elegiac" Ember Project copy</dd>
+            <dt>cb-status-elements</dt><dd>Status data: "elements" Ember Project copy</dd>
+            <dt>cb-status-elements-quick</dt><dd>Status of the "elements" Ember Project copy (quick-update version)</dd>
+            <dt>cb-status-remote</dt><dd>Status of the "remote" Ember Project copy</dd>
+        </dl>
+        <p>These repositories are personal scratch spaces used by <a href="/people/elli">Elli Chandler</a>. They are not officially part of Ember, but may at times contain some information of relevance to the development history of Ember. They may in the future be added to parts 2 or 3 of the Ember Library.</p>
+        <dl>
+            <dt>personal</dt><dd>Personal scratch space</dd>
+            <dt>personal-private</dt><dd>Personal scratch space (not publicly available at this time)</dd>
+        </dl>
 <!--
     <h3>Marked as historical and snapshots stored in ember-history in 2020</h3>
         <p></p>
@@ -90,19 +103,6 @@
 
         </dl>
 -->
-    <h3>Miscellaneous repositories</h3>
-        <p>These two repositories hold a record of the status of copies of the Ember project data. As of this writing, neither copy is complete ("elegiac" is a small test copy of a subset of the data used for testing the software during development, and "remote" has not finished the initial process of getting a copy). (The git repositories are held separately with a copy in the computer used for development and a copy at GitHub, and the other data are held at the Internet Archive. Eventually, there should be various mirrors with the entirety of the Ember project data.)</p>
-        <dl>
-            <dt>cb-status-elegiac</dt><dd>Status data: "elegiac" Ember Project copy</dd>
-            <dt>cb-status-elements</dt><dd>Status data: "elements" Ember Project copy</dd>
-            <dt>cb-status-elements-quick</dt><dd>Status of the "elements" Ember Project copy (quick-update version)</dd>
-            <dt>cb-status-remote</dt><dd>Status of the "remote" Ember Project copy</dd>
-        </dl>
-        <p>These repositories are personal scratch spaces used by <a href="/people/elli">Elli Chandler</a>. They are not officially part of Ember, but may at times contain some information of relevance to the development history of Ember. They may in the future be added to parts 2 or 3 of the Ember Library.</p>
-        <dl>
-            <dt>personal</dt><dd>Personal scratch space</dd>
-            <dt>personal-private</dt><dd>Personal scratch space (not publicly available at this time)</dd>
-        </dl>
 
 <h2>Getting the data</h2>
     <p>This section discusses how to download the data of, and the projects maintained by, Ember. These instructions will result in the creation of a development environment for the repositories similar to the one used by Ember. If you want to use the Ember tools for working with this environment, and are not using Wreathe 7.3, then additional configuration steps should be taken after getting the data (see "Configuring the environment"). If you just want to examine the contents, or use standard Git tools with it, those steps are not necessary. If you are using Wreathe 7.3, these commands for getting the development data should either be run in the root directory, or else the existing <code>/Ember Library</code> folder should be moved to the desired loctaion, and the value of the <code>EmberLibrary</code> configuration field for Crystallize set to that new location as described in the "Configuring the environment" section below.</p>
