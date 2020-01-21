@@ -1,1 +1,0 @@
-**Metadata** are records of concrete attributes of [[nodes]]. See [[metadatum]] for more information.

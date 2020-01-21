@@ -1,1 +1,0 @@
-**R. P. S.** is a Rock/Paper/Scissors computer game for Micro$oft Windows, created ~2009. It is bundled with [[Calculator]].

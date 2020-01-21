@@ -1,7 +1,0 @@
-QTabBar::tab {
-    min-width: 100px
-}
-
-QTabBar::tab {
-    max-width: 600px
-}

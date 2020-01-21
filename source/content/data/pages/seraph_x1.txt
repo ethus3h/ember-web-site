@@ -1,1 +1,0 @@
-**Seraph X1**: Idea: Make a laptop called Seraph X1 — update model each year (e. g. Seraph X1 2013, 2014, etc.). Testing models would be Seraph XT1-1, where the first number is the iteration # (2013 model would be XT1, 2014 model would be XT2, etc.), & the 2nd number is the individual test machine #. [[Wreathe]] preinstalled, of course.

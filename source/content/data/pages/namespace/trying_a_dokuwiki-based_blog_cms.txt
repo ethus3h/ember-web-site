@@ -1,8 +1,0 @@
-====== Trying a DokuWiki-based Blog CMS… ======
-
-Maybe it works!
-
-{{tag>DokuWiki blog blog_post}}
-
-
-

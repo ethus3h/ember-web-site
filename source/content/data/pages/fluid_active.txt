@@ -1,7 +1,0 @@
-**Fluid%%//%%Active** is the UI toolkit and layout system being developed for [[Ember]].
-
-====== Typical process flow ======
-
-  * Loading text appears while the layout system is prepared
-  * Layout system replaces the loading screen with its animated loading screen while it fetches the [[FluidUI script]] to be executed
-  * FluidUI script begins execution
