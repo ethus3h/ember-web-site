@@ -1,0 +1,106 @@
+<h1>Futuramerlin Web Toolkit</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/ancillary/ready-to-use.htm">Software</a></span>
+</p>
+
+<p>The Futuramerlin Web Toolkit is a static site builder and theme featuring:</p>
+<ul>
+    <li>Fully responsive design</li>
+    <li>Semantic HTML5 markup</li>
+    <li>Progressive enhancement, enabling browsers without CSS and/or JavaScript support to access the site's entire contents</li>
+    <li>Table-of-contents creation</li>
+    <li>Blog generator</li>
+    <li>HTML/CSS minification</li>
+    <li>Translation of CSS for older browsers</li>
+    <li>Visual appearance matching the <a href="/ancillary/wreathe">Wreathe</a> operating system</li>
+    <li>Portfolio and work reference page generator for artists (work in progress)</li>
+    <li>Ebook generator from Web site contents (work in progress)</li>
+</ul>
+<p>Version 2.2.35 would normally have been numbered 2.2.34, but was mistakenly given the number 2.2.35.</p>
+
+<h2>Documentation</h2>
+
+    <h3>Command syntax</h3>
+        <p><span class="hatnote-emphasis-warning">Before running the Futuramerlin Web Toolkit, <code>cd</code> to the directory that contains the contents of your Web site. Note that those should be the only files present in that directory.</span></p>
+        <p>If using Wreathe 7.3 or the ebuild from the Wreathe overlay:
+        <figure class="center-figure app-syntax">
+            <code>~/.futuramerlin-web-toolkit-build</code>
+        </figure>
+        </p><figure class="center-figure app-syntax">
+            <code>~/.futuramerlin-web-toolkit-build</code>
+        </figure>
+        <p>Otherwise:
+        <figure class="center-figure app-syntax">
+            <code>~/.futuramerlin-web-toolkit-build</code>
+        </figure>
+        </p>
+    <h3>Installation</h3>
+        <p>For Wreathe 7.3, an ebuild (<code>app-misc/futuramerlin-web-toolkit</code>) is available in the <a href="/ancillary/wreathe">Wreathe</a> overlay (this may also work for similar operating systems such as Ututo XS GNU/Linux).</p>
+        <p>For other operating systems, use the following installation instructions.</p>
+
+        <h4>Download</h4>
+            <pre><code>git clone https://github.com/ethus3h/futuramerlin-web-toolkit.git</code></pre>
+
+
+        <h4>Setup</h4>
+
+            <ol>
+                <li>Ensure your system has the correct dependencies:
+                    <ul>
+                        <li>Only tested and supported using GNU/Linux operating systems. It may be possible to run it using other UNIX-like operating systems, but that is not currently supported.</li>
+                        <li>Requires a connection to the World Wide Web able to access <a href="https://github.com/">GitHub</a>.</li>
+                        <li>Git</li>
+                        <li>Perl</li>
+                        <li>cpan</li>
+                        <li>Node.js</li>
+                        <li><a href="https://www.npmjs.com/package/html-minifier">html-minifier</a></li>
+                        <li><a href="https://github.com/htacg/tidy-html5">html5-tidy</a></li>
+                        <li><a href="https://www.npmjs.com/package/minifier">minifier</a></li>
+                        <li>hypertoc: to install, run: <code>sudo cpan -f -i HTML::GenToc</code></li>
+                        <li>autoprefixer: to install, run: <code>sudo npm install --global postcss-cli autoprefixer</code></li>
+                        <li>Python 2, runnable as <code>python2</code> (for installing and updating)</li>
+                    </ul>
+                    Needed for the optional local CSS installation:
+                    <ul>
+                        <li><code>sudo</code> privileges on your computer</li>
+                        <li>A writeable root partition</li>
+                    </ul>
+                </li>
+                <li>If you have a version of the Futuramerlin Web Toolkit prior to version 2 installed, remove it.</li>
+                <li>Substitute the name of your Web site in place of "<code>webSiteName</code>" in the following command, and run the resulting command (note that output beginning with "<code>mv: cannot stat</code>" can be safely ignored):<br /><pre><code>mv ~/.futuramerlin-web-toolkit.cfg ~/.futuramerlin-web-toolkit.bak; echo "webSiteName" > ~/.futuramerlin-web-toolkit.cfg</code></pre></li>
+                <li><span class="hatnote-emphasis-warning">Note that enabling the local CSS installation option will <em>overwrite CSS files in your root directory</em> if they have the same name as an included theme. In addition, if you have a case-insensitive filesystem, it probably will overwrite any files with names that are the same as that of an included theme when lowercased.</span><br />If you want to enable the local CSS installation option (copies the Web site's theme CSS so the site can be more accurately previewed locally), run the following command:<br /><pre><code>echo "enableLocalInstallation" >> ~/.futuramerlin-web-toolkit.cfg; set +H</code></pre><br />Otherwise, run the following command:<br /><pre><code>echo "disableLocalInstallation" >> ~/.futuramerlin-web-toolkit.cfg; set +H</code></pre></li>
+                <li>Run the following command:<br /><pre><code>futuramerlinWebToolkitPreInstallPath=$(pwd); futuramerlinWebToolkitInstallationUUID=$(python2 -c 'import uuid; print str(uuid.uuid4())'); cd ~; mkdir "$futuramerlinWebToolkitInstallationUUID"; cd "$futuramerlinWebToolkitInstallationUUID"; git clone https://github.com/ethus3h/futuramerlin-web-toolkit.git; cp -f ./futuramerlin-web-toolkit/futuramerlin-web-toolkit-build ~/.futuramerlin-web-toolkit-build; chmod +x ~/.futuramerlin-web-toolkit-build; cp -f ./futuramerlin-web-toolkit/futuramerlin-web-toolkit-aliases ~/.futuramerlin-web-toolkit-aliases; chmod +x ~/.futuramerlin-web-toolkit-aliases; echo $(date +%Y-%m-%d-%H-%M-%S-%N)-$(xxd -pu &lt;&lt;&lt; "$(date +%z)") >> ~/.futuramerlin-web-toolkit.cfg; echo "$futuramerlinWebToolkitInstallationUUID" >> ~/.futuramerlin-web-toolkit.cfg; echo "#"'!'"/bin/bash" >> ~/.bash_profile; echo ". ~/.futuramerlin-web-toolkit-aliases" >> ~/.bash_profile; echo "#"'!'"/bin/bash" >> ~/.bashrc; echo ". ~/.bash_profile" >> ~/.bashrc; chmod +x ~/.bash_profile; chmod +x ~/.bashrc; cd ..; rm -r ./"$futuramerlinWebToolkitInstallationUUID"; cd "$futuramerlinWebToolkitPreInstallPath"</code></pre></li>
+                <li>Log out and log in again, to update your shell aliases.</li>
+            </ol>
+
+    <h3>Themes</h3>
+        <dl>
+            <dt>common</dt><dd>Components shared between the other themes.</dd>
+            <dt>ember</dt><dd>A fancy theme designed to look like the default theme in version 7r2 of the Wreathe GNU/Linux distribution. This is the theme that was formerly used for the Ember project Web site. Despite the name, it is no longer currently used for that (the "simple" theme is used instead), and isn't actively maintained. WARNING: This theme has a bug in the CSS that causes it to malfunction badly when pages using it are viewed in Netscape 6–era Web browsers, causing the Web site to be unusable as the navigation menu fills the entire viewport.</dd>
+            <dt>m</dt><dd>Alias for the "ember" theme.</dd>
+            <dt>simple</dt><dd>A simple black-and-white theme. This is the theme used for the Ember project Web site.</dd>
+        </dl>
+
+    <h3>Ebook configuration</h3>
+        <p>Each line consists of a "depth", followed by a space, followed by the line's contents. The line may be preceded by whitespace without breaking anything, allowing for nicely formatted files. The depth can be any of the following values:</p>
+        <dl>
+            <dt>#</dt><dd>Comment</dd>
+            <dt>Integers -1+</dt><dd>Include the specified path, adjusting its headings by the number of depth levels given. The path may be a path without extension to a .htm file in the Web toolkit's expected fragment format, or the path to a directory ending in / containing a file index.htm in the usual format, or the path with or without extension of another ebook configuration file. If the level -1 is given, headings at the top level will be removed (but any text within them will remain); this is intended for use with a file with a single &lt;h2&gt; header which is desired to be a top-level part of a book.</dd>
+            <dt>-2</dt><dd>A path without extension of a file present with the extension of the native target output format(s), of which to include the contents literally. (For example, if you want the file included for the htm and plain.html output formats of the book, and your configuration line is "<code>-2 book-assets/include-me</code>", the files book-assets/include-me.htm and book-assets/include-me.plain.html need to exist.)</dd>
+            <dt>-3</dt><dd>A heading to include literally, like "<code>&lt;h3&gt;Heading Text&lt;/h3&gt;</code>". (It will be adjusted as needed if the book is included in another book.)</dd>
+            <dt>-4</dt><dd>Used as the first line of a configuration file to define the book title, e.g. "<code>-4 Book Title</code>"</dd>
+        </dl>
+
+    <h3>Configuration file format</h3>
+        <p>The configuration file is located at <code>~/.futuramerlin-web-toolkit.cfg</code>. It contains configuration values separated by a line feed (0x0A), as follows:</p>
+        <ul>
+            <li>Name for the Web site</li>
+            <li>"<code>disableLocalInstallation</code>" to disable installing the CSS file for local browsing, or "<code>enableLocalInstallation</code>" to enable it (any other value will be treated as "<code>disableLocalInstallation</code>")</li>
+            <li>Installation time</li>
+            <li>Installation UUID</li>
+        </ul>
+        <p>Note that there is currently no facility for storing configuration values containing line feeds.</p>
+
+<h2>Development</h2>
+    <p>To learn about contributing to this project, visit <a href="../develop.htm">the development page</a>.</p>
