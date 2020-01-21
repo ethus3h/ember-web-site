@@ -1,0 +1,30 @@
+#!/bin/bash
+
+find ../../built/people/elli/writings/blogs/elliotchandlernmd442 -type f -name '*.htm' -exec ../../.futuramerlin-web-toolkit/nmd442blogcleanup {} \;
+
+pwd
+cd static
+if [[ ! -f content/futuramerlin.com/favicon.ico ]]; then
+    rm -r ./* || echo "(nothing to remove; this is probably nothing to worry about)"
+    #FIXME: this will break for bugs over 1000 and files over 100
+    #FIXME: this will not get revision history of issue notes, issues, etc.
+    fmwtk-gen_static-oneshot http://futuramerlin.com/favicon.ico http://futuramerlin.com/issue-tracker/view_all_bug_page.php http://futuramerlin.com/issue-tracker/changelog_page.php http://futuramerlin.com/issue-tracker/roadmap_page.php http://futuramerlin.com/issue-tracker/summary_page.php http://futuramerlin.com/issue-tracker/view.php?id={-1..1000} http://futuramerlin.com/issue-tracker/file_download.php?file_id={-1..100}\&type=bug
+else
+    echo "(Using existing static files. Remove them prior to building the site to make new ones.)"
+fi
+set +e
+pwd
+rm -rfv ../../../built/static/content
+set -e
+echo "Making first static files copy..."
+pwd
+cp -rv content ../../../built/static/
+echo "Making second static files copy..."
+pwd
+cp -rv content ../../../static/
+for i in set {1..100}; do
+    echo
+done
+
+#echo "Copying EITE data..."
+#cp -rv /usr/share/eite/data ../../../built/information-technology/env/

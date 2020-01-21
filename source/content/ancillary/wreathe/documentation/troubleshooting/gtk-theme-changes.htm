@@ -1,0 +1,73 @@
+<h1>GTK theme changes unexpectedly &mdash; Wreathe Documentation</h1>
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/ancillary/ready-to-use.htm">Software</a></span>
+    <span><a href="/ancillary/wreathe/">Wreathe</a></span>
+    <span><a href="/ancillary/wreathe/documentation/">Documentation</a></span>
+    <span><a href="/ancillary/wreathe/documentation/troubleshooting/">Troubleshooting</a></span>
+</p>
+
+<p class="hatnote-emphasis-warning">This article applies to: Wreathe 7.2</p>
+
+<h2>Problem</h2>
+
+    <p>The GTK theme changes unexpectedly to looking something like this:<br /><br />
+
+    See <a href="https://bugs.launchpad.net/ubuntu/+source/gnome-settings-daemon/+bug/574296">a bug report</a></p>
+
+<h2>Solution</h2>
+
+    <p>From <a href="http://askubuntu.com/questions/21305/desktop-forgets-theme">http://askubuntu.com/questions/21305/desktop-forgets-theme</a> and <a href="http://ubuntuforums.org/showthread.php?t=1587238&page=2&p=9932580#post9932580">http://ubuntuforums.org/showthread.php?t=1587238&page=2&p=9932580#post9932580</a></p>
+
+    <p>I don't know if this solution works yet, but:<br /><br />
+
+    <code><pre># kwrite /etc/xdg/autostart/gnomesettingsdaemonfix.sh</code></pre><br /><br />
+
+    Create the file with:<br /><br />
+
+    <code><pre>#!/bin/bash
+    #from http://askubuntu.com/questions/21305/desktop-forgets-theme
+
+    pid=$(pgrep gnome-settings-)
+
+    while [ -n "$pid" ];
+    do
+      pid=$(pgrep gnome-settings-)
+      sleep 0
+    done
+
+    exit 0</code></pre><br /><br />
+
+    Save the file.</p>
+
+    <p><code><pre># chmod +x /etc/xdg/autostart/gnomesettingsdaemonfix.sh
+    # kwrite /etc/xdg/autostart/gnome-settings-daemon.desktop</code></pre><br /><br />
+
+    Replace the line beginning<br /><br />
+
+    <code><pre>Exec=</code></pre><br /><br />
+
+    with:<br /><br />
+
+    <code><pre>Exec=bash -c 'sleep 2;/etc/xdg/autostart/gnomesettingsdaemonfix.sh;/usr/lib/gnome-settings-daemon/gnome-settings-daemon'</code></pre><br /><br />
+
+    Save the file.</p>
+
+    <p>Run:<br /><br />
+
+    <code><pre>$ kwrite ~/.gtkrc-2.0</code></pre><br /><br />
+
+    Replace the contents with:<br /><br />
+
+    <code><pre>#include "/usr/share/themes/ClearlooksW/gtk-2.0/gtkrc"
+    include ".gtkrc-2.0-gnome-color-chooser"
+    gtk-color-scheme=fg_color:#25f20f0f5252,bg_color:#e7efdccaf293,text_color:#52520f0f2222,base_color:#c6c6cb79e6e6,selected_fg_color:#67dd32fe8919,selected_bg_color:#f1c6e22df055,tooltip_fg_color:#0f0f2be25252,tooltip_bg_color:#e389c6c6e6e6
+    gtk-icon-theme-name = "AwOken"</code></pre><br /><br />
+
+    Save the file.</p>
+
+    <p>Run:<br /><br />
+
+    <code><pre>$ gnome-settings-daemon</code></pre><br /><br />
+
+    If this solution doesn't work, I'm not sure what to do.</p>

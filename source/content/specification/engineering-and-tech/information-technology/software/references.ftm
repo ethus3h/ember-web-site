@@ -1,0 +1,32 @@
+@t <web>Information Technology Software Environment: </web>References
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/components.htm">Core project components</a></span>
+    <span><a href="/specification">Specification</a></span>
+    <span><a href="/specification/engineering-and-tech">Engineering and Technology</a></span>
+    <span><a href="/specification/engineering-and-tech/information-technology">Information technology</a></span>
+    <span><a href="/specification/engineering-and-tech/information-technology/software">Information Technology Software Environment</a></span>
+</p>
+
+<ul>
+    <li>[WHO 2017] WHO. “10 facts on dementia”. April, 2017. <a href="http://www.who.int/features/factfiles/dementia/en/">http://www.who.int/features/factfiles/dementia/en/</a></li>
+    <li>[NIH, n.d.] NIH. “How many people are affected by autism?”. <a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/Pages/at-risk.aspx#f1">https://www.nichd.nih.gov/health/topics/autism/conditioninfo/Pages/at-risk.aspx#f1</a></li>
+    <li>[WHO 2017b] WHO. “Autism spectrum disorders”. April, 2017. <a href="http://www.who.int/mediacentre/factsheets/autism-spectrum-disorders/en/">http://www.who.int/mediacentre/factsheets/autism-spectrum-disorders/en/</a></li>
+    <li>[Miller-Wilson, n.d.] Miller-Wilson, Kate. “How Many People Are Affected by Autism Worldwide?”. <a href="http://autism.lovetoknow.com/what-is-autism/how-many-people-are-affected-by-autism-worldwide">http://autism.lovetoknow.com/what-is-autism/how-many-people-are-affected-by-autism-worldwide</a></li>
+    <li>[Statista, n.d.] Statista. “Global PC penetration per capita from 2000 to 2015 (in percent)”. <a href="https://www.statista.com/statistics/203677/global-pc-penetration-per-capita-since-2000/">https://www.statista.com/statistics/203677/global-pc-penetration-per-capita-since-2000/</a></li>
+    <li>[Statista, n.d. (b)] Statista. “Number of internet users worldwide from 2005 to 2017 (in millions)”. <a href="https://www.statista.com/statistics/273018/number-of-internet-users-worldwide/">https://www.statista.com/statistics/273018/number-of-internet-users-worldwide/</a></li>
+    <li>[Rohrer, 2014] Rohrer, Christian. “When to Use Which User-Experience Research Methods”. <a href="https://www.nngroup.com/articles/which-ux-research-methods/">https://www.nngroup.com/articles/which-ux-research-methods/</a></li>
+    <li>AlBlue. “Git Tip of the Week: Objects and Packfiles”. <a href="http://alblue.bandlem.com/2011/09/git-tip-of-week-objects-and-packfiles.html">http://alblue.bandlem.com/2011/09/git-tip-of-week-objects-and-packfiles.html</a></li>
+    <li>Diffie, Whitfield, and Martin Hellman. “New directions in cryptography”, in IEEE Transactions on Information Theory (Vol. 22, issue 6, Nov. 1976, pp. 644–654). DOI: 10.1109/TIT.1976.1055638</a></li>
+    <li>Git manual, section 10.4: “Git Internals - Packfiles”</a></li>
+    <li>Kahle, Brewster. “Locking the Web Open: A Call for a Distributed Web”. <a href="http://brewster.kahle.org/2015/08/11/locking-the-web-open-a-call-for-a-distributed-web-2/">http://brewster.kahle.org/2015/08/11/locking-the-web-open-a-call-for-a-distributed-web-2/</a></li>
+    <li>Kahle, Brewster. “Content Addressing is Magic”. <a href="http://brewster.kahle.org/2016/12/18/content-addressing-is-magic/">http://brewster.kahle.org/2016/12/18/content-addressing-is-magic/</a></li>
+    <li>Singh, Simon. The Code Book. ISBN: 9780385730624</a></li>
+    <li>Wikipedia. “Mobile ad hoc network”; “Martin Hellman”; “Mesh network”;  “Network topology”; “Public-key cryptography”; “Wireless ad hoc network”</li>
+</ul>
+
+@0 Photograph credits and licensing
+    <ul>
+        <li>Brewster Kahle portrait: Sebastiaan ter Burg, 2015 March 23. Licensed under the Creative Commons Attribution 2.0 Generic license: <a href="https://creativecommons.org/licenses/by/2.0/deed">https://creativecommons.org/licenses/by/2.0/deed</a></li>
+        <li>Whitfield Diffie and Martin Hellman portrait: Martin Hellman, Mary Holzer, Matt Crypto, Phr~commonswiki, and .:Ajvol:., 2006 July 21. Licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license: <a href="https://creativecommons.org/licenses/by-sa/3.0/deed">https://creativecommons.org/licenses/by-sa/3.0/deed</a></li>
+    </ul>
