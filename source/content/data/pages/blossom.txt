@@ -1,9 +1,0 @@
-This is the **Blossom** release group:
-
-====== Wreathe 4 dev 2 ======
-
-* [[Wreathe 4 dev 2]] | Based on [[Wreathe 2 Extended Edition / Wreathe 2e]] and [[Wreathe 4 dev / Wreathe 4 dev 1]].
-
-====== Wreathe 4: Blossom ======
-
-* [[Wreathe 4: Blossom|Wreathe 4: Blossom]] | Released.

@@ -1,9 +1,0 @@
-Some music is difficult to search for on-line so, this is a list of those for easy accessing.
-
-[[:ref:Difficult-to-search music reference: Artist list|Artists]]
-
-[[:ref:Difficult-to-search music reference: Album list|Albums]]
-
-[[:ref:Difficult-to-search music reference: Track list|Tracks]]
-
-[[:ref:Difficult-to-search music reference: Label list|Record labels]]

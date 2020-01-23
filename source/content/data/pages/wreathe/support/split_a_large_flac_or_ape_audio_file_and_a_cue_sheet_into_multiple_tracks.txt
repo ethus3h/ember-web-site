@@ -1,6 +1,0 @@
-=====Split a large FLAC or APE audio file and a cue sheet into multiple tracks=====
-Split a large FLAC or APE audio file and a cue sheet into multiple tracks: 
-  split2flac file.flac -cue file.cue
-or
-  split2flac file.ape -cue file.cue
-If it asks for an encoding: if the file's in Russian, the correct encoding is probably cp1251.

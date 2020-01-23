@@ -1,1 +1,0 @@
-**Wreathe 6: Forest** was a cancelled version of [[:Wreathe]] in the [[:Forest]] release group. It was cancelled because after the CD image was created, I discovered that it had a flaw in it that prevented it from booting, and [[:Wreathe 7: Elegy|Wreathe 7: Elegy]] was already in development. Also, [[:Wreathe 5: Rain|Wreathe 5: Rain]] was significantly more stable, IIRC.

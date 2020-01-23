@@ -1,7 +1,0 @@
-**Wreathe 3** was a cancelled version of [[Wreathe]].
-
-* Release group: [[autumnfairy]]
-
-* Branch: [[Wreathe 3* (branch)|Wreathe 3*]]
-
-It was to have been based on [[Wreathe 3 dev]]. It was cancelled in favor of [[Wreathe 4*]].

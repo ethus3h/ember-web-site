@@ -1,7 +1,0 @@
-=====Backup a Gmail account=====
-Backup a Gmail account [example]@gmail.com (relevant, at least, to Wreathe 7r2):
-  gmvault sync -c no -d /path/to/your/backups/folder/[example]/ [example]@gmail.com
-
-If you get the error message:
-  ImportError: No module named gmv.gmv_cmd
-or something like that, try removing the Python 2.7 packages (leaving only Python 2.6 installed).

@@ -1,3 +1,0 @@
-=====How to restart WFAM=====
-
-To restart [[WFAM]], press Control+Shift+Escape.
