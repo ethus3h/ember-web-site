@@ -1,9 +1,0 @@
-A **[[DCE]] calendar identifier** is a DCE character representing a specific calendar, so that when handling e. g. [[datetime_string]]s the parser knows what [[DCE calendar format|calendar format]] to use. DCE calendar identifiers are also given mappings to ASCII letters by Weave for use in [[datetime_string]]s. If the number of calendars surpasses the number of ASCII letters, multiple letters can be used.
-
-======List of identifiers======
-
-=====Gregorian calendar:=====
-
-DCE: 9
-
-ASCII: G

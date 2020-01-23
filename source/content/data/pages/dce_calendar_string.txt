@@ -1,1 +1,0 @@
-A **DCE calendar string** is a [[DCE]] string used to represent dates and times. See [[DCE calendar format]] for more information.

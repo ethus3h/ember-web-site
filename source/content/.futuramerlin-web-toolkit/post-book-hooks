@@ -1,5 +1,0 @@
-#!/bin/bash
-
-rm -rf books
-mkdir books
-find . -path ./books -prune -o -path ./futuramerlin-web-toolkit-output -o -path ./.egup.stat -prune -o \( -type d -and -name '*.fmwtk-book' -exec cp -r {} ./books/ \; \)

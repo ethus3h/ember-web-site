@@ -1,1 +1,0 @@
-**Wreathe installation process**: See [[Wreathe installer]].

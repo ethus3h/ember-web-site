@@ -1,1 +1,0 @@
-The **DCE separators** are ways of denoting divisions in strings. The two relevant characters are //begin separator// and //end separator//. Between the two is a positive [[DCE number format|integer]] denoting the level of separator, 1 being the highest-level separator, and continuing indefinitely.

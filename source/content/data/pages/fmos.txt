@@ -1,1 +1,0 @@
-**FMOS** was a concept operating system proposed ~2007. Some of its ideas later were incorporated into the [[Wreathe]] operating system.

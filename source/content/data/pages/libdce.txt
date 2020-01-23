@@ -1,1 +1,0 @@
-**libdce** is software renamed to [[dceutils]].

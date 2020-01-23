@@ -1,3 +1,0 @@
-A **.BIN/.CUE** disk image is a pair of files storing the contents of a data storage medium.
-
-According to http://www.poweriso.com/tutorials/open-bin-cue-file.htm, "The bin file is a binary file, which stores the raw sector-by-sector copies of the tracks in the disc."

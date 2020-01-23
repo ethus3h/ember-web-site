@@ -1,7 +1,0 @@
-=====Mirror a webpage and its resources=====
-Mirror a webpage and its resources…
-
-  wget -E -H -k -K -p -e robots=off --warc-max-size=500M --warc-file=example http://www.example.com/directory/page.html
-
-Exclude some domains…
-<code>--exclude-domains example.com,example.org</code>
