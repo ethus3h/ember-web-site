@@ -1,0 +1,5 @@
+This is the **Rain** release group:
+
+* [[Wreathe 5 dev]]
+
+* [[Wreathe 5: Rain|Wreathe 5: Rain]]

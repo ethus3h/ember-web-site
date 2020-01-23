@@ -1,0 +1,92 @@
+====== Notes for mirroring Oen Kennedy's website ======
+
+Mirroring http://oenkennedy.com/. In addition to what is listed below, http://oenkennedy.com/mobi needs to be mirrored.
+
+This website and everything documented here has been grabbed using ArchiveBot as of 14 January 2014. Since I did a !a of the website as http://oenkennedy.com/ a few days ago, if there have been any changes since then they might not have gotten picked up. Likewise, since I compiled this list of URLs a couple (roughly? IIRC it was the same day that I first created this wiki page, yesterday 13 January 2014 according to the revision history) days ago, if there have been any changes since then they too might not have gotten picked up.
+
+===== Resources =====
+
+  * [[http://futuramerlin.com/oenkennedy.com-url-list.txt|URL list]]
+  * [[http://futuramerlin.com/OEN_LINK.HTM|HTML file with URLs as embeds]]
+
+===== List of URLs =====
+
+<code>
+http://oenkennedy.com/
+http://oenkennedy.com/cms/lib/common.js
+http://oenkennedy.com/cms/css.php?tpl=splashpage
+http://oenkennedy.com/cms/lib/swfobject.js
+http://oenkennedy.com/userfiles/f92c7408def81b4daa46c2db1a68bde01a2e3a791295814066666842254.jpg
+http://oenkennedy.com/flash
+http://oenkennedy.com/index.php?splash=1
+http://oenkennedy.com/cms/css.php
+http://oenkennedy.com/cms/template32.swf?rts=1389651051
+http://oenkennedy.com/cms/template32.swf
+http://oenkennedy.com/cms/data.php
+http://oenkennedy.com/userfiles/bdb97c05d4048e38268150a1820232e1a02fadac1295754503241577213.mp3
+http://oenkennedy.com/userfiles/5488ff09d8407ee4d788cc470781c213fdb16e661295813441611474873.jpg
+http://oenkennedy.com/userfiles/27bc4eb522861dc2eaff4c633d7350aa6866cb6912958303251033544749.jpg
+http://oenkennedy.com/userfiles/
+http://oenkennedy.com/robots.txt
+http://oenkennedy.com/cms/fonts/Arial_TextField.swf
+http://oenkennedy.com/userfiles/75dda3f88fdd60e1884220ad8d6133f66d35a2b31311706660328871197.jpg
+http://oenkennedy.com/cms/
+http://oenkennedy.com/cms/fonts/
+http://oenkennedy.com/cms/lib/
+http://oenkennedy.com/userfiles/29226b60d7dc87049bb0ec3ee12a6b70d80959781311301739274028319.mp3
+http://oenkennedy.com/userfiles/45f8a6aeb5b80bfa968eaa8b41688d58fb2a505f1311302078251958485.mp3
+http://oenkennedy.com/userfiles/6809f7fa163e074a368394600cb67bc8363e22551311302633950815028.mp3
+http://oenkennedy.com/userfiles/17d5addff813e5c9d41e13eb7ddf676aa46e98b813113033701099539165.jpg
+http://oenkennedy.com/cms/fonts/Georgia_TextField.swf
+http://oenkennedy.com/userfiles/44b26b828d0773c1b413b880da6e50656da2e8a013113482101307165311.jpg
+http://oenkennedy.com/cms/fonts/Helvetica_TextField.swf
+http://oenkennedy.com/userfiles/3c882dd9adacf8055553fc85e8eb88f3f0cb358213113785271241441928.jpg
+http://oenkennedy.com/userfiles/6bde6c66a9b3940f1079ee42a6d7f4073ce4a0c71311378155589105549.jpg
+http://oenkennedy.com/userfiles/05b36ccd091ae3b512f594d7095c97105ecc07a31312247047740558984.jpg
+http://oenkennedy.com/userfiles/6bae70c6a86a0a0d0d1eea7d14a0112fab0eae8d1295814765530816586.jpg
+</code>
+
+===== Links as HTML embeds =====
+<code><html>
+<head>
+<title>Oen Kennedy's website's links, as embeds (this file made 14 January 2014, based on the one from 10 January 2014 for The Summit Church Worship Ministry's audio files)</title>
+</head>
+<body>
+<p>
+Oen Kennedy's website's links, as embeds (this file made 14 January 2014, based on the one from 10 January 2014 for The Summit Church Worship Ministry's audio files). I collected the actual link data I used here a couple days ago (or so), though.
+</p>
+<img src="http://oenkennedy.com/"><br>
+<img src="http://oenkennedy.com/cms/lib/common.js"><br>
+<img src="http://oenkennedy.com/cms/css.php?tpl=splashpage"><br>
+<img src="http://oenkennedy.com/cms/lib/swfobject.js"><br>
+<img src="http://oenkennedy.com/userfiles/f92c7408def81b4daa46c2db1a68bde01a2e3a791295814066666842254.jpg"><br>
+<img src="http://oenkennedy.com/flash"><br>
+<img src="http://oenkennedy.com/index.php?splash=1"><br>
+<img src="http://oenkennedy.com/cms/css.php"><br>
+<img src="http://oenkennedy.com/cms/template32.swf?rts=1389651051"><br>
+<img src="http://oenkennedy.com/cms/template32.swf"><br>
+<img src="http://oenkennedy.com/cms/data.php"><br>
+<img src="http://oenkennedy.com/userfiles/bdb97c05d4048e38268150a1820232e1a02fadac1295754503241577213.mp3"><br>
+<img src="http://oenkennedy.com/userfiles/5488ff09d8407ee4d788cc470781c213fdb16e661295813441611474873.jpg"><br>
+<img src="http://oenkennedy.com/userfiles/27bc4eb522861dc2eaff4c633d7350aa6866cb6912958303251033544749.jpg"><br>
+<img src="http://oenkennedy.com/userfiles/"><br>
+<img src="http://oenkennedy.com/robots.txt"><br>
+<img src="http://oenkennedy.com/cms/fonts/Arial_TextField.swf"><br>
+<img src="http://oenkennedy.com/userfiles/75dda3f88fdd60e1884220ad8d6133f66d35a2b31311706660328871197.jpg"><br>
+<img src="http://oenkennedy.com/cms/"><br>
+<img src="http://oenkennedy.com/cms/fonts/"><br>
+<img src="http://oenkennedy.com/cms/lib/"><br>
+<img src="http://oenkennedy.com/userfiles/29226b60d7dc87049bb0ec3ee12a6b70d80959781311301739274028319.mp3"><br>
+<img src="http://oenkennedy.com/userfiles/45f8a6aeb5b80bfa968eaa8b41688d58fb2a505f1311302078251958485.mp3"><br>
+<img src="http://oenkennedy.com/userfiles/6809f7fa163e074a368394600cb67bc8363e22551311302633950815028.mp3"><br>
+<img src="http://oenkennedy.com/userfiles/17d5addff813e5c9d41e13eb7ddf676aa46e98b813113033701099539165.jpg"><br>
+<img src="http://oenkennedy.com/cms/fonts/Georgia_TextField.swf"><br>
+<img src="http://oenkennedy.com/userfiles/44b26b828d0773c1b413b880da6e50656da2e8a013113482101307165311.jpg"><br>
+<img src="http://oenkennedy.com/cms/fonts/Helvetica_TextField.swf"><br>
+<img src="http://oenkennedy.com/userfiles/3c882dd9adacf8055553fc85e8eb88f3f0cb358213113785271241441928.jpg"><br>
+<img src="http://oenkennedy.com/userfiles/6bde6c66a9b3940f1079ee42a6d7f4073ce4a0c71311378155589105549.jpg"><br>
+<img src="http://oenkennedy.com/userfiles/05b36ccd091ae3b512f594d7095c97105ecc07a31312247047740558984.jpg"><br>
+<img src="http://oenkennedy.com/userfiles/6bae70c6a86a0a0d0d1eea7d14a0112fab0eae8d1295814765530816586.jpg"><br>
+</body>
+</html>
+</code>

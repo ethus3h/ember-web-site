@@ -1,0 +1,23 @@
+**Futuramerlin roadmap**:
+
+**2013**: Continue work on [[Wreathe]] & polish [[In This Moment]]. Continue development of [[DCE]]. Begin planning work on retail store & [[physical location ideas|physical location]].
+
+**2013/2014**: Complete first DCE version.
+
+**2014**: In This Moment release.
+
+**2014/2015**: [[Wreathe 7r2]] release. Have working alpha of [[DCE editor]].
+
+**2015**: Continue working on pop music. Open retail store.
+
+**2015/2016**: Release full-body suits via retail store. (this is ridiculous, right?)
+
+**2016**: Have usable version of DCE.
+
+**2016/2017**: [[Wreathe 8]] release.
+
+**2018**: Physical location opens.
+
+
+
+Acquire TrID at some point? Make open source? Or develop alternative? Don’t forget AlphaSync, too. Locate source code & provide for all of Wreathe?

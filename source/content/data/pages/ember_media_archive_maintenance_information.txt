@@ -1,0 +1,4 @@
+Things to do to maintain the [[Ember Media Archive]].
+====== To create a new main snapshot ======
+
+  - <code>tar -zcvf /Volumes/disk2s1/_ArchiveSync-snapshot-`date +%Y.%m.%d.%H.%M.%S.%f.%z`.tar.gz /Volumes/disk2s1/_ArchiveSync</code>

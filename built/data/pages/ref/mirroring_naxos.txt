@@ -1,0 +1,181 @@
+====== naxos ======
+(assuming university naxos access)
+About downloading stuff from naxos...
+
+  -    save main album page using MAFF
+  -    click on 500px album art, save as jpg and maff
+  -    click on pdf (in the sidebar) if there is one (e.g. a booklet or back cover) (there might be stuff other than a pdf there but i havent seen any yet). Then click dta oneclick button to download it quickly (use the regular downthemall button if you don't have the oneclick download directory as ~/dwhelper).
+  -    setup videodownload helper to have quick download as the action when click on the button
+  -  put video download helper button in status bar, and turn on status bar
+  -  choose all the items, and stream them
+  -  change the bitrate in the URL from 64 to 128
+  -  start each track, and once it starts playing, click the video download helper button to download it
+
+
+Notes: 
+  * if you have the track ids from a discontinued album, you can substitute them into the streaming player url to download them anyway
+  * a streaming player url for a single track look like this <code>http://umitmaine.naxosmusiclibrary.com.prxy4.ursus.maine.edu/mediaplayer/player.asp?br=64&tl=847338&domain=umitmaine.naxosmusiclibrary.com&pl_token=C6A40126-5FD0-47BD-9744-55CA6C2FCD6F</code>. The br=64 is what gets changed to br=128 in the penultimate step. The tl=847338 is what gets changed to a different track id if you want a different track that u have the id for.
+  * streaming player url for many tracks looks like this <code>http://umitmaine.naxosmusiclibrary.com.prxy4.ursus.maine.edu/mediaplayer/player.asp?br=64&tl=522995|522996|522997|522998|522999|523000|523001|523002|523003|523004|523005|523006|523007|523008|523009|523010|523011|523012|523013|523014&domain=umitmaine.naxosmusiclibrary.com&pl_token=FCCD0798-50A1-4B4C-A313-7B197F67E869</code>. Similar structure to single track
+  * this is kind of labor intensive... probably there is a faster way of doing this (e.g. wgetting all track ids?)
+  * track dl urls look like this <code>http://umitmaine.naxosmusiclibrary.com.prxy4.ursus.maine.edu/mediaplayer/PlayTrack.asp?id=879777&br=64</code> which give http307 temporary redir to url that look like this <code>http://80audiostream.naxosmusiclibrary.com.prxy4.ursus.maine.edu/media/aacstorage/aac64k/arc/qc8642_101_full_064.mp4?dlauth=1409704929_45d7f3f2a2f23d2998b0de237e97fab2</code>
+  * (or with 128 as bit rate)
+  * The redir url can be requested *without* goin thru the player, wich open  up the posibility of sequentially grabbing the lot
+  * but it seems to use cookie or somthing...
+
+===== example: =====
+ 
+
+method: <code>GET</code>
+
+url: <code>http://umitmaine.naxosmusiclibrary.com.prxy4.ursus.maine.edu/mediaplayer/PlayTrack.asp?id=450028&br=64</code>
+
+query string:
+<code>id=450028
+br=64<code>
+
+request headers:
+<code>Host: umitmaine.naxosmusiclibrary.com.prxy4.ursus.maine.edu
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:31.0) Gecko/20100101 Firefox/31.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://umitmaine.naxosmusiclibrary.com.prxy4.ursus.maine.edu/mediaplayer/assets/js/Jplayer.swf
+Cookie: nmlsession=surl=False&sid=28DA00C2%2D8C8F%2D4928%2D9237%2DE20376DBA6BE&subid=OFN0007725&mid=142202&mt=MM&cno=UmitMNmlPd05; __CJ_MPlayer=%7B%22Type%22%3A%20%22fmp_http%22%2C%20%22Url%22%3A%20%22/mediaplayer/flash/http-fplayer.asp%22%7D; ezproxy=LV4Uic675SEliBA; dirpath=umitmaine%2Enaxosmusiclibrary%2Ecom; Search%5FMode=Keyword+Search; ASPSESSIONIDQCCRDSDT=KKCJFOBDGHFHAOGKJPKKEEFP; NMLhb=909012866.16361.4101712832.3463040441; flashPlayer=; ASPSESSIONIDAQDSBRBR=KEJLKLCDJPIPIGPIIMIJEDFP
+Connection: keep-alive</code>
+
+request body: (empty)
+
+==== but ====
+
+dta batch download works like a charm :D
+e.g. 
+<code>http://umitmaine.naxosmusiclibrary.com.prxy4.ursus.maine.edu/mediaplayer/PlayTrack.asp?id=[8348:8350]&br=128</code>
+works perfeccly :)
+
+==== But ====
+
+the music isn't the biggest part of the challenge...
+eg item pages
+<code>http://umitmaine.naxosmusiclibrary.com.prxy4.ursus.maine.edu/catalogue/item.asp?cid=OVC-8058-59</code>
+
+booklet
+
+<code>http://umitmaine.naxosmusiclibrary.com.prxy4.ursus.maine.edu/sharedfiles/booklets/ALY/booklet-TROY468.pdf</code>
+front cover
+
+<code>http://cdn.naxosmusiclibrary.com.prxy4.ursus.maine.edu/sharedfiles/images/cds/hires/CDSDL395.jpg</code>
+
+rear cover
+<code>http://cdn.naxosmusiclibrary.com.prxy4.ursus.maine.edu/sharedfiles/pdf/rear/CRC2469r.pdf</code>
+
+These are all based on the catalogue numbers (since they relate to the releases, rather than the tracks)
+
+So, i need a way to find all the catalog numbers
+====== info for Best of yiddish ======
+Cat. no. EUCD1375
+<code>
+847338-QB5357_001 
+1. 
+847338
+Hey! Zhankoye! 847338 
+00:02:49 
+847339-QB5358_001 
+2. 
+847339
+Taksim 847339 8642 Skeaping, Lucie 78238 847339 142202%2Fumitmnmlpd04%2Fqb5358%5F001 
+00:02:00 
+847340-QB5359_001 
+3. 
+847340
+Quando el rey Nimrod (When King Nimrod) 847340 8642 Skeaping, Lucie 78238 847340 142202%2Fumitmnmlpd04%2Fqb5359%5F001 
+00:03:19 
+847341-QB5360_001 
+4. 
+847341
+Sirba mit Harbster Bletlekh 847341 8642 Skeaping, Lucie 78238 847341 142202%2Fumitmnmlpd04%2Fqb5360%5F001 
+00:04:15 
+847342-QB5361_001 
+5. 
+847342
+A la una naci yo (At One o'Clock I Was Born) 847342 8642 Skeaping, Lucie 78238 847342 142202%2Fumitmnmlpd04%2Fqb5361%5F001 
+00:02:49 
+847343-QB5362_001 
+6. 
+847343
+Chassidic Dance 847343 78238 847343 142202%2Fumitmnmlpd04%2Fqb5362%5F001 
+00:02:16 
+847344-QB5363_001 
+7. 
+847344
+Una noche al borde de la mar (One Night by the Sea) 847344 8642 Skeaping, Lucie 78238 847344 142202%2Fumitmnmlpd04%2Fqb5363%5F001 
+00:04:07 
+847345-QB5364_001 
+8. 
+847345
+Yendome para Marsilia (I Went ot Marseilles) 847345 8642 Skeaping, Lucie 78238 847345 142202%2Fumitmnmlpd04%2Fqb5364%5F001 
+00:02:16 
+847346-QB5365_001 
+9. 
+847346
+Merlin Shpilt Far Dem Rebn 847346 78238 847346 142202%2Fumitmnmlpd04%2Fqb5365%5F001 
+00:03:21 
+847347-QB5366_001 
+10. 
+847347
+Yidl mitn Fidl 847347 8642 Skeaping, Lucie 78238 847347 142202%2Fumitmnmlpd04%2Fqb5366%5F001 
+00:03:32 
+847348-QB5367_001 
+11. 
+847348
+Taksim 847348 78238 847348 142202%2Fumitmnmlpd04%2Fqb5367%5F001 
+00:01:38 
+847349-QB5368_001 
+12. 
+847349
+Morena me Ilaman (They Call Me The Dark Girl) 847349 8642 Skeaping, Lucie 78238 847349 142202%2Fumitmnmlpd04%2Fqb5368%5F001 
+00:04:33 
+847350-QB5369_001 
+13. 
+847350
+Avre tu puerta cerrada (Open Your Locked Door) 847350 8642 Skeaping, Lucie 78238 847350 142202%2Fumitmnmlpd04%2Fqb5369%5F001 
+00:02:53 
+847351-QB5370_001 
+14. 
+847351
+Mayn tayere Odessa (My Dear Odessa) - Dem Triske Rebns Chosid'l (The Disciple of the Rebe) - Dem Monastrishter Rebns Chosid'l (The Dance of the Rebe from Monastrishter) 847351 8642 Skeaping, Lucie 78238 847351 142202%2Fumitmnmlpd04%2Fqb5370%5F001 
+00:06:35 
+847352-QB5371_001 
+15. 
+847352
+Vos geven iz geven un nito (What Was, Was, and Is No More) 847352 8642 Skeaping, Lucie 78238 847352 142202%2Fumitmnmlpd04%2Fqb5371%5F001 
+00:04:16 
+847353-QB5372_001 
+16. 
+847353
+Lamma Badah (When He Starts Shining) 847353 8642 Skeaping, Lucie 78238 847353 142202%2Fumitmnmlpd04%2Fqb5372%5F001 
+00:04:15 
+847354-QB5373_001 
+17. 
+847354
+Scalerica d'oro (Little Ladder of Gold) 847354 8642 Skeaping, Lucie 78238 847354 142202%2Fumitmnmlpd04%2Fqb5373%5F001 
+00:01:50 
+847355-QB5374_001 
+18. 
+847355
+Chassidic Dance 847355 78238 847355 142202%2Fumitmnmlpd04%2Fqb5374%5F001 
+00:04:55 
+847356-QB5375_001 
+19. 
+847356
+Arvles Iloran por Iluvias (The Trees Cry for the Rain) 847356 8642 Skeaping, Lucie 78238 847356 142202%2Fumitmnmlpd04%2Fqb5375%5F001 
+00:03:41 
+847357-QB5376_001 
+20. 
+847357
+Doina 847357 8642 Skeaping, Lucie 78238 847357 142202%2Fumitmnmlpd04%2Fqb5376%5F001 
+00:02:46 
+847358-QB5377_001 
+21. 
+847358
+Russian Shers 847358 78238 847358 142202%2Fumitmnmlpd04%2Fqb5377%5F001 
+00:04:54</code>

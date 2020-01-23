@@ -1,0 +1,12 @@
+
+===== Cairo-dock main menu (applications menu) icon is off center (is overlapping the plasma panel; is offset to the left) =====
+
+==== Problem ====
+
+The Cairo-dock main menu (applications menu) icon is off center (is overlapping the plasma panel; is offset to the left)
+
+==== Solution ====
+
+If you deleted the two Separator items from the main dock, put them back (possibly is easiest solution to revert to a version of the theme that still had them — watch the theme thumbnail as you click through the available themes in reverse chronological order to find the version that had the regression — and then merge in any other changes that have been made since then, if necessary (this may not be the easiest solution; I haven't tried simply re-adding the separators; I don't know if there's anything special about them that would need to be set, and/or if the separator .desktop files could simply be copied into the newer theme folder from an older theme folder or something like that))
+
+If you didn't delete the two Separator items, maybe the main dock relative alignment (offset) is wrong? (see the Position tab of the Behavior section of the configuration; set Relative alignment to 0.500 to get it centered). If you have trouble dragging the selector bar to 0.500 exactly, try dragging it to the far left of its track to get it to zero and then using the scroll method of your input device [(trackpoint: hold right button and push trackpoint) (mouse: center scroll wheel) — scrolling moves by increments of 0.1 units — or by using the arrow keys on your keyboard (arrow keys move by increments of 0.05 units)] to adjust it to your desired value.

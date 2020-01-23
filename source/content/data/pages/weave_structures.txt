@@ -1,0 +1,1 @@
+**Weave**<sub>**structures**</sub> is the general information structure used by [[Weave]]. It is replaced in Ember by [[AIMS]].

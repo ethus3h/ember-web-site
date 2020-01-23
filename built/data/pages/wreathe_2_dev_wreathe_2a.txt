@@ -1,0 +1,7 @@
+**Wreathe 2 dev / Wreathe 2a** was/were the first [[Wreathe]] version(s) in the [[autumnfairy]] release group.
+
+* Release group: [[autumnfairy]]
+
+* Branch: [[Wreathe 2* (branch)|Wreathe 2*]]
+
+Based on [[Wreathe 1r2: Frost|Wreathe 1r2: Frost]]. Never released. I don't remember what the difference was, or if there was a clear boundary between Wreathe 2 dev and Wreathe 2a.

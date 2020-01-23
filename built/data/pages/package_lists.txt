@@ -1,0 +1,4 @@
+Lists of installed Debian packages in [[Wreathe]].
+
+  * [[Packages in Wreathe 5 (saved 6 December 2013 from the live CD)]]
+  * Packages removed between Wreathe 5 and Wreathe 7r2a, as of 6 December 2013: [[Packages removed between Wreathe 5 and Wreathe 7r2a, as of 6 December 2013|installation]] | [[Packages removed between Wreathe 5 and Wreathe 7r2a, as of 6 December 2013 — removal|removal]]

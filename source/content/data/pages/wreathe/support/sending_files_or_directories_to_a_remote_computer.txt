@@ -1,0 +1,10 @@
+====== Sending files or directories to a remote computer ======
+
+(this will put FolderOrFileToSend, or at least its contents (?) in folder PutFilesInHere)
+
+  rsync -av /FolderOrFileToSend user@ip.add.re.ss:/PutFilesInHere
+(a trailing slash goes on the end of the name of an item when it's a folder, although it may work without one (I haven't tested this thoroughly))
+
+The command might (probably will) request a password for the user you are logging in as in the remote computer.
+
+It will try to set the permissions/modification times/etc.. If it can't, it will tell you that some files or attributes didn't get transferred. You can look over the output of the command to see what ran into trouble. Also you can rerun the command so that you only see things that ran into problems (or things that changed since last time and had to be re-sent).

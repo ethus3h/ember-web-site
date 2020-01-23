@@ -1,0 +1,46 @@
+(from IM to Tom)
+====== Part 1 ======
+  * More notes to myself: Left bar: 1) Start menu 2) Word 3) Calculator 4.0 4) Eryi’s Action 5) IEMetro 6) Media Archive 7) Parallels Shared Folders 8) This PC 9) Clock
+  * Start screen left 6: (ltr, ttb: Desktop, News, Food and Drink; (2nd row) Weather, Finance, Health & Fitness) Right 4: Control Panel, Word (2nd row) Calculator, Internet Explorer
+  * Installed apps: 
+  * Aero Glass for Win 8.1 [K]
+  * (interesting apps only)
+  * Aimersoft DRM media converter
+  * Balearic Advisor Eryi’s Action
+  * *Belarc
+  * MalwareBytes Anti Malware
+  * Mus2Okur demo
+  * SharpKeys
+  * Stardock ModernMix
+  * Stardock Start8
+  * iTunes
+  * Office 2000 Premium
+  * Left bar list was ttb
+  * Colors for taskbar and window borders: Hue right side of pink
+  * Saturation: ~2/3
+  * Brightness: far right
+  * Background: monster-demon-anime_476365
+  * Sounds: Windows Default
+  * Screen Saver: None
+  * And of course VisiMESS etc
+====== Part 2 ======
+
+  - 1. Left bar (ttb): Left bar: Start menu, Word, Calculator 4.0, Eryi’s Action, IEMetro, Media Archive, Parallels Shared Folders, This PC, Clock
+  - 2. Task bar properties — go through them
+  - 3. Internet Explorer options — never open in Explorer for the desktop
+  - 4. Start screen (ltr, ttb): (left 6) Desktop, News, Food and Drink; (2nd row) Weather, Finance, Health & Fitness). (right 4) Control Panel, Word (2nd row) Calculator, Internet Explorer
+  - 5. Install Malwarebytes Anti Malware
+  - 6. Install Aero Glass for Win 8.1
+  - 1b. Rename ~/Links to ~/Links original; copy and paste it; rename the copy to ~/Links; delete the copy’s contents; copy and paste shortcuts from Mac desktop into it; rename shortcuts; fix Media Archive shortcut
+
+
+====== version 3 (new 2015jan01) ======
+  - Parallels Tools
+  - Left bar (ttb): Left bar: Start menu, Word, Calculator 4.0, Eryi’s Action, IEMetro, Media Archive, Parallels Shared Folders, This PC, Clock
+  - Rename ~/Links to ~/Links original; copy and paste it; rename the copy to ~/Links; delete the copy’s contents; copy and paste shortcuts from Mac desktop into it; rename shortcuts; fix Media Archive shortcut
+  - Task bar properties — go through them
+  - Internet Explorer options — never open in Explorer for the desktop
+  - Start screen (ltr, ttb): (left 6) Desktop, News, Food and Drink; (2nd row) Weather, Finance, Health & Fitness). (right 4) Control Panel, Word (2nd row) Calculator, Internet Explorer
+  - Install Malwarebytes Anti Malware
+  - Install Aero Glass for Win 8.1
+

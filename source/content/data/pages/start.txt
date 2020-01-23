@@ -1,0 +1,134 @@
+**Projects**: [[List of projects]] | [[Ember]] | [[im:Blossom & Leaf]] | [[Patche]]
+
+**Info about Futuramerlin**: [[Futuramerlin Roadmap|Roadmap]] | [[File formats]] | [[Futuramerlin IRC|IRC]]
+
+**Information, in general**: [[ref:start|Reference info.]] | [[ref:Words:start]]
+
+  PORTAGE_BINHOST="http://packages.gentooexperimental.org/packages/amd64-stable/" emerge --getbinpkg --binpkg-respect-use=n --ask --noreplace gcc glibc binutils libtool
+
+  sleep 18606; while true; do gtimeout 32400s sshpass -p "password" /opt/local/bin/rsync -azvs --progress --partial --append-verify --exclude=.pch/.pshadow --no-i-r -e "ssh -o StrictHostKeyChecking=no" "/Volumes/Archives/FuturamerlinMultimediaArchive/" "srochu@163.172.11.172:/home/rochu/EmberMediaLibrary/" | tee rsync.$(date +%Y.%m.%d.%H.%M.%S.%N.%z).outerr; sleep 54000; done
+
+  date +%Y.%m.%d.%H.%M.%S.%N.%z
+
+  youtube-dl --title --continue --retries 100 --write-info-json --write-description --write-thumbnail --proxy="localhost:8000" --write-annotations --all-subs --no-check-certificate --ignore-errors -k -f bestvideo+bestaudio/best https://www.youtube.com/channel/UCvpvX2QDeHiovR-5qAfJ1Hw
+
+  wpull --python-script=./ftp.py -o=./wpulltry2.log -r -p --sitemaps --follow-ftp -v --span-hosts-allow=page-requisites --ftp-user="futuqiur"  --ftp-password="sintel64ember" --no-remove-listing --preserve-permissions --no-check-certificate --database=./wpulltry3.db --no-robots --no-cookies --rotate-dns --timeout=60 --tries=inf --wait=0.5 --random-wait --waitretry=5 --warc-file=./fm-2016jan09.warc.gz  --warc-cdx  --warc-max-size=300000000 --warc-header="operator: Futuramerlin" ftp://server55.web-hosting.com
+
+  ^https?://archive\.org/download/.+$
+  ^http://digitize\.archiveteam\.org/index\.php/.+/(\w+)/\1/\1/\w+/\1/\1/\1/.*$
+  ^http://digitize\.archiveteam\.org/index\.php\?\w+=\w+:\w+&\w+=(\w+)%2F\1%2F\1%2F.*$
+To deal with https://github.com/munin-monitoring/munin/issues/283 : THIS DOESN'T WORK
+  ^https?://([\w\.-]+)?[\w-]+\.[\w-]+\:?(\d+)?/?.*/munin/?.*/([\w\.\d_]+)/([\w\.\d_]+/)?\1/.+$
+This sort of works for that, I think, but is overly broad and there's no guarantee that "/munin/" will be in the URL:
+  ^https?://([\w\.-]+)?[\w-]+\.[\w-]+\:?(\d+)?/?.*/munin/[^/]+/[^/]+/[^/]+/[^/]+/([^/]+/)+([\w\d_-]+\.html)?$
+Or per-domain like this:
+  ^https?://ol-home\.us\.archive\.org\:8009/munin/[^/]+/[^/]+/[^/]+/[^/]+/([^/]+/)+([\w\d_-]+\.html)?$
+
+Amazon duplicate pages, partly from http://stackoverflow.com/questions/2123131/determine-if-10-digit-string-is-valid-amazon-asin :
+  ^https?\://www\.amazon\.co(m|\.uk)/[\w-]+/\w/(\s*(B\d{3}\w{6}|\d{9}(?:X|\d))\s*)/ref=[\w_]+_srch_lnk_\d+.+$
+Small Tumblr avatars:
+  ^https?://\d+\.media\.tumblr\.com/avatar_[0-9a-f]+_16\.png$
+All Tumblr avatars:
+  ^https?://\d+\.media\.tumblr\.com/avatar_[0-9a-f]+_\d+\.png$
+Amazon stuff like this:
+  ^https?://www\.amazon\.com/Nancy-Springer/e/B001IQXJVW/b/b/b/b/b/b/b/b/b/b/b/b/
+
+  while true; do sshpass -p "foo" /opt/local/bin/rsync -azv --progress --partial --append-verify --exclude=.pch/.pshadow --no-i-r '/Volumes/disk2s1/Archive/' 'PermissionGiver@76.179.191.27:/Volumes/Archives/FuturamerlinMultimediaArchive' | tee rsync.$(date +%Y.%m.%d.%H.%M.%S.%N.%z).outerr; done
+
+  while true; do sshpass -p "password" /opt/local/bin/rsync -azv --progress --partial --append-verify --exclude=.pch/.pshadow --no-i-r -e "ssh -o StrictHostKeyChecking=no" '/Volumes/Archives/FuturamerlinMultimediaArchive/' 'rochu@163.172.11.172:/home/rochu/EmberMediaLibrary' | tee rsync.$(date +%Y.%m.%d.%H.%M.%S.%N.%z).outerr; done
+
+or
+
+  while true; do sshpass -p "foo" /opt/local/bin/rsync -azv --progress --partial --append-verify --exclude=.pch/.pshadow --no-i-r -e "ssh -p 55240 -o StrictHostKeyChecking=no" '/Volumes/disk2s1/Archive/' 'kthenu@ember.airdns.org:55240:/home/kthenu/EmberMediaLibrary | tee rsync.$(date +%Y.%m.%d.%H.%M.%S.%N.%z).outerr; done
+
+  airvpn -cli -login=mylogin -password=suhjZ:Vnsuh.vzumh,4 -connect -netlock -routes.custom='207.241.224.0,255.255.240.0,out;207.241.224.0,255.255.240.0,in' -areas.whitelist=ca -areas.blacklist=nl -routes.default=in
+
+  ssh -l kthenu -p 55240 1337.airdns.org
+
+For PermissionGiver
+  iu() { IUIDENTIFIER=$(python -c 'import uuid; print str(uuid.uuid4())')-$(date +%Y.%m.%d.%H.%M.%S.%N)-$(xxd -pu <<< "$(date +%z)"); ia upload kyaaaaa --metadata="subject:Uploaded using iu v3; 9F227910-A541-11E5-8BD3-7B584224FF49" $IUIDENTIFIER/"$@"; echo 'https://archive.org/download/'$IUIDENTIFIER; }
+
+For Me
+  iu() { IUIDENTIFIER=$(python -c 'import uuid; print str(uuid.uuid4())')-$(date +%Y.%m.%d.%H.%M.%S.%N)-$(xxd -pu <<< "$(date +%z)"); ia upload  $IUIDENTIFIER --metadata="subject:Uploaded using iu v3; D0FC61AE-A860-11E5-AA02-6FF54124FF49" "$@"; echo 'https://archive.org/download/'$IUIDENTIFIER; }
+  iud() { IUIDENTIFIER=$(python -c 'import uuid; print str(uuid.uuid4())')-$(date +%Y.%m.%d.%H.%M.%S.%N)-$(xxd -pu <<< "$(date +%z)"); ia upload  $IUIDENTIFIER --metadata="subject:Uploaded using iu v3; D0FC61AE-A860-11E5-AA02-6FF54124FF49" --delete "$@"; echo 'https://archive.org/download/'$IUIDENTIFIER; }
+
+
+For kthenu
+  iu() { IUIDENTIFIER=$(python -c 'import uuid; print str(uuid.uuid4())')-$(date +%Y.%m.%d.%H.%M.%S.%N)-$(xxd -pu <<< "$(date +%z)"); ia upload kyaaaaa --metadata="subject:Uploaded using iu v3; 1BC0AF98-B4D6-11E5-B9E6-5FFF4124FF49" $IUIDENTIFIER/"$@"; echo 'https://archive.org/download/'$IUIDENTIFIER; }
+
+For rochu's archiveteam account
+  iu() { IUIDENTIFIER=$(python -c 'import uuid; print str(uuid.uuid4())')-$(date +%Y.%m.%d.%H.%M.%S.%N)-$(xxd -pu <<< "$(date +%z)"); ia upload kyaaaaa --metadata="subject:Uploaded using iu v3; 915F42DC-B738-11E5-9646-7AFF5FF10656" $IUIDENTIFIER/"$@"; echo 'https://archive.org/download/'$IUIDENTIFIER; }
+
+For rochu's root account
+  iu() { IUIDENTIFIER=$(python -c 'import uuid; print str(uuid.uuid4())')-$(date +%Y.%m.%d.%H.%M.%S.%N)-$(xxd -pu <<< "$(date +%z)"); ia upload --checksum --delete $IUIDENTIFIER --metadata="subject:Uploaded using iu v3; BF2FBBC2-C9E6-11E5-A593-1CA937852114" "$@"; echo 'https://archive.org/download/'$IUIDENTIFIER; }
+
+For rochu's grabbot account
+  iu() { IUIDENTIFIER=$(python -c 'import uuid; print str(uuid.uuid4())')-$(date +%Y.%m.%d.%H.%M.%S.%N)-$(xxd -pu <<< "$(date +%z)"); ia upload kyaaaaa --metadata="subject:Uploaded using iu v3; E2C69226-CB9A-11E5-BB8D-DFF85FF10656" $IUIDENTIFIER/"$@"; echo 'https://archive.org/download/'$IUIDENTIFIER; }
+
+For warcdealer
+  iu() { IUIDENTIFIER=$(python -c 'import uuid; print str(uuid.uuid4())')-$(date +%Y.%m.%d.%H.%M.%S.%N)-$(xxd -pu <<< "$(date +%z)"); ia upload kyaaaaa --metadata="subject:Uploaded using iu v3 for warcdealer; 249707AC-B4EF-11E5-B573-45D037852114" $IUIDENTIFIER/"$@"; echo 'https://archive.org/download/'$IUIDENTIFIER; }
+
+Youtube sucker (look out it leaves some incompletes in the directory afterward. Can clean up w/ rm -v ./*.mp4 ./*.webm then ls | grep \.part$ and get the video IDs out of that and redownload them and repeat etc etc)
+  youtube-dl --title --continue --retries 100 --write-info-json --write-description --write-thumbnail --proxy="localhost:8000" --write-annotations --all-subs --no-check-certificate --ignore-errors -k -f bestvideo+bestaudio/best 
+
+Normandie condos calendar (maybe too broad? but pretty specific.......):
+  ^https?://normandiecondos\.com/nccalendar/(month|week|day|year)\.php\?(year|date)=(21|18)\d\d(\d\d\d\d)?(&month=\d\d?)?$
+
+  bash -c 'find . -iname "*.ovpn" -type f -exec /bin/mv -v {} /ovpnstuff-moved-2015dec17/ \;';
+
+  while IFS= read -r -d '' file; do cp -v "$file" /wpull-logs-copied-2015dec28/"$(python -c 'import uuid; print str(uuid.uuid4())')"'.wpull.log'; done <   <(find . -iname 'wpull.log' -print0);
+
+  grabbot user account password on rochu: grabbot
+
+How to pack files (will not preserve sockets; see http://superuser.com/questions/705636/given-that-tar-ignored-my-2-sockets-how-do-i-backup-and-then-restore-my-login-f ):
+
+  tar -cv --format pax -f output-file.pax /input-directory
+
+Or something like:
+
+  tar -cv --format pax --exclude /rochu-begun2015dec15a16.pax --exclude /proc/kcore -f /rochu-begun2015dec15a16.pax /
+
+How to compress files:
+
+  xz -k -C sha256 -9 -e -v filename
+
+or being insane:
+
+  lrzip -H -v -z -U -p 1 -L9 input-filename
+
+Invert regex: most of the time, use the trick in the question http://stackoverflow.com/questions/850907/regular-expression-opposite but sometimes it doesn't work.
+  /^((?!^ MYREGEX ).)*$/
+Example: matches inverse of https://www\.youtube\.com/watch\?v=XfNNTlzoYmk (I'm not sure if the line start/end things work? IDK.........)
+  ^((?!^https://www\.youtube\.com/watch\?v=XfNNTlzoYmk).)*$
+
+**User-submitted content (?)**: [[:literature:fiction:start|Fiction]] | [[:literature:poetry:start|Poetry]] | [[:blogs:start|Blogs]]
+
+**Archival**: [[archival:FTP]] | [[archival:Optical media]] | [[archival:To do]] | [[archival:software:start|Software]] | [[Ember Media Archive maintenance information]] | [[Ember Media Library]] | [[Shared Google Drive folders from Tom]] | [[Wayback Machine Tips and Tricks]]
+
+**My personal things**: [[school:start|School things]] | [[music ideas|Music ideas]] | [[Best quotations]] | [[Windows VM notes]] | [[Character URL directory]] | [[to do list]] | [[bumper stickers]] | [[Games that suck really hard]] | [[Removed things by me]] | [[CuteFairy's Dope RotMG Ideas]] | [[Firefox complaints]]
+
+**List of missing pages**: [[Missing pages]]
+
+**[[More links (old start page)|More links ]]**[[More links (old start page)|(old start page)]]
+
+Joke 2014.dec.04 a.mn. : I had a bad coughin' fit. I was too tall when I died.
+
+2014-12-29: While watching [[ref:Midori no Hibi]] ep 3 on [[ref:gogoanime]] ( http://www.gogoanime.com/midori-days-3-midori-days-episode-3 ) I saw a [[ref:oneweekmarketing.com]] (homepage: http://oneweekmarketing.com/ ) url go by in the ArchiveBot dash (on job 7ok9znvcte1uykh8dwkrehlh8 , job for http://kingsolutions.org.uk/ ) and thought it said [[Onee marketing]] (or something like that). Ya know, like, idk, sisters running some [[ref:affiliate marketing]] ebook site or something. LEL.
+
+2014-12-29a30 note: To do: (possibly) add Laurie Andersen's "Home of the Brave" to the media archive
+
+2015-01-03 note: Scary! http://www.thecommonsenseshow.com/2014/01/04/obamas-gun-confiscation-plans-are-a-prelude-to-genocide/ http://www.thecommonsenseshow.com/2014/04/27/psychiatrists-are-the-new-federal-gun-control-agents-and-political-thought-police/
+
+2015-01-05 note: A thought: In [[Ember Document Format]], "Dc" can mean "Document component" instead of "DCE character" — "Document character" being a "backronym" except it's an initialism, so I guess it's a backralism. Just thought this up. :) (both the backralism for "Dc" and the word "backralism" itself.) :)
+
+2015-01-08 note: I just had a dream before I woke up. There was an area with a doorway to it, and two guards guarding it. A guy from one side tried to get into the area, and the guard trying to keep people from that side from getting in failed to get him before he got in, but then that guard grabbed him and tried to toss him outside, only to be stopped by the other guard because the guy had actually gotten in and so the first guard couldn't toss him out now. There was a magnificent fruit display inside the main room of the area, with Lady America in an long iridescent dress reclining on the table with it; the display was nearly all eaten. When it was finished being eaten, there was a men's choir singing in unison in French, introducing the thousand-pound dish that was to follow. In the last line, they introduced the name of the dish, //le bœuf de florange// (8re 4mi 4fa 4re 1do) (florange = portmanteau of //fleur// and //orange//). Once they finished singing, Lady America leaped off the table and pulled back the tablecloth. The higher level of the table that the first dish had been sitting on disappeared, and revealed the //bœuf de florange//, a sumptuous display of oranges (not necessarily whole — displayed fancily, and maybe other fruit? I don't remember) with grapefruit-sized lotus blossoms all over it (I'm not sure how this worked, because the platform that disappeared was only like 1 foot tall and the //bœuf de florange// was maybe 3 feet tall — I guess that's just because it's a dream), and Lady Europa reclining on the table with it (a very traditionally beautiful woman, slender and with pale skin and all that, wearing an iridescent pink-with-lavender-highlights dress identical to Lady America's). (I think some other similarly-dressed women appeared there around the //bœuf de florange// too, but I'm not totally sure about that, and I'd think it would distract from Lady Europa's glory, if such a thing is possible...) She arose gracefully when she and the //bœuf de florange// were revealed.
+
+I think the situation was like the room with the food was a place for refugees from an occupied area, maybe — and the guard that didn't want people to enter was on the occupiers' side, and the people that were trying to enter were residents of the occupied area and of the same nationality as those in the unoccupied area. I'm not 100% sure about all that though, since it's a dream.
+
+2014-01-08a09 note: I should have incremental patches in eser — snapshot, then patch for that snapshot, then patch for that patch. That shouldn't be too hard, I don't think? (Maybe: rsync to stable after creating a patch?)
+
+2015-01-11 note: (note that the previous note, dated 2014-01-08a09 was actually in 2015). I should add another (maybe 2 more?) sections to the Ember book, one detailing the knowledge necessary to build a society from scratch, from skills necessary for basic survival, to current technology; as well as perhaps history that can be used to understand what the best systems of government are, etc. — and the other describing Ember as a book (since there are all the other aspects of Ember — the media library, the computing environment, etc. that have sections of the book, perhaps the Ember book should have a section).
+
+2015-01-12 note: To add to Ember book: a mathematics section in the skills section.
+
+2015-04-22a23 note: The [[ref:PHMV]] ([[ref:Pixie Hollow Music Video]]) is effectively a dead art form. Because the Pixie Hollow game — the medium through which the videos are created — has been closed, never again <del>will</del>can such artworks be created, most likely. And as copyright holders choose to take them down, there might be fewer and fewer of them in existence, until perhaps they have all disappeared, mere specks of dust in the ashes of history.

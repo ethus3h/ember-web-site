@@ -1,0 +1,65 @@
+<!doctype html>
+<meta charset="utf-8">
+<html>
+	<head>
+		<title>
+			Scripting an HTML loop exercise
+		</title>
+		<style id="simple-styles-v1.0">
+			/* Simple styles v1.0, for use in class demos. */
+			body {
+				font-family: verdana ;
+			}
+			#controls,
+			#message-box div {
+				width: 400px ;
+				min-height: 0px ;
+				padding: 2em ;
+			}
+			.robin {
+				background-color: aquamarine ;
+			}
+			.chris {
+				background-color: powderBlue ;
+			}
+			.jamie {
+				background-color: khaki ;
+			}
+		</style>
+		<script>
+			function hidePerson(name) {
+				[].forEach.call(document.getElementsByClassName(name), (elem) => elem.style.color='white');
+			}
+			function hideAll() {
+				[].forEach.call(document.getElementById('message-box').getElementsByTagName('div'), (elem) => elem.style.display='none');
+			}
+		</script>
+	</head>
+	<body>
+		<h2>Welcome to Friendbook!</h2>
+		<div id="controls">
+			<p><a href="#" onclick="hidePerson('jamie')">Mute Jamie</a></p>
+			<p><a href="#" onclick="hideAll()">Hide all messages</a></p>
+		</div>
+		<div id="message-box">
+			<div class="robin">
+				<strong>Robin</strong> Happy birthday!
+			</div>
+			<div class="jamie">
+				<strong>Jamie</strong> Hey, can I borrow $20?
+			</div>
+			<div class="chris">
+				<strong>Chris</strong> I have those notes from the class you missed.
+			</div>
+			<div class="jamie">
+				<strong>Jamie</strong> Oh, actually I need $50.
+			</div>
+			<div class="robin">
+				<strong>Robin</strong> I hope you enjoyed my present!
+			</div>
+			<div class="jamie">
+				<strong>Jamie</strong> WHY HAVEN'T YOU RESPONDED TO ME!?!
+			</div>
+		</div>
+	</body>
+</html>
