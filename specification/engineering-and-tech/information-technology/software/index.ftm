@@ -7,21 +7,21 @@
     <span><a href="/specification/engineering-and-tech/information-technology">Information technology</a></span>
 </p>
 
-- <a href="introduction-and-overview.html">Introduction and overview</a>
-- <a href="installation.html">Installation</a>
-- <a href="design-goals.html">Design goals</a>
-- <a href="development-practices.html">Development practices</a>
-- <a href="implementation-principles.html">Implementation principles</a>
-- <a href="stagel.html">Portable implementation language: StageL</a>
-- <a href="implementation-components.html">Implementation components</a>
+- <a href="introduction-and-overview.htm">Introduction and overview</a>
+- <a href="installation.htm">Installation</a>
+- <a href="design-goals.htm">Design goals</a>
+- <a href="development-practices.htm">Development practices</a>
+- <a href="implementation-principles.htm">Implementation principles</a>
+- <a href="stagel.htm">Portable implementation language: StageL</a>
+- <a href="implementation-components.htm">Implementation components</a>
 - <a href="spec">Interface specification</a>
-- <a href="document-format.html">Native document format (Dc-based)</a>
-- <a href="targeted-uses.html">List of uses targeted by the project</a>
-- <a href="mockups.html">Mockups</a>
-- <a href="user-research.html">User research</a>
+- <a href="document-format.htm">Native document format (Dc-based)</a>
+- <a href="targeted-uses.htm">List of uses targeted by the project</a>
+- <a href="mockups.htm">Mockups</a>
+- <a href="user-research.htm">User research</a>
 - <a href="platforms">Implementation platform documentation</a>
 - Commentaries:
-    - <a href="commentary-network-negotiation.html">Decentralized networked systems: Ad-hoc Computer Network Negotiation</a>
-    - <a href="commentary-new-media.html">EITE in the context of new media studies</a>
-    - <a href="commentary-challenges-and-state.html">Implementation challenges; state of the project</a>
-- <a href="references.html">References</a>
+    - <a href="commentary-network-negotiation.htm">Decentralized networked systems: Ad-hoc Computer Network Negotiation</a>
+    - <a href="commentary-new-media.htm">EITE in the context of new media studies</a>
+    - <a href="commentary-challenges-and-state.htm">Implementation challenges; state of the project</a>
+- <a href="references.htm">References</a>
