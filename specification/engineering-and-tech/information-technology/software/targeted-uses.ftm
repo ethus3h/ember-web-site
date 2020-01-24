@@ -8,9 +8,7 @@
     <span><a href="/specification/engineering-and-tech/information-technology/software">Information Technology Software Environment</a></span>
 </p>
 
-<ul>
-    <li>Getting a summary of everything going on (start / home screen kind of thing): Customizable. For example, could contain:
-        <ul>
+- Getting a summary of everything going on (start / home screen kind of thing): Customizable. For example, could contain:
             <li>A brief reminder of who/where/when/etc. I am
     - What I have to do today (schedule, tasks, etc.)
     - Important news (<em>e.g.</em> emergencies, etc.)
@@ -22,7 +20,7 @@
     - Other guided information resources (see below)
     - A hierarchy of things to browse through (web-portal style)
     - …</li>
-        </ul>
+
     </li>
     <li>Media consumption and browsing
         <ul>
@@ -53,7 +51,7 @@
     - Blogs &amp; RSS feeds
     - Consuming realtime media (television, radio, livestreams, …)
     - …</li>
-        </ul>
+
     </li>
     <li>Document creation and sharing
         <ul>
@@ -85,7 +83,7 @@
     - Blogging and microblogging
     - Working with legal documents
     - …</li>
-        </ul>
+
     </li>
     <li>Working with structured information (this is mostly also document creation / management)
         <ul>
@@ -106,7 +104,7 @@
     - Managing a class
     - Participating in a class
     - …</li>
-        </ul>
+
     </li>
     <li>Using resources/tools
         <ul>
@@ -128,7 +126,7 @@
     - Nutrition information
     - Support in other aspects of life (<em>e.g.</em> help with trouble fishing, personal motivation, nutrition, depression, etc.)
     - …</li>
-        </ul>
+
     </li>
     <li>Management
         <ul>
@@ -148,7 +146,7 @@
     - Malware prevention, intrusion detection, …
     - Data serialization
     - …</li>
-        </ul>
+
     </li>
     <li>Exchange
         <ul>
@@ -158,7 +156,7 @@
     - Issuing and redeeming coupons
     - Sending money (money-order style)
     - …</li>
-        </ul>
+
     </li>
     <li>Searching
         <ul>
@@ -166,7 +164,7 @@
     - Finding media (<em>e.g.</em> news, movies, music, etc.)
     - Locating documents
     - …</li>
-        </ul>
+
     </li>
     <li>Guided time use and content consumption
         <ul>
@@ -198,7 +196,7 @@
     - Acquaintance suggestions (people one might find interesting to talk to or to get to know)
     - Dating suggestions / matchmaking
     - …</li>
-        </ul>
+
     </li>
     <li>Communication
         <ul>
@@ -216,6 +214,6 @@
     - Sharing/microblogging/adding as status updates URLs, photographs, music, videos, …
     - Social bookmarking
     - …</li>
-        </ul>
+
     </li>
 </ul>
