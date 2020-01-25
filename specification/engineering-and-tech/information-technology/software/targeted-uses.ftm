@@ -132,22 +132,19 @@
     - Data serialization
     - …
 - Exchange
-        <ul>
-            <li>Buying and selling goods
+    - Buying and selling goods
     - Trading stocks and cryptocurrencies
     - Purchasing and selling tickets
     - Issuing and redeeming coupons
     - Sending money (money-order style)
     - …
 - Searching
-        <ul>
-            <li>Answers (<em>e.g.</em> facts, math questions)
+    - Answers (<em>e.g.</em> facts, math questions)
     - Finding media (<em>e.g.</em> news, movies, music, etc.)
     - Locating documents
     - …
 - Guided time use and content consumption
-        <ul>
-            <li>Notifications
+    - Notifications
     - Emergencies
     - Important news
     - Emails
@@ -176,8 +173,7 @@
     - Dating suggestions / matchmaking
     - …
 - Communication
-        <ul>
-            <li>Instant messaging
+    - Instant messaging
     - Email
     - Video chat and group video chat
     - Audio and video messages
@@ -190,7 +186,4 @@
     - Industrial automation (machine embroidery, etc.) (not an exact fit in the category of communication, since it’s communication with machines: perhaps closer to "management")
     - Sharing/microblogging/adding as status updates URLs, photographs, music, videos, …
     - Social bookmarking
-    - …</li>
-
-    </li>
-</ul>
+    - …
