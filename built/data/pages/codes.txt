@@ -1,0 +1,15 @@
+====== @-codes ======
+
+(read 'at-codes')
+
+**@-codes** are a coding structure using the syntax @x@ — no that's not an emoticon — to represent values — where x is an identifying code. The syntax varies among a few standards.
+
+=====In FMNP:=====
+In [[FMNP]] the @-codes are lowercase alphanumeric, and sometimes are paired or in sequence (as ordered dividers, e g in the [[2nd generation FMNP]], a generic page framework would be @p1@HTML Title@p2@Title@p3@Content@p4@)
+
+=====In some scripts:=====
+
+In some [[Futuramerlin]] PHP scripts, all-uppercase alphabetical @-codes are or have been used for internal placeholders (markers).
+
+=====In CDCE:=====
+In [[CDCE]], @-codes are numeric, and sometimes are paired or in sequence, or follow more complex syntactic rules. Because (C)DCE is not finished being defined, it is not certain how this will work.

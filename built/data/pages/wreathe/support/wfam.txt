@@ -1,0 +1,1 @@
+**WFAM** (**Wreathe Fusion Application Manager**) is the collection of software that is used when interacting with Wreathe graphically. See also the developer page on [[:WFAM]]

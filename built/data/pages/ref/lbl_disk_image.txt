@@ -1,0 +1,9 @@
+**LBL** disk image files are CP/M disk information.
+
+According to one discussion, LBL  disk image files are "boot-track images for use with the 22Disk "format"  function. When a text definition file is converted to a binary one, every entry with a "LABEL" keyword and accompanying file incorporates the LBL into the binary definition." (from https://web.archive.org/web/20130103032119/http://www.classiccmp.org/pipermail/cctalk/2012-December/326747.html) 
+
+A fragment of a discussion from https://groups.google.com/forum/#!msg/comp.os.cpm/hre9cWimhkc/LjB9NJzMODMJ :
+"
+> A disk formatted by CFMT from 22DISK isn't a true CP/M-86 disk because the generated disk doesn't have a CP/M-86 boot sector, or the requisite CP/M-86 disk ID bytes.
+>> I believe CFMT does support these, if you supply it with a .LBL file containing the boot sector. My copy does have an IBM1.LBL and IBM2.LBL, but these only contain the disk ID, not boot code.
+"

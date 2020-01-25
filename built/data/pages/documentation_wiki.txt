@@ -1,0 +1,13 @@
+**Documentation** is this wiki, originally intended for documentation of the [[Weave]] project but since expanded to include other [[Futuramerlin (organisation)|Futuramerlin]] projects as well.
+
+  * URL: http://futuramerlin.com/d/s/wwk/dokuwiki/doku.php?id=wreathe:support:home
+  * Status: Active
+  * Edit mode: Log in to edit
+  * Engine: DokuWiki
+  * Size: 238 (as of 15 January 2014)
+  * Statistics URL: http://futuramerlin.com/d/s/wwk/dokuwiki/doku.php?do=index&id=wreathe:support:home
+
+**Documentation** is a wiki for Futuramerlin, as well as other topics. Only a support section for the Wreathe Linux distribution and a question-and-answer section are currently publicly displayed. The total page count shown above includes pages accessible only to the admin. There is a total of 56 publicly accessible pages as of 15 January 2014: 52 in the wreathe namespace, and 4 in the publicquestions namespace.
+
+This page contains content copied from http://wikiindex.org/index.php?title=Documentation_%28Futuramerlin%29&direction=prev&oldid=174824.
+

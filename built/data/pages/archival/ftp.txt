@@ -1,0 +1,58 @@
+I started archiving some FTP sites a couple weeks (IIRC) before ArchiveTeam started [[http://archiveteam.org/index.php?title=FTP|archiving FTP sites]]. Good timing. (I guess.) Unfortunately I was grabbing FTP sites as WARCs, which apparently a) can't be used by the Wayback Machine and b) can't be turned into a directory tree by warctozip. I will redo them as TAR later (one went down before the TAR finished, so I uploaded the WARCs to IA anyway; some more I had already uploaded the WARCs and will redo as TAR).
+
+====== How to archive ======
+
+From http://badcheese.com/~steve/atlogs/?chan=archiveteam-bs&day=2014-01-14
+
+  wget -r -l 0 -np -nc ftp://domain.tld/
+
+  tar cvf year.month.domain.tld.tar domain.tld
+
+  tar tvf year.month.domain.tld.tar > year.month.domain.tld.tar.txt
+
+==== TAR Tip ====
+
+From http://archiveteam.org/index.php?title=FTP
+
+❝
+> If you're short on space: <code>tar --remove-files</code> deletes the files shortly after adding them to the tar, not waiting for it to be complete, unlike <code>zip -rm</code>.
+❞
+
+===== To save listings from an FTP site =====
+
+  wget -r -A */ -R * --no-remove-listing -l 0 -np -nc ftp://domain.tld/
+
+====== FTP sites in need of archival / being archived ======
+a lot of these are from http://www.filewatcher.com/m/Debounce-0.htm
+
+^ Address ^ Status ^
+|  |  |
+| ftp://labattmot.ele.ita.br/ | live |
+| ftp://dsepc019.ssi.ist.hokudai.ac.jp/ | live |
+| ftp://mail.digipro.rs/ | live, saving using only Filezilla (wget doesn't seem to work with it for some reason) (so there are no listings :-( ) |
+| ftp://217.118.55.99/ | dead :-( |
+| ftp://ftp.umcs.maine.edu/ | live, saved as WARC (FIXME) |
+| ftp://c-75-68-243-182.hsd1.me.comcast.net/ | dead, complete (but old) WARC; incomplete (but more recent) TAR :-( |
+| ftp://alf4all.demon.nl/ | dead :-( |
+| ftp://ite.ceag.kh.edu.tw/ | live, saving |
+| ftp://50.121.218.8/ | dead :-( |
+| ftp://50.121.218.9/ | dead :-( |
+| ftp://50.121.218.10/ | dead :-( |
+| ftp://50.121.218.11/ | dead :-( |
+| ftp://50.121.219.148/ | dead :-( |
+| ftp://140.136.150.153/ | live, saved! |
+| ftp://ftp.festo.com/ | live, saving |
+| ftp://gandalf.umcs.maine.edu/ | live, saved as WARC (FIXME) |
+| ftp://www.umcs.maine.edu/ | live, saved as WARC (FIXME) |
+
+====== Freezepoints ======
+
+
+
+  * ftp://ite.ceag.kh.edu.tw/2013_S4A_WorkShop/20130517/%E7%B0%A1%E5%A0%B1/%E6%8A%95%E7%9F%B3%E8%BB%8A.MOV
+  * ftp://ftp.festo.com/Public/PNEUMATIC/CHECKBOX/Firmware_SBOx/Firmware_SBOx-Q/Firmware%203.4.3.243/SBOC-Q-R2x-3-4-3-243-build-1438-20100907-Tools-Add-In.sbof
+  * ftp://mail.digipro.rs/Public/vmware/VMware-server-2.0.2-203138.i386.tar.gz
+  * ftp://mail.digipro.rs/Public/LIMUNDO/gume/SNC00528.jpg
+  * ftp://mail.digipro.rs/Public/LIMUNDO/limundo%202/DSCF9701.JPG
+  * ftp://mail.digipro.rs/Public/LIMUNDO/limundo%202/DSCF9699.JPG
+  * ftp://mail.digipro.rs/Public/LIMUNDO/limundo%202/DSCF9696.JPG

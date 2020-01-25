@@ -1,0 +1,6 @@
+=====Backing up a disk, raw=====
+Backing up one disk to another, raw:
+
+NOTE: I HAVE NOT TESTED THIS THOROUGHLY; USE AT YOUR OWN RISK!
+
+  sudo dcfldd if=/dev/sdd hash=md5,sha256 hashwindow=1G md5log=md5.txt sha256log=sha256.txt hashconv=after bs=512 conv=noerror,sync split=1G splitformat=aa of=/path/to/put/backup/in/backup-file-name.dd

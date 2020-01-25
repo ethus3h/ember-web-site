@@ -1,0 +1,106 @@
+====== 19 March 2014 work ======
+(for Project 4)
+
+  - Scale each point of the line to conform to the scale of the grid.
+  - Iterate through the line, drawing each point on the grid as needed.
+<code>
+<?php
+
+class Grid {
+   public function __construct($width, $heighth, $originX, $originY, $scaleFactor)
+   {
+       $this->width = $width;
+       $this->heighth = $heighth;
+       $this->originX = $originX;
+       $this->originY = $originY;
+       $this->scaleFactor = $scaleFactor;
+   }
+   
+   public function renderGrid()
+   {
+       //render the grid
+       
+   }
+   
+   public function drawPoint($x,$y) {
+       //draw a single point
+       //scale the point's coordinates
+       $x=$x*$this->scaleFactor;
+       $y=$y*$this->scaleFactor;
+       //check the coordinates for the boundaries and wrap them if necessary
+       if($x < ($this->width / 2)) {
+           //x coordinate out of bounds; wrap
+           $x = ($x % $this->width) - (width / 2);
+       }
+       if($x < ($this->width / 2)) {
+           //x coordinate out of bounds; wrap
+           $y = ($y % $this->heighth) - (heighth / 2);
+       }
+       //map the point's new coordinates onto a matrix for storage
+       //$xl = $x + (width / 2);
+       //$yl = $y + (heighth / 2);
+       $this->grid["(".$x.",".$y.")"]=1;
+   }
+   
+   public function drawLine($initX, $initY, $endX, $endY)
+   {
+       $slope = ($initY - $endY) / ($initX - $endX)
+       if(($initY == $endY) && ($initX == $endX)) {
+           //start and end points are the same; draw a single point
+           $this->drawPoint($initX,$initY);
+       }
+       if(($initX == $endX)) {
+           if($initY < $endY) {
+               $up = true;
+           }
+           else {
+               $up = false;
+           }
+           //draw a vertical line
+           $i=$initY;
+           while($i<=$endY) {
+               $this->drawPoint($initX,$i);
+           }
+       }
+       //http://www.codeproject.com/Questions/224182/Get-all-points-in-a-Line
+       //Check for the situation that the difference in y from the previous point is more than 1; that indicates that there will be a hole in the line
+       if($initX < $endX) {
+           $right = true;
+       }
+       else {
+           $right = false;
+       }
+       $j=$initX;
+       $previousPointX = $initX - $j;
+       $previousPointY = ($slope * $j) + ($initY - $endY * $slope);
+       while ($j<$endX)
+       {
+           $newPointX = $initX - $j;
+           $newPointY = ($slope * $j) + ($initY - $endY * $slope);
+           if((($newPointY - $previousPointY) < 1) | (($newPointY - $previousPointY) < 1)) {
+               //Distance between y coordinates is greater than 1; draw points to fill the gap
+               $i=$previousPointY;
+               while($i<$newPointY) {
+                   if($i < ($newPointY / 2)) {
+                       //Have not reached halfway point between the x coordinates yet
+                       $this->drawPoint($previousPointX,$i);
+                   }
+                   else {
+                       $this->drawPoint($newPointX,$i);
+                   }
+               }
+           }
+           //map point of line into coordinates in the array
+           $this->drawPoint($newPointX,newPointY);
+           $previousPointX = $newPointX;
+           $previousPointY = $newPointY;
+           if($right) {
+               $j++;
+           }
+           else {
+               $j--;
+           }
+       }
+   }
+}
+</code>

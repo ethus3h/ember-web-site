@@ -1,0 +1,14 @@
+====== List of Futuramerlin file formats ======
+====== pbz ======
+See [[pbz]]
+  * *.pbz - PBZ archive (Bzip2ed Pax archive)
+  * *.pbze - Encrypted PBZ archive (AES256-encrypted PBZ archive)
+  * *.pdx - PBZ index (hashdeep sha-1 directory listing)
+  * *.pdxe - Encrypted PBZ index (AES256-encrypted PBZ index)
+  * *.pbzversion - pbz version number. (ASCII integer) Used to identify the format of the PBZ archive.
+  * .pbzl - pbz default location configuration file (file path)
+  * *.ptd - PBZ archive time data (ASCII timestamp) Downloaded from http://timeapi.org/
+  * .pbziid - pbz installation identifier (ASCII hexadecimal uuid4) Used to indicate which installation of PBZ an archive was created by.
+  * .pbzc - pbz computer name configuration file (ASCII text)
+  * *.pcb - pbz configuration bundle (Bundle) Copied into PBZ archives to record the settings of pbz used.
+  * *.pmb - PBZ archive metadata bundle (Bundle)

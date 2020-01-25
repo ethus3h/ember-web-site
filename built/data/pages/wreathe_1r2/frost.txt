@@ -1,0 +1,7 @@
+**Wreathe 1r2: Frost** was the second version of [[:Wreathe]].
+
+* Group: [[:Frost]]
+
+* Branch: [[:Wreathe 1*]]
+
+Based on Ubuntu 10.10. Never released.

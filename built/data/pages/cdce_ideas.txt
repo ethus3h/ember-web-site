@@ -1,0 +1,458 @@
+CDCE (a lot of this, particularly the parts in grey, aren’t important to worry about implementing yet)
+
+Actually this page is a misnomer. The page is really more about [[DCE]] than [[CDCE]]
+
+Note that not all suggested behaviours are absolute. For example, the document chunk options (see under STRUCTURAL) are not necessary; they are just one option for doing things. Semantic tagging is always good though — the system could probably be expanded a lot to maximize this. Or the automatic bibliography management option à la BiBTeX is optional too, or could be customized, etc. The basic philosophy of DCE is *FLEXIBILITY* — letting the user do what he or she wants in an elegant manner and without undue shenanigans, intrusive 'assistance', or ugly hacks.
+
+====== STRUCTURAL ======
+
+
+There are two principle structural levels for which elements need to be described: documents and texts. A document is a complete unit such as a book or journal article, which would comprise various textual regions (note that in typesetting some items, such as database records of titles or filenames, only one textual region would be used; in the first, either a "Document Title" or a "Standard" region type would be used, depending on how the database was being queried, that is, the presentation style of the information as a title or as standard text (such as if it were being displayed in a page that contained a list of database fields), and in the second, a "Standard" region type would be used for interface display in lists (other region types might be used at other times) (note that in any use cases when it is in a "Standard" textual region, it would still have the text type Title)). A textual region is a section of content that has one semantic componency, e. g. the body of a document or the title; a document is therefore comprised of texts.
+=====Textual region types: =====
+
+* Document title
+
+ * Author name (multiple author names will be compiled into a list) 
+
+* Illustrator name (multiple illustrator names will be compiled into a list) 
+
+* Editor name (multiple editor names will be compiled into a list) 
+
+
+
+*  Publisher's name 
+
+*  Address 
+
+*  Printing history 
+
+*  Copyright notice 
+
+*  Dedication 
+
+*  Author's note 
+
+*  Illustrator's note 
+
+*  Editor's note
+
+
+*  Publisher's note 
+
+*  Introduction 
+
+*  Forward 
+
+*  Preface
+
+
+*  Prologue 
+
+*  Date 
+
+*  Section title (might change in definition within document based on section hierarchy) 
+
+*  Standard (Document content) 
+
+*  Postlogue 
+
+*  Afterword 
+
+*  Date 
+
+*  Signature 
+
+*  Author biography 
+
+*  Illustrator biography 
+
+*  Editor biography 
+
+*  Typographic credits 
+
+*  Index 
+
+*  Bibliography
+
+
+===== Document chunks: =====
+
+*  Spine 
+
+*  Cover 
+
+*  Front flap
+
+
+*  End pages 
+
+*  Title page 
+
+*  Half-title 
+
+*  Contents 
+
+*  Back end pages 
+
+*  Back flap
+
+
+*  Back cover
+===== Text classes: =====
+
+*  Standard 
+
+*  Numbered list 
+
+*  Bulleted list 
+
+*  Block quotation 
+
+*  Poetry
+===== Text subclasses: =====
+
+*  Non-person proper name (can be linked to a Weave node) 
+
+*  Person (can be linked to a Weave node) 
+
+*  Non-person entity (can be linked to a Weave node) 
+
+*  In addition, any other text class can be a subclass
+
+====== CONTENTS ======
+: various presentation elements need to be addressed, such as animation of other elements, actions on keypresses, the ability to write programs, macros, etc. So basically one could make anything (program, slideshow, animated film) using this technique. Additional functionality like fonts (referenced or embedded), document- or character-specific additional glyphs or glyph modifications, colors, text sizes, text backgrounds and background types, page backgrounds, object stacking, wrap, leading, columns (both linear
+and multiple-section/semantic (e. g. the columns in a newspaper being used to store separate articles) (a 'column break' control would be needed for this)), Fontworks and similar, gradients (normal or using variables (e. g. using the text color or background color to determine the color of the gradient) (also as text itself, so text could have a gradient fill or outline)) should also be included.
+
+====== CONCEPTUAL ======
+
+
+Text language classes are types of text used to denote the language and script of a document or a section of text within the document (e. g. latin/english, han/vietnamese, latin/vietnamese, mixed/japanese, latin/php, latin/base64, latin/html, latin/c, latin/visual-basic-.net, none/whitespace (a programming language), latin/volapuk, latin/romaji, cyrillic/russkiy). They are used for identifying the correct spelling-check language. Characters from other scripts (most usefully, symbols) can be inserted in other script regions however. 
+
+
+<html>&#42;</html><html>&#42;</html><html>&#42;</html><html>&#42;</html> Are encodings such as volapuk or base64 'languages' as such? Should they be handled differently???
+
+<html>&#42;</html><html>&#42;</html><html>&#42;</html><html>&#42;</html><html>&#42;</html><html>&#42;</html> They should be handled differently. For one thing, spell checking is irrelevant. Also note the distinction between natlangs, programming languages, and encodings in how autocompletion, spellchecking, grammar/syntax checking, hyphenation, display, syntax highlighting, etc. are handled.
+===== Cross-language text type classes: =====
+ 
+
+*  Mathematics 
+
+*  Geometric sketches and graphs (2d, 3d, nd) 
+
+*  Western musical notation 
+
+*  Ancient Greek musical notation 
+
+*  Byzantine musical notation 
+
+*  Feynman diagrams 
+
+*  Electrical diagrams 
+
+*  Flow charts 
+
+*  Braille 
+
+*  Graphs 
+
+*  Tables 
+
+*  Graphics 
+
+*  Hybridization charts 
+
+*  Genealogical charts 
+
+*  Bitmaps 
+
+*  Symbols 
+
+*  Maps 
+
+*  Sign language transcriptions (see Chicago p. 145) 
+
+*  Hyperlinks 
+
+*  Raw data
+
+==== Only meaningful for electronic media: ====
+
+*  Vector audio (such as MIDI or Vocaloid) 
+
+*  Audio 
+
+*  Animated graphics 
+
+* Video
+
+* Interactive panoramic imagery (QuickTime-style)
+
+* Interactive 2D imagery (Google Maps - style; 2d video games too)
+
+* Interactive 3D imagery (Google SketchUp - style; 3d video games too)
+
+* Interactive text
+
+* Software (how will this work?)
+
+* Embedded resource: Typeface data (store a typeface as a DCE file); colour chart data (store a colour pallet as a DCE file); etc.
+
+
+
+Specify alt text for bitmaps, audio, and video, because they are binary files. 
+====== CHARACTERS ======
+ Separate conceptual characters should be encoded (as Unicode does). Variant glyph forms should be provided however, e. g.
+
+{{ :screen_shot_2011-12-13_at_11.49.00_am.png |}}
+
+vs
+
+{{ :screen_shot_2011-12-13_at_11.47.58_am.png |}}
+
+
+for the letter 'a', because in some source documents, this distinction is important. These glyph forms should be specified by variant form selector control characters (as in Unicode) that for each character have specific defined values. The character without any variant selector should not be required to default to any specific form (the font may determine this). Distinctly from Unicode's handling of this issue, the source separation rule should NOT be applied here; that applies to composite characters (e. g. "cm2" should remain a set of 7 characters (BEGIN UNIT, LATIN SMALL LETTER C, LATIN SMALL LETTER M, BEGIN EXPONENT, DIGIT TWO, END EXPONENT, END UNIT). This may seem clumsy, but it is much simpler for archival of large quantities of data to only have one encoding method for each possible content being encoded. If it is necessary to provide round-trip encoding, the following could be used: BEGIN CHARACTER UNIT, BEGIN UNIT, LATIN SMALL LETTER C, LATIN SMALL LETTER M, BEGIN EXPONENT, DIGIT TWO, END EXPONENT, END UNIT, END CHARACTER UNIT. This will, while remaining roughly internally and semantically equivalent to the previous example (because the CHARACTER UNIT characters are used for handling characters from other standards that are not 'real characters' but rather should be specified as multiple characters), will provide unambiguous round-trip compatibility with existing Unicode or other encoding implementations. A font would not need to have a separate glyph for that unit being viewed as as set of characters or as an individual character; rather, the pile of glyphs that would represent the first character would provide equally well for the second. Each character in an existing standard should have exactly one mapping to a character or sequence of characters in this standard (disregarding CHARACTER UNIT codes), so there will only be one possible mapping for every charater.
+
+===== STYLES =====
+
+Slant, italicization angle, weight, spacing, etc can also be defined using specific values. (might that be difficult, rendering wise? dynamic glyph modification? Eh so what if it is…)
+==== Useful: ====
+ 
+
+*  Serif/Roman (Centaur) 
+
+*  Sans-serif 
+
+*  Equal stroke thickness 
+
+*  Comic book (like in Naruto for dialogue bubbles) 
+
+*  Monospacey (a style that 'looks like' a monospaced typeface ("typewriter"), but because styles don't determine advance width, all it is is a style)
+
+* Fraktur (Fraaaaktur, anyone?)
+
+==== Blackboard styles, mostly useful for math or for education: ====
+
+*  Blackboard Italic 
+
+*  Blackboard Roman
+==== Handwritten or script: ====
+ 
+
+*  Cursive 
+
+*  Chancery 
+
+*  Lucida Handrwriting 
+
+*  Handwritten cursive
+
+
+*  Handwritten sans-serif
+==== Display: ====
+
+
+
+*  Papyrus
+
+
+*  Herculanum
+
+
+*  Harrington 
+
+*  Underland Chronicles
+
+* Forest
+
+* Centre Post
+
+* Inkcalig
+===== SPACING =====
+
+*  Ve r y d e n s e 
+
+*  Dense 
+
+*  Normal 
+
+*  Monospaced 
+
+*  Monospaced unstretched 
+
+*  Loose 
+
+*  Ve r y l o o s e
+===== SHAPES =====
+
+*  Upright 
+
+*  Italic 
+
+*  Slanted 
+
+*  Reversed italic 
+
+*  Reverse slanted
+===== WEIGHTS =====
+ 
+
+*  Extra-light 
+
+*  Light 
+
+*  Normal
+
+
+*  Bold 
+
+*  Extra-bold
+===== FILLS =====
+ 
+Plus pattern fills, gradient fills, animated fills, you name it…
+
+*  Solid 
+
+*  Outlined
+===== EFFECTS: =====
+Whether these are altered by the above font changes depends on the nesting.
+
+Stroke/dot/dash thickness/size/etc can be specified numerically as different from the default to enable such things as big dot - little dot - big dot - little dot patterns of underlines. And just as an example of the flexibility of DCE: the dot/dash patterns of strokes should be able to be modified programattically/dynamically too if desired (able to, for example, use the time the document is loaded to define the stroke pattern, or encode the time in a Morse code underline that updates every second (only in electronic media of course!), etc. EPIIC!
+==== STROKES ====
+
+Should vertical advance lines etc be specified here? Where should anchor points go? Kerning lines? Hint lines? etc. See down in Covers section too…
+
+*  Underlined (multiple builds down) 
+
+*  Overlined (multiple builds up) 
+
+*  Struck (multiple is centred) 
+
+Obviously these build up / down / out behaviours could be overridden by the user if so desired…
+
+*  Ascender line
+
+
+*  Descender line 
+
+*  X-height line
+==== DOTS (for used in modifying STROKES and COVERS) ====
+ 
+
+*  Dot 
+
+*  Rounded dash 
+
+*  Square dot
+
+
+*  Dash
+==== COVERS ====
+ 
+
+*  Circle 
+
+*  Square 
+
+*  Rounded square 
+
+*  Rounded-corner rectangle like {{ :screen_shot_2011-12-14_at_12.00.43_pm.png|}}
+
+*  Zero position (for typography)
+
+
+*  Advance width (for typography)
+==== COVER TYPES ====
+ 
+
+*  Normal 
+
+*  Outlined 
+
+*  Outlined negative 
+
+*  Negative
+
+
+*  Outlined inverse 
+
+*  Inverse
+====== COVERAGE ======
+ In any system, there should be at least one font that covers all the possibilities to allow for complete typesetting fexibility.
+====== ODD CHARACTERS ======
+
+: ASCII transcriptions For use in node titles, transcriptions, &c. 
+
+*  Unknown value: # 
+
+*  Unknown value: illegible: 
+
+* 
+
+
+*  Unknown value: Guess or approximation: ~ 
+
+*  Unspecified value: } 
+
+*  Escape: \ 
+
+*  Opening grouping character: (
+
+
+*  Closing grouping character: ) 
+
+*  Approximation range character: _ 
+
+*  Single character wildcard: ? 
+
+*  Multiple character wildcard: $ 
+
+*  Start name reference (use ()s): ! 
+
+*  Alternative: | 
+
+*  Approximate number of metacharacters: % 
+
+*  Error range opening (use ()s): { 
+
+*  Error range plus: +
+
+
+*  Error range minus: - 
+
+*  Error range plus or minus: ^ 
+
+*  Record sum: = 
+
+*  Non-original data: & 
+
+*  Begin annotation: [ 
+
+*  End annotation: ] 
+
+*  Original value: < 
+
+*  Ommitted portion: / 
+
+*  Insertion: > 
+
+*  Replaced original text with: `
+
+===== Examples =====
+
+: Assume that these special characters are distinguished somehow from the surrounding text to make their usage distinct from the same characters in the text.
+
+==== Comment ====
+
+Hangonaminnit. If these are separate characters, what do we need escaping for?? Maybe so the special annotation characters can be annotating text containing special annotation characters? This recursion is confusing… Also, that could pose a challenge to rendering… how to provide unambiguous visual clues about this kind of thing?? (A document is though possibly going to want to have parts of it that conflict with the determined visual clues… therefore they can't be *totally* unambiguous.) But at least in the edit view maybe there's some way… maybe WYSIWYM editing, sort of??
+
+<html>  &nbsp;&nbsp;Need to think about this…</html>
+
+==== Bibliographic entry. ====
+
+   !(#). "!(Tou 'ta ~(t(f|v)(a|o))niken yo*(%{((**){(+1){(-1)))ai me)". Serialised {(1856^(~2))_1897=1984_~(Winter 1984|Spring 1985). Pages ((&(128_129))|(<(56_}))).
+The author's name is unknown, and is being referenced as a node. The title of the book is _Tou 'ta_ and then something like either 'tva', 'tvo', 'tfa', or 'tfo', _niken yo_ and then two (plus or minus 1) illegible characters, _ai me_. The book was serialised beginning between approximately 1854 and approximately 1858, and ending in 1897, and then again from 1984 to sometime around either winter of 1984 or spring of 1985. Two possibilities for the pages being cited are given. First were some page numbers that were not in the original version of the document, which were used to indicate that the portion being cited is between pages 128 and 129 of the non-original numbering. Second was an original numbering system, using which the cited portion is between page 56 and an ending page that did not have a specified number in the original system.
+
+==== Quotation. ====
+
+  "This is a very wellwritten>( \[sic\]) book /as `(Mr Carter) said."
+After the word 'wellwritten', '[sic]' has been inserted. Some text has been skipped between 'book' and 'as'. 'Mr Carter' is replacing some text.

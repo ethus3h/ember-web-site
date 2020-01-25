@@ -1,0 +1,39 @@
+A **[[DCE]] calendar format** is a structure for representing date/time within DCE. Which calendar format the parser uses is specified by the [[DCE calendar identifier|calendar identifier]].
+
+======Ranges:======
+A range is specified by:
+
+{base string #1}@4@{base string #2}
+
+where the base strings are the start and end points, and @4@ represents the [[DCE range character]].
+
+======Wrapper syntax:======
+
+The syntax for specifying a set of dates/times/ranges is using the [[DCE record summation character]] (represented here and in the [[Weave]] database as @5@).
+
+======List of formats======
+
+=====How to read this list:=====
+
+Each set of braces {} indicates an option that can be chosen or a value to be filled in.
+
+{@10@|@11@} means choose @10@ or @11@.
+
+All values to be filled in are in the [[DCE number format]].
+
+(@2@2@3@ represents the DCE sequence [[DCE separators|begin separator]] - [[DCE number format|2]] - [[DCE separators|end separator]].)
+
+=====Gregorian:=====
+
+(@2@1@3@ represents the DCE sequence [[DCE separators|begin separator]] - [[DCE number format|1]] - [[DCE separators|end separator]].)
+
+{[[DCE calendar identifier]]}@2@1@3@{[[DCE calendar string]]}
+
+====Base structure:====
+
+ {@10@|@11@}{year}@2@2@3@{month}@2@2@3@{day}@2@2@3@{hour}@2@2@3@{minute}@2@2@3@{second}@2@2@3@{subdivisions of a second}
+
+Example: @1@@2@1@3@**@10@****2012**@2@2@3@**10**@2@2@3@**7**@2@2@3@**15**@2@2@3@**@8@**@2@2@3@**@8@**@2@2@3@**@8@**
+
+What this represents is the year 2012 A. D., 10nth month October, 7th day — Sunday, 15th hour after midnight, and that the minute, second, and subdivisions of a second are unknown. The @8@ is representing a character for an unknown value (see also [[CDCE ideas]]; other of these "Odd Characters" could be used here too). The values have been marked in bold for clarity.
+
