@@ -2,6 +2,8 @@
 
 find ../../built/people/elli/writings/blogs/elliotchandlernmd442 -type f -name '*.htm' -exec ../../.futuramerlin-web-toolkit/nmd442blogcleanup {} \;
 
+rsync -a /usr/share/eite/data ../../engineering-and-tech/information-technology/software/env
+
 pwd
 cd static
 if false; then
