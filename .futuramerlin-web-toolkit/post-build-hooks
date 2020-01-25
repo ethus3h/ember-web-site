@@ -5,8 +5,9 @@ find ../../built/people/elli/writings/blogs/elliotchandlernmd442 -type f -name '
 rsync -a --delete /usr/share/eite/web/ ../../engineering-and-tech/information-technology/software/env
 
 pwd
-cd static
 if false; then
+    cd static
+
     if [[ ! -f content/futuramerlin.com/favicon.ico ]]; then
         rm -r ./* || echo "(nothing to remove; this is probably nothing to worry about)"
         #FIXME: this will break for bugs over 1000 and files over 100
