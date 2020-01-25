@@ -130,28 +130,22 @@
     - Computer security
     - Malware prevention, intrusion detection, …
     - Data serialization
-    - …</li>
-
-    </li>
-    <li>Exchange
+    - …
+- Exchange
         <ul>
             <li>Buying and selling goods
     - Trading stocks and cryptocurrencies
     - Purchasing and selling tickets
     - Issuing and redeeming coupons
     - Sending money (money-order style)
-    - …</li>
-
-    </li>
-    <li>Searching
+    - …
+- Searching
         <ul>
             <li>Answers (<em>e.g.</em> facts, math questions)
     - Finding media (<em>e.g.</em> news, movies, music, etc.)
     - Locating documents
-    - …</li>
-
-    </li>
-    <li>Guided time use and content consumption
+    - …
+- Guided time use and content consumption
         <ul>
             <li>Notifications
     - Emergencies
@@ -180,10 +174,8 @@
     - Sports information
     - Acquaintance suggestions (people one might find interesting to talk to or to get to know)
     - Dating suggestions / matchmaking
-    - …</li>
-
-    </li>
-    <li>Communication
+    - …
+- Communication
         <ul>
             <li>Instant messaging
     - Email
