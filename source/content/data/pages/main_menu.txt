@@ -1,4 +1,0 @@
-There are two types of **main menu**.
-
-  * [[Simplified Main Menu]] (also simply referred to as the [[Menu]])
-  * [[Traditional Main Menu]]

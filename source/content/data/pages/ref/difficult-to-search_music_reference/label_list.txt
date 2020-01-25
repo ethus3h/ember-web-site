@@ -1,4 +1,0 @@
-Difficult-to-search-for record labels.
-
-  * [[:ref:distorter records]]
-  * [[:ref:taped noise]]

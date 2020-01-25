@@ -1,7 +1,0 @@
-=====Convert a PDF into multiple images=====
-How to convert a PDF into multiple raster images:
-
-Run this command, where SourceFile.pdf is the file you want to convert, and DestinationFilename is the base name that you want the output files to be named from. (They will be named DestinationFilename-0.png, DestinationFilename-1.png, DestinationFilename-2.png, etc..) Note that this can result in a lot of files (one for each page of the PDF), so be careful where you run it if you don't want a folder to be inundated with output files.
-  convert -density 150 -quality 100 -resize 800x "SourceFile.pdf" "DestinationFilename.png"
-
-Based on the advice from [[http://snipplr.com/view/10361/|this webpage]].

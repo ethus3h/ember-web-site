@@ -1,1 +1,0 @@
-The **DCE record summation character** (DCE code 5) is the [[DCE]] character used to denote the union of two records. Its deprecated internal ASCII representation in the [[Weave]] database was =.

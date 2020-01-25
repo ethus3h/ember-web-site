@@ -1,1 +1,0 @@
-The **Simplified Main Menu** is the menu at the top centre of the screen by default (since [[Rain]]; as of [[Wreathe 4 dev / Wreathe 4 dev 1]] it was at the bottom centre of the screen) in [[Wreathe]]. It is one of the types of [[main menu]].

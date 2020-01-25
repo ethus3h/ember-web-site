@@ -1,3 +1,0 @@
-The **distance formula** allows to find the distance between two points A(x_1,y_1) and B(x_2,y_2) in a plane ℝ: d(A,B)=sqrt((x_2-x_1)^2+(y_2-y_1)^2). (source: Kirk Trigsted Unit Circle Precalculus electronic version).
-
-Also see http://www.mathplanet.com/education/algebra-2/conic-sections/distance-between-two-points-and-the-midpoint

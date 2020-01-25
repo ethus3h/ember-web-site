@@ -1,5 +1,0 @@
-This is historical info about [[Wreathe]] before it was [[Wreathe]].
-
-Screenshot of a pre-[[Frost]] system (redacted for privacy) that shows some of the user interface elements that were used in Wreathe:
-
-{{ :bwa-edit-03012011.png?200 |}}
