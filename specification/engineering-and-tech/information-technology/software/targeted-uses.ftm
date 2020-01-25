@@ -9,7 +9,7 @@
 </p>
 
 - Getting a summary of everything going on (start / home screen kind of thing): Customizable. For example, could contain:
-            <li>A brief reminder of who/where/when/etc. I am
+    - A brief reminder of who/where/when/etc. I am
     - What I have to do today (schedule, tasks, etc.)
     - Important news (<em>e.g.</em> emergencies, etc.)
     - A search box
@@ -19,12 +19,9 @@
     - Messages from others (emails, IMs, voice/videomails, etc.)
     - Other guided information resources (see below)
     - A hierarchy of things to browse through (web-portal style)
-    - …</li>
-
-    </li>
-    <li>Media consumption and browsing
-        <ul>
-            <li>Reading and interacting with documents/apps
+    - …
+- Media consumption and browsing
+    - Reading and interacting with documents/apps
     - Browsing a Web site
     - Browsing through EITE nodes and other structured datasets/databases
     - Movies
@@ -50,12 +47,9 @@
     - Comics (manga)
     - Blogs &amp; RSS feeds
     - Consuming realtime media (television, radio, livestreams, …)
-    - …</li>
-
-    </li>
-    <li>Document creation and sharing
-        <ul>
-            <li>Writing a paper
+    - …
+- Document creation and sharing
+    - Writing a paper
     - Collaborative document editing / creation
     - Composing a score
     - Writing a book
@@ -82,12 +76,9 @@
     - Recording music from a USB/MIDI instrument
     - Blogging and microblogging
     - Working with legal documents
-    - …</li>
-
-    </li>
-    <li>Working with structured information (this is mostly also document creation / management)
-        <ul>
-            <li>Managing a genealogy using Ember records
+    - …
+- Working with structured information (this is mostly also document creation / management)
+    - Managing a genealogy using Ember records
     - Managing a calendar / schedule
     - Managing a to-do list
     - Managing a contacts directory
@@ -103,12 +94,9 @@
     - Managing personal notes, documents, projects, photographs, videos, etc.
     - Managing a class
     - Participating in a class
-    - …</li>
-
-    </li>
-    <li>Using resources/tools
-        <ul>
-            <li>Dictionary
+    - …
+- Using resources/tools
+    - Dictionary
     - Thesaurus
     - Chemical elements chart and data
     - Maps, travel directions, and sky charts
@@ -125,12 +113,9 @@
     - Support using EITE &amp; Ember
     - Nutrition information
     - Support in other aspects of life (<em>e.g.</em> help with trouble fishing, personal motivation, nutrition, depression, etc.)
-    - …</li>
-
-    </li>
-    <li>Management
-        <ul>
-            <li>Database creation and administration (this is really “Document creation”, but also listed here)
+    - …
+- Management
+    - Database creation and administration (this is really “Document creation”, but also listed here)
     - Network administration
     - Programming
     - Emulation of other computing systems (this is also media playback, of a sort)
