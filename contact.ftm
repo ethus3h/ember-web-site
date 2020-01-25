@@ -1,8 +1,13 @@
-<h1>Contact</h1>
+@t Contact
 
 <p class="breadcrumbs">Page location:
     <span><a href="/">Home</a></span>
 </p>
+
+    <p>Matrix is the only reliable way to get in touch with me as of 21 January 2020. You can also try email or telephone, but it may not reach me (or not in a timely manner).</p>
+    <ul>
+        <li>Matrix network/<a href="https://riot.im/" target="_blank">Riot.im</a>: <a href="https://matrix.to/#/@goldenshimmer:matrix.org">@goldenshimmer:matrix.org</a></li>
+        <li>Email: <a href="mailto:elli@futuramerlin.com">elli@futuramerlin.com</a> (Hard to use at the moment; I might use it more once I get it set up better but I'm procrastinating fixing it.)</li>
 
 <ul class="space-below no-bullets">
     <li>As of 21 January 2020, a dedicated contact channel is not available. See Elli's personal contact information at <a href="/people/elli">to get in touch for now.</li>
