@@ -85,6 +85,7 @@
         <dt>eite/1/config/eite.conf</dt><dd>NDW system-specific configuration overrides: I/O settings; mode type to run in; resource limits; etc.</dd>
         <dt>eite/1/data/</dt><dd>Data files provided with EITE. Should be deterministic within an EITE version.</dd>
         <dt>eite/1/var/</dt><dd>Data files to be managed persistently by EITE. Writeable.</dd>
+        <dt>eite/1/var/</dt><dd>Data files to be managed persistently by EITE. Writeable.</dd>
     </dl>
 
     <table>
