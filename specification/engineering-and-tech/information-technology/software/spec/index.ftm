@@ -85,7 +85,7 @@
         <dt>eite/1/config/eite.conf</dt><dd>NDW system-specific configuration overrides: I/O settings; mode type to run in; resource limits; etc.</dd>
         <dt>eite/1/data/</dt><dd>Data files provided with EITE. Should be deterministic within an EITE version.</dd>
         <dt>eite/1/var/</dt><dd>Data files to be managed persistently by EITE. Writeable.</dd>
-        <dt>eite/1/var/</dt><dd>Data files to be managed persistently by EITE. Writeable.</dd>
+        <dt>eite/1/tmp/</dt><dd>Memory for current EITE run (if discarded, can be reconstructed by replaying the run so far). Writeable.</dd>
     </dl>
 
     <table>
@@ -108,9 +108,5 @@
     <tr><td>r/as/storageList s/path</td><td>List the contents of StageR's persistent storage at the specified directory.</td></tr>
     <tr><td>r/v/storagePut s/path an/data</td><td>Set the contents of StageR's persistent storage at the specified path.</td></tr>
 
-    <tr><td colspan="2">Semi-persistent memory (FIXME: How to ensure this doesn't result in a nasty tendency for non-replayable runs? I don't like just trusting that StageR is written well enough. But getting rid of this would destroy performance and/or use way too much storage.)</td></tr>
-    <tr><td>r/an/memoryGet s/path</td><td>Get the contents of StageR's semi-persistent memory at the specified path.</td></tr>
-    <tr><td>r/an/memoryList s/path</td><td>List the contents of StageR's semi-persistent memory at the specified directory.</td></tr>
-    <tr><td>r/v/memoryPut s/path</td><td>Set the contents of StageR's semi-persistent memory at the specified path.</td></tr>
     </tbody>
     </table>
