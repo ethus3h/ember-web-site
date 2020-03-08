@@ -244,3 +244,8 @@ https://github.com/sirjaren/gentoo-overlay.git
 https://github.com/stintel/gentoo-overlay.git
 https://github.com/ethus3h/wreathe-overlay.git
 https://github.com/remko/waforth.git
+https://github.com/wjakob/openexr.git
+https://github.com/mitsuba-renderer/zlib.git
+https://github.com/wdas/ptex.git
+https://github.com/google/glog.git
+https://github.com/mmp/pbrt-v3.git
