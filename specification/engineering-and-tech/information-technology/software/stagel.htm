@@ -116,7 +116,7 @@ while lt n/i count as/temp
     <p>Values are available until the end of the block they are in. Whether they propagate outside of the block is undefined. Accessing them outside the block, or before the line they are defined, is an error, but there isn't anything in place to detect it. Use routine return values to move things around.</p>
 
 <h2>Errors</h2>
-    <p>When an error is encountered, it will produce a message somehow. Execution of the program may stop. Otherwise, behavior is undefined. For instance, in JavaScript in browser it will send a console log message. In bash, it will call "die" from ember-shared. FIXME: Can error conditions be eliminated through the judicious use of logic to </p>
+    <p>When an error is encountered, it will produce a message somehow. Execution of the program may stop. Otherwise, behavior is undefined. For instance, in JavaScript in browser it will send a console log message. In bash, it will call "die" from ember-shared. FIXME: Can error conditions be eliminated at transpile-time by proving what the code does?</p>
 
 <h2>Types and basic commands for them</h2>
     <p>Routines that have type "v" are void. These are all the primitive commands that are implemented natively for each language. Other commands are included in StageR library of useful commands. Type "g" is generic, can only be used as a parameter for a routine. It indicates it can be either string, int, or bool. Type "ga", can also only be used as a parameter, is a generic array, which is either an array of ints, an array of strings, or an array of bools (an array can't contain a mixture), and all arrays passed to a routine that accepts generic-array parameters must be the same type (e.g. all int arrays). Type "gi" (generic item(s)) is like "ga" but can also be a single bool, int, or string.</p>
@@ -127,7 +127,9 @@ while lt n/i count as/temp
             <dt>r/b/or n/a n/b</dt><dd>Returns bool a or b</dd>
             <dt>r/b/not n/a n/b</dt><dd>Returns bool a not b</dd>
         </dl>
-    <h3>n: Numbers (integer only)</h3>
+    <h3>o: Numbers (uint8)</h3>
+        <p>o for octet, since b was taken for boolean so can't be used for byte. Work like int32.</p>
+    <h3>n: Numbers (int32)</h3>
         <p>Can be 0, or positive integer. Can not be undefined (initialized to 0). Currently is restricted to 32-bit signed (-2,147,483,648 to 2,147,483,647), but may be increased if more are needed.</p>
         <dl>
             <dt>r/n/add b/a b/b</dt><dd>Returns the sum of two numbers a and b</dd>
@@ -135,7 +137,7 @@ while lt n/i count as/temp
             <dt>r/n/mod b/a b/b</dt><dd>Returns the modulo of two numbers a and b</dd>
         </dl>
     <h3>s: Strings</h3>
-        <p>A sequence of characters: can be ASCII printable characters or space. No newlines or control characters, I guess. The string support isn't supposed to be very capable, just easy to implement lowest-common-denominator between target languages for making labels for stuff and whatever. For actual data, use arrays of integers.</p>
+        <p>A sequence of characters: can be ASCII printable characters or space. No newlines or control characters, I guess. The string support isn't supposed to be very capable, just easy to implement lowest-common-denominator between target languages for making convenient labels and such (e.g. state names in a state machine). For actual data, use arrays of integers.</p>
         <dl>
             <dt>r/s/substring s/input n/start n/end</dt><dd>Give the characters from start to end (indices as bytes (characters — no Unicode support here, sorry) into input)</dd>
             <dt>r/s/cat s/a s/b</dt><dd>Concatenates a and b</dd>
