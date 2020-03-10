@@ -95,7 +95,7 @@ r/s/fizzBuzz # A string is an array of ASCII printable characters.
         <dt>new</dt><dd>new ident</dd>
         <dt>set</dt><dd>set ident value</dd>
         <dt>}</dt><dd>End parameter list without new line</dd>
-        <dt>{</dt><dd>Loop over an array. How it's used: <pre><code>new as/temp
+        <dt>{</dt><dd>Loop over an array. FIXME: does this work when nested? (are the generated variable names duplicated?) How it's used: <pre><code>new as/temp
 set as/temp [ 'd' 'b' 'l' 'c' 'b' 'a' ]
 new n/c
 as/temp { n/i s/elem
@@ -116,7 +116,7 @@ while lt n/i count as/temp
     <p>Values are available until the end of the block they are in. Whether they propagate outside of the block is undefined. Accessing them outside the block, or before the line they are defined, is an error, but there isn't anything in place to detect it. Use routine return values to move things around.</p>
 
 <h2>Errors</h2>
-    <p>When an error is encountered, it will produce a message somehow. Execution of the program may stop. Otherwise, behavior is undefined. For instance, in JavaScript in browser it will send a console log message. In bash, it will call "die" from ember-shared.</p>
+    <p>When an error is encountered, it will produce a message somehow. Execution of the program may stop. Otherwise, behavior is undefined. For instance, in JavaScript in browser it will send a console log message. In bash, it will call "die" from ember-shared. FIXME: Can error conditions be eliminated through the judicious use of logic to </p>
 
 <h2>Types and basic commands for them</h2>
     <p>Routines that have type "v" are void. These are all the primitive commands that are implemented natively for each language. Other commands are included in StageR library of useful commands. Type "g" is generic, can only be used as a parameter for a routine. It indicates it can be either string, int, or bool. Type "ga", can also only be used as a parameter, is a generic array, which is either an array of ints, an array of strings, or an array of bools (an array can't contain a mixture), and all arrays passed to a routine that accepts generic-array parameters must be the same type (e.g. all int arrays). Type "gi" (generic item(s)) is like "ga" but can also be a single bool, int, or string.</p>
