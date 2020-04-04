@@ -60,7 +60,6 @@
     <p>The DDC should provide the following user-facing command-line scripts, or whatever the usual interface for a routine is in the given context (such as functions in a C library).</p>
     <dl>
         <dt><code>ddc</code></dt><dd>This is the main interface for DDC. Synopsis: <code>ddc [check|run|run-tests|source-to-tree|tree-to-source] (&lt;path-to-document&gt;|-)</code></dd>
-        <dt><code>ddc-invoke</code></dt><dd>Replayably run a single StageL command. Arguments must all be literals. Prints the replay ID to stderr, and the output to stdout Synopsis: <code>ddc-invoke &lt;StageL-statement&gt;</code></dd>
     </dl>
     <p>The DDC provides the following additional command-line scripts that it uses internally.</p>
     <dl>
