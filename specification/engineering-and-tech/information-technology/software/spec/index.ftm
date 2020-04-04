@@ -9,7 +9,7 @@
 </p>
 
 <h2>Purpose of this document</h2>
-    <p>The DDC specification indicates the various interfaces that an DDC implementation provides: APIs and tools for humans. The specific manner of implementation of these is not described here. (Partial implementations could be possible that, for instance, only provide importing and exporting (without running) documents, or that omit some supported formats, or that do not provide the tools.) The main DDC implementation software attempts to be a full implementation of this specification.</p>
+    <p>The DDC specification indicates the various interfaces that a DDC implementation provides: APIs and tools for humans. The specific manner of implementation of these is not described here. (Partial implementations could be possible that, for instance, only provide importing and exporting (without running) documents, or that omit some supported formats, or that do not provide the tools.) The main DDC implementation software attempts to be a full implementation of this specification.</p>
     <p>This is a work in progress and will likely change as it is developed.</p>
 
 <h2>DDC tools</h2>
@@ -83,7 +83,7 @@
     <p>Storage path layout (read-only unless noted):</p>
     <dl>
         <dt>ddc/1/config/ddc.conf</dt><dd>NDW system-specific configuration overrides: I/O settings; mode type to run in; resource limits; etc.</dd>
-        <dt>ddc/1/data/</dt><dd>Data files provided with DDC. Should be deterministic within an DDC version.</dd>
+        <dt>ddc/1/data/</dt><dd>Data files provided with DDC. Should be deterministic within a DDC version.</dd>
         <dt>ddc/1/var/</dt><dd>Data files to be managed persistently by DDC. Writeable.</dd>
         <dt>ddc/1/tmp/</dt><dd>Memory for current DDC run (if discarded, can be reconstructed by replaying the run so far). Writeable.</dd>
     </dl>
