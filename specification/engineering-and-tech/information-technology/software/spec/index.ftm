@@ -59,15 +59,15 @@
 <h2>Command-line interface (mostly unimplemented)</h2>
     <p>The EITE should provide the following user-facing command-line scripts.</p>
     <dl>
-        <dt><code>eite</code></dt><dd>This is the main interface for EITE. Synopsis: <code>eite [check|run|run-tests|source-to-tree|tree-to-source] (&lt;path-to-document&gt;|-)</code></dd>
+        <dt><code>ddc</code></dt><dd>This is the main interface for EITE. Synopsis: <code>ddc [check|run|run-tests|source-to-tree|tree-to-source] (&lt;path-to-document&gt;|-)</code></dd>
     </dl>
     <p>The EITE provides the following additional command-line scripts that it uses internally.</p>
     <dl>
-        <dt><code>eite-check</code></dt><dd>Return false if the specified source document cannot be parsed. Synopsis: <code>eite-check (&lt;path-to-document&gt;|-)</code></dd>
-        <dt><code>eite-run</code></dt><dd>Run the specified document. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
-        <dt><code>eite-run-tests</code></dt><dd>Run test suite. Synopsis: <code>eite-run-tests</code></dd>
-        <dt><code>eite-source-to-tree</code></dt><dd>Given a source file, print out an AST representation of the document. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
-        <dt><code>eite-tree-to-source</code></dt><dd>Given an AST representation of a document, print out the source file for it. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+        <dt><code>ddc-check</code></dt><dd>Return false if the specified source document cannot be parsed. Synopsis: <code>ddc-check (&lt;path-to-document&gt;|-)</code></dd>
+        <dt><code>ddc-run</code></dt><dd>Run the specified document. Synopsis: <code>ddc-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+        <dt><code>ddc-run-tests</code></dt><dd>Run test suite. Synopsis: <code>ddc-run-tests</code></dd>
+        <dt><code>ddc-source-to-tree</code></dt><dd>Given a source file, print out an AST representation of the document. Synopsis: <code>ddc-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+        <dt><code>ddc-tree-to-source</code></dt><dd>Given an AST representation of a document, print out the source file for it. Synopsis: <code>ddc-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
     </dl>
 
 <h2>Formats</h2>
@@ -82,10 +82,10 @@
 <h2>EITE NDW APIs</h2>
     <p>Storage path layout (read-only unless noted):</p>
     <dl>
-        <dt>eite/1/config/eite.conf</dt><dd>NDW system-specific configuration overrides: I/O settings; mode type to run in; resource limits; etc.</dd>
-        <dt>eite/1/data/</dt><dd>Data files provided with EITE. Should be deterministic within an EITE version.</dd>
-        <dt>eite/1/var/</dt><dd>Data files to be managed persistently by EITE. Writeable.</dd>
-        <dt>eite/1/tmp/</dt><dd>Memory for current EITE run (if discarded, can be reconstructed by replaying the run so far). Writeable.</dd>
+        <dt>ddc/1/config/ddc.conf</dt><dd>NDW system-specific configuration overrides: I/O settings; mode type to run in; resource limits; etc.</dd>
+        <dt>ddc/1/data/</dt><dd>Data files provided with EITE. Should be deterministic within an EITE version.</dd>
+        <dt>ddc/1/var/</dt><dd>Data files to be managed persistently by EITE. Writeable.</dd>
+        <dt>ddc/1/tmp/</dt><dd>Memory for current EITE run (if discarded, can be reconstructed by replaying the run so far). Writeable.</dd>
     </dl>
 
     <table>
