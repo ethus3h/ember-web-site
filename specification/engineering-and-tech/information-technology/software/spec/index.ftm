@@ -57,7 +57,7 @@
     </table>
 
 <h2>Command-line interface (mostly unimplemented)</h2>
-    <p>The DDC should provide the following user-facing command-line scripts, or routines in contexts that do not use command.</p>
+    <p>The DDC should provide the following user-facing command-line scripts, or whatever the usual interface for a routine is for such things ().</p>
     <dl>
         <dt><code>ddc</code></dt><dd>This is the main interface for DDC. Synopsis: <code>ddc [check|run|run-tests|source-to-tree|tree-to-source] (&lt;path-to-document&gt;|-)</code></dd>
     </dl>
