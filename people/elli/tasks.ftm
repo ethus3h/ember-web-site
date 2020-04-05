@@ -16,6 +16,8 @@
     - Fiction writing
     - Philosophy writings
 
+    - restic --repo /elements/restic-test-started-2020m4d4 --verbose backup -f --with-atime file
+
 @0 Specific to do
     - Car registration punched out for January
     - Web hosting renewal: when is it due? WhoisGuard: Jun 21, 2020 / hosting : Dec 12, 2021 / Domain name: Dec 9, 2022
