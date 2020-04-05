@@ -17,6 +17,7 @@
     - Philosophy writings
 
     - restic --repo /elements/restic-test-started-2020m4d4 --verbose backup -f --with-atime file
+    -
 
 @0 Specific to do
     - Car registration punched out for January
