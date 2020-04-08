@@ -21,7 +21,7 @@
     - restic --repo /elements/restic-started-2020m4d4a5 --verbose check --read-data
     - borg create --stats --progress --list --filter=AME --compression auto,lzma,6 /elements/borg-started-2020m4d7::"$(emdate)" file
     - borg create --stats --progress --list --filter=AME --compression auto,lzma,6 --files-cache disabled /elements/borg-started-2020m4d7::"$(emdate)" file
-    - borg mount /mnt/backup/borg_repo /mnt/borg
+    - borg mount /elements/borg-started-2020m4d7 ~/borg-mount-2020m4d7
     -
 
 @0 Specific to do
