@@ -20,6 +20,7 @@
     - restic --repo /elements/restic-started-2020m4d4a5 --verbose mount ./restic-mount-2020m4d4/
     - restic --repo /elements/restic-started-2020m4d4a5 --verbose check --read-data
     - borg create --stats --progress --list --filter=AME --compression auto,lzma,6 /elements/borg-started-2020m4d7::"$(emdate)" file
+    - borg create --stats --progress --list --filter=AME --compression auto,lzma,6 /elements/borg-started-2020m4d7::"$(emdate)" file
 
 @0 Specific to do
     - Car registration punched out for January
