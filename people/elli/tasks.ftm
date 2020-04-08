@@ -19,8 +19,8 @@
     - restic --repo /elements/restic-started-2020m4d4a5 --verbose backup -f --with-atime file
     - restic --repo /elements/restic-started-2020m4d4a5 --verbose mount ./restic-mount-2020m4d4/
     - restic --repo /elements/restic-started-2020m4d4a5 --verbose check --read-data
-    - borg create --stats --progress --list --filter=AME --compression 'lzma,6' '/elements/borg-started-2020m4d7::'"$(emdate)" file
-    - borg create --stats --progress --list --filter=AME --compression 'lzma,6' --files-cache disabled '/elements/borg-started-2020m4d7::'"$(emdate)" file
+    - borgcreatequick() ( tempA="$(tempFile)"; tempB="$(tempFile)"; pwd > "$tempA"; printf '%s\0' "$@" > "$tempB"; borg create --stats --progress --list --filter=AME --compression 'lzma,6' '/elements/borg-started-2020m4d7::'"$(emdate)" "$@"; ); borgcreate "$tempA" "$tempB" file
+    - borgcreatequick() ( tempA="$(tempFile)"; tempB="$(tempFile)"; pwd > "$tempA"; printf '%s\0' "$@" > "$tempB"; borg create --stats --progress --list --filter=AME --compression 'lzma,6' '/elements/borg-started-2020m4d7::'"$(emdate)" "$@"; ); borgcreate "$tempA" "$tempB" fileborg create --stats --progress --list --filter=AME --compression 'lzma,6' --files-cache disabled '/elements/borg-started-2020m4d7::'"$(emdate)" file
     - borg mount /elements/borg-started-2020m4d7 ~/borg-mount-2020m4d7
     - borg umount ~/borg-mount-2020m4d7
     - borg info /elements/borg-started-2020m4d7
