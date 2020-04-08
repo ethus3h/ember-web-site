@@ -26,6 +26,7 @@
     - borg umount ~/borg-mount-2020m4d7
     - borg info /elements/borg-started-2020m4d7
     - borg check -v -p --verify-data /elements/borg-started-2020m4d7
+    - also important: borg config /elements/borg-started-2020m4d7 append_only 1
 
 @0 Specific to do
     - Car registration punched out for January
