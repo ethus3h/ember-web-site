@@ -1,0 +1,21 @@
+kyan@elegiac ~ nohup compiz --replace openbox $ We are the embers of the burning world
+bash: We: command not found
+/bin/bash
+failed with the error on /usr/bin/error-notify line 28 in /home/kyan at 20200707055225128637385U2d303430300a:
+An error was reported on  line 1 in /home/kyan at 20200707055225036453474U2d303430300a.
+kyan@elegiac ~ nohup compiz --replace openbox $ We are the embers in the dark and the cold 
+bash: We: command not found
+/bin/bash
+failed with the error on /usr/bin/error-notify line 28 in /home/kyan at 20200707055325045892901U2d303430300a:
+An error was reported on  line 2 in /home/kyan at 20200707055324966435824U2d303430300a.
+kyan@elegiac ~ nohup compiz --replace openbox $ We are the embers of hope in the night
+bash: We: command not found
+/bin/bash
+failed with the error on /usr/bin/error-notify line 28 in /home/kyan at 20200707055347453196349U2d303430300a:
+An error was reported on  line 3 in /home/kyan at 20200707055347390221591U2d303430300a.
+kyan@elegiac ~ nohup compiz --replace openbox $ Bringing warmth to the world that holds you tight
+bash: Bringing: command not found
+/bin/bash
+failed with the error on /usr/bin/error-notify line 28 in /home/kyan at 20200707055439305701120U2d303430300a:
+An error was reported on  line 4 in /home/kyan at 20200707055439192163096U2d303430300a.
+kyan@elegiac ~ nohup compiz --replace openbox $ 
