@@ -1,0 +1,31 @@
+kyan@elegiac ~ nohup compiz --replace openbox $ causes of commuunication failure: absence (production error - author didn't produce/did'nt finish; media loss or transmission failure(degradation,book burning, etc); extant but lost in the shuffle); unawareness (audience unaware of text); disinterest; alienation (reader dislike style - (too formeal, too informal); or content - (disagree, offended, etc)); audience does not know language; tl;dr; confusion; text too long or convoluted and reader gives up; misunderstanding
+ee, offended, etc); 
+bash: syntax error near unexpected token `('
+
+(production error - author didn't produce/did'nt finish; media loss(degradation,book burning, etc); extant but lost in the shuffle); unawareness (audience unaware of text); disinterest; alienation (reader dislike style - (too formeal, too informal); or content - (disagr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
