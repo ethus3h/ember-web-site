@@ -1,1 +1,6 @@
 #!/usr/bin/env bash
+while IFS= read -r -d '' file; do
+    if [[ -f "$file" ]] && [[ ! -h "$file" ]]; then
+        enrollFile "$file" "$dbDir" || warn "Something went wrong while indexing $file."
+    fi
+done < <(find "$enrollDirectory" -type f -print0) || warn "Something went
