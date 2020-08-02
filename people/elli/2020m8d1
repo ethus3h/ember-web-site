@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 while read -r -d '' file; do
     ( tempName="wget-$(date-uuid)"; mkdir "$tempName"; cd "$tempName"; retryUntilSuccess 10 30 5 5 wget -p --no-check-certificate --content-on-error -e robots=off --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0" --save-cookies=cookies.txt --load-cookies=cookies.txt --keep-session-cookies --warc-max-size=500M -E -k -K --warc-file="$tempName" --retry-on-host-error --retry-on-http-error=429,500,502,503,504 -H "https://en.wikipedia.org/wiki/Special:Export?pages=$file%0D%0A&templates=1&history=1" 2>&1 | tee -a "$tempName.log" )
-done < "$1" || warn "Something went wrong"
+done < <("$1") || warn "Something went wrong"
