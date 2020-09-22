@@ -17,9 +17,11 @@
         <li>Type system: define types as grammar of uint8 (o=uint8: octet). :letters: indicates a reference to another type. Serialization: :type:data with / replaced in the data with /s and : replaced in the data with /d (for delimiter)</li>
         <pre><code>
             b: 30|31 # boolean
+            ab: :b:+
             ser: 3a:s:3a:d: # Serialized typed data
             a: :ser:7e # array: multiple serialized items
             d: :o:+ # data (+ = multiple items)
+            ad: :d:+
             aao: :ao:+ # array of byte arrays
             ab: :b:+ # array of bools
             n: oooooooo # 64-bit signed int
