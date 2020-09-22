@@ -14,7 +14,7 @@
     <ul>
         <li>Imperative language. Trivial to implement, learn, and read; extremely portable.</li>
         <li>Provide uint8 values, uint8 arrays, and basic operations for creating and altering them (as a set of routines implemented in the target language; a "StageL core") as the base types? That would allow it to be used kind of like memory/pointers</li>
-        <li>Type system: define types as grammar of uint8 (o=uint8: octet). :letters: indicates a reference to another type. Serialization: :type:data: with the : and &t</li>
+        <li>Type system: define types as grammar of uint8 (o=uint8: octet). :letters: indicates a reference to another type. Serialization: :type:data: with / replaced in the data with // and : replaced in the data with /t (for type)</li>
         <pre><code>
             b: 00|01 # boolean
             ao: :o:+ # array of bytes
