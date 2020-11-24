@@ -1,0 +1,13 @@
+INFO linkcheck.cmdline 2020-11-23 23:40:38,969 MainThread Checking intern URLs only; use --check-extern to check extern URLs.
+LinkChecker 9.4.0              Copyright (C) 2000-2014 Bastian Kleineidam
+LinkChecker comes with ABSOLUTELY NO WARRANTY!
+This is free software, and you are welcome to redistribute it
+under certain conditions. Look at the file `LICENSE' within this
+distribution.
+Get the newest version at http://wummel.github.io/linkchecker/
+Write comments and bugs to https://github.com/wummel/linkchecker/issues
+Support this project at http://wummel.github.io/linkchecker/donations.html
+
+Start checking at 2020-11-23 23:40:38-004
+ 8 threads active,     0 links queued,    1 link in   9 URLs checked, runtime 1 seconds
+10 threads active,    28 links queued,   17 links in  58 URLs checked, runtime 6 seconds
