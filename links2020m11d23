@@ -114,3 +114,12 @@ Result     Error: 404 Not Found
 10 threads active,   281 links queued,  362 links in 693 URLs checked, runtime 1 minute, 11 seconds
 10 threads active,   266 links queued,  377 links in 693 URLs checked, runtime 1 minute, 16 seconds
 10 threads active,   262 links queued,  406 links in 720 URLs checked, runtime 1 minute, 21 seconds
+10 threads active,   273 links queued,  460 links in 785 URLs checked, runtime 1 minute, 26 seconds
+10 threads active,   293 links queued,  592 links in 937 URLs checked, runtime 1 minute, 31 seconds
+10 threads active,   412 links queued, 1089 links in 1553 URLs checked, runtime 1 minute, 36 seconds
+10 threads active,   481 links queued, 1375 links in 1908 URLs checked, runtime 1 minute, 41 seconds
+10 threads active,   572 links queued, 1769 links in 2393 URLs checked, runtime 1 minute, 46 seconds
+10 threads active,   574 links queued, 1782 links in 2408 URLs checked, runtime 1 minute, 51 seconds
+10 threads active,   566 links queued, 1796 links in 2414 URLs checked, runtime 1 minute, 56 seconds
+10 threads active,   556 links queued, 1809 links in 2417 URLs checked, runtime 2 minutes, 1 seconds
+10 threads active,   541 links queued, 1824 links in 2417 URLs checked, runtime 2 minutes, 6 seconds
