@@ -46,3 +46,68 @@ Check time 3.539 seconds
 Size       1KB
 Result     Error: 404 Not Found
 10 threads active,    38 links queued,  113 links in 165 URLs checked, runtime 21 seconds
+
+URL        `/components.html'
+Name       `Core project components'
+Parent URL http://futuramerlin.com/bibliography.htm, line 1, col 1093
+Real URL   http://futuramerlin.com/components.html
+Check time 3.896 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `http://futuramerlin.com/d/s/mantis/'
+Name       `the existing login-only Mantis installation'
+Parent URL http://futuramerlin.com/news/2016/06/17/web-site-and-wreathe-updates.htm, line 1, col 3325
+Real URL   http://futuramerlin.com/d/s/mantis/
+Check time 3.761 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    26 links queued,  128 links in 168 URLs checked, runtime 26 seconds
+10 threads active,     9 links queued,  145 links in 168 URLs checked, runtime 31 seconds
+
+URL        `/ancillary/develop.htm'
+Name       `Development documentation'
+Parent URL http://futuramerlin.com/code-of-conduct.htm, line 1, col 1267
+Real URL   http://futuramerlin.com/ancillary/develop.htm
+Check time 3.342 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `info@futuramerlin.com'
+Name       `info@futuramerlin.com'
+Parent URL http://futuramerlin.com/code-of-conduct.htm, line 1, col 4317
+Real URL   http://futuramerlin.com/info@futuramerlin.com
+Check time 3.899 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    23 links queued,  156 links in 202 URLs checked, runtime 36 seconds
+
+URL        `http://futuramerlin.com/issue-tracker/view.php?id=587'
+Name       `issue #587'
+Parent URL http://futuramerlin.com/ancillary/crystallize/, line 1, col 15448
+Real URL   http://futuramerlin.com/issue-tracker/view.php?id=587
+Check time 4.168 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    30 links queued,  258 links in 311 URLs checked, runtime 41 seconds
+10 threads active,    72 links queued,  270 links in 372 URLs checked, runtime 46 seconds
+
+URL        `install.htm'
+Name       `Installation instructions'
+Parent URL http://futuramerlin.com/ancillary/wreathe/4/, line 1, col 1867
+Real URL   http://futuramerlin.com/ancillary/wreathe/4/install.htm
+Check time 3.462 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    80 links queued,  287 links in 406 URLs checked, runtime 51 seconds
+10 threads active,   321 links queued,  307 links in 678 URLs checked, runtime 56 seconds
+10 threads active,   307 links queued,  332 links in 689 URLs checked, runtime 1 minute, 1 seconds
+
+URL        `plasma-volume-feedback.htm'
+Name       `Plasma volume widget plays audio feedback on volume change even when configured not to'
+Parent URL http://futuramerlin.com/ancillary/wreathe/documentation/troubleshooting/, line 1, col 3161
+Real URL   http://futuramerlin.com/ancillary/wreathe/documentation/troubleshooting/plasma-volume-feedback.htm
+Check time 3.370 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   295 links queued,  347 links in 692 URLs checked, runtime 1 minute, 6 seconds
