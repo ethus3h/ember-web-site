@@ -178,3 +178,5 @@ Result     Error: 404 Not Found
 10 threads active,   365 links queued, 2061 links in 2478 URLs checked, runtime 3 minutes, 11 seconds
 10 threads active,   349 links queued, 2077 links in 2478 URLs checked, runtime 3 minutes, 16 seconds
 10 threads active,   334 links queued, 2092 links in 2478 URLs checked, runtime 3 minutes, 21 seconds
+10 threads active,   320 links queued, 2106 links in 2478 URLs checked, runtime 3 minutes, 26 seconds
+10 threads active,   307 links queued, 2119 links in 2478 URLs checked, runtime 3 minutes, 31 seconds
