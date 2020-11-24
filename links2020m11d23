@@ -131,3 +131,36 @@ Result     Error: 404 Not Found
 10 threads active,   454 links queued, 1911 links in 2417 URLs checked, runtime 2 minutes, 36 seconds
 10 threads active,   446 links queued, 1934 links in 2432 URLs checked, runtime 2 minutes, 41 seconds
 10 threads active,   431 links queued, 1972 links in 2455 URLs checked, runtime 2 minutes, 46 seconds
+10 threads active,   415 links queued, 1990 links in 2457 URLs checked, runtime 2 minutes, 51 seconds
+
+URL        `/issue-tracker/view.php?id=174'
+Name       `this (resolved) bug'
+Parent URL http://futuramerlin.com/ancillary/wreathe/documentation/troubleshooting/thin-stripe-at-top.htm, line 1, col 2136
+Real URL   http://futuramerlin.com/issue-tracker/view.php?id=174
+Check time 3.324 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `http://futuramerlin.com/d/s/mantis/view.php?id=175'
+Name       `bug'
+Parent URL http://futuramerlin.com/ancillary/wreathe/documentation/troubleshooting/plasma-panel-gray.htm, line 1, col 1871
+Real URL   http://futuramerlin.com/d/s/mantis/view.php?id=175
+Check time 3.306 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `target-solution-spaces-list.html'
+Name       `available'
+Parent URL http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/implementation-principles.htm, line 1, col 12317
+Real URL   http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/target-solution-spaces-list.html
+Check time 3.179 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `index.ftm'
+Name       `Ember information technology environment'
+Parent URL http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/stagel.htm, line 1, col 3200
+Real URL   http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/index.ftm
+Check time 3.029 seconds
+Size       1KB
+Result     Error: 404 Not Found
