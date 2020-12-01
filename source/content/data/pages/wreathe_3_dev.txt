@@ -1,0 +1,7 @@
+**Wreathe 3 dev** was a version of [[Wreathe]].
+
+* Release group: [[autumnfairy]]
+
+* Branch: [[Wreathe 3* (branch)|Wreathe 3*]]
+
+Based on [[Wreathe 2 Extended Edition / Wreathe 2e]]. Never released. Used the glossified, transparentized ”[[Wreathe Unicorn]]” theme.

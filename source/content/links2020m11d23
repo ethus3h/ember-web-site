@@ -1,0 +1,2477 @@
+INFO linkcheck.cmdline 2020-11-23 23:40:38,969 MainThread Checking intern URLs only; use --check-extern to check extern URLs.
+LinkChecker 9.4.0              Copyright (C) 2000-2014 Bastian Kleineidam
+LinkChecker comes with ABSOLUTELY NO WARRANTY!
+This is free software, and you are welcome to redistribute it
+under certain conditions. Look at the file `LICENSE' within this
+distribution.
+Get the newest version at http://wummel.github.io/linkchecker/
+Write comments and bugs to https://github.com/wummel/linkchecker/issues
+Support this project at http://wummel.github.io/linkchecker/donations.html
+
+Start checking at 2020-11-23 23:40:38-004
+ 8 threads active,     0 links queued,    1 link in   9 URLs checked, runtime 1 seconds
+10 threads active,    28 links queued,   17 links in  58 URLs checked, runtime 6 seconds
+10 threads active,    15 links queued,   30 links in  58 URLs checked, runtime 11 seconds
+10 threads active,    30 links queued,   85 links in 128 URLs checked, runtime 16 seconds
+
+URL        `/ancillary/ready-to-use.htm'
+Name       `Other projects'
+Parent URL http://futuramerlin.com/develop.htm, line 1, col 1153
+Real URL   http://futuramerlin.com/ancillary/ready-to-use.htm
+Check time 3.429 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `/ancillary/work-in-progress.htm'
+Name       `Work-in-progress ancillary projects'
+Parent URL http://futuramerlin.com/develop.htm, line 1, col 1223
+Real URL   http://futuramerlin.com/ancillary/work-in-progress.htm
+Check time 3.168 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `/ancillary/ember-history/'
+Name       `Ember History'
+Parent URL http://futuramerlin.com/develop.htm, line 1, col 2946
+Real URL   http://futuramerlin.com/ancillary/ember-history/
+Check time 3.583 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `/information-technology'
+Name       `Information technology environment'
+Parent URL http://futuramerlin.com/develop.htm, line 1, col 3141
+Real URL   http://futuramerlin.com/information-technology
+Check time 3.539 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    38 links queued,  113 links in 165 URLs checked, runtime 21 seconds
+
+URL        `/components.html'
+Name       `Core project components'
+Parent URL http://futuramerlin.com/bibliography.htm, line 1, col 1093
+Real URL   http://futuramerlin.com/components.html
+Check time 3.896 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `http://futuramerlin.com/d/s/mantis/'
+Name       `the existing login-only Mantis installation'
+Parent URL http://futuramerlin.com/news/2016/06/17/web-site-and-wreathe-updates.htm, line 1, col 3325
+Real URL   http://futuramerlin.com/d/s/mantis/
+Check time 3.761 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    26 links queued,  128 links in 168 URLs checked, runtime 26 seconds
+10 threads active,     9 links queued,  145 links in 168 URLs checked, runtime 31 seconds
+
+URL        `/ancillary/develop.htm'
+Name       `Development documentation'
+Parent URL http://futuramerlin.com/code-of-conduct.htm, line 1, col 1267
+Real URL   http://futuramerlin.com/ancillary/develop.htm
+Check time 3.342 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `info@futuramerlin.com'
+Name       `info@futuramerlin.com'
+Parent URL http://futuramerlin.com/code-of-conduct.htm, line 1, col 4317
+Real URL   http://futuramerlin.com/info@futuramerlin.com
+Check time 3.899 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    23 links queued,  156 links in 202 URLs checked, runtime 36 seconds
+
+URL        `http://futuramerlin.com/issue-tracker/view.php?id=587'
+Name       `issue #587'
+Parent URL http://futuramerlin.com/ancillary/crystallize/, line 1, col 15448
+Real URL   http://futuramerlin.com/issue-tracker/view.php?id=587
+Check time 4.168 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    30 links queued,  258 links in 311 URLs checked, runtime 41 seconds
+10 threads active,    72 links queued,  270 links in 372 URLs checked, runtime 46 seconds
+
+URL        `install.htm'
+Name       `Installation instructions'
+Parent URL http://futuramerlin.com/ancillary/wreathe/4/, line 1, col 1867
+Real URL   http://futuramerlin.com/ancillary/wreathe/4/install.htm
+Check time 3.462 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    80 links queued,  287 links in 406 URLs checked, runtime 51 seconds
+10 threads active,   321 links queued,  307 links in 678 URLs checked, runtime 56 seconds
+10 threads active,   307 links queued,  332 links in 689 URLs checked, runtime 1 minute, 1 seconds
+
+URL        `plasma-volume-feedback.htm'
+Name       `Plasma volume widget plays audio feedback on volume change even when configured not to'
+Parent URL http://futuramerlin.com/ancillary/wreathe/documentation/troubleshooting/, line 1, col 3161
+Real URL   http://futuramerlin.com/ancillary/wreathe/documentation/troubleshooting/plasma-volume-feedback.htm
+Check time 3.370 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   295 links queued,  347 links in 692 URLs checked, runtime 1 minute, 6 seconds
+10 threads active,   281 links queued,  362 links in 693 URLs checked, runtime 1 minute, 11 seconds
+10 threads active,   266 links queued,  377 links in 693 URLs checked, runtime 1 minute, 16 seconds
+10 threads active,   262 links queued,  406 links in 720 URLs checked, runtime 1 minute, 21 seconds
+10 threads active,   273 links queued,  460 links in 785 URLs checked, runtime 1 minute, 26 seconds
+10 threads active,   293 links queued,  592 links in 937 URLs checked, runtime 1 minute, 31 seconds
+10 threads active,   412 links queued, 1089 links in 1553 URLs checked, runtime 1 minute, 36 seconds
+10 threads active,   481 links queued, 1375 links in 1908 URLs checked, runtime 1 minute, 41 seconds
+10 threads active,   572 links queued, 1769 links in 2393 URLs checked, runtime 1 minute, 46 seconds
+10 threads active,   574 links queued, 1782 links in 2408 URLs checked, runtime 1 minute, 51 seconds
+10 threads active,   566 links queued, 1796 links in 2414 URLs checked, runtime 1 minute, 56 seconds
+10 threads active,   556 links queued, 1809 links in 2417 URLs checked, runtime 2 minutes, 1 seconds
+10 threads active,   541 links queued, 1824 links in 2417 URLs checked, runtime 2 minutes, 6 seconds
+10 threads active,   527 links queued, 1838 links in 2417 URLs checked, runtime 2 minutes, 11 seconds
+10 threads active,   514 links queued, 1851 links in 2417 URLs checked, runtime 2 minutes, 16 seconds
+10 threads active,   499 links queued, 1866 links in 2417 URLs checked, runtime 2 minutes, 21 seconds
+10 threads active,   486 links queued, 1879 links in 2417 URLs checked, runtime 2 minutes, 26 seconds
+10 threads active,   470 links queued, 1895 links in 2417 URLs checked, runtime 2 minutes, 31 seconds
+10 threads active,   454 links queued, 1911 links in 2417 URLs checked, runtime 2 minutes, 36 seconds
+10 threads active,   446 links queued, 1934 links in 2432 URLs checked, runtime 2 minutes, 41 seconds
+10 threads active,   431 links queued, 1972 links in 2455 URLs checked, runtime 2 minutes, 46 seconds
+10 threads active,   415 links queued, 1990 links in 2457 URLs checked, runtime 2 minutes, 51 seconds
+
+URL        `/issue-tracker/view.php?id=174'
+Name       `this (resolved) bug'
+Parent URL http://futuramerlin.com/ancillary/wreathe/documentation/troubleshooting/thin-stripe-at-top.htm, line 1, col 2136
+Real URL   http://futuramerlin.com/issue-tracker/view.php?id=174
+Check time 3.324 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `http://futuramerlin.com/d/s/mantis/view.php?id=175'
+Name       `bug'
+Parent URL http://futuramerlin.com/ancillary/wreathe/documentation/troubleshooting/plasma-panel-gray.htm, line 1, col 1871
+Real URL   http://futuramerlin.com/d/s/mantis/view.php?id=175
+Check time 3.306 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `target-solution-spaces-list.html'
+Name       `available'
+Parent URL http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/implementation-principles.htm, line 1, col 12317
+Real URL   http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/target-solution-spaces-list.html
+Check time 3.179 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `index.ftm'
+Name       `Ember information technology environment'
+Parent URL http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/stagel.htm, line 1, col 3200
+Real URL   http://futuramerlin.com/specification/engineering-and-tech/information-technology/software/index.ftm
+Check time 3.029 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   412 links queued, 2003 links in 2467 URLs checked, runtime 2 minutes, 56 seconds
+10 threads active,   396 links queued, 2019 links in 2467 URLs checked, runtime 3 minutes, 1 seconds
+10 threads active,   382 links queued, 2033 links in 2467 URLs checked, runtime 3 minutes, 6 seconds
+
+URL        `../labels/none.htm'
+Name       `none (No name given: identifier used instead)'
+Parent URL http://futuramerlin.com/people/elli/music/releases/sequence.htm, line 1, col 4062
+Real URL   http://futuramerlin.com/people/elli/music/labels/none.htm
+Check time 3.542 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   365 links queued, 2061 links in 2478 URLs checked, runtime 3 minutes, 11 seconds
+10 threads active,   349 links queued, 2077 links in 2478 URLs checked, runtime 3 minutes, 16 seconds
+10 threads active,   334 links queued, 2092 links in 2478 URLs checked, runtime 3 minutes, 21 seconds
+10 threads active,   320 links queued, 2106 links in 2478 URLs checked, runtime 3 minutes, 26 seconds
+10 threads active,   307 links queued, 2119 links in 2478 URLs checked, runtime 3 minutes, 31 seconds
+10 threads active,   296 links queued, 2130 links in 2478 URLs checked, runtime 3 minutes, 36 seconds
+10 threads active,   283 links queued, 2143 links in 2478 URLs checked, runtime 3 minutes, 41 seconds
+10 threads active,   267 links queued, 2159 links in 2478 URLs checked, runtime 3 minutes, 46 seconds
+10 threads active,   253 links queued, 2173 links in 2478 URLs checked, runtime 3 minutes, 51 seconds
+10 threads active,   238 links queued, 2188 links in 2478 URLs checked, runtime 3 minutes, 56 seconds
+10 threads active,   225 links queued, 2201 links in 2478 URLs checked, runtime 4 minutes, 1 seconds
+10 threads active,   211 links queued, 2215 links in 2478 URLs checked, runtime 4 minutes, 6 seconds
+10 threads active,   194 links queued, 2232 links in 2478 URLs checked, runtime 4 minutes, 11 seconds
+10 threads active,   177 links queued, 2249 links in 2478 URLs checked, runtime 4 minutes, 16 seconds
+10 threads active,   161 links queued, 2265 links in 2478 URLs checked, runtime 4 minutes, 21 seconds
+
+URL        `../works/intro/silence.htm'
+Name       `Интро'
+Parent URL http://futuramerlin.com/people/elli/music/releases/silence.htm, line 1, col 5933
+Real URL   http://futuramerlin.com/people/elli/music/works/intro/silence.htm
+Check time 3.389 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   147 links queued, 2279 links in 2478 URLs checked, runtime 4 minutes, 26 seconds
+10 threads active,   136 links queued, 2290 links in 2478 URLs checked, runtime 4 minutes, 31 seconds
+10 threads active,   123 links queued, 2303 links in 2478 URLs checked, runtime 4 minutes, 36 seconds
+10 threads active,   103 links queued, 2323 links in 2478 URLs checked, runtime 4 minutes, 41 seconds
+10 threads active,    91 links queued, 2335 links in 2478 URLs checked, runtime 4 minutes, 46 seconds
+10 threads active,    79 links queued, 2347 links in 2478 URLs checked, runtime 4 minutes, 51 seconds
+10 threads active,    60 links queued, 2366 links in 2478 URLs checked, runtime 4 minutes, 56 seconds
+10 threads active,    45 links queued, 2381 links in 2478 URLs checked, runtime 5 minutes, 1 seconds
+10 threads active,    31 links queued, 2395 links in 2478 URLs checked, runtime 5 minutes, 6 seconds
+
+URL        `../artists/Sonder.htm'
+Name       `Sonder (No name given: identifier used instead)'
+Parent URL http://futuramerlin.com/people/elli/music/works/toofast-reconstruction.htm, line 1, col 1420
+Real URL   http://futuramerlin.com/people/elli/music/artists/Sonder.htm
+Check time 3.014 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    17 links queued, 2412 links in 2481 URLs checked, runtime 5 minutes, 11 seconds
+
+URL        `../works/mcscuseme.htm'
+Name       `mcscuseme (No name given: identifier used instead)'
+Parent URL http://futuramerlin.com/people/elli/music/works/musicsampler.htm, line 1, col 1843
+Real URL   http://futuramerlin.com/people/elli/music/works/mcscuseme.htm
+Check time 3.248 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../works/lightofdawn.htm'
+Name       `lightofdawn (No name given: identifier used instead)'
+Parent URL http://futuramerlin.com/people/elli/music/works/musicsampler.htm, line 1, col 1980
+Real URL   http://futuramerlin.com/people/elli/music/works/lightofdawn.htm
+Check time 3.614 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,     4 links queued, 2433 links in 2489 URLs checked, runtime 5 minutes, 16 seconds
+
+URL        `../works/2018m02d12n2/draft-2018m02d12.htm'
+Name       `2018m02d12n2/draft-2018m02d12 (No name given: identifier used instead)'
+Parent URL http://futuramerlin.com/people/elli/music/sessions/2018m02d12n2.htm, line 1, col 1887
+Real URL   http://futuramerlin.com/people/elli/music/works/2018m02d12n2/draft-2018m02d12.htm
+Check time 3.088 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../works/2018m02d12n2/draft-2018m02d13.htm'
+Name       `2018m02d12n2/draft-2018m02d13 (No name given: identifier used instead)'
+Parent URL http://futuramerlin.com/people/elli/music/sessions/2018m02d13.htm, line 1, col 1883
+Real URL   http://futuramerlin.com/people/elli/music/works/2018m02d12n2/draft-2018m02d13.htm
+Check time 2.899 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/glyphicons-halflings-white.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/bootstrap.css, line 1481, col 24
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/glyphicons-halflings-white.png
+Check time 2.037 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/navbar-background.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/bootstrap.css, line 2940, col 18
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/navbar-background.png
+Check time 2.427 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/glyphicons-halflings.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/bootstrap.css, line 1472, col 24
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/glyphicons-halflings.png
+Check time 2.494 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    27 links queued, 2450 links in 2529 URLs checked, runtime 5 minutes, 21 seconds
+
+URL        `../img/add-project-icon.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 980
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/add-project-icon.png
+Check time 1.832 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/share-icon.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 1180
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/share-icon.png
+Check time 2.317 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/take-photo-icon.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 1080
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/take-photo-icon.png
+Check time 2.327 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/upload-screen-icon.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 1278
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/upload-screen-icon.png
+Check time 2.827 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/backtoscreens-icon.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 1796
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/backtoscreens-icon.png
+Check time 2.903 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/view-icon.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 1914
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/view-icon.png
+Check time 2.895 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/team_icon.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 2005
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/team_icon.png
+Check time 3.296 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/share.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 2097
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/share.png
+Check time 3.074 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/settings-icon.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 2200
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/settings-icon.png
+Check time 3.998 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/btn-ltgray.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 2271
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/btn-ltgray.png
+Check time 3.770 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   346 links queued, 2463 links in 2861 URLs checked, runtime 5 minutes, 26 seconds
+
+URL        `../img/archive-icon.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 2436
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/archive-icon.png
+Check time 3.808 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/btn-apply-templates.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 2877
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/btn-apply-templates.png
+Check time 3.506 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/btn-backtoscreens.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 2666
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/btn-backtoscreens.png
+Check time 3.915 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   332 links queued, 2477 links in 2861 URLs checked, runtime 5 minutes, 31 seconds
+
+URL        `../../common/img/mobile-skins/iphone4-portrait.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 505486
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-portrait.png?v=1122015
+Check time 3.819 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-portrait-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 505609
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-portrait-shadow.png?v=1122015
+Check time 3.594 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   318 links queued, 2491 links in 2861 URLs checked, runtime 5 minutes, 36 seconds
+
+URL        `../../common/img/mobile-skins/iphone4-portrait-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 505803
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-portrait-white.png?v=1122015
+Check time 3.406 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-portrait-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 507325
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-portrait-bar-light.png
+Check time 3.668 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-portrait-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 507666
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-portrait-bar-light@2x.png
+Check time 3.658 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-portrait-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 507889
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-portrait-bar-dark.png
+Check time 3.679 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-landscape.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 508384
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-landscape.png?v=1122015
+Check time 3.523 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-landscape-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 508509
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-landscape-shadow.png?v=1122015
+Check time 3.772 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-landscape-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 508718
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-landscape-white.png?v=1122015
+Check time 3.042 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-portrait-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 508228
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-portrait-bar-dark@2x.png
+Check time 4.587 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-landscape-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 510270
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-landscape-bar-light.png
+Check time 3.480 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-landscape-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 510614
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-landscape-bar-light@2x.png
+Check time 3.410 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-landscape-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 510840
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-landscape-bar-dark.png
+Check time 3.314 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone4-landscape-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 511182
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone4-landscape-bar-dark@2x.png
+Check time 3.184 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-portrait.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 511436
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-portrait.png?v=1122015
+Check time 3.193 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-portrait-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 511557
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-portrait-shadow.png?v=1122015
+Check time 3.388 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-portrait-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 511749
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-portrait-white.png?v=1122015
+Check time 2.897 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-portrait-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 513248
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-portrait-bar-light.png
+Check time 2.556 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+10 threads active, URL          302 links queued, `../../common/img/mobile-skins/iphone-portrait-bar-light@2x.png'
+Parent URL 2507 linkshttp://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 513586
+Real URL    in 2861 URLs checked, runtime 5 minutes, 41 seconds
+http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-portrait-bar-light@2x.png
+Check time 2.606 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-portrait-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 513806
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-portrait-bar-dark.png
+Check time 3.107 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-portrait-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 514142
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-portrait-bar-dark@2x.png
+Check time 2.845 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-landscape.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 514296
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-landscape.png?v=1122015
+Check time 3.143 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-landscape-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 514419
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-landscape-shadow.png?v=1122015
+Check time 3.155 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-landscape-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 514626
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-landscape-white.png?v=1122015
+Check time 3.203 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-landscape-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 516155
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-landscape-bar-light.png
+Check time 3.452 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-landscape-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 516496
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-landscape-bar-light@2x.png
+Check time 3.446 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-landscape-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 516719
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-landscape-bar-dark.png
+Check time 3.612 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone-landscape-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 517058
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone-landscape-bar-dark@2x.png
+Check time 3.902 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-portrait.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 517310
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-portrait.png?v=1122015
+Check time 4.189 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-portrait-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 517433
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-portrait-shadow.png?v=1122015
+Check time 4.001 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-portrait-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 517699
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-portrait-white.png?v=1122015
+Check time 4.229 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   289 links queued, 2520 links in 2861 URLs checked, runtime 5 minutes, 46 seconds
+
+URL        `../../common/img/mobile-skins/iphone6-portrait-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 519218
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-portrait-bar-light.png
+Check time 3.910 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-portrait-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 519559
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-portrait-bar-light@2x.png
+Check time 4.031 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-portrait-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 519782
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-portrait-bar-dark.png
+Check time 4.124 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-portrait-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 520121
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-portrait-bar-dark@2x.png
+Check time 4.063 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-landscape.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 520277
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-landscape.png?v=1122015
+Check time 4.285 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-landscape-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 520402
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-landscape-shadow.png?v=1122015
+Check time 4.225 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-landscape-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 520611
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-landscape-white.png?v=1122015
+Check time 4.148 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-landscape-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 522162
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-landscape-bar-light.png
+Check time 4.179 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-landscape-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 522506
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-landscape-bar-light@2x.png
+Check time 4.349 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-landscape-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 522732
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-landscape-bar-dark.png
+Check time 4.262 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6-landscape-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 523074
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6-landscape-bar-dark@2x.png
+Check time 4.306 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-portrait.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 523234
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-portrait.png?v=1122015
+Check time 4.301 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   277 links queued, 2532 links in 2861 URLs checked, runtime 5 minutes, 51 seconds
+
+URL        `../../common/img/mobile-skins/iphone6plus-portrait-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 523365
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-portrait-shadow.png?v=1122015
+Check time 4.215 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-portrait-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 523567
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-portrait-white.png?v=1122015
+Check time 3.802 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-portrait-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 525178
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-portrait-bar-light.png
+Check time 3.653 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-portrait-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 525531
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-portrait-bar-light@2x.png
+Check time 3.363 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-portrait-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 525766
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-portrait-bar-dark.png
+Check time 3.248 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-portrait-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 526117
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-portrait-bar-dark@2x.png
+Check time 3.085 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-landscape.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 526281
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-landscape.png?v=1122015
+Check time 3.241 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-landscape-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 526414
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-landscape-shadow.png?v=1122015
+Check time 3.383 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-landscape-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 526631
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-landscape-white.png?v=1122015
+Check time 3.259 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-landscape-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 528274
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-landscape-bar-light.png
+Check time 3.483 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-landscape-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 528630
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-landscape-bar-light@2x.png
+Check time 3.495 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-landscape-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 528868
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-landscape-bar-dark.png
+Check time 3.645 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphone6plus-landscape-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 529222
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphone6plus-landscape-bar-dark@2x.png
+Check time 3.727 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-portrait.png?v=10252017'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 529481
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-portrait.png?v=10252017
+Check time 3.942 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   263 links queued, 2546 links in 2861 URLs checked, runtime 5 minutes, 56 seconds
+
+URL        `../../common/img/mobile-skins/iphoneX-portrait-shadow.png?v=10252017'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 529605
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-portrait-shadow.png?v=10252017
+Check time 4.349 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-portrait-white.png?v=10252017'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 529800
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-portrait-white.png?v=10252017
+Check time 4.519 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-portrait-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 531318
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-portrait-bar-light.png
+Check time 3.944 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-portrait-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 531659
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-portrait-bar-light@2x.png
+Check time 4.012 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-portrait-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 531882
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-portrait-bar-dark.png
+Check time 4.484 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-portrait-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 532221
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-portrait-bar-dark@2x.png
+Check time 4.185 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-landscape.png?v=10252017'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 532377
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-landscape.png?v=10252017
+Check time 4.114 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-landscape-shadow.png?v=10252017'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 532503
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-landscape-shadow.png?v=10252017
+Check time 3.922 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-landscape-white.png?v=10252017'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 532713
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-landscape-white.png?v=10252017
+Check time 3.679 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-landscape-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 534265
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-landscape-bar-light.png
+Check time 3.806 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-landscape-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 534609
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-landscape-bar-light@2x.png
+Check time 3.345 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-landscape-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 534835
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-landscape-bar-dark.png
+Check time 3.159 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-landscape-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 535177
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-landscape-bar-dark@2x.png
+Check time 3.483 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-portrait-notch.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 535440
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-portrait-notch.png
+Check time 3.050 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/iphoneX-landscape-notch.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 535746
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/iphoneX-landscape-notch.png
+Check time 2.701 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   248 links queued, 2561 links in 2861 URLs checked, runtime 6 minutes, 1 seconds
+
+URL        `../../common/img/mobile-skins/ipad-portrait.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 536507
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-portrait.png?v=1122015
+Check time 2.475 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-portrait-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 536624
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-portrait-shadow.png?v=1122015
+Check time 2.698 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-portrait-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 536812
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-portrait-white.png?v=1122015
+Check time 2.826 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-portrait-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 538262
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-portrait-bar-light.png
+Check time 2.770 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-portrait-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 538594
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-portrait-bar-light@2x.png
+Check time 2.808 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-portrait-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 538808
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-portrait-bar-dark.png
+Check time 2.679 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-portrait-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 539138
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-portrait-bar-dark@2x.png
+Check time 2.948 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-landscape.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 539288
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-landscape.png?v=1122015
+Check time 3.008 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-landscape-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 539407
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-landscape-shadow.png?v=1122015
+Check time 3.337 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-landscape-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 539610
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-landscape-white.png?v=1122015
+Check time 3.385 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-landscape-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 541092
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-landscape-bar-light.png
+Check time 4.020 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-landscape-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 541427
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-landscape-bar-light@2x.png
+Check time 3.557 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-landscape-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 541644
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-landscape-bar-dark.png
+Check time 3.660 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/ipad-landscape-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 541977
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/ipad-landscape-bar-dark@2x.png
+Check time 4.027 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   234 links queued, 2575 links in 2861 URLs checked, runtime 6 minutes, 6 seconds
+
+URL        `../../common/img/mobile-skins/htcOne-portrait.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 542222
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-portrait.png?v=1122015
+Check time 3.819 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-portrait-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 542343
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-portrait-shadow.png?v=1122015
+Check time 3.934 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-portrait-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 542535
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-portrait-white.png?v=1122015
+Check time 3.648 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-portrait-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 544032
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-portrait-bar-light.png
+Check time 3.493 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-portrait-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 544370
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-portrait-bar-light@2x.png
+Check time 3.246 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-portrait-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 544590
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-portrait-bar-dark.png
+Check time 3.340 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-portrait-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 544926
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-portrait-bar-dark@2x.png
+Check time 2.881 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-landscape.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 545080
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-landscape.png?v=1122015
+Check time 3.043 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-landscape-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 545203
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-landscape-shadow.png?v=1122015
+Check time 3.060 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-landscape-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 545410
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-landscape-white.png?v=1122015
+Check time 2.888 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-landscape-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 546938
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-landscape-bar-light.png
+Check time 2.936 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-landscape-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 547279
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-landscape-bar-light@2x.png
+Check time 3.237 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-landscape-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 547502
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-landscape-bar-dark.png
+Check time 3.279 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/htcOne-landscape-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 547841
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/htcOne-landscape-bar-dark@2x.png
+Check time 3.045 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-portrait.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 548095
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-portrait.png?v=1122015
+Check time 3.105 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-portrait-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 548222
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-portrait-shadow.png?v=1122015
+Check time 3.138 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-portrait-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 548492
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-portrait-white.png?v=1122015
+Check time 2.946 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   217 links queued, 2592 links in 2861 URLs checked, runtime 6 minutes, 11 seconds
+
+URL        `../../common/img/mobile-skins/samsungS4-portrait-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 550055
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-portrait-bar-light.png
+Check time 3.073 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-portrait-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 550402
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-portrait-bar-light@2x.png
+Check time 3.264 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-portrait-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 550631
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-portrait-bar-dark.png
+Check time 2.973 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-portrait-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 550976
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-portrait-bar-dark@2x.png
+Check time 2.995 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-landscape.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 551136
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-landscape.png?v=1122015
+Check time 2.950 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-landscape-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 551265
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-landscape-shadow.png?v=1122015
+Check time 3.193 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-landscape-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 551478
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-landscape-white.png?v=1122015
+Check time 3.548 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-landscape-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 553075
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-landscape-bar-light.png
+Check time 3.636 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-landscape-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 553425
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-landscape-bar-light@2x.png
+Check time 3.805 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-landscape-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 553657
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-landscape-bar-dark.png
+Check time 4.018 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/samsungS4-landscape-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 554005
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/samsungS4-landscape-bar-dark@2x.png
+Check time 3.982 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-portrait.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 554265
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-portrait.png?v=1122015
+Check time 4.007 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-portrait-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 554386
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-portrait-shadow.png?v=1122015
+Check time 4.118 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   204 links queued, 2605 links in 2861 URLs checked, runtime 6 minutes, 16 seconds
+
+URL        `../../common/img/mobile-skins/nexus7-portrait-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 554578
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-portrait-white.png?v=1122015
+Check time 3.905 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-portrait-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 556075
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-portrait-bar-light.png
+Check time 3.737 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-portrait-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 556413
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-portrait-bar-light@2x.png
+Check time 3.432 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-portrait-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 556633
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-portrait-bar-dark.png
+Check time 3.206 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-portrait-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 556969
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-portrait-bar-dark@2x.png
+Check time 3.417 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-landscape.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 557123
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-landscape.png?v=1122015
+Check time 3.207 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-landscape-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 557246
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-landscape-shadow.png?v=1122015
+Check time 3.296 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-landscape-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 557453
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-landscape-white.png?v=1122015
+Check time 3.633 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-landscape-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 558981
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-landscape-bar-light.png
+Check time 3.499 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-landscape-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 559322
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-landscape-bar-light@2x.png
+Check time 3.698 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-landscape-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 559545
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-landscape-bar-dark.png
+Check time 3.993 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus7-landscape-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 559884
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus7-landscape-bar-dark@2x.png
+Check time 4.146 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-portrait.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 560136
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-portrait.png?v=1122015
+Check time 3.967 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-portrait-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 560259
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-portrait-shadow.png?v=1122015
+Check time 4.140 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   190 links queued, 2619 links in 2861 URLs checked, runtime 6 minutes, 21 seconds
+
+URL        `../../common/img/mobile-skins/nexus10-portrait-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 560454
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-portrait-white.png?v=1122015
+Check time 4.052 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-portrait-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 561972
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-portrait-bar-light.png
+Check time 3.910 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-portrait-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 562313
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-portrait-bar-light@2x.png
+Check time 3.607 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-portrait-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 562536
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-portrait-bar-dark.png
+Check time 3.195 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-portrait-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 562875
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-portrait-bar-dark@2x.png
+Check time 3.018 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-landscape.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 563031
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-landscape.png?v=1122015
+Check time 3.006 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-landscape-shadow.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 563156
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-landscape-shadow.png?v=1122015
+Check time 2.849 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-landscape-white.png?v=1122015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 564387
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-landscape-white.png?v=1122015
+Check time 2.688 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-landscape-bar-light.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 565941
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-landscape-bar-light.png
+Check time 2.904 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-landscape-bar-light@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 566285
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-landscape-bar-light@2x.png
+Check time 2.979 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-landscape-bar-dark.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 566511
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-landscape-bar-dark.png
+Check time 2.916 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/nexus10-landscape-bar-dark@2x.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 566853
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/nexus10-landscape-bar-dark@2x.png
+Check time 3.228 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-38mm-roseGold.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 567122
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-38mm-roseGold.png?v=4162015
+Check time 3.525 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-38mm-silverAluminum.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 568681
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-38mm-silverAluminum.png?v=4162015
+Check time 3.591 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-38mm-spaceBlackStainlessSteel.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 570364
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-38mm-spaceBlackStainlessSteel.png?v=4162015
+Check time 3.535 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-38mm-spaceGrayAluminum.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 572230
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-38mm-spaceGrayAluminum.png?v=4162015
+Check time 3.267 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   174 links queued, 2635 links in 2861 URLs checked, runtime 6 minutes, 26 seconds
+
+URL        `../../common/img/mobile-skins/apple-watch-38mm-stainlessSteel.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 573960
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-38mm-stainlessSteel.png?v=4162015
+Check time 3.255 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-38mm-yellowGold.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 575629
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-38mm-yellowGold.png?v=4162015
+Check time 3.587 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-42mm-roseGold.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 577220
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-42mm-roseGold.png?v=4162015
+Check time 3.734 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-42mm-silverAluminum.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 578779
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-42mm-silverAluminum.png?v=4162015
+Check time 3.690 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-42mm-spaceBlackStainlessSteel.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 580462
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-42mm-spaceBlackStainlessSteel.png?v=4162015
+Check time 3.690 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-42mm-spaceGrayAluminum.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 582420
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-42mm-spaceGrayAluminum.png?v=4162015
+Check time 3.724 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-42mm-stainlessSteel.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 584150
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-42mm-stainlessSteel.png?v=4162015
+Check time 3.426 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/apple-watch-42mm-yellowGold.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 585819
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/apple-watch-42mm-yellowGold.png?v=4162015
+Check time 3.708 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/android-square-dark.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 587404
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/android-square-dark.png?v=4162015
+Check time 4.053 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/android-square-light.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 588837
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/android-square-light.png?v=4162015
+Check time 3.974 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/android-round-dark.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 590287
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/android-round-dark.png?v=4162015
+Check time 3.890 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/mobile-skins/android-round-light.png?v=4162015'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 592365
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/mobile-skins/android-round-light.png?v=4162015
+Check time 3.849 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   161 links queued, 2648 links in 2861 URLs checked, runtime 6 minutes, 31 seconds
+
+URL        `../img/branding/havas-worldwide/loading-sprite.png?v=6102014'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 666366
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/havas-worldwide/loading-sprite.png?v=6102014
+Check time 3.934 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/havas-worldwide/logo.png?v=6102014'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 666578
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/havas-worldwide/logo.png?v=6102014
+Check time 4.030 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   149 links queued, 2660 links in 2861 URLs checked, runtime 6 minutes, 36 seconds
+
+URL        `../img/branding/havas-worldwide/logo-footer.png?v=6102014'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 667028
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/havas-worldwide/logo-footer.png?v=6102014
+Check time 4.217 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/hyfn/loading-sprite.png?v=6102014'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 667232
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/hyfn/loading-sprite.png?v=6102014
+Check time 4.170 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/hyfn/logo.png?v=6102014'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 667422
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/hyfn/logo.png?v=6102014
+Check time 3.951 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/hyfn/logo-footer.png?v=6102014'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 667828
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/hyfn/logo-footer.png?v=6102014
+Check time 3.778 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/lynda/loading-sprite.png?v=1512587900231'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 668129
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/lynda/loading-sprite.png?v=1512587900231
+Check time 3.940 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/lynda/logo.png?v=1512587900231'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 668332
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/lynda/logo.png?v=1512587900231
+Check time 3.988 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/digitalocean/loading-sprite.png?v=1512587900231'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 668884
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/digitalocean/loading-sprite.png?v=1512587900231
+Check time 4.187 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/digitalocean/logo.png?v=1512587900231'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 669100
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/digitalocean/logo.png?v=1512587900231
+Check time 3.333 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/salecycle/loading-sprite.png?v=1512587900232'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 669668
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/salecycle/loading-sprite.png?v=1512587900232
+Check time 3.412 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/salecycle/logo.png?v=1512587900232'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 669878
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/salecycle/logo.png?v=1512587900232
+Check time 3.562 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/papajohns/loading-sprite.png?v=1512587900232'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 670437
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/papajohns/loading-sprite.png?v=1512587900232
+Check time 3.849 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/papajohns/logo.png?v=1512587900233'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 671002
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/papajohns/logo.png?v=1512587900233
+Check time 4.136 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   136 links queued, 2673 links in 2861 URLs checked, runtime 6 minutes, 41 seconds
+
+URL        `../img/branding/papajohns/logo.png?v=1512587900232'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 670648
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/papajohns/logo.png?v=1512587900232
+Check time 4.769 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/ifit/loading-sprite.png?v=1512587900233'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 671204
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/ifit/loading-sprite.png?v=1512587900233
+Check time 4.053 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/ifit/logo.png?v=1512587900233'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 671404
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/ifit/logo.png?v=1512587900233
+Check time 3.886 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/lightburn/loading-sprite.png?v=1512587900234'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 671950
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/lightburn/loading-sprite.png?v=1512587900234
+Check time 3.635 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/lightburn/logo.png?v=1512587900234'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 672160
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/lightburn/logo.png?v=1512587900234
+Check time 3.849 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/jibe/loading-sprite.png?v=1512587900234'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 672716
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/jibe/loading-sprite.png?v=1512587900234
+Check time 3.974 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/jibe/logo.png?v=1512587900234'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 672917
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/jibe/logo.png?v=1512587900234
+Check time 3.743 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/uber/loading-sprite.png?v=1512587900235'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 673460
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/uber/loading-sprite.png?v=1512587900235
+Check time 4.134 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/uber/logo.png?v=1512587900235'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 673660
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/uber/logo.png?v=1512587900235
+Check time 3.931 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/alliander/loading-sprite.png?v=1512587900235'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 674206
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/alliander/loading-sprite.png?v=1512587900235
+Check time 3.929 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/alliander/logo.png?v=1512587900235'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 674416
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/alliander/logo.png?v=1512587900235
+Check time 3.810 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/shopify/loading-sprite.png?v=1512587900236'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 674973
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/shopify/loading-sprite.png?v=1512587900236
+Check time 4.004 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/shopify/logo.png?v=1512587900236'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 675179
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/shopify/logo.png?v=1512587900236
+Check time 3.666 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/alkami/loading-sprite.png?v=1512587900236'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 675731
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/alkami/loading-sprite.png?v=1512587900236
+Check time 3.682 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   122 links queued, 2687 links in 2861 URLs checked, runtime 6 minutes, 46 seconds
+
+URL        `../img/branding/alkami/logo.png?v=1512587900236'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 675935
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/alkami/logo.png?v=1512587900236
+Check time 3.747 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/alkami/logo.png?v=1512587900237'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 676282
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/alkami/logo.png?v=1512587900237
+Check time 3.586 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/hootsuite/loading-sprite.png?v=1512587900237'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 676485
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/hootsuite/loading-sprite.png?v=1512587900237
+Check time 3.838 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/hootsuite/logo.png?v=1512587900237'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 676695
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/hootsuite/logo.png?v=1512587900237
+Check time 3.658 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/newforma/loading-sprite.png?v=1512587900238'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 677253
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/newforma/loading-sprite.png?v=1512587900238
+Check time 4.065 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/newforma/logo.png?v=1512587900238'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 677461
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/newforma/logo.png?v=1512587900238
+Check time 3.687 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/myemma/loading-sprite.png?v=1512587900238'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 678014
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/myemma/loading-sprite.png?v=1512587900238
+Check time 3.761 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/myemma/logo.png?v=1512587900238'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 678219
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/myemma/logo.png?v=1512587900238
+Check time 4.099 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/myemma/logo.png?v=1512587900239'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 678567
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/myemma/logo.png?v=1512587900239
+Check time 4.247 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/realpage/loading-sprite.png?v=1512587900239'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 678770
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/realpage/loading-sprite.png?v=1512587900239
+Check time 4.790 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/realpage/logo.png?v=1512587900239'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 678978
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/realpage/logo.png?v=1512587900239
+Check time 4.329 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/realpage/logo.png?v=1512587900240'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 679333
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/realpage/logo.png?v=1512587900240
+Check time 4.325 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,   110 links queued, 2699 links in 2861 URLs checked, runtime 6 minutes, 51 seconds
+
+URL        `../img/branding/swc/loading-sprite.png?v=1512587900240'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 679532
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/swc/loading-sprite.png?v=1512587900240
+Check time 4.203 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/swc/logo.png?v=1512587900240'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 679730
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/swc/logo.png?v=1512587900240
+Check time 3.868 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/schoolsfirstfcu/loading-sprite.png?v=1512587900241'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 680277
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/schoolsfirstfcu/loading-sprite.png?v=1512587900241
+Check time 3.533 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/schoolsfirstfcu/logo.png?v=1512587900241'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 680499
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/schoolsfirstfcu/logo.png?v=1512587900241
+Check time 3.881 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/engageinteractive/loading-sprite.png?v=1512587900241'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 681085
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/engageinteractive/loading-sprite.png?v=1512587900241
+Check time 3.747 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/engageinteractive/logo.png?v=1512587900241'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 681311
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/engageinteractive/logo.png?v=1512587900241
+Check time 3.640 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/eventbrite/loading-sprite.png?v=1512587900242'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 681896
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/eventbrite/loading-sprite.png?v=1512587900242
+Check time 3.568 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/eventbrite/logo.png?v=1512587900242'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 682108
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/eventbrite/logo.png?v=1512587900242
+Check time 2.898 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/aidigital/loading-sprite.png?v=1512587900242'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 682673
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/aidigital/loading-sprite.png?v=1512587900242
+Check time 2.983 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/aidigital/logo.png?v=1512587900242'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 682883
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/aidigital/logo.png?v=1512587900242
+Check time 3.295 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/aidigital/logo.png?v=1512587900243'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 683239
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/aidigital/logo.png?v=1512587900243
+Check time 3.085 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/gorocketfuel/loading-sprite.png?v=1512587900243'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 683448
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/gorocketfuel/loading-sprite.png?v=1512587900243
+Check time 3.496 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/gorocketfuel/logo.png?v=1512587900243'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 683665
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/gorocketfuel/logo.png?v=1512587900243
+Check time 3.464 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/visioninternet/loading-sprite.png?v=1512587900244'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 684242
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/visioninternet/loading-sprite.png?v=1512587900244
+Check time 3.497 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    96 links queued, 2713 links in 2861 URLs checked, runtime 6 minutes, 56 seconds
+
+URL        `../img/branding/visioninternet/logo.png?v=1512587900244'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 684463
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/visioninternet/logo.png?v=1512587900244
+Check time 3.726 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/americaneagle/loading-sprite.png?v=1512587900244'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 685045
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/americaneagle/loading-sprite.png?v=1512587900244
+Check time 3.842 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/americaneagle/logo.png?v=1512587900244'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 685263
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/americaneagle/logo.png?v=1512587900244
+Check time 3.901 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/bigdrop/loading-sprite.png?v=1512587900245'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 685833
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/bigdrop/loading-sprite.png?v=1512587900245
+Check time 4.011 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/bigdrop/logo.png?v=1512587900245'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 686040
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/bigdrop/logo.png?v=1512587900245
+Check time 4.309 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/broadridge/loading-sprite.png?v=1512587900245'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 686598
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/broadridge/loading-sprite.png?v=1512587900245
+Check time 4.270 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/broadridge/logo.png?v=1512587900245'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 686811
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/broadridge/logo.png?v=1512587900245
+Check time 4.501 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/itx/loading-sprite.png?v=1512587900246'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 687371
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/itx/loading-sprite.png?v=1512587900246
+Check time 4.258 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/itx/logo.png?v=1512587900246'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 687568
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/itx/logo.png?v=1512587900246
+Check time 4.201 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/builtbyweb3/logo.png?v=1512587900246'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 688841
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/builtbyweb3/logo.png?v=1512587900246
+Check time 3.591 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/builtbyweb3/logo.png?v=1512587900247'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 689089
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/builtbyweb3/logo.png?v=1512587900247
+Check time 3.102 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/builtbyweb3/loading-sprite.png?v=1512587900246'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 688651
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/builtbyweb3/loading-sprite.png?v=1512587900246
+Check time 4.700 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/expedia/loading-sprite.png?v=1512587900247'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 689296
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/expedia/loading-sprite.png?v=1512587900247
+Check time 3.356 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/expedia/logo.png?v=1512587900247'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 689478
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/expedia/logo.png?v=1512587900247
+Check time 3.274 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    82 links queued, 2727 links in 2861 URLs checked, runtime 7 minutes, 1 seconds
+
+URL        `../img/branding/venda/loading-sprite.png?v=1512587900248'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 689919
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/venda/loading-sprite.png?v=1512587900248
+Check time 3.119 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/venda/logo.png?v=1512587900248'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 690097
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/venda/logo.png?v=1512587900248
+Check time 2.985 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/heaven/loading-sprite.png?v=1512587900248'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 690715
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/heaven/loading-sprite.png?v=1512587900248
+Check time 3.064 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/heaven/logo.png?v=1512587900248'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 690895
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/heaven/logo.png?v=1512587900248
+Check time 3.299 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/adtrak/loading-sprite.png?v=1512587900249'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 691334
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/adtrak/loading-sprite.png?v=1512587900249
+Check time 3.354 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/adtrak/logo.png?v=1512587900249'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 691538
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/adtrak/logo.png?v=1512587900249
+Check time 3.125 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/sproutsocial/loading-sprite.png?v=1512587900249'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 692093
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/sproutsocial/loading-sprite.png?v=1512587900249
+Check time 3.171 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/sproutsocial/logo.png?v=1512587900249'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 692308
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/sproutsocial/logo.png?v=1512587900249
+Check time 3.174 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/convertiv/loading-sprite.png?v=1512587900250'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 692878
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/convertiv/loading-sprite.png?v=1512587900250
+Check time 3.526 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/convertiv/logo.png?v=1512587900250'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 693089
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/convertiv/logo.png?v=1512587900250
+Check time 3.825 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/walltowall/loading-sprite.png?v=1512587900250'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 693651
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/walltowall/loading-sprite.png?v=1512587900250
+Check time 4.106 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/walltowall/logo.png?v=1512587900251'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 693864
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/walltowall/logo.png?v=1512587900251
+Check time 4.146 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/evernote/loading-sprite.png?v=1512587900251'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 694429
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/evernote/loading-sprite.png?v=1512587900251
+Check time 3.829 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    69 links queued, 2740 links in 2861 URLs checked, runtime 7 minutes, 6 seconds
+
+URL        `../img/branding/evernote/logo.png?v=1512587900251'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 694638
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/evernote/logo.png?v=1512587900251
+Check time 3.516 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/evernote/logo.png?v=1512587900252'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 694994
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/evernote/logo.png?v=1512587900252
+Check time 3.735 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/t4gkick/loading-sprite.png?v=1512587900258'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 695198
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/t4gkick/loading-sprite.png?v=1512587900258
+Check time 3.680 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/t4gkick/logo.png?v=1512587900258'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 695405
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/t4gkick/logo.png?v=1512587900258
+Check time 3.947 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/catchdigital/loading-sprite.png?v=1512587900259'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 695965
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/catchdigital/loading-sprite.png?v=1512587900259
+Check time 3.493 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/catchdigital/logo.png?v=1512587900259'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 696182
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/catchdigital/logo.png?v=1512587900259
+Check time 3.349 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/steadfastcreative/loading-sprite.png?v=1512587900259'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 696762
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/steadfastcreative/loading-sprite.png?v=1512587900259
+Check time 3.305 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/steadfastcreative/logo.png?v=1512587900259'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 696989
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/steadfastcreative/logo.png?v=1512587900259
+Check time 3.053 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/steadfastcreative/logo.png?v=1512587900260'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 697359
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/steadfastcreative/logo.png?v=1512587900260
+Check time 2.671 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/xtime/loading-sprite.png?v=1512587900260'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 697570
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/xtime/loading-sprite.png?v=1512587900260
+Check time 2.668 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/xtime/logo.png?v=1512587900260'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 697772
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/xtime/logo.png?v=1512587900260
+Check time 2.595 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/lloydsbank/loading-sprite.png?v=1512587900261'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 698323
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/lloydsbank/loading-sprite.png?v=1512587900261
+Check time 2.419 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/lloydsbank/logo.png?v=1512587900261'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 698536
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/lloydsbank/logo.png?v=1512587900261
+Check time 2.458 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/icd/loading-sprite.png?v=1512587900261'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 699096
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/icd/loading-sprite.png?v=1512587900261
+Check time 2.390 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/icd/logo.png?v=1512587900261'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 699295
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/icd/logo.png?v=1512587900261
+Check time 2.811 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/hudl/loading-sprite.png?v=1512587900262'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 699835
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/hudl/loading-sprite.png?v=1512587900262
+Check time 2.905 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/hudl/logo.png?v=1512587900262'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 700036
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/hudl/logo.png?v=1512587900262
+Check time 2.752 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/clockwork/loading-sprite.png?v=1512587900262'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 700582
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/clockwork/loading-sprite.png?v=1512587900262
+Check time 2.565 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    51 links queued, 2758 links in 2861 URLs checked, runtime 7 minutes, 11 seconds
+
+URL        `../img/branding/clockwork/logo.png?v=1512587900262'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 700792
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/clockwork/logo.png?v=1512587900262
+Check time 3.015 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/creativeoutsourcing/loading-sprite.png?v=1512587900263'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 701363
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/creativeoutsourcing/loading-sprite.png?v=1512587900263
+Check time 3.110 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/creativeoutsourcing/logo.png?v=1512587900263'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 701593
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/creativeoutsourcing/logo.png?v=1512587900263
+Check time 3.423 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/mrm/loading-sprite.png?v=1512587900263'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 702176
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/mrm/loading-sprite.png?v=1512587900263
+Check time 3.734 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/mrm/logo.png?v=1512587900263'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 702375
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/mrm/logo.png?v=1512587900263
+Check time 3.805 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/mrm/logo.png?v=1512587900264'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 702719
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/mrm/logo.png?v=1512587900264
+Check time 3.915 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/easybranding/loading-sprite.png?v=1512587900264'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 702923
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/easybranding/loading-sprite.png?v=1512587900264
+Check time 4.040 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/easybranding/logo.png?v=1512587900264'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 703140
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/easybranding/logo.png?v=1512587900264
+Check time 3.836 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/bluekey/loading-sprite.png?v=1512587900265'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 703710
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/bluekey/loading-sprite.png?v=1512587900265
+Check time 4.044 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/bluekey/logo.png?v=1512587900265'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 703916
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/bluekey/logo.png?v=1512587900265
+Check time 4.274 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/comradeagency/loading-sprite.png?v=1512587900265'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 704473
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/comradeagency/loading-sprite.png?v=1512587900265
+Check time 4.213 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    40 links queued, 2769 links in 2861 URLs checked, runtime 7 minutes, 16 seconds
+
+URL        `../img/branding/comradeagency/logo.png?v=1512587900265'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 704691
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/comradeagency/logo.png?v=1512587900265
+Check time 4.367 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/castoretpollux/loading-sprite.png?v=1512587900266'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 705267
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/castoretpollux/loading-sprite.png?v=1512587900266
+Check time 4.264 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/castoretpollux/logo.png?v=1512587900266'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 705488
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/castoretpollux/logo.png?v=1512587900266
+Check time 4.147 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/bighuman/loading-sprite.png?v=1512587900266'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 706069
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/bighuman/loading-sprite.png?v=1512587900266
+Check time 4.003 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/bighuman/logo.png?v=1512587900266'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 706277
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/bighuman/logo.png?v=1512587900266
+Check time 4.060 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/metalab/loading-sprite.png?v=1512587900267'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 706831
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/metalab/loading-sprite.png?v=1512587900267
+Check time 3.769 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/metalab/logo.png?v=1512587900267'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 707038
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/metalab/logo.png?v=1512587900267
+Check time 3.945 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/godaddy/loading-sprite.png?v=1512587900267'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 707593
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/godaddy/loading-sprite.png?v=1512587900267
+Check time 3.892 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/godaddy/logo.png?v=1512587900268'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 707800
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/godaddy/logo.png?v=1512587900268
+Check time 3.593 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/bbdo/loading-sprite.png?v=1512587900268'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 708352
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/bbdo/loading-sprite.png?v=1512587900268
+Check time 3.375 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/bbdo/logo.png?v=1512587900268'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 708552
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/bbdo/logo.png?v=1512587900268
+Check time 3.281 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/pwcanalytics/loading-sprite.png?v=1512587900269'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 709101
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/pwcanalytics/loading-sprite.png?v=1512587900269
+Check time 3.158 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/pwcanalytics/logo.png?v=1512587900269'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 709318
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/pwcanalytics/logo.png?v=1512587900269
+Check time 3.283 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/galepartners/loading-sprite.png?v=1512587900269'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 709893
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/galepartners/loading-sprite.png?v=1512587900269
+Check time 3.151 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/galepartners/logo.png?v=1512587900269'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 710109
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/galepartners/logo.png?v=1512587900269
+Check time 3.248 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,    25 links queued, 2784 links in 2861 URLs checked, runtime 7 minutes, 21 seconds
+
+URL        `../img/branding/seradex/logo.png?v=1512587900270'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 710883
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/seradex/logo.png?v=1512587900270
+Check time 3.081 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/seradex/loading-sprite.png?v=1512587900270'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 710677
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/seradex/loading-sprite.png?v=1512587900270
+Check time 3.399 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/verisign/loading-sprite.png?v=1512587900270'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 711435
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/verisign/loading-sprite.png?v=1512587900270
+Check time 3.036 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/verisign/logo.png?v=1512587900270'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 711644
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/verisign/logo.png?v=1512587900270
+Check time 2.959 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/costar/loading-sprite.png?v=1512587900271'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 712201
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/costar/loading-sprite.png?v=1512587900271
+Check time 3.163 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/branding/costar/logo.png?v=1512587900271'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 712406
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/branding/costar/logo.png?v=1512587900271
+Check time 2.949 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../image/branding/bighuman/share-loading-sprites.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 713020
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/image/branding/bighuman/share-loading-sprites.png
+Check time 3.716 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/console-comment-line.gif'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 745345
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/console-comment-line.gif
+Check time 2.974 seconds
+Size       1KB
+Result     Error: 404 Not Found
+10 threads active,     7 links queued, 2802 links in 2861 URLs checked, runtime 7 minutes, 26 seconds
+
+URL        `../img/check-large.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 816821
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/check-large.png
+Check time 4.023 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/loader.gif'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 817244
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/loader.gif
+Check time 3.866 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/project-sprites.png?v=9042014'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 822497
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/project-sprites.png?v=9042014
+Check time 3.251 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../../common/img/project-sprites@2x.png?v=9042014'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 822898
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/common/img/project-sprites@2x.png?v=9042014
+Check time 2.914 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/btn-overlay.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 826693
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/btn-overlay.png
+Check time 2.615 seconds
+Size       1KB
+Result     Error: 404 Not Found
+
+URL        `../img/console-top-bar-drop.png'
+Parent URL http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/css/share-offline.css, line 1, col 827916
+Real URL   http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/assets/apps/share/img/console-top-bar-drop.png
+Check time 2.675 seconds
+Size       1KB
+Result     Error: 404 Not Found
+ 2 threads active,     0 links queued, 2817 links in 2861 URLs checked, runtime 7 minutes, 31 seconds
+
+Statistics:
+Downloaded: 3.52MB.
+Content types: 237 image, 1022 text, 0 video, 0 audio, 15 application, 3 mail and 1542 other.
+URL lengths: min=16, max=305, avg=83.
+
+That's it. 2819 links in 2861 URLs checked. 0 warnings found. 335 errors found.
+Stopped checking at 2020-11-23 23:48:10-004 (7 minutes, 31 seconds)

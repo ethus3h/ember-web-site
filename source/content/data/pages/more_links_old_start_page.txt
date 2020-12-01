@@ -1,0 +1,37 @@
+[[List of projects]]
+
+[[Ember]]
+
+[[Words]]
+
+[[Futuramerlin Roadmap|Roadmap]]
+
+[[ref:start|Reference info.]]
+
+[[Futuramerlin IRC]]
+
+[[archival:FTP]]
+
+[[archival:Optical media]]
+
+[[school:start|School things]]
+
+[[music ideas|Music ideas]]
+
+[[Best quotations]]
+
+====== Wreathe documentation ======
+
+[[Wreathe]]
+
+====== Rules/guidelines ======
+
+While this wiki isn't particularly strict regarding scope, things should be kept organized. Factual things should go in [[:ref:start|Reference info.]]. Fiction writing should go in [[:literature:fiction:start|Fiction]]. Poetry should go in [[:literature:poetry:start|Poetry]]. I want to have a way to provide a place for blogs, too… maybe [[:blogs:start|Blogs]]. There could be some overlap between these.
+
+====== Unlinked pages ======
+
+ ~~ORPHANSWANTED:orphans~~
+
+====== Missing pages ======
+
+ ~~ORPHANSWANTED:wanted~~

@@ -1,0 +1,58 @@
+====== n-space-native computer graphics system ======
+
+Idea for a robust //n//-space-native multithreaded compositing computer graphics system...:
+
+There can be many applications.
+
+Each application can write to many source spaces, each of which has its own pair of buffers. Each source has two buffers so the data can be read by the compositor at any time, even while the source AND one buffer are being updated. That way, the compositor doesn't ever have to wait. It could just not paint things that weren't ready, but then that could make those things flicker.
+
+There is one OS output system.
+
+Compositor is a space of the same type as the output (for a 2-dimensional computer screen, for example, the composition space is 2-dimensional).
+
+A space is an //n//-dimensional data structure of graphics (generally vector) objects. Except for the composition space, spaces are organized in relation to other spaces (the origin of the enclosed space corresponds to a given position in the enclosing space). When the enclosed space has more dimensions than the enclosing space, each extra dimension can be chosen to be sliced, projected, or (sliced and?) protruding from the enclosing space. The compositor should also be able to handle other cases correctly, e.g. when the size of one unit in a space is different from another, when a space is rotated relative to another, when the size of one unit changes within a space, unusually shaped spaces, spaces that wrap around at the edges, spaces with holes in them, spaces split into parts, spaces with areas that teleport, spaces that change over time, two or more //a//-dimensional spaces with //b// intersecting dimensions (for //b// less than or equal to //a// — the other dimensions protruding), etc..
+
+Regarding unusually shaped spaces: consider a piece of string as a one-dimensional space. It has a clear linear point system along its length, but it can be bent within 3 dimensions. This case should be handled correctly by the compositor.
+
+FIXME: How to handle situations where an application needs to reference another application's spaces? Shouldn't be too hard to do, but maybe should have some sort of security/access protection system in place....
+
+{{ ::diagram-graphics-system-15may2014-v2-15may2014_crop_15_may_2014.png?1000 |}}
+
+The finely dashed lines indicate data going to or coming from multiple instances of the structures shown.
+
+To clarify: the compositor should be able to composite any number of simple or complex //n//-dimensional spaces into a single simple //n//-dimensional space.
+
+===== Pseudocode for the methods: =====
+
+==== Semaphores used, and their meanings/purposes: ====
+
+  * When S is up, Compositor can read buffer A
+  * When T is up, Compositor can read buffer B
+  * When U is up, Source can write to buffer A
+  * When V is up, Source can write to buffer B
+
+==== Source.push() ====
+
+<code>
+if(S, V are up):
+    T.down()
+    copy Source to buffer B
+    T.up()
+else if(T, U are up):
+    S.down()
+    copy Source to buffer A
+    S.up()
+</code>
+
+==== Compositor.pull() ====
+
+<code>
+if(S is up):
+    U.down()
+    copy buffer A into Compositor
+    U.up()
+else if(T is up):
+    V.down()
+    copy buffer B into Compositor
+    V.up()
+</code>

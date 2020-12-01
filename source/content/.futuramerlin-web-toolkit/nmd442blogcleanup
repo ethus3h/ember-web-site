@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC1091
+source ember_bash_setup &> /dev/null
+#set -x
+
+trap 'die "A fatal error was reported on ${BASH_SOURCE[0]} line ${LINENO} in $(pwd) at $(emdate)."' ERR
+
+pwd
+
+fileToClean="$1"
+
+ereplace '<body>' '<body class="lessChrome">' "$fileToClean"
+
+ereplace '</p> <p class="entry-title">' '</li> <li class="entry-title">' "$fileToClean"
+
+ereplaceRegEx '(.+)(<li class="entry-title">.+)<\/p> <\/main>' '\1\2<\/li><\/ul><\/main>' "$fileToClean"
+
+ereplace '<p class="breadcrumbs">Page location: <span><a href="..">Home</a></span> </li> <li class="entry-title">' '<p>Hi! I'\''m Elliot. This blog documents my work and learning reflections from a user experience design class at the University of Maine.</p><br /><p>Index of posts:</p><ul><li class="entry-title">' "$fileToClean"
+
+ereplace '<p class="breadcrumbs">Page location: <span><a href="../../..">Elliot'\''s NMD442 Blog!</a></span> </p>' '<p><big><a href="../../.."> « Back to blog index</a></big></p>' "$fileToClean"
+
+ereplace '<input class="nav-trigger" id="nav-trigger" type="checkbox"> <label for="nav-trigger">&nbsp;</label> <nav> <p class="logo"> <a class="nodecorate logolink" href="/">ember</a> </p> <ul> <li>Navigation:</li> <li class="nav-item nav-item-inactive"> <a href="/">Home</a> </li> <li class="nav-item nav-item-inactive"> <a href="/news">News</a> </li> <li class="nav-item nav-item-inactive"> <a href="/ancillary/ready-to-use.htm">Software</a> </li> <li class="nav-item nav-item-inactive"> <a href="/components.htm">Primary project components</a> </li> <li class="nav-item nav-item-inactive"> <a href="/people">People</a> </li> </ul> <a href="#">&#x1F51D;&#xFE0E;</a> </nav>' '' "$fileToClean"
+
+ereplaceRegEx '<span class="post-index-date">\[\d+m\d+d\d+\] <\/span>' '' "$fileToClean"
+
+ereplaceRegEx '<p class="posted-on">\[&#x1f551;:&nbsp;\d+m\d+d\d+\]<\/p>' '' "$fileToClean"

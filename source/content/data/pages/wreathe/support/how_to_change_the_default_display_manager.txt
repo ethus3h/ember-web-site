@@ -1,0 +1,13 @@
+
+
+===== How to change the default display manager? (Aptitude doesn't ask which default display manager to use during configuration?) =====
+==== Problem ====
+Don't know how to change the default display manager. How to change the default display manager? (Aptitude doesn't ask which default display manager to use during configuration?)
+==== Solution ====
+
+Edit /etc/X11/default-display-manager
+
+(useful paths: 
+  * gdm = /usr/sbin/gdm
+  * kdm = /usr/bin/kdm
+)

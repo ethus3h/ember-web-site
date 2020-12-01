@@ -1,0 +1,13 @@
+====== Initial exploration for Project 2: COS225 ======
+
+This project will need a lot of mathematics. It apparently requires an understanding of polar coordinates, which I distinctly do not have. I don't know why whatever math course that's in is not a prerequisite for this course, but it seems like a poor judgement call to ask the students in the class to write computer code that does mathematics they themselves barely recognize.
+
+I'm curious to see how the UI will come out, since I have rarely had good luck with computer programs looking good cross-platform. In COS125, generally when I would write a program that looked perfect on my computer, it would be barely usable in another system (for example, Mac OS). Likewise, the example programs that didn't look too out-of-place in the professor's computer would look like they'd crawled out of Windows 9x when I ran them. I'm hoping Java will provide an opportunity to create software applications with graphical interfaces that actually look halfway decent cross-platform, since Python's user interface toolkits seem to be seriously lacking in this area.
+
+I'm looking forward to getting to the part of the assignment where we can actually model turtle behavior. I think that will be very interesting and fun, and provide a welcome break from all of the logic, mathematics, and computer-games that have dominated my computer science studies so far. Understanding the logic of computer programs, though, can be quite fun and entertaining, trying to understand how best to create efficient models of real-world problems for the implementation of effective software solutions representing those problems.
+
+Object-oriented design has been, so far, quite enjoyable. I find it to be rather more logically structured than functional programming, and to create programs that do not become quite so unwieldy as they grow.
+
+Eventually, I would like to learn about how object-oriented design and programming plays a role in big data processing and the development of scalable Web applications. I doubt that is an immediate objective of this course, but I think that the thorough understanding of object-oriented design we are gaining through this course will lay a solid groundwork for my future studies and learning in this area.
+
+The graphical turtle modelling application we will be developing through several projects will, I trust, be an enjoyable way to continue expanding and enriching my understanding of and experience using object-oriented design and programming. 

@@ -1,0 +1,27 @@
+@t Information Technology Software Environment: Document-Centric Computing Environment
+
+<p class="breadcrumbs">Page location:
+    <span><a href="/components.htm">Core project components</a></span>
+    <span><a href="/specification">Specification</a></span>
+    <span><a href="/specification/engineering-and-tech">Engineering and Technology</a></span>
+    <span><a href="/specification/engineering-and-tech/computing">Computing</a></span>
+</p>
+
+- <a href="introduction-and-overview.htm">Introduction and overview</a>
+- <a href="installation.htm">Installation</a>
+- <a href="design-goals.htm">Design goals</a>
+- <a href="development-practices.htm">Development practices</a>
+- <a href="implementation-principles.htm">Implementation principles</a>
+- <a href="stagel.htm">Portable implementation language: StageL</a>
+- <a href="implementation-components.htm">Implementation components</a>
+- <a href="spec">Interface specification</a>
+- <a href="document-format.htm">Native document format (Dc-based)</a>
+- <a href="targeted-uses.htm">List of uses targeted by the project</a>
+- <a href="mockups.htm">Mockups</a>
+- <a href="user-research.htm">User research</a>
+- <a href="platforms">Implementation platform documentation</a>
+- Commentaries:
+    - <a href="commentary-network-negotiation.htm">Decentralized networked systems: Ad-hoc Computer Network Negotiation</a>
+    - <a href="commentary-new-media.htm">EITE in the context of new media studies</a>
+    - <a href="commentary-challenges-and-state.htm">Implementation challenges; state of the project</a>
+- <a href="references.htm">References</a>

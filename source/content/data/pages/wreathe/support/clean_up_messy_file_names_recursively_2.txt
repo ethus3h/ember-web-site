@@ -1,0 +1,11 @@
+=====Clean up messy file names, recursively=====
+
+Clean up messy file names, recursively: cd to the directory the files are in, then… (from: http://serverfault.com/questions/348482/how-to-remove-invalid-characters-from-filenames)
+
+
+<code>find . -type f -print0 | \
+perl -n0e '$new = $_; if($new =~ s/[^[:ascii:]]/_/g) {
+  print("Renaming $_ to $new\n"); rename($_, $new);
+}'
+</code>
+"That would find all files with non-ascii characters and replace those characters with underscores (_). Use caution though, if a file with the new name already exists, it'll overwrite it. The script can be modified to check for such a case, but I didnt put that in to keep it simple."

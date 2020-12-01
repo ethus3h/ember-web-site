@@ -1,0 +1,22 @@
+====== COS225 Project 0 Reflection ======
+
+2 pages on installing Eclipse.
+
+"write an up to 2 page “reflection” on your experiences downloading, running, and exploring the Eclipse IDE. If you already have experience with Eclipse, describe this experience. I understand that it might possibly be extensive. Please structure your writing. Don’t ramble, and properly use paragraphing." from Project0.pdf
+
+
+----
+
+
+I have run into several various issues, bothersome things, and problems while using Eclipse so far. However, I have come to terms with it, and the problems are pretty much resolved.
+To install it, I downloaded it from the website, selecting the 32-bit Linux package. Installing it was a breeze, only needing extraction of a .tar.gz (<code>tar -xvzf foo.tar.gz</code>). I could then cd into the extracted "eclipse" directory, and run <code>./eclipse</code>.
+
+After getting it installed, it took a fair bit of struggling to understand how it works. While there is a command search/run box, it is quite small and took me a while to find it, during which I was frustratedly trying to use the row of small buttons with pictures ("icons") on them that was above it. I find icons very frustrating in most uses in software: they aren't generally particularly self-explanatory, and all look pretty much the same to me. Once I found the search/run box, I was greatly relieved. My next step was to get rid of the icon-buttons, but that wasn't as easy as it seemed. While they can be relocated by dragging and dropping them, dragging and dropping them off of the window does not get rid of them. Likewise, there does not seem to be an option to get rid of them by right-clicking. Eventually I found a source that indicated that I needed to run the "Customize Perspective" command (thanks to this Web-page: http://www.eclipse.org/forums/index.php/t/366472/ ). This is not a particularly intuitive name for this command. Some of the other options like "Edit toolbars" or "Change button selection" would be more likely guesses. The use of the word customize is good though, I daresay.
+
+It would be very nice if there was a way to learn the names of the commands without having to use the World Wide Web: it seems that despite the inclusion of an extensive readme with the IDE, it lacks a comprehensive command reference. That would be a very helpful bit of documentation for me, especially given the sometimes confusing results when multiple commands share the same name (for example, the multiple Run commands).
+
+I floundered about in it for a while trying to create and run a project. I ran into two major issues during that process: I was making mistakes in the code, assuming incorrectly that I could make a new Java file with only <code>System.out.println("Hello World!");</code> and have it work; and I did not realize that I had to add my current project and class name using the Run Configuration command. Christopher Dufour told me about my omission of the Run Configuration step, and once I fixed that, programming in Eclipse went like a breeze.
+
+My other minor quarrel with Eclipse is the unpredictable automatic completion: if I type the letters "impor" at the beginning of a file, I would expect it to use automatic completion to fill it out. It does use automatic completion in some other contexts, but I haven't figured out its rules for when it does and when it doesn't.
+
+Programming Project 0 in Java was quite a relief (I'm writing this after finishing the programming part of the project): while I expected Java to be ridiculously verbose and overbearingly complex after seeing the length of some simple programs, I found the important parts for the most part to be quite concise. The way of creating an ArrayList seems a little redundant, however: <code>ArrayList<Float> variableName = new ArrayList<Float>();</code> seems to specify the data type twice. This is not necessary with, for example, an integer: <code>int variableName = 0</code> does everything needed. I did enjoy programming in Java quite a bit though.

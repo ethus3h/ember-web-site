@@ -1,0 +1,55 @@
+Might be useful: http://www.slideshare.net/DanLynn1/storing-and-manipulating-graphs-in-hbase
+
+
+====== Example schema ======
+Note that this is simplified (doesn't deal with character encodings, localisation, strings, etc.... FIXME
+
+Rough example of how things might work (note that type 2 is a relationship and does not necessarily take data but has a node as its target, while type 3 is a metadatum and has to take data but only has its root node:
+
+===== Classes =====
+^ id ^ description ^
+| 0 | node |
+| 1 | relationship |
+| 2 | metadatum |
+
+===== Types =====
+^ id ^ class ^ description_1 ^ description_2 ^
+| 0 | 0 | person | |
+| 1 | 0 | basic node | |
+| 2 | 1 | has author | is author of |
+| 3 | 2 | has title | is title of |
+
+===== Users =====
+^ id ^ username ^ salted_password_hash ^ node ^ biometrics data ^
+| 0 | test | blahblahblah | 0 | DCEe... |
+
+===== Nodes =====
+^ id ^ node ^ date ^ type ^ data ^ node_1 ^ node_2 ^ author ^ permissions ^
+| 0 | 0 | DCEe... | 0 | DCEe... | | | 0 | DCEe... |
+| 1 | 0 | DCEe... | 0 | DCEe... | | | 0 | DCEe... |
+| 2 | 1 | DCEe... | 1 | DCEe... | | | 0 | DCEe... |
+| 3 | 2 | DCEe... | 2 | | 1 | 0 | 0 | DCEe... |
+| 4 | 3 | DCEe... | 1 | DCEe... | | | 0 | DCEe... |
+| 5 | 2 | DCEe... | 2 | DCEe... | 1 | 0 | 0 | DCEe... |
+| 6 | 4 | DCEe... | 3 | DCEe... | 1 | | 0 | DCEe... |
+====== Comments and ideas ======
+
+How to deal with complicated situations, e.g. three-node relationships? Could relationships all just be special cases of metadata? (Or maybe vice versa, although I don't think that would work?) What about nondirectional relationships? Or unidirectional?
+
+Everything in one big table??
+
+How to delete relationships??
+
+Relationships and metadata as nodes, all together in one big table??
+
+For each node: id
+
+For each node revision: id, node_id, revision_date, type, data, node_1, node_2
+
+node_id: related to node table
+
+type: e.g. "Node has number of pages metadata" or "Data" or "Person" or "node_1 is author of node_2"
+
+data: DCE data ID associated with the node (for metadata, this would be the value of the metadata; for a data-type node this would be its contents)
+
+node_1 and node_2: two nodes that this node represents a relationship between

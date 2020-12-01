@@ -1,0 +1,88 @@
+*, *::before, *::after {
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+#logo {
+	position: fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background-image: url('https://raw.githubusercontent.com/ethus3h/wreathe-backgrounds/master/Backgrounds/DSCN8100.JPG');
+	background-size: cover;
+}
+body {
+	overflow: hidden;
+}
+#main-container {
+	display: flex;
+	flex-direction: column;
+}
+#other-projects {
+	display: flex;
+	flex-direction: column-reverse;
+}
+#description-container > p::before {
+	position: fixed;
+	color: white;
+	width: calc(100vw / 3);
+	background-color: rgba(195,83,229,0.9);
+	height: 3rem;
+	font-size: 2rem;
+	opacity: 1;
+	text-align: center;
+	top: 0;
+	transition: all 0.2s ease-in-out;
+	border-right: 0.5rem solid rgba(65,105,225,0.9);
+}
+#description-container > p:hover::before {
+	background-color: rgba(215,90,240,0.9);
+	height: 3rem;
+	opacity: 1;
+	text-align: center;
+	top: 0;
+	transition: all 0.2s ease-in-out;
+	border-right: 0.5rem solid rgba(65,105,225,0.9);
+}
+#description-container > p:active::before {
+	background-color: rgba(175,77,208,0.9);
+	height: 3rem;
+	font-size: 3rem;
+	opacity: 1;
+	text-align: center;
+	top: 0;
+	transition: all 0.2s ease-in-out;
+	border-right: 0.5rem solid rgba(65,105,225,0.9);
+}
+#description-container::after {
+	columns: 4;
+	content: 'Objective: Develop a machine-readable language that can be source-to-source translated into other languages. It should be practically useable as a shell as well as for running stored programs. Possible target languages to investigate include Bash, Rakudo Perl 6, NQP, C--, C, PyQt5, and JQuery. EITE Language programs may optionally declare a non-default language profile to use: Core, Basic, and Dangerous (the default is "Standard"). Core and Basic both restrict the program to a subset of the language. The Basic language interpreter is written using the Core subset of the language, and provides useful shortcuts to use in the development of the interpreter for the Standard profile. The Default language interpreter is written using the Basic subset of the language. The Dangerous profile allows using language features which are probably a bad idea to use, but may be needed in some cases. The core unit of the EITE Language is the Dc (Document Component). The defined Dcs are listed in DcData.csv. An EITE Language document is a list of Dcs, and a file is considered structurally valid if it can be interpreted as such. A Dc can have a syntactical pattern that it can require if it is to be meaningful. For example, a marker to begin a section of a document might be required to have a matching end marker. A document is only syntactically valid if the usage of each Dc contained within it conforms to the Dc\'s defined syntax, even if the document is otherwise structurally valid. Reading DcData.csv: DcData.csv contains nine columns, each of which gives some information about a given Dc. From left to right, the columns are: ID, Name, Combining class, Bidirectional class, Simple case mapping, Type, Script, Details, and Description. The "ID" column specifies the number used to refer to a given Dc. Once an ID has been specified in a stable version, its meaning will not change in future versions. The "Name" column specifies an informative name for the Dc. The names may change in future versions if the current names seem suboptimal. They should not be relied on as unique or stable identifiers. If a name is prefixed with "!", then that Dc is deprecated. Names should be unique within any given version of DcData.csv, although errors in it could compromise that (it is not currently checked by a computer). "Combining class" column: See below. "Bidirectional class" column: See below. "Simple case mapping" column: This column contains the ID of the uppercase form of characters with the "Ll" type, and the ID of the lowercase form of characters with the "Lu" type. "Type" column: See below. The "Script" column indicates the script or other set to which the character belongs. Values needing further explanation include "Semantic", "DCE", "DCE sheets", "Noncharacters", "DCE versions", "Encapsulation", "EL Syntax", "EL Routines", and "EL Types". The "Details" column contains various additional information about characters, as a comma-separated list. List entries beginning with ">" are cross-references to related Dcs. List entries beginning with "<" are decompositions. List entries beginning with "(" indicate the syntax (parameter type signatures) for Ember Language routines. List entries beginning with ":" indicate the required syntax for the given Dc, using a form similar to regular expressions: a bracketed list of Dcs [] indicate a set of possible Dcs a bracketed list of Dcs with a ^ at the beginning indicates an inversion of the set + indicates 1 or more of the preceding item a Dc ID in brackets with a colon before the closing brackets indicates any syntactically correct sequence of Dcs beginning with the enclosed Dc ID "~" represents the Dc the syntax of which is being defined. The remaining list entries are aliases (alternate names for the characters, for ease of look-up). The "Description" column contains additional comments regarding the Dc. Three columns\' contents are directly inherited from the Unicode Standard: Combining class (inherits Unicode\'s "Canonical_Combining_Class property"), Bidirectional class (inherits Unicode\'s "Bidi_Class" property), and Type (inherits Unicode\'s "General_Category" property). The "Simple case mapping" and "Script" columns should also be inherited from Unicode in some manner, but are not at present. For characters not included in Unicode, a reasonable value is chosen in the pattern of the values used by Unicode. If there are discrepancies between this value and Unicode\'s value for a given character that is in both sets, this should be reported as an error in the Ember Language standard. Unicode\'s values should take precedence. "Type" column values also extend the Unicode Standard\'s possible values with the "!Cx" category, denoting characters that do not fit neatly into Unicode\'s existing categories.';
+	color: #3f005f;
+	text-indent: 1rem;
+	background-color: rgba(226,218,241,0.5);
+	position: fixed;
+	left: 1rem;
+	top: 4rem;
+	height: calc(100vh - 5rem);
+	width: calc(100vw - 2rem);
+	backdrop-filter: blur(1rem); /* Not avail in gecko */
+	padding: 1rem;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	border-radius: 10vh;
+	border: 0.05rem solid white;
+}
+
+#description-container > :nth-child(1)::before {
+	content: 'Button 1';
+	left: 0;
+}
+#description-container > :nth-child(2)::before {
+	content: 'Button 2';
+	left: calc(100vw / 3);
+}
+#description-container > :nth-child(3)::before {
+	content: 'Button 3';
+	left: calc(200vw / 3);
+}

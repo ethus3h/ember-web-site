@@ -1,0 +1,1 @@
+**Relationships** are information regarding the connection between two [[nodes]]. See [[Relationship]] for more information.

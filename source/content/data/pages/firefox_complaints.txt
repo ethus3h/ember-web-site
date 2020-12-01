@@ -1,0 +1,72 @@
+====== My list of things that don't work the way I want them to in Firefox ======
+New stuff:
+
+  * Toolbar ugly (too tall? or something) and moves when hovering over the URL bar
+  * Add to reading list orange star doesn't work (and the only functional add-current-page-to-reading-list tool is at the end of the URL bar, which is awkward to get to)
+  * Sidebars drop down menu has an unnecessary separator
+  * Feeds and Reading list sidebars don't conform to the UI
+  * Reading list sidebar is called "Save-To-Read" instead of "Reading list" or "Reading List" in the dropdown menu
+  * Status information is transparent in the location bar, making it cluttered and hard to read (often unreadable).
+  * Status information is the dull modern kind, not like older browsers that would show detailed progress information for each page resource
+  * Up a level arrow is to the right of back/forward buttons in stead of in between them
+  * Up a level arrow has a dropdown arrow menu, instead of hold to get the dropdown like the back and forward buttons.
+  * Keyboard shortcuts need work.
+  * A lot of text is cut off throughout the UI.
+  * Hamburger menu has help and quit buttons that I want to get rid of
+  * URL bar doesn't stay expanded open when it's selected but the cursor's not hovering over it
+  * No hovered tab color
+  * Non-selected tabs are quite light, making them hard to tell apart from the selected tab
+  * History (and probably bookmarks?) search doesn't match results with/without diacritics that are typed
+  * Excess blank space to the right of the tab bar
+  * New tab button disappears unless there's a separator keeping it away from the tab bar, which is then not that great looking
+  * No visible change (mask icon?) on private browsing windows
+  * Blank space at the left and right of the toolbar
+  * Bookmark this page button doesn't change to show if a page is bookmarked or not, necessitating clicking on it to check (which takes keyboard focus away from the Web page)
+  * Can't hide Options button on new tab page
+  * Dragging and dropping text into the URL bar acts like I typed it and then pressed enter. I want it just to act like I typed it, but didn't press enter (I often want to use the URL bar as a scratch pad, or to edit URLs before visiting them.)
+  * Haven't hidden URL bar's reader mode button
+
+
+
+
+
+
+Previous list:
+
+  * Reading list missing
+  * Reading list button is in URL bar instead of a movable gray toolbar button (when there was a Reading List in 40.0a1).
+  * Feeds sidebar entry is below an ugly grey line
+  * Feeds sidebar doesn't have styled background
+  * Hamburger menu has help and quit buttons that I want to get rid of
+  * URL bar doesn't stay expanded open when it's selected but the cursor's not hovering over it
+  * black lines on hovered and active tabs
+  * Download panel covers up the toolbar
+  * Download panel has arrow at bottom instead of top
+  * Can't change hovered tab background color (in Classic Theme Restorer)
+  * Status-4-Evar status information doesn't show up in URL bar
+  * tab text and close buttons are too low on the tool bar
+  * Ugly bottom border on the URL bar
+  * Right border on the URL bar should be gone
+  * History (and probably bookmarks?) search doesn't match results with/without diacritics that are typed
+  * Pressing enter in the URL bar sometimes doesn't work, making me have to use the arrow button
+  * I want to get rid of the arrow button but can't because of the previous bullet point
+  * Bookmark star button not a movable toolbar button
+  * Blank space at the left and right of the toolbar
+  * Ugly icons for Bookmark This Page and New tab
+  * Bookmark this page button doesn't change to show if a page is bookmarked or not
+  * Toolbar button border lines protrude outside toolbar
+  * Ugly bottom border on toolbar
+  * Hovering URL bar makes toolbar shorter
+  * No visible change (mask icon?) on private browsing windows
+  * MAFF extension is broken
+  * Can't hide Options button on new tab page
+  * New window not created when opening Firefox
+  * Dragging and dropping text into the URL bar acts like I typed it and then pressed enter. I want it just to act like I typed it, but didn't press enter (I often want to use the URL bar as a scratch pad, or to edit URLs before visiting them.)
+
+
+Fixed:
+  * 8-) black lines on new tab button when hovered, instead of gradients
+  * 8-) Alternatively, change gradients to lines when hovered (just make it all the same)
+  * Toolbar buttons are too high on the toolbar
+  * Can't hide Window menu (but it's lower priority now that El Capitan allows hiding the menu bar) Meh, forget about this.
+  * Can't hide history menu and put recently closed tabs/windows in hamburger menu Meh, forget about this too.

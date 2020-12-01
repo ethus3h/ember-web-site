@@ -1,0 +1,12 @@
+
+===== There is a thin (~1px) stripe of color at the top of the screen (can appear to be that the Plasma desktop background / wallpaper is shifted down a pixel) =====
+
+==== Problem ====
+
+There is a thin (~1px) stripe of color at the top of the screen (can appear to be that the Plasma desktop background / wallpaper is shifted down a pixel)
+
+(See this (resolved) bug http://futuramerlin.com/d/s/mantis/view.php?id=174 )
+
+==== Solution ====
+
+You have gnome-panel running. That is a automatically-hidden gnome-panel.

@@ -1,0 +1,1 @@
+The **DCE range character** is the character used in DCE to represent ranges in data. DCE code 4. See [[Representing ranges in DCE]] for more information.

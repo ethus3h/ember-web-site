@@ -1,0 +1,7 @@
+**Wreathe 2 Extended Edition / Wreathe 2e** was an unofficial version of [[Wreathe]].
+
+* Release group: [[autumnfairy]]
+
+* Branch: [[Wreathe 2* (branch)|Wreathe 2*]]
+
+Based on [[Wreathe 2 dev / Wreathe 2a]]. Unofficial version including nonfree software. Two DVDs (and their ISOs) created: [[Wreathe 2 Extended Edition Preview Copy — not for installation Burned & labeled 3 September 2011|a "preview" Live DVD]] version, and [[Wreathe 2 Extended Edition 3 September 2011|a (slightly updated since the Live DVD) Mondo Rescue–based installer]]. They were released 3 September 2011.

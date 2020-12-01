@@ -1,0 +1,126 @@
+**RACE THE °MUSIC** is a computer game.
+
+
+====== Implementation tasks and status ======
+
+  - Implement keyed data storage in [[DCE]] standard
+  - Implement keyed data storage in [[dceutils]]
+  - Make necessary enhancements (including dceutils interface and a storage system) to Fracture%%//%%Active
+  - Implement [[Fracture//Active]] Python bindings
+  - Create dummy modules
+  - Begin game module development:
+    - Fracture%%//%%Active resource storage interface: make sends and requests; cache resources locally.
+    - Fracture%%//%%Active DCE data parser interface: make requests to parser to store/retrieve score data.
+    - User interface graphics handler: display windows and handle events from button triggers.
+    - Timer: keep track of how long the user has spent on a level.
+    - Score calculator: compute scores.
+    - Sound generator: play music
+    - Question generator: select questions randomly from a set specified for a given level. Some questions may be generated dynamically (e. g. mathematics questions).
+    - Local storage interface to save a cached copy of the score database in ~/.RACETHEMUSIC/scores_[username].dce and a cached copy of the resource database in ~/.RACETHEMUSIC/resources.dce
+
+
+======  Design and implementation  ======
+
+From the design document
+
+=====  Introduction  =====
+
+RACE THE °MUSIC is a game targeted at adults looking for challenging entertainment. It will offer a range of difficulties so the user can choose his or her desired level of challenge.
+
+=====  Overview of the game  =====
+
+The game displays an image to the user and begins playing recorded music. The user has until the music has finished playing to earn a baseline score by solving a series of questions or puzzles posed by the computer. The image provides a secondary puzzle to the user, to deduce the relationship between the questions and the image for a given level (the image and the music tie in to a theme for the questions for a level). Based on how quickly the user can complete these puzzles, the points are weighted. That is, if the user completes the questions before the end of the music, the points are worth more, and if the user must continue after the end of the music, the points lose value rapidly. At the end of the game, the user's points are added to his or her running total. The user's total points and per-level scores will be stored using a Web service and compared to other users' points in a high-scores system. The game cannot be paused once a level has been begun. The game is graphical and uses sound.
+
+=====  User interface  =====
+
+The user will use the mouse to click buttons. Information will be displayed through sound and graphics. Music will be used to restrict the time the user has to get a baseline score in a level. The graphics will be a combination of textual (text-area controls) and raster graphics. 
+
+There are two main interface windows: 
+
+Choose a level:
+
+{{:designdocument-v3-10oct2013-convertedtohtml-14sept2013_html_20d38fc.png?200|}}
+
+Play a level:
+
+{{:designdocument-v3-10oct2013-convertedtohtml-14sept2013_html_d04376a5.png?200|}}
+
+=====  Architecture  =====
+
+The game has level resources stored using the Internet. The game stores score data locally and remotely, including both per-level and cumulative scores.
+
+====The game's logic structure====
+
+The game presents a question to the user. The user then presses a button indicating an answer to the question. If the user selected the correct answer, the program increments the number of points for that level. When the user has finished the level, the program computes the scaled score for the level (accounting for time bonus/penalty).
+
+====Components====
+
+  * User interface graphics handler: display windows and handle events from button triggers.
+
+  * Timer: keep track of how long the user has spent on a level.
+
+  * Score calculator: compute scores.
+
+  * Sound generator: play music
+
+  * Question generator: select questions randomly from a set specified for a given level. Some questions may be generated dynamically (e. g. mathematics questions).
+
+  * Local storage interface to save a cached copy of the score database in ~/.RACETHEMUSIC/scores_[username].dce and a cached copy of the resource database in ~/.RACETHEMUSIC/resources.dce
+
+  * Fracture%%//%%Active resource storage interface: make sends and requests; cache resources locally.
+
+  * Fracture%%//%%Active DCE data parser interface: make requests to parser to store/retrieve score data.
+
+=====  Scope of effort  =====
+
+The project is substantial. I will need to write at least one file for each of the modules listed above. I plan to create eight levels, but that may change. The resource data will be stored using DCE3 keyed data systems and retrieved and parsed on-demand through Fracture%%//%%Active requests.
+
+=====  Implementation plan and timeline  =====
+
+I will start by constructing skeletons for the necessary modules and creating an overview of logic flow within the game program. After that first version, I will try to implement each module to a sufficient level of completion that it can be used for testing purposes. For this second version, the modules do not necessarily need to be fully functional, e. g. question generation might just use the same question all the time. The third and final version will be to program the actual modules. The project should take two hours for the initial version and another two hours for the second version. The final version should take ten hours or more, over multiple days. Creating game content will probably take four to five hours. Each day until the due date, I will try to implement at least one portion of a module or an element of the game content. This should take about 1 to 1ï¿½ hours of work daily.
+
+=====  Resources used  =====
+
+I will use the following modules and resources:
+
+* PyGTK: Graphical user interface (from The GNOME Project and PyGTK Team)
+
+* random: Generate questions (comes with Python)
+
+* Fracture%%//%%Active Python bindings: communicate with a Fracture%%//%%Active server (to write)
+
+* Fracture%%//%%Active web service: store and manipulate game resources and data (hosted by Futuramerlin)
+
+
+
+=====  Concluding remarks  =====
+
+I will use the Glade Interface Designer to build the user interface files.
+
+
+====== Testing ======
+
+From the testing document
+
+===== Sources of failure =====
+The game fills the screen. The most likely source of problems is the user switching to another program by accident (for example by using ALT+TAB) and not being able to find the game window again. Other keyboard commands may also cause issues. The game should not allow another window to gain focus until the exit button is pressed, and should not allow any keyboard input while it is running. It should also disable screen-edge triggers.
+
+===== Modules and testing =====
+
+I will use the following modules and resources:
+  * PyGTK: Graphical user interface (from The GNOME Project and PyGTK Team). Errors can be found from the PyGTK section of the GNOME Bugzilla.
+  * Random: Generate questions (comes with Python). Errors can be found from the Python bug tracker.
+  * Fracture%%//%%Active Python bindings: communicate with a Fracture%%//%%Active server (to write). Testing will be fairly simple, since it is a straightforward system. Tests will be written to verify the integrity of transferred data and commands.
+  * Fracture%%//%%Active web service: store and manipulate game resources and data (hosted by Futuramerlin)
+
+===== Top level testing =====
+
+To test my game, I will ensure that it can be fully played. The game should be fully playable without unexpected behavior. Testing will be done to ensure the Web resources are working properly. Testing with multiple users will be done to ensure that the game performs adequately for many users.
+
+===== Implementation plan and timeline =====
+
+The game should be tested with every substantial code change, to make sure that changes to one part of the code do not break another. The game should be fully playable without unexpected behavior by the 20th of October 2013, to allow time to fix any last-minute issues.
+
+===== RACE THE °MUSIC and Fracture//Active =====
+
+So, the workflow for RACE THE °MUSIC will include retrieving DCE document(s) containing game resources or high scores from FractureStorage, extracting specific keyed records from those documents, creating new keyed-storage DCE documents containing user scores, requesting new high scores, and storing the user score DCE documents using FractureStorage.
