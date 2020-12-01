@@ -1,9 +1,0 @@
-=====Keyboard shortcuts don't work=====
-
-====Problem====
-
-Keyboard shortcuts don't work
-
-====Solution====
-
-Possible solution: Press Control+Shift+Escape. Wait for WFAM to finish restarting.

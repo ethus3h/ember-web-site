@@ -1,1 +1,0 @@
-The **DCE interface** is the application program used to provide [[DCE]] support to [[Wreathe]].
