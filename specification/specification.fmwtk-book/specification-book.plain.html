@@ -21,9 +21,6 @@
         <li>Transfer control of the project's assets (Web presence, etc.) to that organization</li>
     </ul>
 
-<h3>Copy of dynamic Web site content</h3>
-    <p>The dynamic content of the Web site is mostly mirrored in static form <a href="https://github.com/ethus3h/ember-web-site/tree/master/static">[https://github.com/ethus3h/ember-web-site/tree/master/static]: in the Web site's Git repository</a> and consequently <a href="http://futuramerlin.com/static">[http://futuramerlin.com/static]: in the site</a> as well. This process is not automated to occur regularly, and the static copy may be out of date.</p>
-
 <!--
 <h3>Tasks list</h3>
 
@@ -64,7 +61,7 @@ TOTAL                               1400    10          14120
 - Transfer control of the project's assets (Web presence, etc.) to that organization
 
 -->
-<!-- 
+<!--
 # Resources needed
 
 - Communication skills
@@ -1375,7 +1372,7 @@ The extensive focus on the information technology aspects in the proposal is lar
 
 
 <p>A modular building should be designed, which is able to be easily moved even when assembled, changed to add windows or other sections of the building and similar parts, and waterproof.</p>
-<h3>Information Technology</h3>
+<h3>Computing</h3>
 <h4>Hardware</h4>
 <h4>Ember Information Technology Environment</h4>
 <h5>Information Technology Software Environment: Introduction and overview</h5>
@@ -1594,28 +1591,46 @@ The extensive focus on the information technology aspects in the proposal is lar
 
 
 <h6>Overview</h6>
-    <p>StageL is a simple programming language for easily writing portable algorithms to be transpiled to and used by programs in other languages. It is the language used for, and was developed to be used for, the primary implementation of the <a href="http://futuramerlin.com/index.ftm">[http://futuramerlin.com/index.ftm]: Ember information technology environment</a> (EITE), and thus of the Dc-based document format used by EITE. The name "StageL" comes from calling it a "staging language" (which refers to its being a tool for developing the main EITE software, which should provide a more complete language).<!-- Also, "StageL" sounds catchy, and should be relatively easy to search for. It does seem reminiscent of "stage left" in theater, but that doesn't really have anything to do with it. --> This project was inspired by the ugly code that resulted when I tried to write using these principles directly in JavaScript, needing a lot of easy-to-mess-up boilerplate code and awkward notation (largely because it is not strongly typed).</p>
+    <p>StageL is a simple programming language for easily writing portable algorithms to be transpiled to and used by programs in other languages. It is the language used for, and was developed to be used for, the primary implementation of the <a href="http://futuramerlin.com/index.ftm">[http://futuramerlin.com/index.ftm]: Ember information technology environment</a> (EITE), and thus of the Dc-based document format used by EITE. The name "StageL" comes from calling it a "staging language" (which refers to its being a tool for developing the main EITE software, which should provide a more complete language).<!-- Also, "StageL" sounds catchy, and should be relatively unique. It does seem reminiscent of "stage left" in theater, but that doesn't really have anything to do with it. Although I later punned on that by calling the code written in it "StageR". --> This project was inspired by the ugly code that resulted when I tried to write using these principles directly in JavaScript, needing a lot of easy-to-mess-up boilerplate code and awkward notation (largely because it is not strongly typed).</p>
 <h6>Design goals</h6>
     <ul>
         <li>Imperative language. Trivial to implement, learn, and read; extremely portable.</li>
-        <li>Provide function calls, arrays, strings, numbers, booleans, and operators for these types with strict typing. Objects and first-class functions are out of scope for this language. (It's closer to duck-typed in practice, as e.g. in Bash there would be no distinction between string 0 and number 0.)</li>
+        <li>Provide uint8 values, uint8 arrays, and basic operations for creating and altering them (as a set of routines implemented in the target language; a "StageL core") as the base types? That would allow it to be used kind of like memory/pointers</li>
+        <li>Type system: define types as grammar of uint8 (o=uint8: octet). :letters: indicates a reference to another type. Standard escaping: replace / with /s (for slash) and ~ with /t (for tilde). Serialization: (type name as string)/:d:7e+ with the data scaped using the standard escaping.
+        <pre><code>
+            b: 30|31 # boolean
+            ab: :b:+ # array of bools
+            d: :o:+ # data (array of bytes) (+ = multiple items)
+            ad: :d:7e+ # data escaped using standard escaping
+            n: oooooooo # 64-bit signed int
+            an: :n:+ # array of numbers
+            s: 20|22|25|28|29|2c|2d|2e|2f|30|31|32|33|34|35|36|37|38|39|3a|3b|3c|3d|3e|3f|41|42|43|44|45|46|47|48|49|4a|4b|4c|4d|4e|4f|50|51|52|53|54|55|56|57|58|59|5a|61|62|63|64|65|66|67|68|69|6a|6b|6c|6d|6e|6f|70|71|72|73|74|75|76|77|78|79|7a+ # string
+            as: :s:7e+ # array of strings
+            kvp: :s:7e:d: # key-value pair
+            kv: :kvp:7e+ # key-value pairs: kvp escaped using standard escaping
+            tr: :kv:7e+ # table row: kv escaped using standard escaping
+            t: :tr:7e+ # table: tr escaped using standard escaping
+        </code></pre></li>
+        <li>Provide routine calls, and provide strings (albeit simple; see below; [TODO: perhaps should transpile to array functions operating on uint8?]), numbers (signed int32), numbers (unsigned int8), booleans, and arrays of these four types as primary types with easy to use syntax produced by the transpiler for these types with strict type checking. Objects and first-class functions are out of scope for this language. (this is the main syntax used by existing StageL code as of 2020m1d8) [TODO: Implement a table of values and scopes that gets filled in and managed at runtime by the debug routine calls, and track their types for optional strict type checking. Provide a means of additional type annotations for compound types (e.g. tables, lists, or key-value pairs), and for types that are optional to implement natively and will be emulated otherwise (i.e. anything other than strings, int32, or booleans: all types and operators available in WebAssembly should be available), and strictly check these annotations.] (It's currently closer to duck-typed in practice, as e.g. in Bash there would be no distinction between string 0 and number 0.)</li>
         <li>Implemented as a transpiler that accepts a file as input and produces a file in the target language as output.</li>
-        <li>Have an implementation of itself using itself, to provide testing and portability of the language.</li>
-        <li>Have an implementation in Bash.</li>
-        <li>Should transpile to (eventually) JavaScript, C, Java, Bash, PHP, Microsoft CIL, Lisp, x86 assembly, and Python, at least, in roughly that order of priority. (JavaScript has been completed for work on the main EITE software; C and Java should follow soon thereafter for their portability; the other languages are nice to have to cover a diverse range of development environments, and additionally, in the case of CIL/x86 assembly/Lisp, of providing interesting challenges in ensuring that the language really is easily portable due to their difference from the others.)</li>
-        <li>Focus on simplicity and portability: it should purely be an algorithm representation format, without input/output capabilities. It is for implementing the algorithms of a program once, and having it be available in various languages. Things such as input/output and native calls should be provided as an API specification for the StageL source file: at the top of the file, it should declare all the implementation-dependent functions that it requires; these would then be provided separately by the programmer and/or by a set of functions provided with StageL for each target language. (This was loosened in practice and a standard library with some basic I/O is required.)</li>
-        <li>All input/output to/from the language is as functions. All code must be in a function, with declared parameters, parameter types, variables needed, and return type. (The expense of the simple type system is that changing return values would break functions' API, since "out" parameters and/or pointers would not be available, but this should allow the code to be simple and readable, which is a priority for this language.)</li>
+        <li>Should be self-hosted, bootstrapped using Bash and perhaps other languages. Bootstrap implementation doesn't need to be fancy, just enough to get the actual implementation to build itself.</li>
+        <li>Should transpile to (eventually) JavaScript, C, Java, Bash, PHP, Microsoft CIL, Lisp, x86 assembly, and Python, at least, in roughly that order of priority. (JavaScript has been completed from the bootstrap transpiler for work on the main EITE software and Bash is done but untested; C and Java should follow soon thereafter for their portability; the other languages are nice to have to cover a diverse range of development environments, and additionally, in the case of CIL/x86 assembly/Lisp, of providing interesting challenges in ensuring that the language really is easily portable due to their difference from the others.)</li>
+        <li>Focus on simplicity and portability: it should purely be an algorithm representation format, without input/output capabilities. It is for implementing the algorithms of a program once, and having it be available in various languages. Things such as input/output and native calls should be implemented in the EITE NDW instead, which will call in to the StageL code, passing any input values, and StageL would return a standard response value format. Response format from NDW should be a uint8array with an an extensible, clear structure within it (à la JSON). Calls from the language itself using StageL as a library would use whatever the native formats were.</li>
+        <li>All input/output to/from the language is as routines. All code must be in a routine, with declared parameters, parameter types, variables needed [TODO: Should variable declarations all be at the top of a routine?], and return type. (The expense of the simple type system is that changing return values would break routines' API, since "out" parameters and/or pointers would not be available, but this should allow the code to be simple and readable, which is a priority for this language.)</li>
+        <li>Transpile-time validation: all types, return types, and argument uses and parameter types correct; no chance of exiting routine without returning; variables all declared before use</li>
+        <li>Things like debugging and type-checking routines should be interpolated into the command stream as a step after parsing and before codegen, to avoid needing to reimplement them by hand in the target languages: they should be normal StageL code. Same goes for "until" and "unless" keywords.</li>
         <li>Output files should retain the structure and comments of the input files, thereby retaining readability as far as the target language permits.</li>
         <li>All behavior should be specified. Ambiguous programs should be impossible to write knowing the specification, and (as far as possible) the meaning of a program should be obvious and unambiguous <em>without</em> the language specification. Programs that do not match the specification exactly should be entirely rejected, rather than produce warnings or having a best guess of its meaning made.</li>
+        <li>To do: Proper type tracking. Escapeable newlines? UInt8 literals as strings+escaped characters. Get rid of generic types. Routine documentation format: first comment documents the routine. Parameters come first, with a comment for each parameter, in order. Let statements should go at top of routine, and all have a comment at the end of their line. Return statement should have comment before it describing it. Should any or all of these be required?<code>r/s/helloWorld s/parameter1 s/parameter2\ # Returns "Hello, World!".\ # The first parameter.\ # The second parameter.\ new s/res # The string to return.\ set s/res s/parameter1\ set s/res "Hello, World!"\ # The string "Hello, World!" that has been prepared\ return s/res</code></li>
     </ul>
 <h6>Actual results of the design goals</h6>
-    <p>It works satisfactorily. It's pretty portable, I think. Things aren't fully specified because it transpiles to native constructs that behave differently between target languages. This could be resolved by implementing a virtual machine or similar in each target language, but that's a pain, so this is good enough for what this is for. Low-level facilities aren't really available yet. I guess they can be added as additional builtin routines. One option might be implementing a WebAssembly VM or something that is available implemented purely in StageL, but can be accessed natively if available to be faster.</p>
+    <p>It works satisfactorily. It's pretty portable, I think. Things aren't fully specified because it transpiles to native constructs that behave differently between target languages. This could be resolved by implementing a virtual machine or similar in each target language, but that's a pain, so this is good enough for what this is for. Low-level facilities aren't really available yet. I guess they can be added as additional builtin routines. One option might be implementing a WebAssembly VM or something that is available implemented purely in StageL, but can be accessed natively if available to be faster. How to bootstrap that? Maybe implement an X86 virtual machine in StageL, which would run the Guix bootstrap seed to build a WASM toolchain, which would in turn bootstrap Guix again to get out of the StageL virtual machine to pure WASM?</p>
 <h6>Syntax</h6>
     <p>Lines are separated by 0x0A. Each line consists of printable ASCII text: a–z, 0–9, apostrophe, slash, spaces, &lt;, &gt;, [, ], (, ), {, and }, and any other printable ASCII characters in string literals or comments (apostrophe is not yet available in string literals). Within a line is a sequence of space-delimited words. Semantic levels are denoted by four spaces' indentation. The first word in a line is a command. Comments (started with #) and string literals can contain any printable ASCII (although string literals can't contain ' because it's used to indicate them; this could probably be fixed easily enough at some point (TODO)). Identifiers can contain ASCII text a-z A-Z and 0-9 (but 0-9 may not be the first character, and code that relies on case sensitivity or insensitivity by having ident references differ only in case or having two idents that differ only in case is a (possibly un-notified-about) error (these are not technical restrictions; they're just required in the interest of portability)).</p>
     <p>There are a number of built-in commands in the core language, which is in core.js or whatever your output language is. There are also commands from the standard library, which is in portable.js.</p>
     <h7>Gotchas</h7>
     <ul>
-        <li>Whitespace is (usually) significant. There isn't a 1:1 correspondence between valid source files and the parsed code, though, I don't think. Indentation must be with 4 spaces.</li>
+        <li>Whitespace is (usually) significant. There isn't a 1:1 correspondence between valid source files and the parsed code, though, I don't think. Indentation must be with 4 spaces per level.</li>
         <li>Unexpected byte values in code files aren't allowed and should cause the parser to die; strings or comments containing byte values other than printable ASCII are an error.</li>
         <li>The value of a variable before it has been set in a given block is undefined; don't access it until it has been set (and don't rely on variable hoisting). That's an error, but there isn't anything in place to detect it.</li>
         <li>Argument lists can contain references to any type.</li>
@@ -1677,7 +1692,7 @@ r/s/fizzBuzz # A string is an array of ASCII printable characters.
         <dt>new</dt><dd>new ident</dd>
         <dt>set</dt><dd>set ident value</dd>
         <dt>}</dt><dd>End parameter list without new line</dd>
-        <dt>{</dt><dd>Loop over an array. How it's used: <pre><code>new as/temp
+        <dt>{</dt><dd>Loop over an array. FIXME: does this work when nested? (are the generated variable names duplicated?) How it's used: <pre><code>new as/temp
 set as/temp [ 'd' 'b' 'l' 'c' 'b' 'a' ]
 new n/c
 as/temp { n/i s/elem
@@ -1698,7 +1713,7 @@ while lt n/i count as/temp
     <p>Values are available until the end of the block they are in. Whether they propagate outside of the block is undefined. Accessing them outside the block, or before the line they are defined, is an error, but there isn't anything in place to detect it. Use routine return values to move things around.</p>
 
 <h6>Errors</h6>
-    <p>When an error is encountered, it will produce a message somehow. Execution of the program may stop. Otherwise, behavior is undefined. For instance, in JavaScript in browser it will send a console log message. In bash, it will call "die" from ember-shared.</p>
+    <p>When an error is encountered, it will produce a message somehow. Execution of the program may stop. Otherwise, behavior is undefined. For instance, in JavaScript in browser it will send a console log message. In bash, it will call "die" from ember-shared. FIXME: Can error conditions be eliminated at transpile-time by proving what the code does?</p>
 
 <h6>Types and basic commands for them</h6>
     <p>Routines that have type "v" are void. These are all the primitive commands that are implemented natively for each language. Other commands are included in StageR library of useful commands. Type "g" is generic, can only be used as a parameter for a routine. It indicates it can be either string, int, or bool. Type "ga", can also only be used as a parameter, is a generic array, which is either an array of ints, an array of strings, or an array of bools (an array can't contain a mixture), and all arrays passed to a routine that accepts generic-array parameters must be the same type (e.g. all int arrays). Type "gi" (generic item(s)) is like "ga" but can also be a single bool, int, or string.</p>
@@ -1709,7 +1724,9 @@ while lt n/i count as/temp
             <dt>r/b/or n/a n/b</dt><dd>Returns bool a or b</dd>
             <dt>r/b/not n/a n/b</dt><dd>Returns bool a not b</dd>
         </dl>
-    <h7>n: Numbers (integer only)</h7>
+    <h7>o: Numbers (uint8)</h7>
+        <p>o for octet, since b was taken for boolean so can't be used for byte. Work like int32.</p>
+    <h7>n: Numbers (int32)</h7>
         <p>Can be 0, or positive integer. Can not be undefined (initialized to 0). Currently is restricted to 32-bit signed (-2,147,483,648 to 2,147,483,647), but may be increased if more are needed.</p>
         <dl>
             <dt>r/n/add b/a b/b</dt><dd>Returns the sum of two numbers a and b</dd>
@@ -1717,7 +1734,7 @@ while lt n/i count as/temp
             <dt>r/n/mod b/a b/b</dt><dd>Returns the modulo of two numbers a and b</dd>
         </dl>
     <h7>s: Strings</h7>
-        <p>A sequence of characters: can be ASCII printable characters or space. No newlines or control characters, I guess. The string support isn't supposed to be very capable, just easy to implement lowest-common-denominator between target languages for making labels for stuff and whatever. For actual data, use arrays of integers.</p>
+        <p>A sequence of characters: can be ASCII printable characters or space. No newlines or control characters, I guess. The string support isn't supposed to be very capable, just easy to implement lowest-common-denominator between target languages for making convenient labels and such. For actual data, use arrays of integers.</p>
         <dl>
             <dt>r/s/substring s/input n/start n/end</dt><dd>Give the characters from start to end (indices as bytes (characters — no Unicode support here, sorry) into input)</dd>
             <dt>r/s/cat s/a s/b</dt><dd>Concatenates a and b</dd>
@@ -1727,7 +1744,7 @@ while lt n/i count as/temp
         <p>These operate on str/int/bool.</p>
         <dt>r/s/strFrom g/input</dt><dd>Give string with contents.</dd>
     <h7>Array utility routines</h7>
-        <p>A set of routines for managing arrays apply to any of the three array types (except the typed subset ones). Note that the push/append/prepend functions may not check that the type of the item being added to the array matches the array type; calling it with mismatched parameters is an error but may not be reported.
+        <p>A set of routines for managing arrays apply to any of the three array types (except the typed subset ones). Note that the push/append/prepend routines may not check that the type of the item being added to the array matches the array type; calling it with mismatched parameters is an error but may not be reported.
         <dl>
             <dt>r/a/copy gi/a gi/b</dt><dd>Set a to have the contents of b.</dd>
             <dt>r/a/push ga/array gi/value</dt><dd>Append the value to array. Same as r/an/append</dd>
@@ -1772,16 +1789,25 @@ while lt n/i count as/temp
 <thead><tr><th>Component</th><th>Implementation language</th><th>Description</th><th>Code location</th></tr></thead>
 <tbody>
     <tr><td><a href="http://futuramerlin.com/stagel.htm">[http://futuramerlin.com/stagel.htm]: StageL</a> transpiler</td><td>bash</td><td>Translate .stagel files to other languages</td><td>cli/stagel-convert</td></tr>
-    <tr><td>StageL's language-specific implementations</td><td>Implemented once for each StageL target language</td><td>Implementations of routines for StageL that are not implemented in StageL itself, but are instead implemented in its target languages.</td><td>implementation/core-implementations/</td></tr>
-    <tr><td>Portable implementation</td><td>StageL</td><td>This is the software that parses and runs documents stored in the EITE document format. It comprises a set of routines implementing the EITE document format. This is a batch of StageL-native routines that are available to the programs implemented in StageL (which are, collectively, this portable implementation).</td><td>implementation/portable/</td></tr>
-    <tr><td>Optional speedup code</td><td>Optionally implemented for each StageL target language</td><td>Functions can be provided here that are optimized, native implementations of existing StageR functions. Since StageR is unoptimized lowest-common-denominator code to keep things simple, this can help things run faster. These should only be <em>equivalent</em> to already existing StageR functions, and should not provide extra features, approximate implementations (<em>e.g.</em> if floats were supported, don't provide a fast inverse square root implementation here that produces different results than the one it's overriding), entirely new code, or (usually) functions that duplicate existing StageL core-implementation code (instead, optimize those, unless it makes them really unwieldy). If a language implementation includes these, it should be tested sometimes without them to make sure they aren't inadvertently required.</td><td>implementation/speedups/</td></tr>
-    <tr><td>Data files</td><td>N/A</td><td>Data files used to implement EITE.</td><td>implementation/portable/</td></tr>
+
+    <tr><td>StageL's language-specific implementations</td><td>Implemented once for each StageL target language</td><td>Implementations of routines for StageL that are not implemented in StageL itself, but are instead implemented in its target languages.</td><td>implementation/stagel-cores/</td></tr>
+
+    <tr><td>Portable deterministic implementation (StageR)</td><td>StageL</td><td>This is the software that parses and runs documents stored in the EITE document format. It comprises a set of routines implementing the EITE document format. This is a batch of StageL-native routines that are available to the programs implemented in StageL (which are, collectively, this portable implementation). Should be self-contained, aside from references to the StageL language-specific implementations, and deterministic given its inputs (thus isolated from the outside world except for what is passed in to it).</td><td>implementation/portable/</td></tr>
+
+    <tr><td>Optional speedup code</td><td>Optionally implemented for each StageL target language</td><td>Functions can be provided here that are optimized, native implementations of existing StageR functions. Since StageR is unoptimized lowest-common-denominator code to keep things simple, this can help things run faster. These should only be <em>equivalent</em> to already existing StageR functions, and should not provide extra features, approximate implementations (<em>e.g.</em> if floats were supported, don't provide a fast inverse square root implementation here that produces different results than the one it's overriding), or entirely new code<!--, or (usually) functions that duplicate existing StageL core-implementation code (instead, optimize those, unless it makes them really unwieldy)-->. If a language implementation includes these, it should be tested sometimes without them to make sure they aren't inadvertently required.</td><td>implementation/speedups/</td></tr>
+
+    <tr><td>Data files</td><td>N/A</td><td>Data files used to implement EITE. These should all be only accessed and available via the NDW Storage API in a location dedicated to them.</td><td>data/</td></tr>
     <tr><td>Build scripts</td><td>bash (dep. on StageL transpiler)</td><td>Build EITE (usually invoked by "<code>make</code>"): builds StageL libraries (StageR at implementation/portable/portable.js, and StageL's language-specific native implementations of things at implementation/core-implementations/(lang)/core.(lang)) in various languages. Also combines and copies the finished JavaScript code into web/eite.js.</td><td>support/build-scripts/</td></tr>
+
+    <tr><td>EITE non-deterministic wrapper (NDW)</td><td>Various (one for each implementation)</td><td>Thin (or at least, as thin as it can be given what it has to do) wrapper that implements the public APIs for interacting with StageR in a way that can provide time-based computation, I/O, networking, semi-persistent memory access for sequences of StageR calls, local disk storage, or other things that are not purely deterministic or require persistence over time. Implementation logic should be eschewed in this, in favor of keeping it in StageR, thus reducing portability burden (<em>e.g.</em> this should not include an implementation of the node storage API; rather, a local storage API and a networking API should both be used to provide StageR with the ability to work with node storage).</td><td>implementation/ndw/</tr>
+
     <tr><td>EITE document testing quick-runner</td><td>For now, bash, I guess? Or maybe js and run it in node to avoid having to add new StageL target language (dep. on EITE document format implementation)</td><td>Thin wrapper around the EITE document format implementation that gets the output of a document in its state after it's finished loading, for automated testing (would ignore things that are <em>e.g.</em> interactive or whatever).</td><td>(TODO)</td></tr>
     <tr><td>EITE document format tests</td><td>StageL</td><td>Test suite for EITE implementation.</td><td>web/tests.htm</td></tr>
+
     <tr><td>EITE document runner</td><td>Various platforms possible. For now, HTML+JS. (dep. on EITE document format implementation)</td><td>Thin wrapper around the EITE document format implementation that runs and displays a specified document.</td><td>(TODO)</td></tr>
     <tr><td>EITE non-native document editing tool</td><td>HTML, JavaScript (dep. on EITE document runner)</td><td>Tool for editing and running EITE-format documents before an EITE-native editing tool is available.</td><td>web/edit.htm (WIP)</td></tr>
-    <tr><td>EITE-native user interface and platform, including document editing tool, and optional servers for search, ad-hoc networking, encryption keys, and node data storage and synchronization (optionally, able to be a master server, storing all nodes in the network).</td><td>EITE</td><td>A user interface and document editing tool. This is what's shown in the mockups <em>e.g.</em> <a href="http://futuramerlin.com/people/elli/writings/blogs/ellichandlernmd442/2017/12/06/12799819e/">[http://futuramerlin.com/people/elli/writings/blogs/ellichandlernmd442/2017/12/06/12799819e/]: here</a>. It would be used by running it using the EITE document format implementation. Thus, it could be used as the main interface to a computer, by booting directly into it. (I probably won't get it running outside of a Web browser this semester, as that's not a big priority for me right now, and it almost certainly won't be nearly as useful as mainstream operating systems or Web desktops, but I think that such capabilities would ultimately be ideal.)</td><td>web/main.htm (WIP)</td></tr>
+
+    <tr><td>EITE-native user interface and platform, including document editing tool, and optional servers for search, ad-hoc networking, encryption keys, and node data storage and synchronization (optionally, able to be a master server, storing all nodes in the network).</td><td>EITE</td><td>A user interface and document editing tool. This is what's shown in the mockups <em>e.g.</em> <a href="http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/">[http://futuramerlin.com/people/elli/writings/blogs/elliotchandlernmd442/2017/12/06/12799819e/]: here</a>. It would be used by running it using the EITE document format implementation. Thus, it could be used as the main interface to a computer, by booting directly into it. (I probably won't get it running outside of a Web browser this semester, as that's not a big priority for me right now, and it almost certainly won't be nearly as useful as mainstream operating systems or Web desktops, but I think that such capabilities would ultimately be ideal.)</td><td>web/main.htm (WIP)</td></tr>
 </tbody>
 </table>
 
@@ -1789,25 +1815,21 @@ while lt n/i count as/temp
 
 
 <h6>Purpose of this document</h6>
-    <p>The EITE specification indicates the various interfaces that an EITE implementation provides: APIs and tools for humans. The specific manner of implementation of these is not described here. (Partial implementations could be possible that, for instance, only provide importing and exporting (without running) documents, or that omit some supported formats, or that do not provide the tools.) The main EITE implementation software attempts to be a full implementation of this specification.</p>
+    <p>The DDC specification indicates the various interfaces that a DDC implementation provides: APIs and tools for humans. The specific manner of implementation of these is not described here. (Partial implementations could be possible that, for instance, only provide importing and exporting (without running) documents, or that omit some supported formats, or that do not provide the tools.) The main DDC implementation software attempts to be a full implementation of this specification.</p>
     <p>This is a work in progress and will likely change as it is developed.</p>
 
-<h6>EITE tools</h6>
-    <p>The following natively implemented tools should be available in a full implementation: <a href="http://futuramerlin.com/tool-testrunner.htm">[http://futuramerlin.com/tool-testrunner.htm]: test runner</a>, <a href="http://futuramerlin.com/tool-docrunner.htm">[http://futuramerlin.com/tool-docrunner.htm]: document runner</a>, <a href="http://futuramerlin.com/tool-implrunner.htm">[http://futuramerlin.com/tool-implrunner.htm]: main EITE implementation runner</a>, and <a href="http://futuramerlin.com/tool-edit.htm">[http://futuramerlin.com/tool-edit.htm]: simple document edit tool</a>. They are not EITE documents; rather they are implemented for each platform, so they can be used in the course of developing and testing the EITE implementation. The also serve to some extent as sanity checks for the API functionality for a new implementation, as they would not work without the APIs available.</p>
+<h6>DDC tools</h6>
+    <p>The following natively implemented tools should be available in a full implementation: <a href="http://futuramerlin.com/tool-testrunner.htm">[http://futuramerlin.com/tool-testrunner.htm]: test runner</a>, <a href="http://futuramerlin.com/tool-docrunner.htm">[http://futuramerlin.com/tool-docrunner.htm]: document runner</a>, <a href="http://futuramerlin.com/tool-implrunner.htm">[http://futuramerlin.com/tool-implrunner.htm]: main DDC implementation runner</a>, and <a href="http://futuramerlin.com/tool-edit.htm">[http://futuramerlin.com/tool-edit.htm]: simple document edit tool</a>. They are not DDC documents; rather they are implemented for each platform, so they can be used in the course of developing and testing the DDC implementation. The also serve to some extent as sanity checks for the API functionality for a new implementation, as they would not work without the APIs available.</p>
 
-<h6>EITE implementation public APIs</h6>
+<h6>DDC implementation public APIs</h6>
     <p>These APIs are implemented in public-interface.stagel.</p>
     <table>
     <thead>
     <tr><th>Routine name</th><th>Description</th></tr>
     </thead>
     <tbody>
-    <tr><td>r/v/startEite</td><td>Start EITE, using the default startup document. Does not return while EITE is still running.</td></tr>
-    <tr><td>r/v/loadAndRun s/format s/path</td><td>Load and run the specified document. Does not return while the document is still running.</td></tr>
     <tr><td>r/an/loadAndConvert s/inputFormat s/outputFormat s/path</td><td>Load the specified document, and return it converted to the specified outputFormat as an array of bytes.</td></tr>
-    <tr><td>r/v/runDocument an/contents</td><td>Run the provided document. Does not return while the document is still running. Takes care of events and I/O automatically.</td></tr>
     <tr><td>r/n/runDocumentPrepare an/contents</td><td>Prepare to run the provided document. Use this followed by runDocumentGo if you want to configure execution settings before starting the document.</td></tr>
-    <tr><td>r/v/runDocumentGo n/execId</td><td>Run a document, once it's been prepared to run by calling runDocumentPrepare.</td></tr>
     <tr><td>r/s/getExecOption n/execId s/key</td><td>Get the value of an execution option for a document.</td></tr>
     <tr><td>r/as/getExecOptions n/execId</td><td>Get the execution options set for a document.</td></tr>
     <tr><td>r/v/setExecOption n/execId s/key s/value</td><td>Set an execution option for a document.</td></tr>
@@ -1825,27 +1847,33 @@ while lt n/i count as/temp
     <tr><td>r/v/setFormatImportSettings s/format as/settings</td><td>Replace the import settings array for the specified format.</td></tr>
     <tr><td>r/v/setFormatExportSettings s/format as/settings</td><td>Replace the export settings array for the specified format.</td></tr>
     <tr><td>r/an/transformDocument an/inputDocument s/transformation</td><td>Apply one of the supported document transformations to the provided document, and return the result.</td></tr>
-    <tr><td>r/an/loadStoredDocument s/format s/path</td><td>Load and return the specified document as a Dc array.</td></tr>
-    <tr><td>r/as/getDesiredEventNotifications n/execId</td><td>Return list of event types (e.g. keystrokes, mouse movement, elapsed time) that the document wants to be notified of.</td></tr>
+    <tr><td>r/as/getDesiredEventNotifications n/execId</td><td>Return list of event types (e.g. keystrokes, network response, storage request response, mouse movement, elapsed time) that the document wants to be notified of.</td></tr>
     <tr><td>r/an/sendEvent n/execId an/eventData</td><td>Send the provided event or events data to the specified document.</td></tr>
     <tr><td>r/an/getDocumentFrame n/execId s/format</td><td>Return the most recently available output for the given document in the requested format.</td></tr>
+    <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
+    <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
+    <tr><td>r/v/startEite</td><td>Start DDC, using the default startup document. Does not return while DDC is still running.</td></tr>
+    <tr><td>r/v/loadAndRun s/format s/path</td><td>Load and run the specified document. Does not return while the document is still running.</td></tr>
+    <tr><td>r/v/runDocument an/contents</td><td>Run the provided document. Does not return while the document is still running.</td></tr>
+    <tr><td>r/v/runDocumentGo n/execId</td><td>Run a document, once it's been prepared to run by calling runDocumentPrepare. This is the main document execution loop. Takes care of events and I/O automatically, by using the other NDW APIs in conjunction with StageR.</td></tr>
+    <tr><td>r/an/loadStoredDocument s/format s/path</td><td>Load and return the specified document as a Dc array.</td></tr>
     <tr><td>r/b/runTests</td><td>Returns true if all tests pass; false otherwise. Displays a report of the tests.</td></tr>
     <tr><td>r/b/quietRunTests</td><td>Returns true if all tests pass; false otherwise.</td></tr>
     </tbody>
     </table>
 
 <h6>Command-line interface (mostly unimplemented)</h6>
-    <p>The EITE should provide the following user-facing command-line scripts.</p>
+    <p>The DDC should provide the following user-facing command-line scripts, or whatever the usual interface for a routine is in the given context (such as functions in a C library).</p>
     <dl>
-        <dt><code>eite</code></dt><dd>This is the main interface for EITE. Synopsis: <code>eite [check|run|run-tests|source-to-tree|tree-to-source] (&lt;path-to-document&gt;|-)</code></dd>
+        <dt><code>ddc</code></dt><dd>This is the main interface for DDC. Synopsis: <code>ddc [check|run|run-tests|source-to-tree|tree-to-source] (&lt;path-to-document&gt;|-)</code></dd>
     </dl>
-    <p>The EITE provides the following additional command-line scripts that it uses internally.</p>
+    <p>The DDC provides the following additional command-line scripts that it uses internally.</p>
     <dl>
-        <dt><code>eite-check</code></dt><dd>Return false if the specified source document cannot be parsed. Synopsis: <code>eite-check (&lt;path-to-document&gt;|-)</code></dd>
-        <dt><code>eite-run</code></dt><dd>Run the specified document. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
-        <dt><code>eite-run-tests</code></dt><dd>Run test suite. Synopsis: <code>eite-run-tests</code></dd>
-        <dt><code>eite-source-to-tree</code></dt><dd>Given a source file, print out an AST representation of the document. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
-        <dt><code>eite-tree-to-source</code></dt><dd>Given an AST representation of a document, print out the source file for it. Synopsis: <code>eite-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+        <dt><code>ddc-check</code></dt><dd>Return false if the specified source document cannot be parsed. Synopsis: <code>ddc-check (&lt;path-to-document&gt;|-)</code></dd>
+        <dt><code>ddc-run</code></dt><dd>Run the specified document. Synopsis: <code>ddc-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+        <dt><code>ddc-run-tests</code></dt><dd>Run test suite. Synopsis: <code>ddc-run-tests</code></dd>
+        <dt><code>ddc-source-to-tree</code></dt><dd>Given a source file, print out an AST representation of the document. Synopsis: <code>ddc-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
+        <dt><code>ddc-tree-to-source</code></dt><dd>Given an AST representation of a document, print out the source file for it. Synopsis: <code>ddc-run (&lt;path-to-document&gt;|-) [--graphical]</code></dd>
     </dl>
 
 <h6>Formats</h6>
@@ -1857,6 +1885,37 @@ while lt n/i count as/temp
 <h6>Exec options</h6>
     <p>The document exec options are: (TODO)</p>
 
+<h6>DDC NDW APIs</h6>
+    <p>Storage path layout (read-only unless noted):</p>
+    <dl>
+        <dt>ddc/1/config/ddc.conf</dt><dd>NDW system-specific configuration overrides: I/O settings; mode type to run in; resource limits; etc.</dd>
+        <dt>ddc/1/data/</dt><dd>Data files provided with DDC. Should be deterministic within a DDC version.</dd>
+        <dt>ddc/1/var/</dt><dd>Data files to be managed persistently by DDC. Writeable.</dd>
+        <dt>ddc/1/tmp/</dt><dd>Memory for current DDC run (if discarded, can be reconstructed by replaying the run so far). Writeable.</dd>
+    </dl>
+
+    <table>
+    <thead>
+    <tr><th>Routine name</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+
+    <tr><td colspan="2">Document routines</td></tr>
+    <tr><td>r/n/ndw</td><td>Start the DDC main loop, which is implemented as a set of routines provided by StageR.</td></tr>
+
+    <tr><td colspan="2">Networking</td></tr>
+    <tr><td>r/an/networkAuth s/remoteInstance s/publicKey s/secretKey</td><td>Get a session key from the specified remote instance.</td></tr>
+    <tr><td>r/as/networkGetStatus s/remoteInstance s/sessionKey s/requestPath</td><td>Get the key-value results indicating the status of the specified remote resource (availability; authorization).</td></tr>
+    <tr><td>r/as/networkListRemotes</td><td>List the available remote instances.</td></tr>
+    <tr><td>r/an/networkRequest s/remoteInstance s/sessionKey s/requestPath</td><td>Request the specified path from the specified remote instance.</td></tr>
+
+    <tr><td colspan="2">Storage</td></tr>
+    <tr><td>r/an/storageGet s/path</td><td>Get the contents of StageR's persistent storage at the specified path.</td></tr>
+    <tr><td>r/as/storageList s/path</td><td>List the contents of StageR's persistent storage at the specified directory.</td></tr>
+    <tr><td>r/v/storagePut s/path an/data</td><td>Set the contents of StageR's persistent storage at the specified path.</td></tr>
+
+    </tbody>
+    </table>
 
 <h6>EITE Tool Documentation: Document Runner</h6>
 
@@ -1869,7 +1928,7 @@ while lt n/i count as/temp
 <h7>Edit tool introduction</h7>
     <p>The edit tool is one of the native tools included in a full EITE implementation. It allows importing and exporting documents using the EITE library, running documents, and editing documents as dcBasenb (extended Unicode), ELS (not yet implemented), or a whitespace-separated series of integers.</p>
     <p>Here is a screenshot of the edit tool for the Web implementation (found in web/edit.htm in the EITE installation root):
-        <img src="assets/4c068196bd4dfe55af2f3e0e5eb16ac94bb1537da77decdb3bba6646329b3781cb4f959c67a58dc0251d9ae94e1337b5f00c21c3534dee9628771ab244e9de38.png" alt="Screenshot of edit tool" />
+        <img src="assets/bbd884742cf3d0c89c3858e2ebed4317343dfbdec335bab30667576d7164862a54843fcdeeb0e599c81a8d6daf04931126ecb8598d6fbbb3e8b06587ab1989e6.png" alt="Screenshot of edit tool" />
     </p>
 
 <h7>Edit tool interface</h7>
@@ -1881,7 +1940,7 @@ while lt n/i count as/temp
 <h7>EITE implementation runner operation</h7>
     <p>The EITE implementation runner is one of the native tools included in a full EITE implementation. Its purpose is to host and run an instance of the EITE implementation document (eite.sems), by providing the necessary execution environment and running the startEite routine. It does not need to provide any user interface beyond that provided by the eite.sems document.</p>
     <p>Here is a screenshot of a very rough mockup of what this might look like:
-        <img src="assets/63e3dacbefcbf27eb0b2df0613e1e769876b7b8272c64213125b8c9ba38d2ba77d903d1e584c825c990eb6600a37fd80f839a3462387439319abe40565270f6f.png" alt="Screenshot of EITE implementation runner mockup" />
+        <img src="assets/4277e54c3924be19e7f9e98a75b9f666d5a40e15a324edf1241c611406c8d9d5c6387f2031cc4b4d2e7bc10adbd0817ece7b34d771072efbe46762560bbbcf94.png" alt="Screenshot of EITE implementation runner mockup" />
     </p>
 <h6>EITE Tool Documentation: Test Runner</h6>
 
@@ -1889,7 +1948,7 @@ while lt n/i count as/temp
 <h7>Test runner operation</h7>
     <p>The test runner is one of the native tools included in a full EITE implementation. Its purpose is to load an instance of the EITE library, and run the unit tests included in the StageL build for the platform by running the "runTests" routine, displaying the outputs. It runs automatically, without the need for human intervention once it has been started. To do this, it needs to provide an output context that the runTests routine can use for displaying the test results.</p>
     <p>Here is a screenshot of the test runner for the Web implementation (found in web/tests.htm in the EITE installation root) while running the test suite:
-        <img src="assets/0b63149bc8a9c5bdb2e90c9aeae6be4ee706ccb57c23b5e94d4973cb1a6d2dbfbd16ded7eae5b24ae50970c7f4de99594e4b3209e362e17318845aaeedc38f6e.png" alt="Screenshot of test runner" />
+        <img src="assets/c66e2bd440129e928a1da5469dd3238e43957e10080ec87b4ec179746d4706aecf200a17ec1aee99fcaa44669af2641e44ce1bb40a30b67f854effb64c009989.png" alt="Screenshot of test runner" />
     </p>
 <h5>Information Technology Software Environment: Native document format</h5>
 
@@ -2154,25 +2213,23 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 
 <ul>
     <li>Getting a summary of everything going on (start / home screen kind of thing): Customizable. For example, could contain:
-        <ul>
-            <li>A brief reminder of who/where/when/etc. I am</li>
-            <li>What I have to do today (schedule, tasks, etc.)</li>
-            <li>Important news (<em>e.g.</em> emergencies, etc.)</li>
-            <li>A search box</li>
-            <li>A way to easily create a journal entry, blog/microblog post, social networking status update, etc.</li>
-            <li>A way to easily add an event to my schedule or a task to my to-do list or a note to myself (Stickies style) or a more thorough journal-y note to myself (à la this note on apps and features) (this could even include jotting down / recording / playing in musical ideas, etc.)</li>
-            <li>A way to easily compose an IM / email / etc. or place a voice/videocall</li>
-            <li>Messages from others (emails, IMs, voice/videomails, etc.)</li>
-            <li>Other guided information resources (see below)</li>
-            <li>A hierarchy of things to browse through (web-portal style)</li>
-            <li>…</li>
-        </ul>
-    </li>
-    </ul>
+    <ul>
+        <li>A brief reminder of who/where/when/etc. I am</li>
+        <li>What I have to do today (schedule, tasks, etc.)</li>
+        <li>Important news (<em>e.g.</em> emergencies, etc.)</li>
+        <li>A search box</li>
+        <li>A way to easily create a journal entry, blog/microblog post, social networking status update, etc.</li>
+        <li>A way to easily add an event to my schedule or a task to my to-do list or a note to myself (Stickies style) or a more thorough journal-y note to myself (à la this note on apps and features) (this could even include jotting down / recording / playing in musical ideas, etc.)</li>
+        <li>A way to easily compose an IM / email / etc. or place a voice/videocall</li>
+        <li>Messages from others (emails, IMs, voice/videomails, etc.)</li>
+        <li>Other guided information resources (see below)</li>
+        <li>A hierarchy of things to browse through (web-portal style)</li>
+        <li>…</li>
+    </ul></li>
     <li>Media consumption and browsing
-
+    <ul>
+        <li>Reading and interacting with documents/apps
         <ul>
-            <li>Reading and interacting with documents/apps</li>
             <li>Browsing a Web site</li>
             <li>Browsing through EITE nodes and other structured datasets/databases</li>
             <li>Movies</li>
@@ -2180,7 +2237,9 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
             <li>Video series</li>
             <li>Online streaming home video (YouTube, etc.)</li>
             <li>…</li>
-            <li>Music</li>
+        </ul></li>
+        <li>Music
+        <ul>
             <li>Albums</li>
             <li>Individual tracks</li>
             <li>Music videos</li>
@@ -2188,149 +2247,130 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
             <li>Playlists, including shared playlists</li>
             <li>Scores</li>
             <li>…</li>
-            <li>Games</li>
-            <li>Interactive fiction, MUDs, MOOs, MMOs, puzzles, board game simulations, many other types of games …</li>
-            <li>Ebooks</li>
-            <li>Poetry</li>
-            <li>Quotations</li>
-            <li>Essays</li>
-            <li>News</li>
-            <li>Comics (manga)</li>
-            <li>Blogs &amp; RSS feeds</li>
-            <li>Consuming realtime media (television, radio, livestreams, …)</li>
-            <li>…</li>
-        </ul>
-    </li>
-    </ul>
+        </ul></li>
+        <li>Games</li>
+        <li>Interactive fiction, MUDs, MOOs, MMOs, puzzles, board game simulations, many other types of games …</li>
+        <li>Ebooks</li>
+        <li>Poetry</li>
+        <li>Quotations</li>
+        <li>Essays</li>
+        <li>News</li>
+        <li>Comics (manga)</li>
+        <li>Blogs &amp; RSS feeds</li>
+        <li>Consuming realtime media (television, radio, livestreams, …)</li>
+        <li>…</li>
+    </ul></li>
     <li>Document creation and sharing
-
-        <ul>
-            <li>Writing a paper</li>
-            <li>Collaborative document editing / creation</li>
-            <li>Composing a score</li>
-            <li>Writing a book</li>
-            <li>Creating a movie</li>
-            <li>Creating a storyboard for a movie</li>
-            <li>Writing a script</li>
-            <li>Editing a photograph</li>
-            <li>Creating animation</li>
-            <li>Notes to one's self (sticky notes style)</li>
-            <li>More thorough journal-y notes to one's self (including jotting down / recording / playing in musical ideas, etc.)</li>
-            <li>3D modeling and rendering</li>
-            <li>CAD</li>
-            <li>Diagramming</li>
-            <li>Creating a database</li>
-            <li>Mind mapping</li>
-            <li>Recording and producing a song</li>
-            <li>Diagramming structures in multiple dimensions</li>
-            <li>Developing apps</li>
-            <li>Designing a typeface</li>
-            <li>Working with GIS data</li>
-            <li>Recording a photograph or a video using a webcam, scanner, camera, …</li>
-            <li>Recording audio using a microphone</li>
-            <li>Working with geometric figures</li>
-            <li>Recording music from a USB/MIDI instrument</li>
-            <li>Blogging and microblogging</li>
-            <li>Working with legal documents</li>
-            <li>…</li>
-        </ul>
-    </li>
-    </ul>
+    <ul>
+        <li>Writing a paper</li>
+        <li>Collaborative document editing / creation</li>
+        <li>Composing a score</li>
+        <li>Writing a book</li>
+        <li>Creating a movie</li>
+        <li>Creating a storyboard for a movie</li>
+        <li>Writing a script</li>
+        <li>Editing a photograph</li>
+        <li>Creating animation</li>
+        <li>Notes to one's self (sticky notes style)</li>
+        <li>More thorough journal-y notes to one's self (including jotting down / recording / playing in musical ideas, etc.)</li>
+        <li>3D modeling and rendering</li>
+        <li>CAD</li>
+        <li>Diagramming</li>
+        <li>Creating a database</li>
+        <li>Mind mapping</li>
+        <li>Recording and producing a song</li>
+        <li>Diagramming structures in multiple dimensions</li>
+        <li>Developing apps</li>
+        <li>Designing a typeface</li>
+        <li>Working with GIS data</li>
+        <li>Recording a photograph or a video using a webcam, scanner, camera, …</li>
+        <li>Recording audio using a microphone</li>
+        <li>Working with geometric figures</li>
+        <li>Recording music from a USB/MIDI instrument</li>
+        <li>Blogging and microblogging</li>
+        <li>Working with legal documents</li>
+        <li>…</li>
+    </ul></li>
     <li>Working with structured information (this is mostly also document creation / management)
-
-        <ul>
-            <li>Managing a genealogy using Ember records</li>
-            <li>Managing a calendar / schedule</li>
-            <li>Managing a to-do list</li>
-            <li>Managing a contacts directory</li>
-            <li>Working with scientific data</li>
-            <li>Maintaining a retail environment (online or physical)</li>
-            <li>Managing recipes</li>
-            <li>Managing a reading list</li>
-            <li>Journaling</li>
-            <li>Managing a bibliography</li>
-            <li>Fantasy sports</li>
-            <li>Managing and using bookmarks</li>
-            <li>Managing financial information</li>
-            <li>Managing personal notes, documents, projects, photographs, videos, etc.</li>
-            <li>Managing a class</li>
-            <li>Participating in a class</li>
-            <li>…</li>
-        </ul>
-    </li>
-    </ul>
+    <ul>
+        <li>Managing a genealogy using Ember records</li>
+        <li>Managing a calendar / schedule</li>
+        <li>Managing a to-do list</li>
+        <li>Managing a contacts directory</li>
+        <li>Working with scientific data</li>
+        <li>Maintaining a retail environment (online or physical)</li>
+        <li>Managing recipes</li>
+        <li>Managing a reading list</li>
+        <li>Journaling</li>
+        <li>Managing a bibliography</li>
+        <li>Fantasy sports</li>
+        <li>Managing and using bookmarks</li>
+        <li>Managing financial information</li>
+        <li>Managing personal notes, documents, projects, photographs, videos, etc.</li>
+        <li>Managing a class</li>
+        <li>Participating in a class</li>
+        <li>…</li>
+    </ul></li>
     <li>Using resources/tools
-
+    <ul>
+        <li>Dictionary</li>
+        <li>Thesaurus</li>
+        <li>Chemical elements chart and data</li>
+        <li>Maps, travel directions, and sky charts</li>
+        <li>Calculator</li>
+        <li>Using the computer as a flashlight</li>
+        <li>Field guides / identification keys</li>
+        <li>Instructions and how-to information</li>
+        <li>Lessons on things
         <ul>
-            <li>Dictionary</li>
-            <li>Thesaurus</li>
-            <li>Chemical elements chart and data</li>
-            <li>Maps, travel directions, and sky charts</li>
-            <li>Calculator</li>
-            <li>Using the computer as a flashlight</li>
-            <li>Field guides / identification keys</li>
-            <li>Instructions and how-to information</li>
-            <li>Lessons on things</li>
             <li>Typing lessons</li>
             <li>Language learning lessons</li>
             <li>Musical instrument lessons</li>
             <li>Tutorials on using software</li>
             <li>…</li>
-            <li>Support using EITE &amp; Ember</li>
-            <li>Nutrition information</li>
-            <li>Support in other aspects of life (<em>e.g.</em> help with trouble fishing, personal motivation, nutrition, depression, etc.)</li>
-            <li>…</li>
-        </ul>
-    </li>
-    </ul>
+        </ul></li>
+        <li>Support using EITE &amp; Ember</li>
+        <li>Nutrition information</li>
+        <li>Support in other aspects of life (<em>e.g.</em> help with trouble fishing, personal motivation, nutrition, depression, etc.)</li>
+        <li>…</li>
+    </ul></li>
     <li>Management
-
-        <ul>
-            <li>Database creation and administration (this is really “Document creation”, but also listed here)</li>
-            <li>Network administration</li>
-            <li>Programming</li>
-            <li>Emulation of other computing systems (this is also media playback, of a sort)</li>
-            <li>Working with files and directories</li>
-            <li>Converting data from one format to another</li>
-            <li>Compressing and/or archiving data and/or directory structures</li>
-            <li>Imaging disks</li>
-            <li>Encrypting, decrypting, creating checksum records for, checking against checksum records, packing with parity data, restoring from parity data…</li>
-            <li>Running apps (this is basically just opening documents, )</li>
-            <li>Distributed computing</li>
-            <li>Digital forensics</li>
-            <li>Computer security</li>
-            <li>Malware prevention, intrusion detection, …</li>
-            <li>Data serialization</li>
-            <li>…</li>
-        </ul>
-    </li>
-    </ul>
-    <li>Exchange
-
-        <ul>
-            <li>Buying and selling goods</li>
-            <li>Trading stocks and cryptocurrencies</li>
-            <li>Purchasing and selling tickets</li>
-            <li>Issuing and redeeming coupons</li>
-            <li>Sending money (money-order style)</li>
-            <li>…</li>
-        </ul>
-    </li>
-    </ul>
+    <ul>
+        <li>Database creation and administration (this is really “Document creation”, but also listed here)</li>
+        <li>Network administration</li>
+        <li>Programming</li>
+        <li>Emulation of other computing systems (this is also media playback, of a sort)</li>
+        <li>Working with files and directories</li>
+        <li>Converting data from one format to another</li>
+        <li>Compressing and/or archiving data and/or directory structures</li>
+        <li>Imaging disks</li>
+        <li>Encrypting, decrypting, creating checksum records for, checking against checksum records, packing with parity data, restoring from parity data…</li>
+        <li>Running apps (this is basically just opening documents, )</li>
+        <li>Distributed computing</li>
+        <li>Digital forensics</li>
+        <li>Computer security</li>
+        <li>Malware prevention, intrusion detection, …</li>
+        <li>Data serialization</li>
+        <li>…</li>
+    </ol></li>
+    <li>- Exchange</li>
+    <li>   - Buying and selling goods</li>
+    <li>   - Trading stocks and cryptocurrencies</li>
+    <li>   - Purchasing and selling tickets</li>
+    <li>   - Issuing and redeeming coupons</li>
+    <li>   - Sending money (money-order style)</li>
+    <li>   - … <!-- should these be supported, or are they unethical capitalism?--></li>
     <li>Searching
-
-        <ul>
-            <li>Answers (<em>e.g.</em> facts, math questions)</li>
-            <li>Finding media (<em>e.g.</em> news, movies, music, etc.)</li>
-            <li>Locating documents</li>
-            <li>…</li>
-        </ul>
-    </li>
-    </ul>
+    <ul>
+        <li>Answers (<em>e.g.</em> facts, math questions)</li>
+        <li>Finding media (<em>e.g.</em> news, movies, music, etc.)</li>
+        <li>Locating documents</li>
+        <li>…</li>
+    </ul></li>
     <li>Guided time use and content consumption
-
+    <ul>
+        <li>Notifications
         <ul>
-            <li>Notifications</li>
             <li>Emergencies</li>
             <li>Important news</li>
             <li>Emails</li>
@@ -2339,50 +2379,46 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
             <li>Personal health warnings</li>
             <li>Computer status warnings (disk/memory failure, overheating, can’t connect to Ember server, running out of battery power, …)</li>
             <li>…</li>
-            <li>Activity guidance</li>
+        </ul></li>
+        <li>Activity guidance
+        <ul>
             <li>What to do right now</li>
             <li>What I have on my schedule upcoming</li>
             <li>…</li>
-            <li>News headlines</li>
-            <li>Blog feeds</li>
-            <li>Podcasts</li>
-            <li>Top charts (popular items)</li>
-            <li>Best charts (classics / enduring popularity items)</li>
-            <li>Suggested recipes</li>
-            <li>Fitness tips</li>
-            <li>Weather information</li>
-            <li>Stock market information</li>
-            <li>Computer’s status (resource usage, etc.)</li>
-            <li>Personal health</li>
-            <li>Sports information</li>
-            <li>Acquaintance suggestions (people one might find interesting to talk to or to get to know)</li>
-            <li>Dating suggestions / matchmaking</li>
-            <li>…</li>
-        </ul>
-    </li>
-    </ul>
+        </ul></li>
+        <li>News headlines</li>
+        <li>Blog feeds</li>
+        <li>Podcasts</li>
+        <li>Top charts (popular items)</li>
+        <li>Best charts (classics / enduring popularity items)</li>
+        <li>Suggested recipes</li>
+        <li>Fitness tips</li>
+        <li>Weather information</li>
+        <li>Stock market information</li>
+        <li>Computer’s status (resource usage, etc.)</li>
+        <li>Personal health</li>
+        <li>Sports information</li>
+        <li>Acquaintance suggestions (people one might find interesting to talk to or to get to know)</li>
+        <li>Dating suggestions / matchmaking</li>
+        <li>…</li>
+    </ul></li>
     <li>Communication
-
-        <ul>
-            <li>Instant messaging</li>
-            <li>Email</li>
-            <li>Video chat and group video chat</li>
-            <li>Audio and video messages</li>
-            <li>Collaborative document editing (this is “Document creation” but is related to communication)</li>
-            <li>Social networking</li>
-            <li>Blogging and microblogging (this is “Document creation” but is also a form of communication)</li>
-            <li>Newsgroups</li>
-            <li>BBSes</li>
-            <li>File sharing</li>
-            <li>Industrial automation (machine embroidery, etc.) (not an exact fit in the category of communication, since it’s communication with machines: perhaps closer to "management")</li>
-            <li>Sharing/microblogging/adding as status updates URLs, photographs, music, videos, …</li>
-            <li>Social bookmarking</li>
-            <li>…</li>
-        </ul>
-    </li>
+    <ul>
+        <li>Instant messaging</li>
+        <li>Email</li>
+        <li>Video chat and group video chat</li>
+        <li>Audio and video messages</li>
+        <li>Collaborative document editing (this is “Document creation” but is related to communication)</li>
+        <li>Social networking</li>
+        <li>Blogging and microblogging (this is “Document creation” but is also a form of communication)</li>
+        <li>Newsgroups</li>
+        <li>BBSes</li>
+        <li>File sharing</li>
+        <li>Industrial automation (machine embroidery, etc.) (not an exact fit in the category of communication, since it’s communication with machines: perhaps closer to "management")</li>
+        <li>Sharing/microblogging/adding as status updates URLs, photographs, music, videos, …</li>
+        <li>Social bookmarking</li>
+        <li>…</li>
 </ul>
-</ul>
-
 
 <h5>Information Technology Software Environment: Mockups</h5>
 
@@ -2531,9 +2567,9 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
     <p>And it will be great to have the option of displaying mere italics in Messages on my iPhone!</p>
 
 <h6>Storyboard</h6>
-    <a href="http://futuramerlin.com/image-001.png">[http://futuramerlin.com/image-001.png]: <img src="assets/3660a46204b0983338a08f457310bc9e0e8a5dbdc8fa16aee28120cd695c1d388b6860ee1b654d80e285caa1c0e883faa38a283a3d6583cebb652f154cb7954b.png" alt="I'm working on making a new computer game. I made a great look for a Web site for the game in a word processor. But now, the word processor won't let me put my new game into the file!"></a>
-    <a href="http://futuramerlin.com/image-002.png">[http://futuramerlin.com/image-002.png]: <img src="assets/04d409aa3a41c8aa02f5887864f3eb9346b8e984635651f23a54b196da56a8d01558f8a0191e129debccdc2aa258367b43d50d07681d60b16bc3a7f8e9d9b18d.png" alt="That doesn't make any sense. Computers can hold text and games, so why not both in one document? Oh! I remember a tool someone mentioned to me. They said it is a computer document editing tool that can hold many types of data."></a>
-    <a href="http://futuramerlin.com/image-003.png">[http://futuramerlin.com/image-003.png]: <img src="assets/41085b20ef9329c69201d81f73219fadbf51b9fdd17edffe2d9ae89b72c74342762b64bb90ac4abb2b754635d62140edf30a27b524cb6a997685c6fadaebc26b.png" alt="Great, now I can have the game in my document, and post it to the Web like I originally wanted! Problem solved!"></a>
+    <a href="http://futuramerlin.com/image-001.png">[http://futuramerlin.com/image-001.png]: <img src="assets/a4dacd1cfd7bf3a8066ea2425ab2aae9777f114b40092b16405831601925b2694f8d9e9d5df998d1d353d518d540d5f39d25c83eb017a77243be8798482a9a80.png" alt="I'm working on making a new computer game. I made a great look for a Web site for the game in a word processor. But now, the word processor won't let me put my new game into the file!"></a>
+    <a href="http://futuramerlin.com/image-002.png">[http://futuramerlin.com/image-002.png]: <img src="assets/36f4ee642e0309793b2d3b69a2ccd5e36e5f4f4dd014a2240b3a901baf62de91b44e40480c0cd03c02e2950288f649312c3b36846d13ac61d3b54a45a6a21ebd.png" alt="That doesn't make any sense. Computers can hold text and games, so why not both in one document? Oh! I remember a tool someone mentioned to me. They said it is a computer document editing tool that can hold many types of data."></a>
+    <a href="http://futuramerlin.com/image-003.png">[http://futuramerlin.com/image-003.png]: <img src="assets/be2007d04bacec5a666487c61650913539213418777feb6d9629ba46e78b6359d1ca5a6858b99d6095d79273a5ea5a9d3873e61c920539492db893072b49481c.png" alt="Great, now I can have the game in my document, and post it to the Web like I originally wanted! Problem solved!"></a>
 
 <h5></h5>
 
@@ -2563,7 +2599,7 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 <p>A technology known as content-addressed storage systems enables the unambiguous identification of, and thereby discussion of, information, without the need to quote it in its entirety: whereas traditional citation formats (<em>e.g.</em> an author’s name and a title, or a Web URL) do not include enough information to verify that the cited document being viewed by a reader is the same as the document viewed by the author, by including a cryptographic hash, the content can be identified precisely. Brewster Kahle, quoting Peter Lyman, writes: “Now we can add something: ‘Content addressibility means that knowledge has a name.’” This is the system used by the Git distributed version control system, and it allows validation of the accuracy of a copy of a document or set of documents, and thereby validation of the authenticity of them as well through the use of cryptographic signatures.</p>
     <figure class="thumbnail-right thumbnail-top">
         <a href="http://futuramerlin.com/102-000.jpg">[http://futuramerlin.com/102-000.jpg]: 
-            <img src="assets/2139409618268bf7460e61c4cd631e9a952a76f589d835f2213caedbd66c8196be49122225940e7d7c751bc7bb57554e9530289878265d9ba8d7482fc294c91f.jpg" alt="Photograph of Brewster Kahle" />
+            <img src="assets/f815303c63d6fb7348cc391482912310f4f0b135e10b83c2be57677cfd81987f0f2c76356c7574dae456630ecd2082d6be51f2b1230c68033045c1b4adf03791.jpg" alt="Photograph of Brewster Kahle" />
         </a>
         <figcaption>Brewster Kahle, founder of the nonprofit Internet Archive, who has advocated for the use of distributed networks to facilitate information access</figcaption>
     </figure>
@@ -2572,7 +2608,7 @@ External I/O: render target ← ⎢ output (terminal text for  ⎥
 <p>As with the Internet, verification of the identity of the connection thereby established can be accomplished using public-key cryptography, given an existing centralized public key infrastructure (PKI).</p>
     <figure class="thumbnail-right thumbnail-top">
         <a href="http://futuramerlin.com/102-001.jpg">[http://futuramerlin.com/102-001.jpg]: 
-            <img src="assets/ac86125ad6fe85fb128a6deb5f5c34b27b04ecb99046f82e8097e5490eaf5cc058767a825f52da1e3925a3fc653cf97a37022901aa43e9bf7a7d20ff47341f24.jpg" alt="Photograph of Whitfield Diffie and Martin Hellman" />
+            <img src="assets/cea5202c0cffe681a219ab502ec42c5b19f679c23930ea3035b3bc474dc8d0553057ae59803af470c62201c0bd9da29828e07f22f6298339d5d72512ca50bdcb.jpg" alt="Photograph of Whitfield Diffie and Martin Hellman" />
         </a>
         <figcaption>Whitfield Diffie and Martin Hellman, authors of the 1976 paper “New directions in cryptography”, which was influential in the development of public-key cryptography in the private sector</figcaption>
     </figure>
