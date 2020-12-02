@@ -7,4 +7,4 @@ trap 'die "A fatal error was reported on ${BASH_SOURCE[0]} line ${LINENO} in $(p
 
 # Usage: book-quick [--all]
 
-/Ember\ Library/Ember/ember-web-site/build-book --quick "$1"
+/Ember/ember-web-site/build-book --quick "$1"
