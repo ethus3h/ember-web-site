@@ -7,7 +7,7 @@ trap 'die "A fatal error was reported on ${BASH_SOURCE[0]} line ${LINENO} in $(p
 
 # Usage: build-book [--quick|--confirm] [--all]
 
-cd /Ember\ Library/Ember/ember-web-site
+cd /Ember/ember-web-site
 eogup-single
 
 quick="false"
