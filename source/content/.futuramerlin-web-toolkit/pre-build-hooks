@@ -1,7 +1,0 @@
-#!/bin/bash
-
-#(
-#    cd ../..
-#    mkdir -p specification/engineering-and-tech/information-technology/software/env
-#    rsync -av --checksum --progress --delete ../ember-information-technology-environment/built/web/ specification/engineering-and-tech/information-technology/software/env
-#)
